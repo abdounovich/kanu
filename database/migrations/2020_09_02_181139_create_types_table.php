@@ -17,7 +17,9 @@ class CreateTypesTable extends Migration
             $table->bigIncrements('id');
             $table->text('type');
             $table->text('prix');
+            $table->text('point');
             $table->text('temps');
+            $table->text('photo');
             $table->timestamps();
         });
     }
