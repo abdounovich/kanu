@@ -40,13 +40,13 @@
 
 
 @php
-    App\Type::query("INSERT INTO `types` (`id`, `type`, `prix`, `temps`, `photo`, `point`, `created_at`, `updated_at`) VALUES
-(1, 'حلاقة عادية', '250', '20', 'https://res.cloudinary.com/ds9qfm1ok/image/upload/v1599381388/1_ks3mg3.jpg', '10', NULL, NULL),
-(2, 'لحية', '100', '10', 'https://res.cloudinary.com/ds9qfm1ok/image/upload/v1599380742/6a9e1200d5f747a7a8a8e2010ccb9f02_vwjebs.jpg', '5', NULL, NULL),
-(7, 'حلاقة عادية + لحية', '300', '30', 'https://res.cloudinary.com/ds9qfm1ok/image/upload/v1599381715/semtouhair-salon-de-coiffure002_ja1gvx.jpg', '20', NULL, NULL),
-(8, 'تور دوراي', '50', '5', 'https://res.cloudinary.com/ds9qfm1ok/image/upload/v1599380735/hairdresser-hairstyle-cutting-hair-men-hair-salon-barber-beauty-spa-cutting-only-men_cxf1er.jpg', '5', NULL, NULL);
-");
-
+    $type=new App\Type();
+    $type->type='لحية';
+    $type->prix='250';
+    $type->temps='15';
+    $type->points='10';
+    $type->photo='https://res.cloudinary.com/ds9qfm1ok/image/upload/v1599380742/6a9e1200d5f747a7a8a8e2010ccb9f02_vwjebs.jpg';
+$type->save();
 @endphp
 
 <script src="/js/app.js"></script>
