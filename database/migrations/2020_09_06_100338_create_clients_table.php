@@ -17,7 +17,7 @@ class CreateClientsTable extends Migration
             $table->increments('id');
             $table->text('facebook');
             $table->integer('points');
-            $table->integer('fb_id');
+            $table->bigInteger('fb_id');
             $table->timestamps();
             $table->text('slug');
 
