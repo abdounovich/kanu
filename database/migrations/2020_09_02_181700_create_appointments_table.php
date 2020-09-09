@@ -18,6 +18,8 @@ class CreateAppointmentsTable extends Migration
             $table->text('facebook');
             $table->text('temps');
             $table->text('ActiveType');
+            $table->text('fb_id');
+
             $table->unsignedBigInteger('type_id');
             $table->foreign('type_id')
             ->references('id')->on('types')

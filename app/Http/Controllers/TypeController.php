@@ -13,9 +13,10 @@ class TypeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+
     {
-        //
-    }
+        $types=Type::all();
+       return view('types')->with('types',$types);    }
 
     /**
      * Show the form for creating a new resource.
@@ -33,9 +34,29 @@ class TypeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+  
+
+
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'type'=>'required',
+            'prix'=>'required|integer',
+            'temps'=>'required|integer',
+            'point'=>'required|integer',
+            'photo'=>'required',
+        ]);
+
+        $contact = new Type([
+            'type'=>  $request->get('type'),
+            'prix'=>$request->get('prix'),
+            'temps'=>$request->get('temps'),
+            'point'=>$request->get('point'),
+            'photo'=>$request->get('photo'),
+           
+        ]);
+        $contact->save();
+        return redirect('/types')->with('success', 'type saved!');
     }
 
     /**

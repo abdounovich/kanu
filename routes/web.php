@@ -19,6 +19,8 @@ Route::get('/client/{slug}','ClientController@index');
 Route::get('/delete','AppointmentController@deleteFunction');
 
 Route::get('/add','AppointmentController@AddPFunction');
+Route::post('/types','TypeController@store');
+Route::get('/types','TypeController@index');
 
 
 Route::get('/commande', function () {
