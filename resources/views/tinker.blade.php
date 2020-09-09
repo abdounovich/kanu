@@ -44,7 +44,7 @@
     $type->type='لحية';
     $type->prix='250';
     $type->temps='15';
-    $type->points='10';
+    $type->point='10';
     $type->photo='https://res.cloudinary.com/ds9qfm1ok/image/upload/v1599380742/6a9e1200d5f747a7a8a8e2010ccb9f02_vwjebs.jpg';
 $type->save();
 @endphp
