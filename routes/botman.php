@@ -59,7 +59,6 @@ $DbUsername=Client::whereFacebook($full_name)->first();
 $bot->typesAndWaits(2);
 
 $config=Config::get('app.url');
-$config='https://d161769dac6c.ngrok.io';
 
     $bot->reply('مرحبا بك  🙋‍♂️ '.$full_name."\n".'تشرفنا زيارتك لصفحتنا ');
     $bot->typesAndWaits(2);
