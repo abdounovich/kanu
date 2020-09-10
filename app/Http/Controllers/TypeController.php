@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Type;
 use Illuminate\Http\Request;
+use JD\Cloudder\Facades\Cloudder;
 
 class TypeController extends Controller
 {
@@ -39,23 +40,30 @@ class TypeController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'type'=>'required',
-            'prix'=>'required|integer',
-            'temps'=>'required|integer',
-            'point'=>'required|integer',
-            'photo'=>'required',
-        ]);
+      
 
-        $contact = new Type([
-            'type'=>  $request->get('type'),
-            'prix'=>$request->get('prix'),
-            'temps'=>$request->get('temps'),
-            'point'=>$request->get('point'),
-            'photo'=>$request->get('photo'),
+
+        if ($request->isMethod('post')) 
+                 
+        {
+  
+         $image_name = $request->file('photo')->getRealPath();
+         Cloudder::upload($image_name, null);
+         list($width, $height) = getimagesize($image_name);
+         $image_url= Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height"=>$height]);
+       
+
+        $types = new Type();
+            $types->type=  $request->get('type');
+            $types->prix=$request->get('prix');
+            $types->temps=$request->get('temps');
+            $types->point=$request->get('point');
+            $types->photo=$image_url;
            
-        ]);
-        $contact->save();
+    
+        $types->save();
+    
+    }
         return redirect('/types')->with('success', 'type saved!');
     }
 

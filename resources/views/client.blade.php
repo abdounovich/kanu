@@ -59,15 +59,20 @@ a {
 button:hover, a:hover {
   opacity: 0.7;
 }
+
+
+body{
+
+    style="direction: rtl;background:url(https://res.cloudinary.com/ds9qfm1ok/image/upload/v1599670310/1_zvsdhh.jpg) ;background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
 </style>
 
 <!-- Optionally add this to use a skin : -->
     <!-- Styles -->
 </head>
-<body style="direction: rtl;background:url(https://res.cloudinary.com/ds9qfm1ok/image/upload/v1599670310/1_zvsdhh.jpg) ;background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;
-">
+<body>
 
 <div class="m-4">
     <div  class=" card bg-success text-white  justify-content-center align-self-center align-items-center" style="opacity: 0.9">
@@ -84,7 +89,7 @@ background-size: cover;
         <img src="{{$picture}}" alt="John"  width="100" height="100" class="   align-self-center m-4 img-thumbnail ">
         <h3 class="mt-2 bg-dark">{{$client->facebook}}</h3>
       
-    <div><div class="h4">عدد نقاطي :            <span class="badge badge-dark">{{$client->points}}</span></div>
+    <div><div class="h4">عدد نقاطي :            <span class="badge badge-dark">{{$client->points}} نقطة  </span></div>
 </div>
            
 
