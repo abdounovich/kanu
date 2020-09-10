@@ -51,6 +51,8 @@
   <a id="button" class=" text-white btn btn-info"> 
     اعادة تحميل الصفحة
   </a> 
+  <a  href="/types" class=" text-white btn btn-success"> 
+أضف أنواع جديدة   </a> 
 </div>
   </div>
 </div>
