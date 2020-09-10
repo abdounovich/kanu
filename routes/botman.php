@@ -157,8 +157,19 @@ $complet_message="  أنا آسف صديقي 😕  ".$full_name."\n"." كل ال
 
 
 
-$botman->hears('menu)', function ($bot, $number) {
-    $bot->reply("kk");
+$botman->hears('menu)', function ($bot) {
+    $bot->reply(MediaTemplate::create()
+    ->element(MediaAttachmentElement::create('image')
+        ->attachmentId('1543527005693234')
+        ->addButton(ElementButton::create('Tell me more')
+            ->type('postback')
+            ->payload('Tell me more')
+        )
+        ->addButton(ElementButton::create('Documentation')
+            ->url('https://botman.io/')
+        )
+    )
+);
 });
 $botman->hears('C([0-9]+)', function ($bot, $number) {
     $user = $bot->getUser();
