@@ -1,5 +1,5 @@
 <?php
-$c=Client::whereFacebook('Merahi-AbdelDjalil')->first();
+$c=App\Client::whereFacebook('Merahi-AbdelDjalil')->first();
 $fb="m.me/".$c->facebook;
 return [
 
