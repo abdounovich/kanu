@@ -1,5 +1,5 @@
 <?php
-
+$fb="m.me/theAjmoda";
 
 return [
 
@@ -84,14 +84,14 @@ return [
                         [
                             'title' => ' 🛍 إحجز موعد  ',
                             'type' => 'postback',
-                            'payload' => 'موعد',
+                            'payload' => 'rdv',
                         ],
                     
                 
                         [
                             'title' => '  مواعيدي',
                             'type' => 'web_url',
-                            'url' => 'https://www.messenger.com/t/merahi.adjalile',
+                            'url' => $fb,
                         ],
                         [
 

@@ -10,7 +10,6 @@
     <title>Document</title>      
     <script src="{{ asset('js/app.js') }}" type="text/js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -29,60 +28,6 @@ font-family: 'Cairo', sans-serif;
 </style>
 </head>
 <body  dir="rtl">
-<div>   @if ($errors->any())
-  <div class="alert alert-danger">
-    <ul>
-        @foreach ($errors->all() as $error)
-          <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-  </div><br />
-@endif</div>
-
-    <div class=" container mt-5">
-        <div class="row">
-            <h2 class=" text-white p-2">أنواع الحلاقة :</h2>
-            <table class="table table-dark table-hover" style="opacity: 0.9 ">
- <thead class=" bg-success text-center">
-
-                    <tr>
-                      <th>النوع   </th>
-                      <th>السعر </th>
-                      <th>المدة </th>
-                      <th> النقاط</th>
-                      <th> الصورة</th>
-                      <th> </th>
-                     
-                   
-                    </tr>
-                  </thead>
-                  <tbody class=" text-center">
-                   @foreach ($types as $type)
-                    <tr class=" align-items-center text-center">
-                    
-                         <td class="align-middle">{{$type->type}}</td>
-                         <td class="align-middle">{{$type->prix}} دج </td>
-                         <td class="align-middle">{{$type->temps}} دقيقة </td>
-                         <td class="align-middle">{{$type->point}}</td>
-                         <td class="align-middle"><img class="img border  border-white" width="50" height="50"  src="{{$type->photo}}" alt=""></td>
-<td>  
-   
-
-<a class="btn btn-info  m-2 " href="/edit/{{$type->id}}">تعديل</a>
-
-  
-
-  <a href="/delete/{{$type->id}}" type="submit" class="btn btn-danger  m-2" >حذف</a>
-</td>
-            
-                    </tr> @endforeach 
-                  </tbody>
-                
-            </table>
-        </div>
-    </div>
-
-
 
 
 
@@ -92,7 +37,7 @@ font-family: 'Cairo', sans-serif;
 
         <div class="container">
             <div class="card mt-5 mb-5" style="opacity: 0.9"  >
-                <div class="card-header  bg-success text-white ">           <h4 class=" text-center p-2 ">أضف نوع جديد </h4>
+                <div class="card-header  bg-success text-white ">           <h4 class=" text-center p-2 "> تعديل  " {{$type->type}} "  </h4>
                 </div>
                 <div class="card-body bg-dark text-white"> <div>
                     @if ($errors->any())
@@ -104,25 +49,25 @@ font-family: 'Cairo', sans-serif;
                         </ul>
                       </div><br />
                     @endif
-                      <form method="post" action="/types" role="form" enctype="multipart/form-data">
+                    <form method="post" action="/types_edit/{{$type->id}}" role="form" enctype="multipart/form-data">
                           @csrf
                           <div class="form-group">    
                               <label for="type" class=" float-right">  نوع الحلاقة :</label>
-                              <input type="text" class="form-control" name="type"/>
+                          <input type="text" class="form-control" value="{{$type->type}}" name="type"/>
                           </div>
                 
                           <div class="form-group">
                               <label for="prix" class=" float-right">السعر: </label>
-                              <input type="text" class="form-control" name="prix"/>
+                              <input type="text" class="form-control" value="{{$type->prix}}" name="prix"/>
                           </div>
                 
                           <div class="form-group">
                               <label for="temps" class=" float-right">الوقت:</label>
-                              <input type="text" class="form-control" name="temps"/>
+                              <input type="text" class="form-control" value="{{$type->temps}}" name="temps"/>
                           </div>
                           <div class="form-group">
                               <label for="point" class=" float-right">عدد النقاط:</label>
-                              <input type="text" class="form-control" name="point"/>
+                              <input type="text" class="form-control"  value="{{$type->point}}" name="point"/>
                           </div>
 
                           <div class="form-group">
@@ -131,9 +76,11 @@ font-family: 'Cairo', sans-serif;
           <div class="col-2">
             <input type="file" id="imgupload" onchange="loadFile(event)"  name="photo" hidden>
         <a href="#" onclick="$('#imgupload').trigger('click'); return false;"> 
-           <img class="img " id="image" 
-           src="https://res.cloudinary.com/ds9qfm1ok/image/upload/v1595881085/gallery-131964752828011266_ko0lhf.png"
-            alt="" width="200" height="200">
+           <img class="img " id="image"  
+           src="{{$type->photo}}"
+            alt="" width="200" height="200">           
+            <input value="{{$type->photo}}" class="form-control" type="hidden" name="image">
+
         </a>
           </div>
           
@@ -152,7 +99,7 @@ font-family: 'Cairo', sans-serif;
                     <div class="row">
                        
                         <div class="col col-12">
-                           <button style="width: 100%" type="submit" class="btn btn-success">  اضافة</button>
+                           <button style="width: 100%" type="submit" class="btn btn-success">  حفظ التغييرات</button>
  
                         </div>
                       
@@ -173,8 +120,7 @@ font-family: 'Cairo', sans-serif;
 
    
 
-    <script src="{{ asset('js/app.js') }}" type="text/js"></script>
-
+    
 
 </body>
 </html>
