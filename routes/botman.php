@@ -66,7 +66,7 @@ $config=Config::get('app.url');
     $bot->reply(ButtonTemplate::create(' كيف يمكننا خدمتك ؟ ')
 	->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
 	    ->type('postback')
-	    ->payload('موعد')
+	    ->payload('rdv')
 	)
 	->addButton(ElementButton::create('تصفح مواعيدي ')
 	    ->url($config.'/client/'.$DbUsername->slug)
@@ -75,7 +75,7 @@ $config=Config::get('app.url');
 });
   
 
-$botman->hears('موعد', function($bot) {
+$botman->hears('rdv', function($bot) {
 
     $user = $bot->getUser();
     // Access last name
