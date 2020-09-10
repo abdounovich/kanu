@@ -157,10 +157,7 @@ $complet_message="  أنا آسف صديقي 😕  ".$full_name."\n"." كل ال
 
 
 
-$botman->hears('mn)', function ($bot) {
-    $bot->reply("lll");
-  
-});
+
 $botman->hears('C([0-9]+)', function ($bot, $number) {
     $user = $bot->getUser();
     // Access last name
@@ -175,7 +172,7 @@ $full_name=$firstname.'-'.$lastname;
 $botman->hears('hi', function ($bot) {
 
 
-   
+   $bot->reply("rrr");
 });
 
 
