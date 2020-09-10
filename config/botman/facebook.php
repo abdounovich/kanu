@@ -90,9 +90,8 @@ return [
                 
                         [
                             'title' => '  نقاطي / مواعيدي',
-                            'type' => 'web_url',
-                            'url' => 'https://www.messenger.com/t/merahi.adjalile',
-                        ],
+                            'type' => 'postback',
+                            'payload' => 'menu',                        ],
                         [
 
                     'title' => ' ⁉ استفسار ',
