@@ -154,6 +154,18 @@ $complet_message="  أنا آسف صديقي 😕  ".$full_name."\n"." كل ال
 
 
 
+
+$botman->hears('menu)', function ($bot, $number) {
+    $bot->reply(ButtonTemplate::create('Do you want to know more about BotMan?')
+	->addButton(ElementButton::create('Tell me more')
+	    ->type('postback')
+	    ->payload('tellmemore')
+	)
+	->addButton(ElementButton::create('Show me the docs')
+	    ->url('http://botman.io/')
+	)
+);
+});
 $botman->hears('C([0-9]+)', function ($bot, $number) {
     $user = $bot->getUser();
     // Access last name

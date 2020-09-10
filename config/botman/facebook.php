@@ -1,5 +1,6 @@
 <?php
-$fb="m.me/";
+$fb="m.me/theAjmoda";
+
 return [
 
     /*
@@ -88,9 +89,9 @@ return [
                     
                 
                         [
-                            'title' => '  مواعيدي',
+                            'title' => '  نقاطي / مواعيدي',
                             'type' => 'web_url',
-                            'url' => $fb,
+                            'url' => 'https://www.messenger.com/t/merahi.adjalile',
                         ],
                         [
 
