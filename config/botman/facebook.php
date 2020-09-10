@@ -1,6 +1,6 @@
 <?php
-$fb="m.me/theAjmoda";
-
+$c=Client::whereFacebook('Merahi-AbdelDjalil')->first();
+$fb="m.me/".$c->facebook;
 return [
 
     /*
