@@ -122,7 +122,7 @@
 <div class="container p-2">
   <div class="row">
     @if ($Inactif_appointments->count()=='0')
-    <div  class="col col-12 badge-dark " style="opacity: 0.9"><h2 class="p-4 float-right">لا توجد مواعيد لنهار اليوم</h2></div>
+    <div  class="col col-12 badge-dark " style="opacity: 0.9"><h2 class="p-4 float-right">   لا توجد مواعيد سابقة </h2></div>
 
    
 @else
