@@ -169,7 +169,7 @@ $full_name=$firstname.'-'.$lastname;
     $bot->startConversation(new ExampleConversation($full_name,$number,$facebook_id));
 });
 
-$botman->hears('hi', function ($bot) {
+$botman->hears('menu', function ($bot) {
 
 
    $bot->reply("rrr");
