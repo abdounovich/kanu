@@ -1,15 +1,17 @@
 <?php
 use App\Type;
 use App\Client;
-use Illuminate\Support\Str;
 use Carbon\Carbon;
 use App\Appointment;
+use Illuminate\Support\Str;
 use App\Conversations\ExampleConversation;
 use App\Http\Controllers\BotManController;
 use BotMan\Drivers\Facebook\Extensions\Element;
 use BotMan\Drivers\Facebook\Extensions\ElementButton;
+use BotMan\Drivers\Facebook\Extensions\MediaTemplate;
 use BotMan\Drivers\Facebook\Extensions\ButtonTemplate;
 use BotMan\Drivers\Facebook\Extensions\GenericTemplate;
+use BotMan\Drivers\Facebook\Extensions\MediaAttachmentElement;
 
 $botman = resolve('botman');
 
