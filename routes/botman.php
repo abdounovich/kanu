@@ -172,8 +172,18 @@ $full_name=$firstname.'-'.$lastname;
 $botman->hears('menu', function ($bot) {
 
 
-   $bot->reply("rrr");
-});
+    $bot->reply(MediaTemplate::create()
+    ->element(MediaAttachmentElement::create('image')
+        ->attachmentId('1543527005693234')
+        ->addButton(ElementButton::create('Tell me more')
+            ->type('postback')
+            ->payload('Tell me more')
+        )
+        ->addButton(ElementButton::create('Documentation')
+            ->url('https://botman.io/')
+        )
+    )
+);});
 
 
 $botman->fallback(function ($bot) {
