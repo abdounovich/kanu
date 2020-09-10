@@ -91,7 +91,8 @@ return [
                         [
                             'title' => '  نقاطي / مواعيدي',
                             'type' => 'postback',
-                            'payload' => 'menu',                        ],
+                            'url' => 'menu',
+                        ],
                         [
 
                     'title' => ' ⁉ استفسار ',
