@@ -10,4 +10,10 @@ class Appointment extends Model
     {
         return $this->belongsTo(Type::class);
     }
+
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
 }

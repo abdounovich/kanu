@@ -24,6 +24,11 @@ class CreateAppointmentsTable extends Migration
             $table->foreign('type_id')
             ->references('id')->on('types')
             ->onDelete('cascade');
+            
+            $table->unsignedBigInteger('client_id');
+            $table->foreign('client_id')
+            ->references('id')->on('clients')
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }

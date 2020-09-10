@@ -11,12 +11,12 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
   <style>
     body{
 
 
-      font-family: 'El Messiri', sans-serif;
+      font-family: 'Cairo', sans-serif;
 
     }</style></head>
 <body>
@@ -28,7 +28,7 @@
 
     
 
-<div class="container">
+<div class="container" >
     <div class="content">
 
       <table dir="rtl" class="table table-striped table-dark ">
@@ -69,7 +69,7 @@
 
 
                     <img class=" img-thumbnail border  rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">{{$Actif_appointment->facebook}}
-                    <span class="badge badge-success badge-pill p-1 m-2">{{$Actif_appointment->id}}</span> 
+                    <span class="badge badge-success badge-pill p-1 m-2">{{$Actif_appointment->client->points}}</span> 
 </td>
      
                     <td class="p-1"> 

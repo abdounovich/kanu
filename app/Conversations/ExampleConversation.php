@@ -98,12 +98,13 @@ $this->diff=$this->total-$this->somme;
 
 
         
-      
+      $client=Client::whereFacebook($this->facebook)->first();
           
                 $app=new Appointment();
                 $app->facebook=$this->facebook;
                 $app->type_id=intval($this->type);
                 $app->ActiveType="1";
+                $app->client_id=$client->id;
                 $rest= new Carbon($this->debut);
                 $rest->addMinutes($this->somme);
                 $app->temps=$rest;
