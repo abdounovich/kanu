@@ -156,14 +156,17 @@ $complet_message="  أنا آسف صديقي 😕  ".$full_name."\n"." كل ال
 
 
 $botman->hears('menu)', function ($bot, $number) {
-    $bot->reply(ButtonTemplate::create('Do you want to know more about BotMan?')
-	->addButton(ElementButton::create('Tell me more')
-	    ->type('postback')
-	    ->payload('tellmemore')
-	)
-	->addButton(ElementButton::create('Show me the docs')
-	    ->url('http://botman.io/')
-	)
+    $bot->reply(MediaTemplate::create()
+    ->element(MediaAttachmentElement::create('image')
+        ->attachmentId('1543527005693234')
+        ->addButton(ElementButton::create('Tell me more')
+            ->type('postback')
+            ->payload('Tell me more')
+        )
+        ->addButton(ElementButton::create('Documentation')
+            ->url('https://botman.io/')
+        )
+    )
 );
 });
 $botman->hears('C([0-9]+)', function ($bot, $number) {
