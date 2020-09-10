@@ -1,5 +1,6 @@
 <?php
 
+
 return [
 
     /*
@@ -77,25 +78,40 @@ return [
     'persistent_menu' => [
         [
             'locale' => 'default',
-            'composer_input_disabled' => 'true',
+            'composer_input_disabled' => 'false',
             'call_to_actions' => [
-                [
-                    'title' => 'My Account',
+             
+                        [
+                            'title' => ' 🛍 إحجز موعد  ',
+                            'type' => 'postback',
+                            'payload' => 'موعد',
+                        ],
+                    
+                
+                        [
+                            'title' => '  مواعيدي',
+                            'type' => 'web_url',
+                            'url' => 'https://www.messenger.com/t/merahi.adjalile',
+                        ],
+                        [
+
+                    'title' => ' ⁉ استفسار ',
                     'type' => 'nested',
                     'call_to_actions' => [
                         [
-                            'title' => 'Pay Bill',
-                            'type' => 'postback',
-                            'payload' => 'PAYBILL_PAYLOAD',
+
+                            'title' => ' 💬 تواصل مع المبرمج',
+                            'type' => 'web_url',
+                            'url' => 'https://www.messenger.com/t/merahi.adjalile',
                         ],
-                    ],
-                ],
-                [
-                    'type' => 'web_url',
-                    'title' => 'Latest News',
-                    'url' => 'http://botman.io',
-                    'webview_height_ratio' => 'full',
-                ],
+                  [
+                            'title' => ' 👨‍🏫 شرح طريقة حجز موعد  ',
+                            'type' => 'postback',
+                            'payload' => 'steps',
+                           'webview_height_ratio'=>'full'
+                        ]]],
+                      
+                       
             ],
         ],
     ],
