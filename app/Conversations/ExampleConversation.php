@@ -4,6 +4,7 @@ namespace App\Conversations;
 
 use App\Type;
 use DateTime;
+use App\Client;
 use DateTimeZone;
 use Carbon\Carbon;
 use App\Appointment;
@@ -45,7 +46,7 @@ class ExampleConversation extends Conversation
             $this->total="720"; 
         }else{
             $this->total="360";
-            $this->debut="16:00";
+            $this->debut="15:00";
         }
 
         
