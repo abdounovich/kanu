@@ -38,10 +38,10 @@ font-family: 'Cairo', sans-serif;
  <thead class=" bg-success text-center">
 
                     <tr>
-                      <th>نوع الحلاقة </th>
+                      <th>النوع   </th>
                       <th>السعر </th>
                       <th>المدة </th>
-                      <th>عدد النقاط</th>
+                      <th> النقاط</th>
                       <th> الصورة</th>
                      
                    
@@ -55,7 +55,7 @@ font-family: 'Cairo', sans-serif;
                          <td class="align-middle">{{$type->prix}} دج </td>
                          <td class="align-middle">{{$type->temps}} دقيقة </td>
                          <td class="align-middle">{{$type->point}}</td>
-                         <td class="align-middle"><img class="img border  border-white" width="100" height="100"  src="{{$type->photo}}" alt=""></td>
+                         <td class="align-middle"><img class="img border  border-white" width="50" height="50"  src="{{$type->photo}}" alt=""></td>
 
             
                     </tr> @endforeach 

@@ -83,7 +83,8 @@ $botman->hears('موعد', function($bot) {
 // Access last name
 $lastname = $user->getLastname();
 $full_name=$firstname.'-'.$lastname;
-$OneApp=Appointment::whereFacebook($full_name)->where('ActiveType','1')->count();
+$OneApp=Appointment::where('facebook',$full_name)
+->where('ActiveType','1')->count();
 if ($OneApp>0) {
 $bot->reply('عذرا , لقد حجزت موعد من قبل لا يمكنك حجز أكثر من موعد في نفس اليوم');}
 else{
