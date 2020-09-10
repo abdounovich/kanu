@@ -2,7 +2,10 @@
 <html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=1024">
+    <meta  name="viewport" content="width= {screenWidth}">
+   
+
+
 
     <title>BotMan Studio</title>
 
