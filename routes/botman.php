@@ -102,7 +102,7 @@ if ($date=='Friday') {
 
  }else{
      $total="360";
-     $debut="15:00";
+     $debut="16:00";
 
  }
 
