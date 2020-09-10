@@ -157,7 +157,7 @@ $complet_message="  أنا آسف صديقي 😕  ".$full_name."\n"." كل ال
 
 
 
-$botman->hears('menu)', function ($bot) {
+$botman->hears('mn)', function ($bot) {
     $bot->reply("lll");
   
 });
