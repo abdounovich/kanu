@@ -172,19 +172,17 @@ $full_name=$firstname.'-'.$lastname;
 });
 
 $botman->hears('menu', function ($bot) {
+    $bot->reply(ButtonTemplate::create('Do you want to know more about BotMan?')
+	->addButton(ElementButton::create('Tell me more')
+	    ->type('postback')
+	    ->payload('tellmemore')
+	)
+	->addButton(ElementButton::create('Show me the docs')
+	    ->url('http://botman.io/')
+	)
+);
 
-
- 
-    
-        $bot->ask( Question::create("تأكيد الموعد ")
-    ->addButtons([
-        Button::create(' ✅ تأكيد')->value('yes'),
-        Button::create(' ❎ إلغاء')->value('no')]), function (Answer $answer) {
-            $reponse=$answer->getValue();
-            $bot->reply($reponse);
-
-}
-);});
+  });
 
 
 $botman->fallback(function ($bot) {
