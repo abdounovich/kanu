@@ -6,7 +6,9 @@ use App\Appointment;
 use Illuminate\Support\Str;
 use App\Conversations\ExampleConversation;
 use App\Http\Controllers\BotManController;
+use BotMan\BotMan\Messages\Outgoing\Question;
 use BotMan\Drivers\Facebook\Extensions\Element;
+use BotMan\BotMan\Messages\Outgoing\Actions\Button;
 use BotMan\Drivers\Facebook\Extensions\ElementButton;
 use BotMan\Drivers\Facebook\Extensions\MediaTemplate;
 use BotMan\Drivers\Facebook\Extensions\ButtonTemplate;
@@ -172,17 +174,16 @@ $full_name=$firstname.'-'.$lastname;
 $botman->hears('menu', function ($bot) {
 
 
-    $bot->reply(MediaTemplate::create()
-    ->element(MediaAttachmentElement::create('image')
-        ->attachmentId('1543527005693234')
-        ->addButton(ElementButton::create('Tell me more')
-            ->type('postback')
-            ->payload('Tell me more')
-        )
-        ->addButton(ElementButton::create('Documentation')
-            ->url('https://botman.io/')
-        )
-    )
+    $question = Question::create("تأكيد الموعد ")
+    ->addButtons([
+        Button::create(' ✅ تأكيد')->value('yes'),
+        Button::create(' ❎ إلغاء')->value('no')]);
+    
+        $bot->ask($question, function (Answer $answer) {
+            $reponse=$answer->getValue();
+            $bot->reply($reponse);
+
+}
 );});
 
 
