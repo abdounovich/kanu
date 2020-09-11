@@ -17,6 +17,7 @@ use BotMan\Drivers\Facebook\Extensions\MediaAttachmentElement;
 
 $botman = resolve('botman');
 
+$config=Config::get('app.url');
 
 $botman->hears('p', function ( $bot) {
     $user = $bot->getUser();
@@ -62,7 +63,6 @@ $DbUsername=Client::whereFacebook($full_name)->first();
 
 $bot->typesAndWaits(2);
 
-$config=Config::get('app.url');
 
     $bot->reply('مرحبا بك  🙋‍♂️ '.$full_name."\n".'تشرفنا زيارتك لصفحتنا ');
     $bot->typesAndWaits(2);
@@ -172,13 +172,21 @@ $full_name=$firstname.'-'.$lastname;
 });
 
 $botman->hears('menu', function ($bot) {
-    $bot->reply(ButtonTemplate::create('Do you want to know more about BotMan?')
-	->addButton(ElementButton::create('Tell me more')
-	    ->type('postback')
-	    ->payload('tellmemore')
+
+    $user = $bot->getUser();
+    $facebook_id = $user->getId();
+    $firstname = $user->getFirstname();
+    $lastname = $user->getLastname();
+    $full_name=$firstname.'-'.$lastname;
+    $DbUsername=Client::whereFacebook($full_name)->first();
+
+    $bot->reply(ButtonTemplate::create('|||||||||||')
+	->addButton(ElementButton::create('مواعيدي')
+    ->url($config.'/client/'.$DbUsername->slug)
+
 	)
-	->addButton(ElementButton::create('Show me the docs')
-	    ->url('http://botman.io/')
+	->addButton(ElementButton::create('نقاطي')
+    ->url($config.'/client/'.$DbUsername->slug)
 	)
 );
 
