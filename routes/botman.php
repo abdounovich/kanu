@@ -174,12 +174,12 @@ $full_name=$firstname.'-'.$lastname;
 $botman->hears('menu', function ($bot) {
 
 
-    $question = Question::create("تأكيد الموعد ")
+ 
+    
+        $bot->ask( Question::create("تأكيد الموعد ")
     ->addButtons([
         Button::create(' ✅ تأكيد')->value('yes'),
-        Button::create(' ❎ إلغاء')->value('no')]);
-    
-        $bot->ask($question, function (Answer $answer) {
+        Button::create(' ❎ إلغاء')->value('no')]), function (Answer $answer) {
             $reponse=$answer->getValue();
             $bot->reply($reponse);
 
