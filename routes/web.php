@@ -22,6 +22,8 @@ Route::get('/add','AppointmentController@AddPFunction');
 Route::post('/types','TypeController@store');
 Route::get('/types','TypeController@index');
 Route::get('/test','testController@index');
+Route::post('/test','testController@commande');
+
 
 
 Route::get('/delete/{id}','TypeController@supprimer');

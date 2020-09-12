@@ -5,10 +5,27 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Appointment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 
 class testController extends Controller
 {
+
+
+   public function commande(Request $request){
+      
+      $a=Artisan::call($request["commande"]);
+      $a=Artisan::output();
+
+     echo $a;
+   dd();}
    public function index(){
+
+
+return view('test');
+
+
+     
+
   $total='600';
   $somme="0";
  $now=Carbon::now()->addMinute(60);
