@@ -17,6 +17,7 @@ use BotMan\Drivers\Facebook\Extensions\GenericTemplate;
 use BotMan\Drivers\Facebook\Extensions\MediaAttachmentElement;
 
 $this->config=Config::get('app.url');
+$this->config="https://1423b4d1a838.ngrok.io";
 $botman = resolve('botman');
 
 
@@ -55,7 +56,7 @@ $bot->typesAndWaits(2);
 	    ->type('postback')
 	    ->payload('rdv')
 	)
-	->addButton(ElementButton::create('تصفح مواعيدي ')
+	->addButton(ElementButton::create(' 🗒 تصفح مواعيدي ')
 	    ->url($this->config.'/client/'.$DbUsername->slug)
 	)
 );
@@ -76,8 +77,8 @@ $DbUsername=Client::whereFacebook($full_name)->first();
 
 if ($OneApp>0) {
 
-    $bot->reply(ButtonTemplate::create(' عذرا صديقي 😕 '.$full_name ." لقد حجزت موعد من قبل لا يمكنك حجز أكثر من موعد في نفس اليوم ")
-    ->addButton(ElementButton::create('🛍 تصفح مواعيدي  ')
+    $bot->reply(ButtonTemplate::create(' عذرا صديقي 😕 '.$full_name ."\n"." لقد حجزت موعد من قبل لا يمكنك حجز أكثر من موعد في نفس اليوم ")
+    ->addButton(ElementButton::create('🗒 تصفح مواعيدي  ')
     ->url($this->config.'/client/'.$DbUsername->slug)
 
     )

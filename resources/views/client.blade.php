@@ -23,7 +23,12 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery.classycountdown@1.0.1/js/jquery.classycountdown.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
 
-<style>
+<style>body{
+background:url(https://res.cloudinary.com/ds9qfm1ok/image/upload/v1599670310/1_zvsdhh.jpg) ;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
   .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 400px;
@@ -61,18 +66,13 @@ button:hover, a:hover {
 }
 
 
-body{
 
-    style="direction: rtl;background:url(https://res.cloudinary.com/ds9qfm1ok/image/upload/v1599670310/1_zvsdhh.jpg) ;background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;
-}
 </style>
 
 <!-- Optionally add this to use a skin : -->
     <!-- Styles -->
 </head>
-<body>
+<body dir="rtl">
 
 <div class="m-4">
     <div  class=" card bg-success text-white  justify-content-center align-self-center align-items-center" style="opacity: 0.9">
@@ -138,7 +138,7 @@ background-size: cover;
           theme: "white",
       
       // end time
-          end: $.now() +str-3000,
+          end: $.now() +str-3900,
           now: $.now(),
       
       // whether to display the days/hours/minutes/seconds labels.
