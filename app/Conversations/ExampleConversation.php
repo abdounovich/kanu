@@ -68,6 +68,8 @@ if($Tos){
 
     if ($now>$Tos->temps) {
         $this->temps= $this->now;
+        $this->mgg=date("H:i:",strtotime(date($this->temps)));
+
     } 
                
       }
@@ -77,19 +79,25 @@ if($Tos){
 
                 if ($this->now>$this->debut) {
                     $this->temps=$this->now;
+                    $this->mgg=date("H:i:",strtotime(date($this->temps)));
+
                 } 
                              else {
                 $start_time=date("Y-m-d ").$this->debut.":00";
 
                 $this->temps=date("Y-m-d H:i:s",strtotime(date($start_time)));
+                $this->mgg=date("H:i:",strtotime(date($this->temps)));
+
             }}
 
 
             if ($this->min < $this->temps &&  $this->temps < $this->max) {
                 $this->temps=$this->max;
+                $this->mgg=date("H:i:",strtotime(date($this->temps)));
+
                 
               }
-    $this->say(' ⏰ موعد حلاقتك في حوالي : '.  $this->temps);
+    $this->say(' ⏰ موعد حلاقتك في حوالي : '.  $this->mgg);
     $question = Question::create("تأكيد الموعد ")
     ->addButtons([
                 Button::create(' ✅ تأكيد')->value('yes'),
@@ -135,7 +143,7 @@ if($Tos){
                 $app->save(); 
                 $this->say('شكرا لك  '.$this->facebook);
                 $this->say('لقد تم حجز موعدك بنجاح ');
-                $this->say(' ⏰ موعد حلاقتك : '.$this->temps);
+                $this->say(' ⏰ موعد حلاقتك : '.$this->mgg);
                
                
             

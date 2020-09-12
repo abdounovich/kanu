@@ -72,8 +72,17 @@ $lastname = $user->getLastname();
 $full_name=$firstname.'-'.$lastname;
 $OneApp=Appointment::where('facebook',$full_name)
 ->where('ActiveType','1')->count();
+$DbUsername=Client::whereFacebook($full_name)->first();
+
 if ($OneApp>0) {
-$bot->reply('عذرا , لقد حجزت موعد من قبل لا يمكنك حجز أكثر من موعد في نفس اليوم');}
+
+    $bot->reply(ButtonTemplate::create(' عذرا صديقي 😕 '.$full_name ." لقد حجزت موعد من قبل لا يمكنك حجز أكثر من موعد في نفس اليوم ")
+    ->addButton(ElementButton::create('🛍 تصفح مواعيدي  ')
+    ->url($this->config.'/client/'.$DbUsername->slug)
+
+    )
+    
+    );}
 else{
 $app_tot=Appointment::all()->count();
 
@@ -128,7 +137,7 @@ $diff=$total-$somme;
     ->addElements($array)
 ); 
  }else{    
-    $bot->reply(' عذرا صديقي يتم أخذ موعد إبتداءا  من '.$date);
+    $bot->reply(' عذرا صديقي يتم أخذ موعد إبتداءا  من 🧏‍♂️ '.$date);
 }}
 else{
 $complet_message="  أنا آسف صديقي 😕  ".$full_name."\n"." كل الأماكن محجوزة لنهار اليوم ";
