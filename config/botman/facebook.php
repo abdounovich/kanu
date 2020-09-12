@@ -91,7 +91,7 @@ return [
                         [
                             'title' => ' 📆 نقاطي 🎁| مواعيدي',
                             'type' => 'postback',
-                            'url' => 'menu',
+                            'payload' => 'menu',
                         ],
                         [
 
@@ -101,7 +101,7 @@ return [
                         [
                             'title' => ' 💬 تواصل مع المبرمج',
                             'type' => 'web_url',
-                            'url' => 'm.me/merahi.adjalile',
+                            'url' => 'https://www.messenger.com/t/merahi.adjalile',
                         ],
                   [
                             'title' => ' 👨‍🏫 شرح طريقة حجز موعد  ',
