@@ -48,14 +48,14 @@
   <div class="row">
 
     <div class="col p-4 ">
-        <a class="btn btn-danger m-2 p-3 " style="font-size: 30px"  onclick="return confirm('هل أنت متأكد ?')" href="/add">مسح المواعيد</a>
+        <a class="btn btn-danger m-2 p-3 " style="font-size: 30px"  onclick="return confirm('هل أنت متأكد ?')" href="/add">مسح </a>
 
    
   <a id="button" class=" text-white btn btn-info m-2 p-3" style="font-size: 30px"> 
-    اعادة تحميل الصفحة
+    اعادة تحميل 
   </a> 
   <a  href="/types" class=" text-white btn btn-success m-2 p-3" style="font-size: 30px"> 
-أضف أنواع جديدة   </a> 
+الأنواع   </a> 
 </div>
   </div>
 </div>
