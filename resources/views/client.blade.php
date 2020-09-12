@@ -28,13 +28,14 @@ background:url(https://res.cloudinary.com/ds9qfm1ok/image/upload/v1599670310/1_z
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
+font-family: 'Cairo', sans-serif;
+
 }
   .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 400px;
   margin: auto;
   text-align: center;
-  font-family: 'Cairo', sans-serif;
 }
 
 .title {
@@ -110,6 +111,11 @@ button:hover, a:hover {
 <p></p>
           
       </div>
+
+          
+      @else
+      <div class="col col-12 bg-dark text-white m-2  " style="opacity: 0.9"><h4 class="p-4 text-right">لا توجد مواعيد لنهار اليوم</h4></div>
+     
   @endif
     
 

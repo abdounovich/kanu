@@ -17,7 +17,6 @@ use BotMan\Drivers\Facebook\Extensions\GenericTemplate;
 use BotMan\Drivers\Facebook\Extensions\MediaAttachmentElement;
 
 $this->config=Config::get('app.url');
-$this->config="https://1423b4d1a838.ngrok.io";
 $botman = resolve('botman');
 
 
@@ -174,12 +173,12 @@ $botman->hears('menu', function ($bot) {
     $full_name=$firstname.'-'.$lastname;
     $DbUsername=Client::whereFacebook($full_name)->first();
 
-    $bot->reply(ButtonTemplate::create('.')
-	->addButton(ElementButton::create('مواعيدي')
+    $bot->reply(ButtonTemplate::create('  الرجاء إختيار زر من القائمة 👇👇 ')
+	->addButton(ElementButton::create(' 📅 مواعيدي')
     ->url($this->config.'/client/'.$DbUsername->slug)
 
 	)
-	->addButton(ElementButton::create('نقاطي')
+	->addButton(ElementButton::create(' 🎁 نقاطي')
     ->url($this->config.'/client/'.$DbUsername->slug)
 	)
 );
