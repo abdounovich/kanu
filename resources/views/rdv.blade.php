@@ -51,7 +51,7 @@
         <a class="btn btn-danger " onclick="return confirm('هل أنت متأكد ?')" href="/add">مسح المواعيد</a>
 
    
-  <a id="button" class=" text-white btn btn-info"> 
+  <a id="button" class=" text-white btn btn-info p-3"> 
     اعادة تحميل الصفحة
   </a> 
   <a  href="/types" class=" text-white btn btn-success"> 
