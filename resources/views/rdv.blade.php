@@ -11,7 +11,6 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
-
     <!-- Styles -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
@@ -46,16 +45,10 @@
 
 <div class="container">
   <div class="row">
-
     <div class="col p-4 ">
-        <a class="btn btn-danger m-2 p-3 " style="font-size: 30px"  onclick="return confirm('هل أنت متأكد ?')" href="/add">مسح </a>
-
-   
-  <a id="button" class=" text-white btn btn-info m-2 p-3" style="font-size: 30px"> 
-    اعادة تحميل 
-  </a> 
-  <a  href="/types" class=" text-white btn btn-success m-2 p-3" style="font-size: 30px"> 
-الأنواع   </a> 
+  <a class="btn btn-danger m-2 p-3 " style="font-size: 30px"  onclick="return confirm('هل أنت متأكد ?')" href="/add">مسح </a>
+  <a id="button" class=" text-white btn btn-info m-2 p-3" style="font-size: 30px"> اعادة تحميل</a> 
+  <a href="/types" class=" text-white btn btn-success m-2 p-3" style="font-size: 30px">الأنواع</a> 
 </div>
   </div>
 </div>

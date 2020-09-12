@@ -17,7 +17,6 @@ use BotMan\Drivers\Facebook\Extensions\GenericTemplate;
 use BotMan\Drivers\Facebook\Extensions\MediaAttachmentElement;
 
 $this->config=Config::get('app.url');
-$this->config='https://8ea1b184c616.ngrok.io';
 $botman = resolve('botman');
 
 
@@ -178,6 +177,51 @@ $botman->hears('menu', function ($bot) {
   });
 
 
-$botman->fallback(function ($bot) {
-    $bot->reply('sorry');
+
+  $botman->hears('steps', function($bot) {
+
+    $bot->reply(' 🤭  لتسهيل عمليةحجز موعد  إختصرتها لك في ثلاثة مراحل بسيطة للغاية  😁 : ');
+    $bot->typesAndWaits(1);
+    
+    $bot->reply('1⃣ :  اختر نوع الحلاقةواضغط على زر احجز الموجود أسفل كل صورة ');
+    
+    $bot->typesAndWaits(1);
+    
+    
+    
+    $bot->reply('4⃣2 :  ثم اضغط على زر تأكيد الحجز  ');
+    $bot->typesAndWaits(1);
+    $bot->reply('بعد قيامك بهاته المراحل  تكون قد أتتمت عملية الحجز  ');
+    
+    $bot->reply(' يمكنك بعدها معرفة الزمن المتبقي لموعدك بالضغط على زر مواعيدي / نقاطي من القائمة  ');
+    $bot->typesAndWaits(1);
+    
+    $bot->reply(ButtonTemplate::create('يمكنك الآن حجز موعدك  بكل سهولة  😍 ')
+    ->addButton(ElementButton::create('🛍 إحجز موعدك الأن ')
+        ->type('postback')
+        ->payload('rdv')
+    )
+    
+    );
+    
+    
+    
+    
+    
+    });
+  $botman->fallback(function($bot) {
+    $bot->reply(ButtonTemplate::create('عذرًا ، لم أستطع فهمك 😕 '."\n". 'هذه قائمة بالأوامر التي أفهمها:')
+	->addButton(ElementButton::create('🛍 احجز موعد ')
+	    ->type('postback')
+	    ->payload('rdv')
+    )
+    ->addButton(ElementButton::create('💬 استفسار ')
+    ->url('https://www.messenger.com/t/merahi.adjalile')
+
+    )
+    ->addButton(ElementButton::create('🤔 طريقة حجز موعد ')
+	    ->type('postback')
+	    ->payload('steps')
+	)
+);
 });
