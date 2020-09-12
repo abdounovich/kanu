@@ -48,8 +48,8 @@
   <div class="row">
 
     <div class="col p-4 ">
-        <h3><a class="btn btn-danger p-3 "  onclick="return confirm('هل أنت متأكد ?')" href="/add">مسح المواعيد</a>
-        </h3>
+        <a class="btn btn-danger p-3 "  onclick="return confirm('هل أنت متأكد ?')" href="/add">مسح المواعيد</a>
+
    
   <a id="button" class=" text-white btn btn-info p-3"> 
     اعادة تحميل الصفحة
