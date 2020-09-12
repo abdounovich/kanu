@@ -2,6 +2,7 @@
 
 namespace App\Conversations;
 
+
 use App\Type;
 use DateTime;
 use App\Client;
@@ -31,60 +32,83 @@ class ExampleConversation extends Conversation
 
     }
     public function askType()
-    {
-
-
+    {   $this->somme=0;
         $this->total=0;
         $this->debut=0;
- 
+        $this->temps=0;
         $this->date=date("l");
         if ($this->date=='Friday') {
             $this->debut="09:00";
+            $this->mx="15:00";
+            $this->mi="12:00";
+           
             $this->total="600";
         }elseif($this->date=='Saturday'){
-            $this->debut="09:00";
-            $this->total="720"; 
+             $this->total="720";
+             $this->debut="09:00";
+             $this->mx="13:00";
+             $this->mi="12:00";   
         }else{
             $this->total="360";
-            $this->debut="21:00";
+            $this->debut="16:00";
+            $this->mx="13:00";
+            $this->mi="12:00";
         }
 
-        
-$Tos=Appointment::all();
-$this->app_tot=Appointment::all()->count();
-$this->somme=0;
-foreach ($Tos as $To) {
-$this->somme=$this->somme+$To->type->temps;
-}
+        $this->max=date("Y-m-d ").$this->mx.":00";
+        $this->max=date("Y-m-d H:i:s",strtotime(date($this->max)));
+        $this->min=date("Y-m-d ").$this->mi.":00";
+        $this->min=date("Y-m-d H:i:s",strtotime(date($this->min)));
 
-$this->diff=$this->total-$this->somme;
+$Tos=Appointment::where('ActiveType','1')->latest('created_at')->first();
+date_default_timezone_set("Africa/Algiers");
 
-       $rest= new Carbon($this->debut);
-                $rest->addMinutes($this->somme-10);
-                $Lerestant=date_format($rest,"H").'h'.date_format($rest,"i");
+    $this->now=date("Y-m-d H:i:s");
+if($Tos){
+
+    if ($now>$Tos->temps) {
+        $this->temps= $this->now;
+    } 
+               
+      }
+            else {
+
+               
+
+                if ($this->now>$this->debut) {
+                    $this->temps=$this->now;
+                } 
+                             else {
+                $start_time=date("Y-m-d ").$this->debut.":00";
+
+                $this->temps=date("Y-m-d H:i:s",strtotime(date($start_time)));
+            }}
+
+
+            if ($this->min < $this->temps &&  $this->temps < $this->max) {
+                $this->temps=$this->max;
+                
+              }
+    $this->say(' ⏰ موعد حلاقتك في حوالي : '.  $this->temps);
+    $question = Question::create("تأكيد الموعد ")
+    ->addButtons([
+                Button::create(' ✅ تأكيد')->value('yes'),
+                Button::create(' ❎ إلغاء')->value('no')]);
+                return $this->ask($question, function (Answer $answer) {
+                    $this->reponse=$answer->getValue();
+                    if ($answer->isInteractiveMessageReply()) {
+                    if ($this->reponse==="yes") {
+                       $this->stepTwo();}
+                    else{ $this->say('حسنا ');
+                            }
+                    }
+                });
+
+
+
 
                 
-                    $this->say(' ⏰ موعد حلاقتك في حوالي : '.$Lerestant);
-
-                    $question = Question::create("تأكيد الموعد ")
-                    ->addButtons([
-                        Button::create(' ✅ تأكيد')->value('yes'),
-                        Button::create(' ❎ إلغاء')->value('no')]);
-                    
-                        return $this->ask($question, function (Answer $answer) {
-                            $this->reponse=$answer->getValue();
-
-                            if ($answer->isInteractiveMessageReply()) {
-                            if ($this->reponse==="yes") {
-
-                               $this->stepTwo();
-                            }
-                            else{ $this->say('حسنا ');
-                                        }
-                               
-                               
-                            }
-                        });
+                  
       
        
     }
@@ -106,16 +130,12 @@ $this->diff=$this->total-$this->somme;
                 $app->type_id=intval($this->type);
                 $app->ActiveType="1";
                 $app->client_id=$client->id;
-                $rest= new Carbon($this->debut);
-                $rest->addMinutes($this->somme);
-                $app->temps=$rest;
+                $app->temps=$this->temps;
                 $app->fb_id=$this->fb_id;
                 $app->save(); 
-                $rest->subMinutes(10);
-                $Lerestant=date_format($rest,"H").'h'.date_format($rest,"i");
                 $this->say('شكرا لك  '.$this->facebook);
                 $this->say('لقد تم حجز موعدك بنجاح ');
-                $this->say(' ⏰ موعد حلاقتك : '.$Lerestant);
+                $this->say(' ⏰ موعد حلاقتك : '.$this->temps);
                
                
             

@@ -4,6 +4,7 @@ use App\Client;
 use Carbon\Carbon;
 use App\Appointment;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Config;
 use App\Conversations\ExampleConversation;
 use App\Http\Controllers\BotManController;
 use BotMan\BotMan\Messages\Outgoing\Question;
@@ -15,32 +16,22 @@ use BotMan\Drivers\Facebook\Extensions\ButtonTemplate;
 use BotMan\Drivers\Facebook\Extensions\GenericTemplate;
 use BotMan\Drivers\Facebook\Extensions\MediaAttachmentElement;
 
+$this->config=Config::get('app.url');
+$this->config='https://8ea1b184c616.ngrok.io';
 $botman = resolve('botman');
 
-$config=Config::get('app.url');
 
-$botman->hears('p', function ( $bot) {
-    $user = $bot->getUser();
-    // Access last name
-// Access last name
-$picture=$user->getId();
-$bot->reply('id '.$picture);
-});
+
 
 $botman->hears('GET_STARTED', function ( $bot) {
     $user = $bot->getUser();
-
     $facebook_id = $user->getId();
-
     // Access last name
     $firstname = $user->getFirstname();
 // Access last name
 $lastname = $user->getLastname();
 $full_name=$firstname.'-'.$lastname;
 // Access Username
-
-
-
 $DbUsername=Client::whereFacebook($full_name)->count();
 if ($DbUsername=="0") {
     $client=new Client();
@@ -55,25 +46,18 @@ if ($DbUsername=="0") {
 
 
 }
-else
-{
 
-}
 $DbUsername=Client::whereFacebook($full_name)->first();
-
 $bot->typesAndWaits(2);
-
-
     $bot->reply('مرحبا بك  🙋‍♂️ '.$full_name."\n".'تشرفنا زيارتك لصفحتنا ');
     $bot->typesAndWaits(2);
-
     $bot->reply(ButtonTemplate::create(' كيف يمكننا خدمتك ؟ ')
 	->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
 	    ->type('postback')
 	    ->payload('rdv')
 	)
 	->addButton(ElementButton::create('تصفح مواعيدي ')
-	    ->url($config.'/client/'.$DbUsername->slug)
+	    ->url($this->config.'/client/'.$DbUsername->slug)
 	)
 );
 });
@@ -100,32 +84,32 @@ if ($date=='Friday') {
     $total="600";
     $debut="09:00";
 
-    $fin="22:00";
  }elseif($date=='Saturday'){
      $total="720";
      $debut="09:00";
 
  }else{
      $total="360";
-     $debut="01:00";
+     $debut="16:00";
 
  }
+ $debut="02:00";
 
- $Tos=Appointment::all();
+ $Tos=Appointment::where('ActiveType','1')->get();
 $somme=0;
 foreach ($Tos as $To) {
 $somme=$somme+$To->type->temps;
 }
 
- if ($somme<$total) {    
+ if ($somme<=$total) {    
     date_default_timezone_set("Africa/Algiers");
     $date = new Carbon($debut);
     $date->subMinute(120);
     $date=$date->format('H:i:s');
     $heure_actuel=$dt=date("H:i:s");
 if ($heure_actuel>=$date){
-    $Tos=Appointment::all();
-    $app_tot=Appointment::all()->count();
+    $Tos=Appointment::where('ActiveType','1')->get();
+    $app_tot=Appointment::where('ActiveType','1')->count();
     $somme=0;
     foreach ($Tos as $To) {
         $somme=$somme+$To->type->temps;
@@ -150,10 +134,11 @@ $diff=$total-$somme;
 else{
 $complet_message="  أنا آسف صديقي 😕  ".$full_name."\n"." كل الأماكن محجوزة لنهار اليوم ";
     $bot->reply($complet_message);
-
 }
 }
 });
+
+
 
 
 
@@ -180,13 +165,13 @@ $botman->hears('menu', function ($bot) {
     $full_name=$firstname.'-'.$lastname;
     $DbUsername=Client::whereFacebook($full_name)->first();
 
-    $bot->reply(ButtonTemplate::create('|||||||||||')
+    $bot->reply(ButtonTemplate::create('.')
 	->addButton(ElementButton::create('مواعيدي')
-    ->url($config.'/client/'.$DbUsername->slug)
+    ->url($this->config.'/client/'.$DbUsername->slug)
 
 	)
 	->addButton(ElementButton::create('نقاطي')
-    ->url($config.'/client/'.$DbUsername->slug)
+    ->url($this->config.'/client/'.$DbUsername->slug)
 	)
 );
 
