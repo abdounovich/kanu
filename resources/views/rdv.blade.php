@@ -48,13 +48,13 @@
   <div class="row">
 
     <div class="col p-4 ">
-        <a class="btn btn-danger m-2 p-3 "  onclick="return confirm('هل أنت متأكد ?')" href="/add">مسح المواعيد</a>
+        <a class="btn btn-danger m-2 p-3 h3 "  onclick="return confirm('هل أنت متأكد ?')" href="/add">مسح المواعيد</a>
 
    
-  <a id="button" class=" text-white btn btn-info m-2 p-3"> 
+  <a id="button" class=" text-white btn btn-info h3 m-2 p-3"> 
     اعادة تحميل الصفحة
   </a> 
-  <a  href="/types" class=" text-white btn btn-success m-2 p-3"> 
+  <a  href="/types" class=" text-white h3 btn btn-success m-2 p-3"> 
 أضف أنواع جديدة   </a> 
 </div>
   </div>
@@ -70,7 +70,7 @@
 <div class="container">
   <div class="row">
     @if ($Actif_appointments->count()=='0')
-        <div  class="col col-12 badge-dark " style="opacity: 0.9"><h2 class="p-4 float-right">لا توجد مواعيد لنهار اليوم</h2></div>
+        <div  class="col col-12 badge-dark  " style="opacity: 0.9"><h2 class="p-4 float-right">لا توجد مواعيد لنهار اليوم</h2></div>
    
        
    @else
