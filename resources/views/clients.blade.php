@@ -114,7 +114,12 @@
 </div>
 
 
-
+<div class=" container">
+  <div class="row">
+  <div class=" justify-content-center">{{$clients->links()}}
+ </div>
+</div> 
+</div>
 
 
 

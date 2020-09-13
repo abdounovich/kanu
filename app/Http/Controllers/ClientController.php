@@ -85,7 +85,7 @@ $config=Config::get('botman.facebook.token');
     public function show(Client $client)
     {
         
-        $clients=Client::latest()->paginate(10); 
+        $clients=Client::latest()->paginate(2); 
         $config=Config::get('botman.facebook.token');
 return view("clients")->with('clients',$clients)
 ->with('config',$config);
