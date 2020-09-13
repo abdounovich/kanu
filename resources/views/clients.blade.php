@@ -42,12 +42,12 @@ font-family: 'Cairo', sans-serif;
         <div class="row">
             <h2 class=" text-white p-2">قائمة الزبائن : </h2>
             <table class="table table-dark table-hover" style="opacity: 0.9 ">
- <thead class=" bg-success text-center">
+ <thead class=" bg-success text-right">
 
                     <tr>
                    
+                      <th> الفيسبوك </th>
                       <th> النقاط</th>
-                      <th> الصورة</th>
                       <th> </th>
                      
                    
