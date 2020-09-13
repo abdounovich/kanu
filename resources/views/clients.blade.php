@@ -93,7 +93,7 @@
         @endphp
         <tr>
           <th scope="row">{{$counter}}</th>
-          <td class="align-middle"><img class=" img-thumbnail border  rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+          <td class="align-middle"><img class="  border border-white   rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
             {{$client->facebook}}</td>
          
         <td class="align-middle">
