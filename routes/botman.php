@@ -125,7 +125,7 @@ if ($heure_actuel>=$date){
         $somme=$somme+$To->type->temps;
     }
 $diff=$total-$somme;
-    $types=Type::where('temps','<=',$diff)->get();
+    $types=Type::all();
     $array=array();
     foreach ($types as $type ) {
         $array[]= Element::create($type->type)
