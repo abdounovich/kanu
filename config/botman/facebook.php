@@ -1,5 +1,4 @@
 <?php
-$fb="m.me/theAjmoda";
 
 return [
 

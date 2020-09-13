@@ -20,8 +20,8 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-       $Actif_appointments=Appointment::where('ActiveType','1')->get();
-       $Inactif_appointments=Appointment::where('ActiveType','0')->paginate(5);
+       $Actif_appointments=Appointment::where('ActiveType','1')->latest()->get();
+       $Inactif_appointments=Appointment::where('ActiveType','0')->latest()->paginate(5);
     $config=Config::get('botman.facebook.token');
  
        return view("rdv")
