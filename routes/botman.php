@@ -63,13 +63,22 @@ $bot->typesAndWaits(2);
   
 
 $botman->hears('rdv', function($bot) {
+    $DbUsername=Client::whereFacebook($full_name)->count();
+if ($DbUsername=="0") {
+    $client=new Client();
+    $client->facebook=$full_name;
+    $client->slug=Str::random(10) ;
 
-    $user = $bot->getUser();
-    // Access last name
-    $firstname = $user->getFirstname();
-// Access last name
-$lastname = $user->getLastname();
-$full_name=$firstname.'-'.$lastname;
+    $client->points='5';
+    $client->fb_id=$facebook_id;
+
+    $client->save();
+
+
+
+}
+
+
 $OneApp=Appointment::where('facebook',$full_name)
 ->where('ActiveType','1')->count();
 $DbUsername=Client::whereFacebook($full_name)->first();
