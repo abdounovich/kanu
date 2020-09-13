@@ -60,7 +60,7 @@ font-family: 'Cairo', sans-serif;
                     
                          <td class="align-middle">{{$client->facebook}}</td>
                   
-                         <td class="align-middle"><span class="badge-success">{{$client->points}}</span></td>
+                         <td class="align-middle"><span class=" badge badge-success">{{$client->points}}</span></td>
                          <td class="align-middle">   @php
 
 
