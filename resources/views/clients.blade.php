@@ -40,7 +40,7 @@ font-family: 'Cairo', sans-serif;
 
     <div class=" container mt-5">
         <div class="row">
-            <h2 class=" text-white p-2">أنواع الحلاقة :</h2>
+            <h2 class=" text-white p-2">قائمة الزبائن : </h2>
             <table class="table table-dark table-hover" style="opacity: 0.9 ">
  <thead class=" bg-success text-center">
 
@@ -60,7 +60,7 @@ font-family: 'Cairo', sans-serif;
                     
                          <td class="align-middle">{{$client->facebook}}</td>
                   
-                         <td class="align-middle"><span class=" badge badge-success">{{$client->points}}</span></td>
+                         <td class="align-middle"><span class=" badge badge-success p-2">{{$client->points}}</span></td>
                          <td class="align-middle">   @php
 
 
