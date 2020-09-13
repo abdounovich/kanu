@@ -67,7 +67,7 @@ font-family: 'Cairo', sans-serif;
                                       $picture = $userInfo['profile_pic'] ;
                             
                             @endphp
-                            <img src="{{$picture}}" alt="John"  width="100" height="100" class="   align-self-center m-4 border border-white border-1 ">
+                            <img src="{{$picture}}" alt="John"  width="50" height="50" class=" float-right m-4 border border-white border-2 ">
                             {{$client->facebook}}<td>  
      <td class="align-middle"><span class=" badge badge-success p-2">{{$client->points}}</span></td>
                         
