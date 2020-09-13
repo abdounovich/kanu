@@ -45,7 +45,7 @@ font-family: 'Cairo', sans-serif;
   <a class="btn btn-danger m-2 p-3 " style="font-size: 30px"  onclick="return confirm('هل أنت متأكد ?')" href="/add">مسح </a>
   <a id="button" class=" text-white btn btn-info m-2 p-3" style="font-size: 30px"> اعادة تحميل</a> 
   <a href="/types" class=" text-white btn btn-success m-2 p-3" style="font-size: 30px">الأنواع</a> 
-  <a href="/clients" class=" text-white btn btn-warning m-2 p-3" style="font-size: 30px">قائمة الزبائن</a> 
+  <a href="/clients" class=" text-white btn btn-warning m-2 p-3" style="font-size: 30px"> الزبائن</a> 
 
 </div>
   </div>
