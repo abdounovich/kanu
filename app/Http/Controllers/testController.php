@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Type;
 use Carbon\Carbon;
 use App\Appointment;
 use Illuminate\Http\Request;
@@ -19,6 +20,12 @@ class testController extends Controller
      echo $a;
    dd();}
    public function index(){
+$all=Type::latest()->get();
+ foreach ($all as $key ) {
+  echo $key->type."<p></p>";
+  
+ } 
+return;
 
 
 return view('test');
