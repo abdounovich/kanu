@@ -71,7 +71,7 @@
     <table class="table table-striped table-dark"style="opacity:0.9">
       <thead class=" bg-success text-right">
         <tr>
-          <th scope="col  text-center">#</th>          
+          <th scope="col ">#</th>          
 
           <th scope="col">الفيسبوك</th>
           <th scope="col">عدد النقاط 
