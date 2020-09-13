@@ -87,7 +87,7 @@ button:hover, a:hover {
                   $picture = $userInfo['profile_pic'] ;
         
         @endphp
-        <img src="{{$picture}}" alt="John"  width="100" height="100" class="   align-self-center m-4 img-thumbnail ">
+        <img src="{{$picture}}" alt="John"  width="100" height="100" class=" align-self-center m-4 border border-white ">
         <h3 class="mt-2 bg-dark">{{$client->facebook}}</h3>
       
     <div><div class="h4">عدد نقاطي :            <span class="badge badge-dark">{{$client->points}} نقطة  </span></div>
