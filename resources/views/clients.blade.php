@@ -67,7 +67,7 @@
   
        
   
-    <h3 class="p-2 text-white">مواعيد اليوم </h3>
+    <h3 class="p-2 text-white">قائمة الزبائن :  </h3>
     <table class="table table-striped table-dark"style="opacity:0.9">
       <thead class=" bg-success text-right">
         <tr>
@@ -76,7 +76,7 @@
           <th scope="col">الفيسبوك</th>
           <th scope="col">عدد النقاط 
           </th>
-          <th scope="col">تاريخ الحجز </th>
+          <th scope="col">تاريخ التسجيل </th>
 
         </tr>
       </thead>
