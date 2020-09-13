@@ -45,7 +45,6 @@ font-family: 'Cairo', sans-serif;
  <thead class=" bg-success text-center">
 
                     <tr>
-                      <th>الفيسبوك   </th>
                    
                       <th> النقاط</th>
                       <th> الصورة</th>
@@ -58,10 +57,8 @@ font-family: 'Cairo', sans-serif;
                    @foreach ($clients as $client)
                     <tr class=" align-items-center text-center">
                     
-                         <td class="align-middle">{{$client->facebook}}</td>
                   
-                         <td class="align-middle"><span class=" badge badge-success p-2">{{$client->points}}</span></td>
-                         <td class="align-middle">   @php
+                        <td class="align-middle">   @php
 
 
                             ini_set("allow_url_fopen", 1);
@@ -71,8 +68,9 @@ font-family: 'Cairo', sans-serif;
                             
                             @endphp
                             <img src="{{$picture}}" alt="John"  width="100" height="100" class="   align-self-center m-4 border border-white border-1 ">
-                            <h3 class="mt-2 bg-dark">{{$client->facebook}}</h3><td>  
-   
+                            {{$client->facebook}}<td>  
+     <td class="align-middle"><span class=" badge badge-success p-2">{{$client->points}}</span></td>
+                        
 
 
   
