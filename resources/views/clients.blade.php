@@ -60,18 +60,17 @@ font-family: 'Cairo', sans-serif;
                     
                          <td class="align-middle">{{$client->facebook}}</td>
                   
-                         <td class="align-middle">{{$client->points}}</td>
+                         <td class="align-middle"><span class="badge-success">{{$client->points}}</span></td>
                          <td class="align-middle">   @php
 
 
                             ini_set("allow_url_fopen", 1);
-                            
                                           $userInfoData=file_get_contents('https://graph.facebook.com/v2.6/'.$client->fb_id.'?fields=profile_pic&access_token='.$config);
                                           $userInfo = json_decode($userInfoData, true);
                                       $picture = $userInfo['profile_pic'] ;
                             
                             @endphp
-                            <img src="{{$picture}}" alt="John"  width="100" height="100" class="   align-self-center m-4 img-thumbnail ">
+                            <img src="{{$picture}}" alt="John"  width="100" height="100" class="   align-self-center m-4 border border-white border-1 ">
                             <h3 class="mt-2 bg-dark">{{$client->facebook}}</h3><td>  
    
 
