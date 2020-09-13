@@ -78,8 +78,10 @@
           <th scope="col">#</th>          
 
           <th scope="col">الفيسبوك</th>
-          <th scope="col">عدد النقاط 
-          </th>
+          <th scope="col">عدد النقاط </th>
+          
+          <th scope="col">نوع الحلاقة </th>
+
           <th scope="col">الموعد  </th>
           <th scope="col">تاريخ الحجز </th>
 
@@ -106,6 +108,7 @@
         <td class="align-middle">
           <span class="badge badge-success badge-pill p-2">{{$Actif_appointment->client->points}}</span> 
         </td>
+        <td class="align-middle">{{$Actif_appointment->type->type}}</td>
          <td class="align-middle">@php $demain = date('H:i', strtotime($Actif_appointment->temps));
           echo $demain;
           @endphp</td>
