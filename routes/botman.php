@@ -65,7 +65,13 @@ $bot->typesAndWaits(2);
 $botman->hears('rdv', function($bot) {
  
 
-
+    $user = $bot->getUser();
+    $facebook_id = $user->getId();
+    // Access last name
+    $firstname = $user->getFirstname();
+// Access last name
+$lastname = $user->getLastname();
+$full_name=$firstname.'-'.$lastname;
 $OneApp=Appointment::where('facebook',$full_name)
 ->where('ActiveType','1')->count();
 $DbUsername=Client::whereFacebook($full_name)->first();
