@@ -52,7 +52,7 @@
 
 
      
-<div class="p-2 m-5 mb-5"> <a class="btn btn-dark float-right rounded-circle text-success " ><i class=" p-1 fa fa-bars fa-4x " data-toggle="collapse" data-target="#demo"></i>
+<div class="p-2 m-5  d-flex justify-content-center"> <a class="btn btn-dark  rounded-circle text-success " ><i class=" p-1 fa fa-bars fa-4x " data-toggle="collapse" data-target="#demo"></i>
 </a></div>
        
           <div id="demo" class="collapse m-5 p-4">
@@ -64,7 +64,7 @@
 
 <a href="/types" class=" col col-2 text-white btn btn-success m-3 p-3" style="font-size: 60px"><i class=" p-2 fa fa-server"></i></a> 
             <a href="/clients" class="col col-2  text-white btn btn-info m-3 p-3" style="font-size: 60px"> <i class=" p-2 fa fa-users"></i></a> 
-                      <a class=" col col-2 btn btn-danger m-3 p-3 " style="font-size: 60px"  onclick="return confirm('هل أنت متأكد ?')" href="/add"><i class=" p-2 fa fa-power-off"></i> </a>
+                      <a class=" col col-2 btn btn-danger m-3 p-3 " style="font-size: 60px" data-toggle="modal" ><i class=" p-2 fa fa-power-off"></i> </a>
             <a id="button" class="col col-2  text-white btn btn-warning m-3 p-3"  style="font-size: 60px"> <i class=" p-2 fa fa-refresh"></i></a> 
             
 
@@ -73,6 +73,31 @@
           </div>
             </div>
           </div> </div>
+
+
+
+
+
+          <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">تأكيد العملية  </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       النقاط  بالضغط على زر تأكيد سيتم إفراغ جميع المواعيد المحجوزة لنهار اليوم ومنح الزبائن 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">إلغـــاء</button>
+        <a href="/add" class="btn btn-danger">تــأكيد العملية</a>
+      </div>
+    </div>
+  </div>
+</div>
         <div class="container">
             @yield('content')
         </div>
