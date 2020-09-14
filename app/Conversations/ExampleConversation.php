@@ -146,7 +146,7 @@ if($Tos){
                 $app->save(); 
                 $this->say('شكرا لك  '.$this->facebook);
                 $this->say('لقد تم حجز موعدك بنجاح ');
-                $this->say(ButtonTemplate::create('  الرجاء إختيار زر من القائمة 👇👇 ')
+              /*   $this->say(ButtonTemplate::create('  الرجاء إختيار زر من القائمة 👇👇 ')
                 ->addButton(ElementButton::create(' 📅 مواعيدي')
                 ->url($this->config.'/client/'.$client->slug)
             
@@ -154,7 +154,7 @@ if($Tos){
                 ->addButton(ElementButton::create(' 🎁 نقاطي')
                 ->url($this->config.'/client/'.$client->slug)
                 )
-            );
+            ); */
                 $this->say(' ⏰ موعد حلاقتك : '.$this->mgg);
                
                
