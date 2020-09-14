@@ -1,55 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta  name="viewport" content="width= {screenWidth}">
 
-   
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>      
-    <script src="{{ asset('js/app.js') }}" type="text/js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
+@extends('layouts.master')
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
-<style>
-body{
-
-background:url(https://res.cloudinary.com/ds9qfm1ok/image/upload/v1599670310/1_zvsdhh.jpg) ;background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;
-font-family: 'Cairo', sans-serif;
-}
-    
-</style>
-</head>
-<body  dir="rtl">
-<div>   @if ($errors->any())
-  <div class="alert alert-danger">
-    <ul>
-        @foreach ($errors->all() as $error)
-          <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-  </div><br />
-@endif</div>
+@section('title', 'types_page')
 
 
-<div class="container">
-  <div class="row">
-    <div class="col p-4 ">
-  <a class="btn btn-danger m-2 p-3 " style="font-size: 30px"  onclick="return confirm('هل أنت متأكد ?')" href="/add">مسح </a>
-  <a id="button" class=" text-white btn btn-info m-2 p-3" style="font-size: 30px"> اعادة تحميل</a> 
-  <a href="/types" class=" text-white btn btn-success m-2 p-3" style="font-size: 30px">الأنواع</a> 
-  <a href="/clients" class=" text-white btn btn-warning m-2 p-3" style="font-size: 30px"> الزبائن</a> 
 
-</div>
-  </div>
-</div>
+@section('content')
+
+
+
+
+
+
+
     <div class=" container mt-5">
         <div class="row">
             <h2 class=" text-white p-2">أنواع الحلاقة :</h2>
@@ -183,9 +146,6 @@ font-family: 'Cairo', sans-serif;
 
 
    
+   
 
-    <script src="{{ asset('js/app.js') }}" type="text/js"></script>
-
-
-</body>
-</html>
+@stop
