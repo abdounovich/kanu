@@ -101,7 +101,7 @@ if($Tos){
 
                 
               }
-    $this->say(' ⏰ موعد حلاقتك في حوالي : '.  $this->mgg);
+    $this->say(' ⏰ موعد حلاقتك في حوالي  '.  $this->mgg);
     $question = Question::create("تأكيد الموعد ")
     ->addButtons([
                 Button::create(' ✅ تأكيد')->value('yes'),
@@ -147,7 +147,7 @@ if($Tos){
                 $app->save(); 
                 $this->say('شكرا لك  '.$this->facebook);
                 $this->say('لقد تم حجز موعدك بنجاح ');
-                $this->say(' ⏰ موعد حلاقتك : '.$this->mgg);
+                $this->say(' ⏰ موعد حلاقتك  '.$this->mgg);
                
                
             
