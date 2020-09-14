@@ -16,6 +16,7 @@ use BotMan\Drivers\Facebook\Extensions\Element;
 use BotMan\BotMan\Messages\Outgoing\Actions\Button;
 use BotMan\Drivers\Facebook\Extensions\ElementButton;
 use BotMan\BotMan\Messages\Conversations\Conversation;
+use BotMan\Drivers\Facebook\Extensions\ButtonTemplate;
 use BotMan\Drivers\Facebook\Extensions\GenericTemplate;
 
 class ExampleConversation extends Conversation
@@ -54,6 +55,7 @@ class ExampleConversation extends Conversation
             $this->mx="13:00";
             $this->mi="12:00";
         }
+        $this->config=Config::get('app.url');
 
         $this->max=date("Y-m-d ").$this->mx.":00";
         $this->max=date("Y-m-d H:i:s",strtotime(date($this->max)));
@@ -110,7 +112,7 @@ if($Tos){
                     if ($answer->isInteractiveMessageReply()) {
                     if ($this->reponse==="yes") {
                        $this->stepTwo();}
-                    else{ $this->say('حسنا ');
+                    else{ $this->say('لقد تم إلغاء موعدك بنجاح  ');
                             }
                     }
                 });
@@ -146,6 +148,15 @@ if($Tos){
                 $app->save(); 
                 $this->say('شكرا لك  '.$this->facebook);
                 $this->say('لقد تم حجز موعدك بنجاح ');
+                $this->say(ButtonTemplate::create('  الرجاء إختيار زر من القائمة 👇👇 ')
+                ->addButton(ElementButton::create(' 📅 مواعيدي')
+                ->url($this->config.'/client/'.$client->slug)
+            
+                )
+                ->addButton(ElementButton::create(' 🎁 نقاطي')
+                ->url($this->config.'/client/'.$client->slug)
+                )
+            );
                 $this->say(' ⏰ موعد حلاقتك : '.$this->mgg);
                
                
