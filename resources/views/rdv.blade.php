@@ -18,7 +18,7 @@
 <div class="container">
   <div class="row mt-5">
     @if ($Actif_appointments->count()=='0')
-        <div  class="col col-12 bg-dark text-white  " style="opacity: 0.9"><h2 class="p-4 float-right">لا توجد مواعيد لنهار اليوم</h2></div>
+        <div  class="col col-12 bg-dark text-white mt-5  " style="opacity: 0.9"><h2 class="p-4 float-right">لا توجد مواعيد لنهار اليوم</h2></div>
    
        
    @else
