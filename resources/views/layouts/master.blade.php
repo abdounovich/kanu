@@ -51,7 +51,6 @@
           @endif</div>
 
 
-     
 <div class="p-2 m-5"> <a class="btn float-right  btn-dark rounded-circle text-success " ><i class=" p-1 fa fa-bars fa-4x " data-toggle="collapse" data-target="#demo"></i>
 </a></div>
        
