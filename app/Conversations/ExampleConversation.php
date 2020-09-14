@@ -68,7 +68,7 @@ if($Tos){
 
     if ($this->now>$Tos->temps) {
         $this->temps= $this->now;
-        $this->mgg=date("H:i:",strtotime(date($this->temps)));
+        $this->mgg=date("H:i",strtotime(date($this->temps)));
 
     } 
                
