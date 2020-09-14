@@ -58,7 +58,7 @@
           
        <div class="container  ">
             <div class="row ">
-              <div class="col p-4 btn-group ">
+              <div class="col p-4  ">
                 <a class=" col col-2 btn btn-primary m-3 p-3 " style="font-size: 60px"   href="/home"><i class=" p-2 fa fa-home"></i> </a>
 
 <a href="/types" class=" col col-2 text-white btn btn-success m-3 p-3" style="font-size: 60px"><i class=" p-2 fa fa-server"></i></a> 
