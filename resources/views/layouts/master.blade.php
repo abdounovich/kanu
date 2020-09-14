@@ -121,6 +121,13 @@
   // Do what you want, the window is entirely loaded and ready to use.
 });
          </script>
+         <script>
+          $(document).ready(function(){
+              $("#button").click(function(){
+                  location.reload(true);
+              });
+          });
+      </script>
       <script src="{{ asset('js/app.js') }}" type="text/js"></script>
      
     </body>
