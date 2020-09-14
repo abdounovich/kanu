@@ -32,7 +32,10 @@ class ExampleConversation extends Conversation
 
     }
     public function askType()
-    {   $this->somme=0;
+
+    
+    { date_default_timezone_set("Africa/Algiers");
+        $this->somme=0;
         $this->total=0;
         $this->debut=0;
         $this->temps=0;
@@ -41,7 +44,6 @@ class ExampleConversation extends Conversation
             $this->debut="09:00";
             $this->mx="15:00";
             $this->mi="12:00";
-           
             $this->total="600";
         }elseif($this->date=='Saturday'){
              $this->total="720";
@@ -61,7 +63,6 @@ class ExampleConversation extends Conversation
         $this->min=date("Y-m-d H:i:s",strtotime(date($this->min)));
 
 $Tos=Appointment::where('ActiveType','1')->latest('created_at')->first();
-date_default_timezone_set("Africa/Algiers");
 
     $this->now=date("Y-m-d H:i:s");
 if($Tos){
