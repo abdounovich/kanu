@@ -56,12 +56,10 @@ class ExampleConversation extends Conversation
             $this->mi="12:00";
         }
         $this->config=Config::get('app.url');
-
         $this->max=date("Y-m-d ").$this->mx.":00";
         $this->max=date("Y-m-d H:i:s",strtotime(date($this->max)));
         $this->min=date("Y-m-d ").$this->mi.":00";
         $this->min=date("Y-m-d H:i:s",strtotime(date($this->min)));
-
 $Tos=Appointment::where('ActiveType','1')->latest('created_at')->first();
 date_default_timezone_set("Africa/Algiers");
 
