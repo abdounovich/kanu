@@ -103,7 +103,7 @@ if ($date=='Friday') {
      $debut="16:00";
 
  }
- $debut="02:00";
+
 
  $Tos=Appointment::where('ActiveType','1')->get();
 $somme=0;
