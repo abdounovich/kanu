@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>App Name - @yield('title')</title>
+        <title> @yield('title')</title>
         <meta charset="UTF-8">
         <meta  name="viewport" content="width= {screenWidth}">
     
@@ -52,10 +52,10 @@
 
 
      
-<div class="p-2 m-5"> <a class="btn float-right  btn-dark rounded-circle text-success " ><i class=" p-1 fa fa-bars fa-4x " data-toggle="collapse" data-target="#demo"></i>
+<div class="p-2 m-5  align-content-center align-items-center align-self-center"> <a class="btn  btn-dark rounded-circle text-success " ><i class=" p-1 fa fa-bars fa-4x " data-toggle="collapse" data-target="#demo"></i>
 </a></div>
        
-          <div id="demo" class="collapse m-4 p-4">
+          <div id="demo" class="collapse m-5 p-4">
           
        <div class="container  ">
             <div class="row ">
@@ -65,22 +65,31 @@
 <a href="/types" class=" col col-2 text-white btn btn-success m-3 p-3" style="font-size: 60px"><i class=" p-2 fa fa-server"></i></a> 
             <a href="/clients" class="col col-2  text-white btn btn-info m-3 p-3" style="font-size: 60px"> <i class=" p-2 fa fa-users"></i></a> 
                       <a class=" col col-2 btn btn-danger m-3 p-3 " style="font-size: 60px"  onclick="return confirm('هل أنت متأكد ?')" href="/add"><i class=" p-2 fa fa-power-off"></i> </a>
-            <a id="button" class="col col-2  text-white btn btn-warning m-3 p-3" style="font-size: 60px"> <i class=" p-2 fa fa-refresh"></i></a> 
+            <a id="button" class="col col-2  text-white btn btn-warning m-3 p-3"  style="font-size: 60px"> <i class=" p-2 fa fa-refresh"></i></a> 
             
+
+
+            <script>
+             $('#button').click(function() {
+    location.reload();
+});
+            </script>
+
           </div>
             </div>
           </div> </div>
         <div class="container">
             @yield('content')
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs-/modernizr/2.8.3/modernizr.js"></script>
-        <script>//paste this code under the head tag or in a separate js file.
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js" integrity="sha512-lOtDAY9KMT1WH9Fx6JSuZLHxjC8wmIBxsNFL6gJPaG7sLIVoSO9yCraWOwqLLX+txsOw0h2cHvcUJlJPvMlotw==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous"></script>      
+          <script>//paste this code under the head tag or in a separate js file.
             // Wait for window load
-            $(window).load(function() {
-                // Animate loader off screen
-                $(".se-pre-con").fadeOut("slow");;
-            });</script>
+            window.addEventListener("load", function(event) {
+  $('.se-pre-con').delay(400).hide(500);
+  // Do what you want, the window is entirely loaded and ready to use.
+});
+         </script>
           <script src="{{ asset('js/app.js') }}" type="text/js"></script>
     </body>
 </html>
