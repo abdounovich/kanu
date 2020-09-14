@@ -67,7 +67,7 @@
 
 <a href="/types" class=" col col-2 text-white btn btn-success m-3 p-3" style="font-size: 60px"><i class=" p-2 fa fa-server"></i></a> 
             <a href="/clients" class="col col-2  text-white btn btn-info m-3 p-3" style="font-size: 60px"> <i class=" p-2 fa fa-users"></i></a> 
-                      <a class=" col col-2 btn btn-danger m-3 p-3 " style="font-size: 60px" data-toggle="modal" data-target="#exampleModal" ><i class=" p-2 fa fa-power-off"></i> </a>
+                      <a class=" col col-2   text-white btn btn-danger m-3 p-3 " style="font-size: 60px" data-toggle="modal" data-target="#exampleModal" ><i class=" p-2 fa fa-power-off"></i> </a>
             <a id="button" class="col col-2  text-white btn btn-warning m-3 p-3"  style="font-size: 60px"> <i class=" p-2 fa fa-refresh"></i></a> 
             
 
