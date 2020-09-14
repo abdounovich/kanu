@@ -13,7 +13,7 @@
 
 
 
-    <div class=" container mt-5">
+    <div class=" container m-5">
         <div class="row">
             <h2 class=" text-white p-2">أنواع الحلاقة :</h2>
             <table class="table table-dark table-hover" style="opacity: 0.9 ">
