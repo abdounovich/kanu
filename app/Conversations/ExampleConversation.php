@@ -66,7 +66,7 @@ date_default_timezone_set("Africa/Algiers");
     $this->now=date("Y-m-d H:i:s");
 if($Tos){
 
-    if ($now>$Tos->temps) {
+    if ($this->now>$Tos->temps) {
         $this->temps= $this->now;
         $this->mgg=date("H:i:",strtotime(date($this->temps)));
 
