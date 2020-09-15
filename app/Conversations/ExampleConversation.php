@@ -59,7 +59,6 @@ class ExampleConversation extends Conversation
             $this->mi="12:00";
         }
 
-        $this->say($this->debut);
         date_default_timezone_set("Africa/Algiers");
         $this->max=date("Y-m-d ").$this->mx.":00";
         $this->max=date("Y-m-d H:i:s",strtotime(date($this->max)));
@@ -71,8 +70,6 @@ class ExampleConversation extends Conversation
 $Tos=Appointment::where('ActiveType','1')->latest('created_at')->first();
 
     $this->now=date("Y-m-d H:i:s");
-    $this->say($this->debut);
-    $this->say($this->now);
 
 
 if($Tos){
