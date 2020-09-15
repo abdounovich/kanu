@@ -179,10 +179,15 @@ $botman->hears('menu', function ($bot) {
 	->addButton(ElementButton::create(' 📅 مواعيدي')
     ->url($this->config.'/client/'.$DbUsername->slug)
     ->heightRatio('tall')
+    ->disableShare()
 
 	)
 	->addButton(ElementButton::create(' 🎁 نقاطي')
     ->url($this->config.'/client/'.$DbUsername->slug)
+    ->heightRatio('tall')
+    ->disableShare()
+
+
 	)
 );
 
