@@ -97,7 +97,6 @@ if($Tos){
 
                 } 
                              else {
-                $this->temps=date("Y-m-d ").$this->debut.":00";
                 $this->say( $this->temps);
 
                 $this->temps=date("Y-m-d H:i:s",strtotime(date($this->temps)));
