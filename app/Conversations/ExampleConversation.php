@@ -10,6 +10,7 @@ use DateTimeZone;
 use Carbon\Carbon;
 use App\Appointment;
 use Illuminate\Foundation\Inspiring;
+use Illuminate\Support\Facades\Config;
 use BotMan\BotMan\Messages\Incoming\Answer;
 use BotMan\BotMan\Messages\Outgoing\Question;
 use BotMan\Drivers\Facebook\Extensions\Element;
