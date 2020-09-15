@@ -25,24 +25,33 @@ class testController extends Controller
 $debut="16:00";
 $fin="22:00";
 /* return view('test'); */
-$debut = Carbon::createFromFormat('H:i:s', $debut.":00");
-$fin = Carbon::createFromFormat('H:i:s', $fin.":00");
-$pas="30";
-$f="0";
+$pas=60*30;
 $arr=array();
 
 
 
+$debut=date("Y-m-d ").$debut.":00";
+$debut=date("Y-m-d H:i:s", strtotime(date($debut)));
 
- do {
-  $arr[]=$debut;
-$debut=$debut->addMinute($pas);  
- } while ($debut < $fin) ;
+$fin=date("Y-m-d ").$fin.":00";
+$fin=date("Y-m-d H:i:s", strtotime(date($fin)));
 
+
+
+while ($debut <= $fin) {
+     $arr[]=$debut;
+
+     $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
+
+}
+
+ 
 
 
 
   foreach ($arr as $key ) { 
+
+   
   echo $key."<p></p>";
 } 
 }}
