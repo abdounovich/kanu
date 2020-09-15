@@ -80,6 +80,7 @@ if($Tos){
                 $this->debut=date("Y-m-d ").$this->debut.":00";
 
                 $this->debut=date("Y-m-d H:i:s", strtotime(date($this->debut)));
+                $this->say($this->debut);
 
 
                 if ($this->now>$this->debut) {
