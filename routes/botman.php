@@ -178,7 +178,6 @@ $botman->hears('menu', function ($bot) {
     $bot->reply(ButtonTemplate::create('  الرجاء إختيار زر من القائمة 👇👇 ')
 	->addButton(ElementButton::create(' 📅 مواعيدي')
     ->url($this->config.'/client/'.$DbUsername->slug)
-    ->webview_height_ratio('compact')
 
 	)
 	->addButton(ElementButton::create(' 🎁 نقاطي')
