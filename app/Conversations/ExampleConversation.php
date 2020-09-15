@@ -81,7 +81,8 @@ if($Tos){
                
 
                 if ($this->now>$this->debut) {
-                    
+                    $this->say($this->now);
+                    $this->say($this->debut);
                     $this->temps=$this->now;
                     $seconds = 15*60;
                     $this->temps=date("Y-m-d H:i:s", (strtotime(date($this->temps)) + $seconds));
