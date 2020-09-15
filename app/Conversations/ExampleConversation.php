@@ -65,12 +65,14 @@ class ExampleConversation extends Conversation
         $this->max=date("Y-m-d H:i:s",strtotime(date($this->max)));
         $this->min=date("Y-m-d ").$this->mi.":00";
         $this->min=date("Y-m-d H:i:s",strtotime(date($this->min)));
+        $this->debut=date("Y-m-d ").$this->debut.":00";
+        $this->debut=date("Y-m-d H:i:s",strtotime(date($this->debut)));
 
 $Tos=Appointment::where('ActiveType','1')->latest('created_at')->first();
 
     $this->now=date("Y-m-d H:i:s");
     $this->say($this->debut);
-    $this->say($this->debut);
+    $this->say($this->now);
 
 
 if($Tos){
