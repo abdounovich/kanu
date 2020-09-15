@@ -70,7 +70,7 @@ $Tos=Appointment::where('ActiveType','1')->latest('created_at')->first();
 
     $this->now=date("Y-m-d H:i:s");
     $this->say($this->debut);
-    $this->say($this->now);
+    $this->say($this->debut);
 
 
 if($Tos){
