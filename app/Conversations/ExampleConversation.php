@@ -36,7 +36,7 @@ class ExampleConversation extends Conversation
     public function askType()
 
     
-    { date_default_timezone_set("Africa/Algiers");
+    { 
         $this->somme=0;
         $this->total=0;
         $this->debut=0;
@@ -58,7 +58,7 @@ class ExampleConversation extends Conversation
             $this->mx="13:00";
             $this->mi="12:00";
         }
-
+        date_default_timezone_set("Africa/Algiers");
         $this->max=date("Y-m-d ").$this->mx.":00";
         $this->max=date("Y-m-d H:i:s",strtotime(date($this->max)));
         $this->min=date("Y-m-d ").$this->mi.":00";
