@@ -20,68 +20,31 @@ class testController extends Controller
      echo $a;
    dd();}
    public function index(){
+      date_default_timezone_set("Africa/Algiers");
+
+$debut="16:00";
+$fin="22:00";
+/* return view('test'); */
+$debut = Carbon::createFromFormat('H:i:s', $debut.":00");
+$fin = Carbon::createFromFormat('H:i:s', $fin.":00");
+$pas="30";
+$f="0";
+$arr=array();
 
 
 
-return view('test');
 
-
-     
-
-  $total='600';
-  $somme="0";
- $now=Carbon::now()->addMinute(60);
-   $all_app=Appointment::where('ActiveType','1')->latest('created_at')->first();
-   if($all_app){
-
-      $all=Appointment::where('ActiveType','1')->get();
-      foreach ($all as $al ) {
-       $somme=$somme+$al->type->temps;}
-      if ($somme<$total ){
-         if ($now>$all_app->temps) {
-         $temps=$now->addMinute(15);         } 
-         else {           
-         $start_time=$all_app->temps;
-         $duration=$all_app->type->temps;
-         $sec = $all_app->type->temps*60;
-         $temps= date("Y-m-d H:i:s", (strtotime(date($start_time)) + $sec));}}
-            else {echo"complet";return;}
-         
-         }
-      else{
-      $debut="09:00";
-      if ($now>$debut) {
-         $temps=$now->addMinute(15);         } 
-         else{
-      $start_time=date("Y-m-d ").$debut.":00";
-      $this->temps=date("Y-m-d H:i:s",strtotime(date($start_time)));
-      $start_time=date("Y-m-d")." 09:00:00";
-      $temps=date("Y-m-d H:i:s",strtotime(date($start_time)));
-   }  } 
+ do {
+  $arr[]=$debut;
+$debut=$debut->addMinute($pas);  
+ } while ($debut < $fin) ;
 
 
 
-   $min=date("Y-m-d")." 12:00".":00";
-   $min=date("Y-m-d H:i:s",strtotime(date($min)));
-  
 
-   $max=date("Y-m-d")." 15:00".":00";
-   $max=date("Y-m-d H:i:s",strtotime(date($max)));
-
-   if ($min < $temps && $temps < $max) {
-     $temps=$max;
-     
-   }
-   $app=new Appointment();
-   $app->facebook="Merahi-AbdelDjalil";
-   $app->fb_id="3243262092379356";
-   $app->type_id='1';
-   $app->temps=$temps;
-   $app->client_id='1';
-   $app->ActiveType='1';
- $app->save();
-
-  
+  foreach ($arr as $key ) { 
+  echo $key."<p></p>";
+} 
 }}
 
 

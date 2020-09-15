@@ -54,7 +54,7 @@ class ExampleConversation extends Conversation
              $this->mi="12:00";   
         }else{
             $this->total="360";
-            $this->debut="16:00";
+            $this->debut="17:00";
             $this->mx="13:00";
             $this->mi="12:00";
         }
@@ -93,9 +93,8 @@ if($Tos){
 
                 } 
                              else {
-                $start_time=date("Y-m-d ").$this->debut.":00";
 
-                $this->temps=date("Y-m-d H:i:s",strtotime(date($start_time)));
+                $this->temps=$this->debut;
                 $this->mgg=date("H:i::",strtotime(date($this->temps)));
 
             }}
