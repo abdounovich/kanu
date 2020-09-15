@@ -69,6 +69,10 @@ class ExampleConversation extends Conversation
 $Tos=Appointment::where('ActiveType','1')->latest('created_at')->first();
 
     $this->now=date("Y-m-d H:i:s");
+    $this->say($this->debut);
+    $this->say($this->now);
+
+
 if($Tos){
 
     if ($this->now>$Tos->temps) {
