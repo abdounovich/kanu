@@ -80,7 +80,6 @@ if($Tos){
     if ($this->now>$Tos->temps) {
         $this->temps= $this->now;
         $this->mgg=date("H:i",strtotime(date($this->temps)));
-        $this->say('1');
 
     } 
                
@@ -91,18 +90,18 @@ if($Tos){
 
                 if ($this->now>$this->debut) {
                     
-                    $this->say('2');
                     $this->temps=$this->now;
                     $seconds = 15*60;
                     $this->temps=date("Y-m-d H:i:s", (strtotime(date($this->temps)) + $seconds));
-                    $this->mgg=date("H:i:::",strtotime(date($this->temps)));
+                    $this->mgg=date("H:i",strtotime(date($this->temps)));
 
                 } 
                              else {
                 $this->temps=date("Y-m-d ").$this->debut.":00";
+                $this->say( $this->temps);
+
                 $this->temps=date("Y-m-d H:i:s",strtotime(date($this->temps)));
                 $this->mgg=date("H:i",strtotime(date($this->temps)));
-                $this->say( $this->temps);
                 $this->say( $this->mgg);
 
             }}
@@ -111,7 +110,6 @@ if($Tos){
             if ($this->min < $this->temps &&  $this->temps < $this->max) {
                 $this->temps=$this->max;
                 $this->mgg=date("H:i",strtotime(date($this->temps)));
-                $this->say('4');
 
                 
               }
