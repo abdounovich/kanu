@@ -16,6 +16,7 @@ use BotMan\Drivers\Facebook\Extensions\Element;
 use BotMan\BotMan\Messages\Outgoing\Actions\Button;
 use BotMan\Drivers\Facebook\Extensions\ElementButton;
 use BotMan\BotMan\Messages\Conversations\Conversation;
+use BotMan\Drivers\Facebook\Extensions\ButtonTemplate;
 use BotMan\Drivers\Facebook\Extensions\GenericTemplate;
 
 class ExampleConversation extends Conversation
@@ -132,6 +133,7 @@ if($Tos){
 
  
        
+        $this->config=Config::get('app.url');
 
 
         
@@ -148,7 +150,17 @@ if($Tos){
                 $this->say('شكرا لك  '.$this->facebook);
                 $this->say('لقد تم حجز موعدك بنجاح ');
                 $this->say(' ⏰ موعد حلاقتك  '.$this->mgg);
-               
+                $DbUsername=Client::whereFacebook($this->facebook)->first();
+
+                $this->say(ButtonTemplate::create('  الرجاء إختيار زر من القائمة 👇👇 ')
+                ->addButton(ElementButton::create(' 📅 مواعيدي')
+                ->url($this->config.'/client/'.$DbUsername->slug)
+            
+                )
+                ->addButton(ElementButton::create(' 🎁 نقاطي')
+                ->url($this->config.'/client/'.$DbUsername->slug)
+                )
+            );
                
             
     
