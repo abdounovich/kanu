@@ -100,7 +100,7 @@ if($Tos){
                 } 
                              else {
                 $this->temps=date("Y-m-d").$this->debut.":00";
-                $this->temps=date("Y-m-d H:i:s", (strtotime(date($this->temps))));
+                $this->temps=date("Y-m-d H:i:s",strtotime(date($this->temps)));
                 $this->mgg=date("H:i",strtotime(date($this->temps)));
                 $this->say( $this->temps);
                 $this->say( $this->mgg);
