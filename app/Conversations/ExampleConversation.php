@@ -92,14 +92,14 @@ if($Tos){
                 $start_time=date("Y-m-d ").$this->debut.":00";
 
                 $this->temps=date("Y-m-d H:i:s",strtotime(date($start_time)));
-                $this->mgg=date("H:i",strtotime(date($this->temps)));
+                $this->mgg=date("H:i:",strtotime(date($this->temps)));
 
             }}
 
 
             if ($this->min < $this->temps &&  $this->temps < $this->max) {
                 $this->temps=$this->max;
-                $this->mgg=date("H:i",strtotime(date($this->temps)));
+                $this->mgg=date("H:i:s",strtotime(date($this->temps)));
 
                 
               }
@@ -150,11 +150,10 @@ if($Tos){
                 $app->save(); 
                 $this->say('شكرا لك  '.$this->facebook);
                 $this->say('لقد تم حجز موعدك بنجاح ');
-                $this->say(' ⏰ موعد حلاقتك  '.$this->mgg);
                 $DbUsername=Client::whereFacebook($this->facebook)->first();
 
-                $this->say(ButtonTemplate::create('  الرجاء إختيار زر من القائمة 👇👇 ')
-                ->addButton(ElementButton::create(' 📅 مواعيدي')
+                $this->say(ButtonTemplate::create(' ⏰ موعد حلاقتك  '.$this->mgg)
+                ->addButton(ElementButton::create(' 📅 الزمن المتبقي لموعدي')
                 ->url($this->config.'/client/'.$DbUsername->slug)
             
                 )
