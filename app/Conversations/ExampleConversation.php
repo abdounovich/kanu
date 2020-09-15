@@ -54,24 +54,19 @@ class ExampleConversation extends Conversation
              $this->mi="12:00";   
         }else{
             $this->total="360";
-            $this->debut="16:00";
+            $this->debut="15:00";
             $this->mx="13:00";
             $this->mi="12:00";
         }
-
-        date_default_timezone_set("Africa/Algiers");
+date_default_timezone_set("Africa/Algiers");
         $this->max=date("Y-m-d ").$this->mx.":00";
         $this->max=date("Y-m-d H:i:s",strtotime(date($this->max)));
         $this->min=date("Y-m-d ").$this->mi.":00";
         $this->min=date("Y-m-d H:i:s",strtotime(date($this->min)));
-        $this->debut=date("Y-m-d ").$this->debut.":00";
-        $this->debut=date("Y-m-d H:i:s",strtotime(date($this->debut)));
 
 $Tos=Appointment::where('ActiveType','1')->latest('created_at')->first();
 
     $this->now=date("Y-m-d H:i:s");
-
-
 if($Tos){
 
     if ($this->now>$Tos->temps) {
@@ -94,11 +89,10 @@ if($Tos){
 
                 } 
                              else {
-                $this->say( $this->temps);
+                $start_time=date("Y-m-d ").$this->debut.":00";
 
-                $this->temps=date("Y-m-d H:i:s",strtotime(date($this->temps)));
-                $this->mgg=date("H:i",strtotime(date($this->temps)));
-                $this->say( $this->mgg);
+                $this->temps=date("Y-m-d H:i:s",strtotime(date($start_time)));
+                $this->mgg=date("H:i::",strtotime(date($this->temps)));
 
             }}
 
