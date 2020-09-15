@@ -144,7 +144,7 @@ button:hover, a:hover {
           theme: "white",
       
       // end time
-          end: $.now() +str-3900,
+          end: $.now() +str-3600,
           now: $.now(),
       
       // whether to display the days/hours/minutes/seconds labels.

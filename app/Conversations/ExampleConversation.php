@@ -54,7 +54,7 @@ class ExampleConversation extends Conversation
              $this->mi="12:00";   
         }else{
             $this->total="360";
-            $this->debut="17:00";
+            $this->debut="16:00";
             $this->mx="13:00";
             $this->mi="12:00";
         }
