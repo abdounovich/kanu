@@ -28,3 +28,4 @@ BotMan is free software distributed under the terms of the MIT license.
 "# kanu2" 
 "# kanu2" 
 "# kanu2" 
+"# kanu2" 
