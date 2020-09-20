@@ -55,7 +55,7 @@ $bot->typesAndWaits(2);
 	    ->type('postback')
 	    ->payload('GotoDis')
 	)
-	->addButton(ElementButton::create(' 👨‍🏫 شرح طريقة حجز المواعيد  ')
+	->addButton(ElementButton::create(' 👨‍🏫  كيف أحجز موعد    ')
     ->type('postback')
     ->payload('steps')	)
 );
