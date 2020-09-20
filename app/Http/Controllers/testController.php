@@ -89,7 +89,9 @@ $config=Config::get('app.url');
                   [
                     "type"=>"web_url",
                     "url"=>"$config/client/$client->slug",
-                    "title"=>" 🎁 رصيدي    "
+                    "title"=>" 🎁 رصيدي    ",
+                    "webview_height_ratio"=>"tall"
+
                   ],
                  
                   
