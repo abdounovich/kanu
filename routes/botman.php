@@ -219,7 +219,7 @@ $botman->hears('menu', function ($bot) {
     ->enableExtensions()
 
 	)
-	->addButton(ElementButton::create(' 🎁 نقاطي')
+	->addButton(ElementButton::create(' 🎁 رصيدي')
     ->url($this->config.'/client/'.$DbUsername->slug)
     ->heightRatio('tall')
     ->disableShare()
@@ -246,7 +246,7 @@ $botman->hears('menu', function ($bot) {
     $bot->typesAndWaits(1);
 
     $bot->reply('بعد قيامك بهاته المراحل  تكون قد أتممت عملية الحجز  ');
-    $bot->reply(' يمكنك كذلك معرفة الزمن المتبقي لموعدك بالضغط على زر  📆 نقاطي 🎁  |  مواعيدي من القائمة  ');
+    $bot->reply(' يمكنك كذلك معرفة الزمن المتبقي لموعدك بالضغط على زر  📆 رصيدي 🎁  |  مواعيدي من القائمة  ');
     $bot->typesAndWaits(1);
     
     $bot->reply(ButtonTemplate::create('يمكنك الآن حجز موعدك  بكل سهولة  😍 ')
