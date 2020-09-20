@@ -250,7 +250,7 @@ $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
 
 
 
-<div class="container align-content-center clearfix align-items-center">
+<div class=" col col-10 m-2 align-content-center clearfix align-items-center">
         <input type="button" class="btn btn-success" id="clc" onclick="sendMessage()" style="display: none" value="تأكيد ">
 
 </div>
