@@ -143,7 +143,13 @@ $complet_message="  أنا آسف صديقي 😕  ".$full_name."\n"." كل ال
 
 $botman->hears('GoToDis', function ( $bot) {
 
-
+    $user = $bot->getUser();
+    $facebook_id = $user->getId();
+    // Access last name
+    $firstname = $user->getFirstname();
+// Access last name
+$lastname = $user->getLastname();
+$full_name=$firstname.'-'.$lastname;
     $DbUsername=Client::whereFacebook($full_name)->first();
     $OneApp=Appointment::where('facebook',$full_name)
     ->where('ActiveType','1')->count();
