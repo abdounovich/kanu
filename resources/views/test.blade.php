@@ -189,6 +189,11 @@ $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
 
 
             </div>
+            <div class="row">
+                <div class=" col col-10 m-2 align-content-center clearfix align-items-center">
+                        <input type="button" class="btn btn-success" id="clc" onclick="sendMessage()" style="display: none; width:100%" value="تأكيد ">
+                </div>
+                </div>
             </div>
 
 
@@ -250,11 +255,7 @@ $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
 
 
              
-   <div class="row">
-<div class=" col col-10 m-2 align-content-center clearfix align-items-center">
-        <input type="button" class="btn btn-success" id="clc" onclick="sendMessage()" style="display: none; width:100%" value="تأكيد ">
-</div>
-</div>
+  
   </form>
 
     <script type="text/javascript">
