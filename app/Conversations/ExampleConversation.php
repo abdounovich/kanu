@@ -157,7 +157,7 @@ if($Tos){
                 ->url($this->config.'/client/'.$DbUsername->slug)
             
                 )
-                ->addButton(ElementButton::create(' 🎁 نقاطي')
+                ->addButton(ElementButton::create(' 🎁 رصيدي')
                 ->url($this->config.'/client/'.$DbUsername->slug)
                 )
             );

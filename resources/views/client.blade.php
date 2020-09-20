@@ -90,7 +90,7 @@ button:hover, a:hover {
         <img src="{{$picture}}" alt="John"  width="100" height="100" class=" align-self-center m-4 border border-white ">
         <h3 class="mt-2 bg-dark">{{$client->facebook}}</h3>
       
-    <div><div class="h4">عدد نقاطي :            <span class="badge badge-dark">{{$client->points}} نقطة  </span></div>
+    <div><div class="h4">رصيدي   :            <span class="badge badge-dark">{{$client->points}} نقطة  </span></div>
 </div>
            
 
