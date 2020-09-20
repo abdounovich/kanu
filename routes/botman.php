@@ -55,9 +55,9 @@ $bot->typesAndWaits(2);
 	    ->type('postback')
 	    ->payload('GotoDis')
 	)
-	->addButton(ElementButton::create(' 🗒 تصفح مواعيدي ')
-	    ->url($this->config.'/client/'.$DbUsername->slug)
-	)
+	->addButton(ElementButton::create(' 🗒 شرح طريقة حجز المواعيد  ')
+    ->type('postback')
+    ->payload('steps')	)
 );
 });
   
