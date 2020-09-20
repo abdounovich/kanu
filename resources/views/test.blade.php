@@ -243,7 +243,7 @@ $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
 
 
     
-<input type="hidden" name="message" value="شكرا لك  {{$username}} لقد تم حجز  موعدك بنجاح "> 
+<input type="hidden" name="message" value=" 👏 شكرا لك  {{$username}} لقد تم حجز  موعدك بنجاح 👌👌  "> 
    <input type="hidden" id="id" name="id"><br>
    <input type="hidden" name="debut"  id="debut" >
    <input type="hidden" name="type" id="type" value="{{$type}}">
