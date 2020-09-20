@@ -53,7 +53,7 @@ $bot->typesAndWaits(2);
     $bot->reply(ButtonTemplate::create(' كيف يمكننا خدمتك ؟ ')
 	->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
 	    ->type('postback')
-	    ->payload('rdv')
+	    ->payload('GotoDis')
 	)
 	->addButton(ElementButton::create(' 🗒 تصفح مواعيدي ')
 	    ->url($this->config.'/client/'.$DbUsername->slug)
@@ -62,7 +62,7 @@ $bot->typesAndWaits(2);
 });
   
 
-$botman->hears('rdv', function($bot) {
+$botman->hears('rdv([0-9]+)', function($bot,$number) {
  
 
     $user = $bot->getUser();
@@ -77,6 +77,7 @@ $OneApp=Appointment::where('facebook',$full_name)
 $DbUsername=Client::whereFacebook($full_name)->first();
 
 if ($OneApp>0) {
+    $bot->typesAndWaits(2);
 
     $bot->reply(ButtonTemplate::create(' عذرا صديقي 😕 '.$full_name ."\n"." لقد حجزت موعد من قبل لا يمكنك حجز أكثر من موعد في نفس اليوم ")
     ->addButton(ElementButton::create('🗒 تصفح مواعيدي  ')
@@ -86,26 +87,25 @@ if ($OneApp>0) {
     
     );}
 else{
-$app_tot=Appointment::all()->count();
+ $types=Type::all();
+ $array=array();
+ $bot->typesAndWaits(2);
 
-$date=date("l");
-$debut=0;
-if ($date=='Friday') {
-    $total="600";
-    $debut="09:00";
-
- }elseif($date=='Saturday'){
-     $total="720";
-     $debut="09:00";
-
- }else{
-     $total="360";
-     $debut="15:00";
-
- }
-
-
- $Tos=Appointment::where('ActiveType','1')->get();
+ foreach ($types as $type ) {
+     $array[]= Element::create($type->type)
+     ->subtitle("السعر : ".$type->prix.' دج ')
+     ->image($type->photo)
+     ->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
+     ->url($this->config.'/test/'.$type->id.'/D'.$number."/".$full_name."/".$DbUsername->id)
+     ->heightRatio('tall')
+     ->disableShare()
+     ->enableExtensions());}
+ $bot->reply(GenericTemplate::create()
+ ->addImageAspectRatio(GenericTemplate::RATIO_SQUARE)
+ ->addElements($array)
+); 
+}
+ /* $Tos=Appointment::where('ActiveType','1')->get();
 $somme=0;
 foreach ($Tos as $To) {
 $somme=$somme+$To->type->temps;
@@ -144,8 +144,8 @@ $diff=$total-$somme;
 else{
 $complet_message="  أنا آسف صديقي 😕  ".$full_name."\n"." كل الأماكن محجوزة لنهار اليوم ";
     $bot->reply($complet_message);
-}
-}
+}*/
+ 
 });
 
 
@@ -153,9 +153,22 @@ $complet_message="  أنا آسف صديقي 😕  ".$full_name."\n"." كل ال
 
 
 
+$botman->hears('GoToDis', function ( $bot) {
+    $bot->typesAndWaits(2);
+
+    $bot->reply(Question::create('  من فضلك إختر يوم موعدك  👇👇')->addButtons([
+    Button::create(' 🕐 بعد غد')->value('rdv3'),
+    Button::create(' 🕐 يوم الغد ')->value('rdv2'),        
+    Button::create('🕐 اليوم')->value('rdv1'),
 
 
-$botman->hears('C([0-9]+)', function ($bot, $number) {
+
+
+
+    ]));
+});
+
+/* $botman->hears('C([0-9]+)', function ($bot, $number) {
     $user = $bot->getUser();
     // Access last name
     $facebook_id=$user->getId();
@@ -163,8 +176,13 @@ $botman->hears('C([0-9]+)', function ($bot, $number) {
 // Access last name
 $lastname = $user->getLastname();
 $full_name=$firstname.'-'.$lastname;
-    $bot->startConversation(new ExampleConversation($full_name,$number,$facebook_id));
-});
+$bot->startConversation(new ExampleConversation($full_name,$number,$facebook_id));
+
+}); */
+
+
+
+
 
 $botman->hears('menu', function ($bot) {
 
@@ -174,12 +192,14 @@ $botman->hears('menu', function ($bot) {
     $lastname = $user->getLastname();
     $full_name=$firstname.'-'.$lastname;
     $DbUsername=Client::whereFacebook($full_name)->first();
+    $bot->typesAndWaits(2);
 
     $bot->reply(ButtonTemplate::create('  الرجاء إختيار زر من القائمة 👇👇 ')
 	->addButton(ElementButton::create(' 📅 مواعيدي')
     ->url($this->config.'/client/'.$DbUsername->slug)
     ->heightRatio('tall')
     ->disableShare()
+    ->enableExtensions()
 
 	)
 	->addButton(ElementButton::create(' 🎁 نقاطي')
@@ -197,26 +217,23 @@ $botman->hears('menu', function ($bot) {
 
   $botman->hears('steps', function($bot) {
 
-    $bot->reply(' 🤭  لتسهيل عملية حجز موعد إختصرتها لك في  مرحلتين بسيطتين للغاية  😁 : ');
+    $bot->reply(' 🤭  لتسهيل عملية حجز موعد إختصرتها لك في  ثلاث  مراحل بسيطة  للغاية  😁 : ');
     $bot->typesAndWaits(1);
-    
     $bot->reply('1⃣ :  اختر نوع الحلاقة واضغط على زر احجز الموجود أسفل كل صورة ');
-    
     $bot->typesAndWaits(1);
-    
-    
-    
-    $bot->reply('2⃣ :   اضغط على زر تأكيد الحجز  ');
+    $bot->reply('2⃣ :   إختر اليوم الذي تريد حجز موعد فيه   ');
     $bot->typesAndWaits(1);
+    $bot->reply('3⃣ :   إختر الساعة قم إضغط تأكيد الموعد    ');
+    $bot->typesAndWaits(1);
+
     $bot->reply('بعد قيامك بهاته المراحل  تكون قد أتممت عملية الحجز  ');
-    
     $bot->reply(' يمكنك كذلك معرفة الزمن المتبقي لموعدك بالضغط على زر مواعيدي / نقاطي من القائمة  ');
     $bot->typesAndWaits(1);
     
     $bot->reply(ButtonTemplate::create('يمكنك الآن حجز موعدك  بكل سهولة  😍 ')
     ->addButton(ElementButton::create('🛍 إحجز موعدك الأن ')
         ->type('postback')
-        ->payload('rdv')
+        ->payload('GotoDis')
     )
     
     );
@@ -230,7 +247,7 @@ $botman->hears('menu', function ($bot) {
     $bot->reply(ButtonTemplate::create('عذرًا ، لم أستطع فهمك 😕 '."\n". 'هذه قائمة بالأوامر التي أفهمها:')
 	->addButton(ElementButton::create('🛍 احجز موعد ')
 	    ->type('postback')
-	    ->payload('rdv')
+	    ->payload('GotoDis')
     )
     ->addButton(ElementButton::create('💬 استفسار ')
     ->url('https://www.messenger.com/t/merahi.adjalile')

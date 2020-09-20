@@ -83,7 +83,7 @@ return [
                         [
                             'title' => ' 🛍 إحجز موعد  ',
                             'type' => 'postback',
-                            'payload' => 'rdv',
+                            'payload' => 'GoToDis',
                         ],
                     
                 

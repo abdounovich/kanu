@@ -16,9 +16,11 @@ class CreateAppointmentsTable extends Migration
         Schema::create('appointments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('facebook');
-            $table->text('temps');
             $table->text('ActiveType');
             $table->text('fb_id');
+            $table->text('jour');
+            $table->text('debut');
+            $table->text('fin');
 
             $table->unsignedBigInteger('type_id');
             $table->foreign('type_id')
