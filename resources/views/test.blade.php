@@ -250,8 +250,10 @@ $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
 
 
 
+<div class="container align-content-center clearfix align-items-center">
+        <input type="button" class="btn btn-success" id="clc" onclick="sendMessage()" style="display: none" value="تأكيد ">
 
-    <input type="button" id="clc" onclick="sendMessage()" style="display: none" value="Submit form">
+</div>
   </form>
 
     <script type="text/javascript">
