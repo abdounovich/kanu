@@ -351,7 +351,7 @@ foreach ($arr4 as $k ) {
 $types=Type::whereId($type)->first();
 date_default_timezone_set("Africa/Algiers");
 $date=date("l");
-    $date=date("l", strtotime($date. ' + 2 day'));
+    $date=date("l", strtotime($date. ' + 4 day'));
 
     if ($date=='Friday') {
       $debut="09:00";
@@ -383,7 +383,7 @@ $date=date("l");
    $items=array();
    $arr4=array();
    $jour=date("Y-m-d");
-   $afterTommorow=date('Y-m-d', strtotime($jour. ' + 5 day'));
+   $afterTommorow=date('Y-m-d', strtotime($jour. ' + 4 day'));
    $jour=$afterTommorow;
 
    $d_pause=$jour.$d_pause.":00";
