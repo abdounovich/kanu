@@ -168,6 +168,7 @@ if ($date=='Friday') {
     $pas=60*$types->temps;
     $arr=array();
     $arr2=array();
+
     $items=array();
     $arr4=array();
     $jour=date("Y-m-d");
