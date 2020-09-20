@@ -87,8 +87,8 @@ $config=Config::get('botman.facebook.token');
         
         $clients=Client::latest()->paginate(10); 
         $config=Config::get('botman.facebook.token');
-        $appointment=Appointment::where($ActiveType,"1")->first();
-return view("clients")->with('clients',$clients)
+        $appointment=Appointment::where("ActiveType",1)->first();
+return view("clients")->with('clients',$clients)->with('appointment',$appointment)
 ->with('config',$config);
 
     }
