@@ -215,19 +215,21 @@ $botman->hears('menu', function ($bot) {
 
 
 
+
+
   $botman->hears('steps', function($bot) {
 
     $bot->reply(' 🤭  لتسهيل عملية حجز موعد إختصرتها لك في  ثلاث  مراحل بسيطة  للغاية  😁 : ');
     $bot->typesAndWaits(1);
-    $bot->reply('1⃣ :  اختر نوع الحلاقة واضغط على زر احجز الموجود أسفل كل صورة ');
-    $bot->typesAndWaits(1);
-    $bot->reply('2⃣ :   إختر اليوم الذي تريد حجز موعد فيه   ');
+    $bot->reply('1⃣ :  إضغط على زر إحجز موعد ثم إختر اليوم الذي تريد حجز موعد فيه  ');
+
+    $bot->reply('2⃣ :  اختر نوع الحلاقة واضغط على زر احجز الموجود أسفل كل صورة ');
     $bot->typesAndWaits(1);
     $bot->reply('3⃣ :   إختر الساعة قم إضغط تأكيد الموعد    ');
     $bot->typesAndWaits(1);
 
     $bot->reply('بعد قيامك بهاته المراحل  تكون قد أتممت عملية الحجز  ');
-    $bot->reply(' يمكنك كذلك معرفة الزمن المتبقي لموعدك بالضغط على زر مواعيدي / نقاطي من القائمة  ');
+    $bot->reply(' يمكنك كذلك معرفة الزمن المتبقي لموعدك بالضغط على زر  📆 نقاطي 🎁  |  مواعيدي من القائمة  ');
     $bot->typesAndWaits(1);
     
     $bot->reply(ButtonTemplate::create('يمكنك الآن حجز موعدك  بكل سهولة  😍 ')
@@ -243,6 +245,7 @@ $botman->hears('menu', function ($bot) {
     
     
     });
+
   $botman->fallback(function($bot) {
     $bot->reply(ButtonTemplate::create('عذرًا ، لم أستطع فهمك 😕 '."\n". 'هذه قائمة بالأوامر التي أفهمها:')
 	->addButton(ElementButton::create('🛍 احجز موعد ')

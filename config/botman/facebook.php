@@ -88,7 +88,7 @@ return [
                     
                 
                         [
-                            'title' => ' 📆 نقاطي 🎁| مواعيدي',
+                            'title' => ' 📆 نقاطي 🎁  |  مواعيدي',
                             'type' => 'postback',
                             'payload' => 'menu',
                         ],
