@@ -160,87 +160,82 @@ switch ($yawm) {
 
     <script> 
     str=parseInt(document.getElementById('hidden').value);
-    alert(str+86400);
 
     
     $('#countdown-container').ClassyCountdown({
 
+// flat-colors, flat-colors-wide, flat-colors-very-wide, 
+// flat-colors-black, black, black-wide, black-very-wide, 
+// black-black, white, white-wide, 
+// white-very-wide or white-black
+    theme: "white",
 
-      // flat-colors, flat-colors-wide, flat-colors-very-wide, 
-      // flat-colors-black, black, black-wide, black-very-wide, 
-      // black-black, white, white-wide, 
-      // white-very-wide or white-black
-          theme: "white",
-      
-      // end time
-          end: $.now() +156023,
-          now: $.now(),
-      
-      // whether to display the days/hours/minutes/seconds labels.
-          labels: true,
-      
-      // object that specifies different language phrases for says/hours/minutes/seconds as well as specific CSS styles.
-          labelsOptions: {
-              lang: {
-                days:'يوم',
-                  hours: 'ساعة ',
-                  minutes: 'دقيقة',
-                  seconds: 'ثانية'
-              },
-              style: 'font-size: 16px'
-          },
-      
-      // custom style for the countdown
-          style: {
-              element: '',
-              labels: true,
-              textCSS: '',
-              days: {
-                  gauge: {
-                      thickness: 0.1,
-                      bgColor: 'rgba(0, 0, 0, 0)',
-                      fgColor: 'rgba(0, 0, 0, 1)',
-                      lineCap: 'butt',
-                      
-                  
-                  },
-                  textCSS: '',
-                  
-              },
-              hours: {
-                  gauge: {
-                      thickness: 0.1,
-                      bgColor: 'rgba(0, 0, 0, 0)',
-                      fgColor: 'rgba(0, 0, 0, 1)',
-                      lineCap: 'butt'
-                  },
-                  textCSS: ''
-              },
-              minutes: {
-                  gauge: {
-                      thickness: 0.1,
-                      bgColor: 'rgba(0, 0, 0, 0)',
-                      fgColor: 'rgba(0, 0, 0, 1)',
-                      lineCap: 'butt'
-                  },
-                  textCSS: ''
-              },
-              seconds: {
-                  gauge: {
-                      thickness: 0.1,
-                      bgColor: 'rgba(0, 0, 0, 0)',
-                      fgColor: 'rgba(0, 0, 0, 1)',
-                      lineCap: 'butt'
-                  },
-                  textCSS: ''
-              }
-          },
-      
-      // callback that is fired when the countdown reaches 0.
-          onEndCallback: function () {
-          }
-      
-      });</script>
+// end time
+    end: $.now() + str-3600,
+    now: $.now(),
+
+// whether to display the days/hours/minutes/seconds labels.
+    labels: true,
+
+// object that specifies different language phrases for says/hours/minutes/seconds as well as specific CSS styles.
+    labelsOptions: {
+        lang: {
+            days: 'Days',
+            hours: 'Hours',
+            minutes: 'Minutes',
+            seconds: 'Seconds'
+        },
+        style: 'font-size: 0.5em;'
+    },
+
+// custom style for the countdown
+    style: {
+        element: '',
+        labels: false,
+        textCSS: '',
+        days: {
+            gauge: {
+                thickness: 0.02,
+                bgColor: 'rgba(0, 0, 0, 0)',
+                fgColor: 'rgba(0, 0, 0, 1)',
+                lineCap: 'butt'
+            },
+            textCSS: ''
+        },
+        hours: {
+            gauge: {
+                thickness: 0.02,
+                bgColor: 'rgba(0, 0, 0, 0)',
+                fgColor: 'rgba(0, 0, 0, 1)',
+                lineCap: 'butt'
+            },
+            textCSS: ''
+        },
+        minutes: {
+            gauge: {
+                thickness: 0.02,
+                bgColor: 'rgba(0, 0, 0, 0)',
+                fgColor: 'rgba(0, 0, 0, 1)',
+                lineCap: 'butt'
+            },
+            textCSS: ''
+        },
+        seconds: {
+            gauge: {
+                thickness: 0.02,
+                bgColor: 'rgba(0, 0, 0, 0)',
+                fgColor: 'rgba(0, 0, 0, 1)',
+                lineCap: 'butt'
+            },
+            textCSS: ''
+        }
+    },
+
+// callback that is fired when the countdown reaches 0.
+    onEndCallback: function () {
+    }
+
+});</script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
