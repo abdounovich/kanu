@@ -28,17 +28,7 @@
     background-size: cover;
     font-family: 'Cairo', sans-serif;
     }
-    .no-js #loader { display: none;  }
-    .js #loader { display: block; position: absolute; left: 100px; top: 0; }
-    .se-pre-con {
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-        background: url(https://smallenvelop.com/wp-content/uploads/2014/08/Preloader_11.gif) center no-repeat #fff;
-    }
+ 
     </style>
     </head>
     <body dir="rtl">
@@ -116,20 +106,7 @@
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js" integrity="sha512-lOtDAY9KMT1WH9Fx6JSuZLHxjC8wmIBxsNFL6gJPaG7sLIVoSO9yCraWOwqLLX+txsOw0h2cHvcUJlJPvMlotw==" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous"></script>      
-          <script>//paste this code under the head tag or in a separate js file.
-            // Wait for window load
-            window.addEventListener("load", function(event) {
-  $('.se-pre-con').delay(400).hide(500);
-  // Do what you want, the window is entirely loaded and ready to use.
-});
-         </script>
-         <script>
-          $(document).ready(function(){
-              $("#button").click(function(){
-                  location.reload(true);
-              });
-          });
-      </script>
+        
       <script src="{{ asset('js/app.js') }}" type="text/js"></script>
      
     </body>
