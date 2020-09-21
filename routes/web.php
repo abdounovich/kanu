@@ -42,3 +42,7 @@ Route::get('/','HomeController@index');
 Route::get('/commande', function () {
     return view('commande') ;
 });
+
+Route::get('/tester', function () {
+    return view('tester') ;
+});
