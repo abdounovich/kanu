@@ -151,7 +151,7 @@ switch ($yawm) {
 
 
 
-           <input type="hidden" id="hidden" name="hidden" value="{{$difmin}}">
+           <input type="text" id="hidden" name="hidden" value="{{$difmin}}">
 
        
 
@@ -168,7 +168,7 @@ switch ($yawm) {
 // flat-colors-black, black, black-wide, black-very-wide, 
 // black-black, white, white-wide, 
 // white-very-wide or white-black
-    theme: "white",
+    theme: "black-black",
 
 // end time
     end: $.now() + str-3600,
