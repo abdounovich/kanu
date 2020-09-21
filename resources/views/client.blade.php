@@ -10,10 +10,10 @@
     <!-- Fonts -->
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="{{URL::asset('js/jquery.knob.js')}}"></script>
-    <script src="{{URL::asset('js/jquery.throttle.js')}}"></script>
-    <link href="{{URL::asset('css/jquery.classycountdown.css')}}" rel="stylesheet">
-<script src="{{URL::asset('js/jquery.classycountdown.js')}}"></script>
+    <script src="{{URL::asset('js/jquery.knob.js',true)}}"></script>
+    <script src="{{URL::asset('js/jquery.throttle.js',true)}}"></script>
+    <link href="{{URL::asset('css/jquery.classycountdown.css',true)}}" rel="stylesheet">
+<script src="{{URL::asset('js/jquery.classycountdown.js',true)}}"></script>
 <style>body{
 background:url(https://res.cloudinary.com/ds9qfm1ok/image/upload/v1599670310/1_zvsdhh.jpg) ;
 background-repeat: no-repeat;
