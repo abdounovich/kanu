@@ -167,7 +167,7 @@ if ($date=='Friday') {
      $debut="16:00";
      $fin="22:00";
      $d_pause="17:00";
-     $f_pause="19:01";
+     $f_pause="19:00";
  }
     $debut=date("Y-m-d ").$debut.":00";
     $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
@@ -185,7 +185,8 @@ if ($date=='Friday') {
     $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause))); 
     $f_pause=$jour.$f_pause.":00";
     $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
-
+echo $d_pause ." // ".$f_pause;
+dd();
     $Today_appointments=Appointment::where('ActiveType',"1")->whereJour($jour)->get();
     while ($debut < $fin )
     {
