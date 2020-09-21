@@ -197,7 +197,6 @@ switch ($yawm) {
               textCSS: '',
               days: {
                   gauge: {
-                    displayInput: false,
                       thickness: 0.1,
                       bgColor: 'rgba(0, 0, 0, 0)',
                       fgColor: 'rgba(0, 0, 0, 1)',
