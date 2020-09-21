@@ -22,7 +22,7 @@
         <div class="h3 p-2   d-flex align-self-center"> الزبائن   </div>
         <div class="h1 d-flex align-self-center">{{$clients->count()}}</div>
 
-        <button class=" m-4 p-2 btn btn-warning d-flex align-self-center">مشاهدة الجميع</button>
+        <a  href="/clients" class=" m-4 p-2 btn btn-warning d-flex align-self-center">مشاهدة الجميع</a>
          </div>
         </div>
       
@@ -32,7 +32,7 @@
             <div class="h3 p-2   d-flex align-self-center"> المواعيد   </div>
             <div class="h1 d-flex align-self-center">{{$appointments->count()}}</div>
     
-            <button class=" m-4 p-2 btn btn-warning d-flex align-self-center">مشاهدة الجميع</button>
+            <a  href="/rdv" class=" m-4 p-2 btn btn-warning d-flex align-self-center">مشاهدة الجميع</a>
              </div>
             </div>
 
@@ -43,7 +43,7 @@
             <div class="h3 p-2   d-flex align-self-center"> الأنواع    </div>
             <div class="h1 d-flex align-self-center">{{$types->count()}}</div>
     
-            <button class=" m-4 p-2 btn btn-warning d-flex align-self-center">مشاهدة الجميع</button>
+            <a href="/types" class=" m-4 p-2 btn btn-warning d-flex align-self-center">مشاهدة الجميع</a>
              </div>
             </div>
     </div>
