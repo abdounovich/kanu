@@ -99,7 +99,7 @@ button:hover, a:hover {
     
     $('#countdown-container').ClassyCountdown({
     theme: "dark", // theme
-    end: $.now() +10800+10000+str // end time
+    end: $.now() +2874804 // end time
 });</script>
 
 
