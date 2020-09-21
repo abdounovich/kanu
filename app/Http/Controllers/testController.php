@@ -262,8 +262,7 @@ $date=date("l");
        $f_pause="00:01";
    }
 
-   echo $d_pause;
-   dd();
+  
 
     $debut=date("Y-m-d ").$debut.":00";
     $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
@@ -283,6 +282,8 @@ $date=date("l");
     $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause))); 
     $f_pause=$jour.$f_pause.":00";
     $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
+    echo $d_pause;
+    dd();
     $Tomorrow_appointments=Appointment::where('ActiveType',"1")->whereJour($tomorrow)->get();
     while ($debut < $fin )
     {
