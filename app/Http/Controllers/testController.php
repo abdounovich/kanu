@@ -303,7 +303,8 @@ $date=date("l");
     
     else{
       if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause) {
-        $arr2[]=$arr[$i];}
+        $arr2[]=$arr[$i];
+      echo "true";}
 else{
        $arr4[]= $arr[$i];}}}
      
@@ -315,6 +316,8 @@ else{
        
             $arr4[]= $arr[$i];}
           }
+
+          dd();
 foreach ($arr4 as $k ) {
 
 
