@@ -276,6 +276,8 @@ $date=date("l");
     $jour=date("Y-m-d");
     $tomorrow=date('Y-m-d', strtotime($jour. ' + 5 day'));
     $jour=$tomorrow;
+    echo $jour;
+    dd();
     $d_pause=$jour." ".$d_pause.":00";
     $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause)));  
     $f_pause=$jour." ".$f_pause.":00";
