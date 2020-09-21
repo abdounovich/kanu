@@ -195,8 +195,7 @@ $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
                 </div>
             </div>
 
-<div class="bg-dark" id="suc" style="opacity: 0.9; display:none"><h3 class="bg-success"> تم حفظ موعدك بنجاح </h3>
-    <h3 class="bg-success"> سيتم إغلاق هذه الصفحة تلقائيا ويتم توجيهك إى المحادثة  </h3></div>
+
         
        
 {{-- @foreach ($arr as $item)  
@@ -259,25 +258,23 @@ $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
   </form>
 
     <script type="text/javascript">
-                var debut =document.getElementById("debut");
 
-                var x = document.getElementById("clc");
 
-        var y = document.getElementById("suc");
 
 function getvalue() {
-                 debut.value =event.target.name;
-                 x.style.display = "block";
+                var debut =document.getElementById("debut");
 
 
+                debut.value =event.target.name;
+                var x = document.getElementById("clc");
+ 
+ x.style.display = "block";
 
 }
-        function sendMessage() {    
-        document.getElementById("myForm").submit();
-        y.style.display = "block";
-        setTimeout("send()", 5000);
-}
-        function send() {
+        function sendMessage() {
+            document.getElementById("myForm").submit();
+
+        
             MessengerExtensions.requestCloseBrowser(function success() {
 
             }, function error(err) {
