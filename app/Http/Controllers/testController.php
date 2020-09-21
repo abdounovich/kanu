@@ -296,11 +296,9 @@ $date=date("l");
     $d=date("Y-m-d H:i:s", strtotime($appointment->date." ".$appointment->debut.":00"));
     $f=date("Y-m-d H:i:s", strtotime($appointment->date." ".$appointment->fin.":00"));
     if ($arr[$i]>=$d && $arr[$i]<$f) {
-      if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause) {
 
       $arr2[]=$arr[$i];}
-      else{  $arr2[]=$arr[$i];}
-    }
+    
     else{
       if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause) {
         $arr2[]=$arr[$i];}
