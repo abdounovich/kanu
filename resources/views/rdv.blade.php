@@ -15,7 +15,62 @@
 
 
 
+<div class="container">
+  <div class="row mt-5">
+    @if ($Today_appointments->count()=='0')
+        <div  class="col col-12 bg-dark text-white mt-5  " style="opacity: 0.9"><h2 class="p-4 float-right">لا توجد مواعيد لنهار اليوم</h2></div>
+   @else
+    <h3 class="p-2 text-white">مواعيد اليوم </h3>
+    <table class="table table-striped table-dark"style="opacity:0.9">
+      <thead class=" bg-success text-right">
+        <tr>
+          <th scope="col">#</th>          
 
+          <th scope="col">الفيسبوك</th>
+          <th scope="col">عدد النقاط </th>
+          
+          <th scope="col">نوع الحلاقة </th>
+
+          <th scope="col">الموعد  </th>
+          <th scope="col">تاريخ الحجز </th>
+
+        </tr>
+      </thead>
+      <tbody class=" text-right">
+        @php
+        $counter=0;
+        @endphp
+        @foreach ($Today_appointments as $Today_appointment)
+        @php
+           $counter=$counter+1; 
+      
+        ini_set("allow_url_fopen", 1);
+                      $userInfoData=file_get_contents('https://graph.facebook.com/v2.6/'.$Today_appointment->fb_id.'?fields=profile_pic&access_token='.$config);
+                      $userInfo = json_decode($userInfoData, true);
+                  $picture = $userInfo['profile_pic'] ;
+        @endphp
+        <tr>
+          <th scope="row">{{$counter}}</th>
+          <td class="align-middle"><img class="  border  rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+            {{$Today_appointment->facebook}}</td>
+         
+        <td class="align-middle">
+          <span class="badge badge-success badge-pill p-2">{{$Today_appointment->client->points}}</span> 
+        </td>
+        <td class="align-middle">{{$Today_appointment->type->type}}</td>
+         <td class="align-middle">@php $demain = date('H:i', strtotime($Today_appointment->debut));
+          echo $demain;
+          @endphp</td>
+            <td class="align-middle"> @php  carbon\Carbon::setLocale('ar');
+              echo $Today_appointment->created_at->diffForHumans(); @endphp    </td>
+
+        </tr>
+    
+        @endforeach
+      </tbody>
+    </table> @endif
+  </div>
+</div>
 
 
 
@@ -67,7 +122,7 @@
             {{$Tomorow_appointment->facebook}}</td>
          
         <td class="align-middle">
-          <span class="badge badge-success badge-pill p-2">{{$Today_appointment->client->points}}</span> 
+          <span class="badge badge-success badge-pill p-2">{{$Tomorow_appointment->client->points}}</span> 
         </td>
         <td class="align-middle">{{$Tomorow_appointment->type->type}}</td>
          <td class="align-middle">@php $demain = date('H:i', strtotime($Tomorow_appointment->debut));
