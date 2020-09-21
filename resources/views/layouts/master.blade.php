@@ -66,7 +66,7 @@
                 <a class=" col col-2 btn btn-primary m-3 p-3 " style="font-size: 60px"   href="/"><i class=" p-2 fa fa-home"></i> </a>
 
 <a href="/types" class=" col col-2 text-white btn btn-success m-3 p-3" style="font-size: 60px"><i class=" p-2 fa fa-server"></i></a>
-<a href="/rdv" class=" col col-2 text-white btn btn-light m-3 p-3" style="font-size: 60px"><i class=" p-2 fa fa-calendar"></i></a> 
+<a href="/rdv" class=" col col-2 text-white btn btn-dark m-3 p-3" style="font-size: 60px"><i class=" p-2 fa fa-calendar"></i></a> 
 
             <a href="/clients" class="col col-2  text-white btn btn-info m-3 p-3" style="font-size: 60px"> <i class=" p-2 fa fa-users"></i></a> 
                       <a class=" col col-2   text-white btn btn-danger m-3 p-3 " style="font-size: 60px" data-toggle="modal" data-target="#exampleModal" ><i class=" p-2 fa fa-power-off"></i> </a>
