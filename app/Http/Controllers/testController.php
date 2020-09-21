@@ -261,10 +261,13 @@ $date=date("l");
        $d_pause="00:00";
        $f_pause="00:01";
    }
+   $jour=date("Y-m-d");
+   $tomorrow=date('Y-m-d', strtotime($jour. ' + 5 day'));
+   $jour=$tomorrow;
 
-    $debut=date("Y-m-d ").$debut.":00";
+    $debut=$jour." ".$debut.":00";
     $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
-    $fin=date("Y-m-d ").$fin.":00";
+    $fin=$jour." ".$fin.":00";
     $fin=date("Y-m-d H:i:s", strtotime(date($fin)));
     $types=Type::whereId($type)->first();
 
@@ -273,11 +276,8 @@ $date=date("l");
     $arr2=array();
     $items=array();
     $arr4=array();
-    $jour=date("Y-m-d");
-    $tomorrow=date('Y-m-d', strtotime($jour. ' + 5 day'));
-    $jour=$tomorrow;
-    echo $jour;
-    dd();
+    
+    
     $d_pause=$jour." ".$d_pause.":00";
     $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause)));  
     $f_pause=$jour." ".$f_pause.":00";
@@ -314,15 +314,12 @@ $date=date("l");
           }
 
 
-          echo $d_pause;
-          echo $f_pause;
 foreach ($arr4 as $k ) {
 
 
     if (!in_array($k, $items)&&!in_array($k, $arr2) ) {
 
 if ($d_pause<=$k && $k<$f_pause) {
-  echo "true";
 }
 else{
 
