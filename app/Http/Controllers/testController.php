@@ -252,7 +252,7 @@ if ($date=='Friday') {
    {
 date_default_timezone_set("Africa/Algiers");
 $date=date("l");
-    $date=date("l", strtotime($date. ' + 4 day'));
+    $date=date("l", strtotime($date. ' + 1 day'));
 
 
 
@@ -274,7 +274,7 @@ $date=date("l");
        $f_pause="00:01";
    }
    $jour=date("Y-m-d");
-   $tomorrow=date('Y-m-d', strtotime($jour. ' + 4 day'));
+   $tomorrow=date('Y-m-d', strtotime($jour. ' + 1 day'));
    $jour=$tomorrow;
 
     $debut=$jour." ".$debut.":00";
