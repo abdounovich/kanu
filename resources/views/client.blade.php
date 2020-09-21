@@ -174,7 +174,7 @@ switch ($yawm) {
           theme: "white",
       
       // end time
-          end: $.now() +159220,
+          end: $.now() 86400-3600+str,
           now: $.now(),
           
       
