@@ -301,11 +301,8 @@ $date=date("l");
       $arr2[]=$arr[$i];}
     
     else{
-      if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause) {
-        $arr2[]=$arr[$i];
-      echo "true";}
-else{
-       $arr4[]= $arr[$i];}}}
+  
+       $arr4[]= $arr[$i];}}
      
      
      }} else {
@@ -316,12 +313,19 @@ else{
             $arr4[]= $arr[$i];}
           }
 
-          dd();
 foreach ($arr4 as $k ) {
 
 
     if (!in_array($k, $items)&&!in_array($k, $arr2) ) {
-   $items[]=$k;}}
+
+if ($k<=$d_pause && $k>$f_pause) {
+}
+else{
+
+   $items[]=$k;
+}
+  
+  }}
    $var=2;
    $type=Type::find($type);
    return view("test")->with('items',$items)
