@@ -160,8 +160,7 @@ switch ($yawm) {
 
 
     <script> 
-    sar=parseInt(document.getElementById('hidden').value);
-    str=86400+sar-3600;
+    str=parseInt(document.getElementById('hidden').value);
 
     
     $('#countdown-container').ClassyCountdown({
@@ -174,7 +173,7 @@ switch ($yawm) {
           theme: "white",
       
       // end time
-          end: $.now() +str,
+          end: $.now() +str-3600,
           now: $.now(),
       
       // whether to display the days/hours/minutes/seconds labels.
