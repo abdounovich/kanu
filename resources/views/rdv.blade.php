@@ -55,7 +55,7 @@
         @endphp
         <tr>
           <th scope="row">{{$counter}}</th>
-          <td class="align-middle"><img class=" img-thumbnail border  rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+          <td class="align-middle"><img class="  border  rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
             {{$Actif_appointment->facebook}}</td>
          
         <td class="align-middle">
