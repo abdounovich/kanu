@@ -180,12 +180,10 @@ if ($date=='Friday') {
     $arr4=array();
     $jour=date("Y-m-d");
 
-
-    $d_pause=$jour.$d_pause.":00";
-    $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause))); 
-    $f_pause=$jour.$f_pause.":00";
+    $d_pause=$jour." ".$d_pause.":00";
+    $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause)));  
+    $f_pause=$jour." ".$f_pause.":00";
     $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
-
     $Today_appointments=Appointment::where('ActiveType',"1")->whereJour($jour)->get();
     while ($debut < $fin )
     {
@@ -198,22 +196,24 @@ if ($date=='Friday') {
     for ($i=0; $i <count($arr) ; $i++) { 
     $d=date("Y-m-d H:i:s", strtotime($appointment->date." ".$appointment->debut.":00"));
     $f=date("Y-m-d H:i:s", strtotime($appointment->date." ".$appointment->fin.":00"));
-    if ($arr[$i]>=$d && $arr[$i]<$f ) {
-      if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause ) {
-      
-        $arr2[]=$arr[$i];}
-        else{
+    if ($arr[$i]>=$d && $arr[$i]<$f) {
+      if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause) {
+
       $arr2[]=$arr[$i];}
+      else{  $arr2[]=$arr[$i];}
     }
     else{
-      if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause ) {
+      if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause) {
         $arr2[]=$arr[$i];}
 else{
-       $arr4[]= $arr[$i];}
-      
-      }}
+       $arr4[]= $arr[$i];}}}
+     
+     
      }} else {
+ 
+ 
        for ($i=0; $i <count($arr) ; $i++) { 
+       
             $arr4[]= $arr[$i];}
           }
 foreach ($arr4 as $k ) {
@@ -244,6 +244,8 @@ date_default_timezone_set("Africa/Algiers");
 $date=date("l");
     $date=date("l", strtotime($date. ' + 5 day'));
 
+
+
     if ($date=='Friday') {
       $debut="09:00";
       $fin="22:00";
@@ -262,8 +264,6 @@ $date=date("l");
        $f_pause="00:01";
    }
 
-  
-
     $debut=date("Y-m-d ").$debut.":00";
     $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
     $fin=date("Y-m-d ").$fin.":00";
@@ -278,13 +278,10 @@ $date=date("l");
     $jour=date("Y-m-d");
     $tomorrow=date('Y-m-d', strtotime($jour. ' + 5 day'));
     $jour=$tomorrow;
-    $d_pause=$jour.$d_pause.":00";
-    $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause))); 
-    $f_pause=$jour.$f_pause.":00";
+    $d_pause=$jour." ".$d_pause.":00";
+    $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause)));  
+    $f_pause=$jour." ".$f_pause.":00";
     $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
-    echo $d_pause;
-    echo $f_pause;
-    dd();
     $Tomorrow_appointments=Appointment::where('ActiveType',"1")->whereJour($tomorrow)->get();
     while ($debut < $fin )
     {
@@ -298,20 +295,19 @@ $date=date("l");
     for ($i=0; $i <count($arr) ; $i++) { 
     $d=date("Y-m-d H:i:s", strtotime($appointment->date." ".$appointment->debut.":00"));
     $f=date("Y-m-d H:i:s", strtotime($appointment->date." ".$appointment->fin.":00"));
-    if ($arr[$i]>=$d && $arr[$i]<$f ) {
-      if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause ) {
-      
-        $arr2[]=$arr[$i];}
-        else{
+    if ($arr[$i]>=$d && $arr[$i]<$f) {
+      if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause) {
+
       $arr2[]=$arr[$i];}
+      else{  $arr2[]=$arr[$i];}
     }
     else{
-      if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause ) {
+      if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause) {
         $arr2[]=$arr[$i];}
 else{
-       $arr4[]= $arr[$i];}
-      
-      }}
+       $arr4[]= $arr[$i];}}}
+     
+     
      }} else {
  
  
@@ -346,6 +342,7 @@ $types=Type::whereId($type)->first();
 date_default_timezone_set("Africa/Algiers");
 $date=date("l");
     $date=date("l", strtotime($date. ' + 2 day'));
+
     if ($date=='Friday') {
       $debut="09:00";
       $fin="22:00";
@@ -360,8 +357,8 @@ $date=date("l");
    }else{
        $debut="16:00";
        $fin="22:00";
-       $d_pause="17:00";
-       $f_pause="19:00";
+       $d_pause="00:00";
+       $f_pause="00:01";
    }
    $debut=date("Y-m-d ").$debut.":00";
    $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
@@ -375,10 +372,10 @@ $date=date("l");
    $jour=date("Y-m-d");
    $afterTommorow=date('Y-m-d', strtotime($jour. ' + 2 day'));
    $jour=$afterTommorow;
-   $d_pause=$jour.$d_pause.":00";
-   $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause))); 
-   $f_pause=$jour.$f_pause.":00";
-   $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
+   $d_pause=$jour." ".$d_pause.":00";
+    $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause)));  
+    $f_pause=$jour." ".$f_pause.":00";
+    $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
    $afterTommorow=Appointment::where('ActiveType',"1")->whereJour($afterTommorow)->get();
    while ($debut < $fin )
    {
@@ -391,20 +388,19 @@ $date=date("l");
    for ($i=0; $i <count($arr) ; $i++) { 
    $d=date("Y-m-d H:i:s", strtotime($appointment->date." ".$appointment->debut.":00"));
    $f=date("Y-m-d H:i:s", strtotime($appointment->date." ".$appointment->fin.":00"));
-   if ($arr[$i]>=$d && $arr[$i]<$f ) {
-    if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause ) {
-    
-      $arr2[]=$arr[$i];}
-      else{
+   if ($arr[$i]>=$d && $arr[$i]<$f) {
+    if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause) {
+
     $arr2[]=$arr[$i];}
+    else{  $arr2[]=$arr[$i];}
   }
   else{
-    if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause ) {
+    if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause) {
       $arr2[]=$arr[$i];}
 else{
-     $arr4[]= $arr[$i];}
-    
-    }}
+     $arr4[]= $arr[$i];}}}
+   
+   
    }} else {
 
 
