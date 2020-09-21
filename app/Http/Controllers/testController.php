@@ -341,8 +341,8 @@ $date=date("l");
    }else{
        $debut="16:00";
        $fin="22:00";
-       $d_pause="00:00";
-       $f_pause="00:01";
+       $d_pause="17:00";
+       $f_pause="19:00";
    }
    $debut=date("Y-m-d ").$debut.":00";
    $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
