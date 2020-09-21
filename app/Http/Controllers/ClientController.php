@@ -29,7 +29,6 @@ if (!$appointment) {
 }
 else{
              $TheDi=$appointment->jour." ".$appointment->debut.":00";
-             echo $TheDi;
            
 
             // 2012-01-31 00:00:00
@@ -38,10 +37,7 @@ else{
 
 
   $difmin=$aaa->diffInSeconds($restOfTimeInSeconds);
-  echo $difmin;
-  // 0
-  dd();
- 
+
 
 }
 $config=Config::get('botman.facebook.token');
