@@ -9,13 +9,11 @@
 
     <!-- Fonts -->
 
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-knob@1.2.11/dist/jquery.knob.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js" integrity="sha512-JZSo0h5TONFYmyLMqp8k4oPhuo6yNk9mHM+FY50aBjpypfofqtEWsAgRDQm94ImLCzSaHeqNvYuD9382CEn2zw==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.js" integrity="sha512-5ITfxARa+VowWr2W6H+oCSKk1t3q4pqFoiU4or3whS4VkaOF6N+QFNAQFZeMBMM/9CT4TeFiRPFJDuFFNfXkZA==" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.classycountdown@1.0.1/css/jquery.classycountdown.min.css">
-<script src="https://cdn.jsdelivr.net/npm/jquery.classycountdown@1.0.1/js/jquery.classycountdown.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="{{URL::asset('js/jquery.knob.js')}}"></script>
+    <script src="{{URL::asset('js/jquery.throttle.js')}}"></script>
+    <link href="{{URL::asset('css/jquery.classycountdown.css')}}" rel="stylesheet">
+<script src="{{URL::asset('js/jquery.classycountdown.js')}}"></script>
 <style>body{
 background:url(https://res.cloudinary.com/ds9qfm1ok/image/upload/v1599670310/1_zvsdhh.jpg) ;
 background-repeat: no-repeat;
