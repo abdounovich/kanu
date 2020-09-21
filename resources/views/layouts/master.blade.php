@@ -62,7 +62,7 @@
           
        <div class="container  ">
             <div class="row ">
-              <div class="col p-4 btn-group bg-dark rounded " style="opacity: 0.8">
+              <div class="col p-4 btn-group bg-dark rounded " style="opacity: 0.7">
                 <a class=" col col-2 btn btn-primary m-2 p-2 " style="font-size: 60px"   href="/"><i class=" p-2 fa fa-home"></i> </a>
 
 <a href="/types" class=" col col-2 text-white btn btn-success m-2 p-2" style="font-size: 60px"><i class=" p-2 fa fa-server"></i></a>
