@@ -179,6 +179,14 @@ if ($date=='Friday') {
     $items=array();
     $arr4=array();
     $jour=date("Y-m-d");
+
+
+    $d_pause=date("Y-m-d ").$d_pause.":00";
+    $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause))); 
+    $f_pause=date("Y-m-d ").$f_pause.":00";
+    $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
+
+    
     $Today_appointments=Appointment::where('ActiveType',"1")->whereJour($jour)->get();
     while ($debut < $fin )
     {
