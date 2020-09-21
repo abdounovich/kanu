@@ -214,9 +214,21 @@ if ($date=='Friday') {
        
             $arr4[]= $arr[$i];}
           }
-foreach ($arr4 as $k ) {
-    if (!in_array($k, $items)&&!in_array($k, $arr2) ) {
-   $items[]=$k;}}
+          foreach ($arr4 as $k ) {
+
+
+            if (!in_array($k, $items)&&!in_array($k, $arr2) ) {
+        
+        if ($d_pause<=$k && $k<$f_pause) {
+        }
+        else{
+        
+           $items[]=$k;
+        
+           
+        }
+          
+          }}
    $var=1;
 
 
@@ -324,8 +336,7 @@ if ($d_pause<=$k && $k<$f_pause) {
 else{
 
    $items[]=$k;
-   echo $k;
-   echo"<p></p>";
+
    
 }
   
@@ -372,18 +383,19 @@ $date=date("l");
        $d_pause="00:00";
        $f_pause="00:01";
    }
-   $debut=date("Y-m-d ").$debut.":00";
+   $jour=date("Y-m-d");
+   $afterTommorow=date('Y-m-d', strtotime($jour. ' + 2 day'));
+   $jour=$afterTommorow;
+   $debut=$jour." ".$debut.":00";
    $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
-   $fin=date("Y-m-d ").$fin.":00";
+   $fin=$jour." ".$fin.":00";
    $fin=date("Y-m-d H:i:s", strtotime(date($fin)));
    $pas=60*$types->temps;
    $arr=array();
    $arr2=array();
    $items=array();
    $arr4=array();
-   $jour=date("Y-m-d");
-   $afterTommorow=date('Y-m-d', strtotime($jour. ' + 2 day'));
-   $jour=$afterTommorow;
+ 
    $d_pause=$jour." ".$d_pause.":00";
     $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause)));  
     $f_pause=$jour." ".$f_pause.":00";
@@ -420,9 +432,21 @@ $date=date("l");
          }
          
  
-foreach ($arr4 as $k ) {
-   if (!in_array($k, $items)&&!in_array($k, $arr2) ) {
-  $items[]=$k;}}
+         foreach ($arr4 as $k ) {
+
+
+          if (!in_array($k, $items)&&!in_array($k, $arr2) ) {
+      
+      if ($d_pause<=$k && $k<$f_pause) {
+      }
+      else{
+      
+         $items[]=$k;
+      
+         
+      }
+        
+        }}
   $var=3;
   $type=Type::find($type);
   return view("test")->with('items',$items)
