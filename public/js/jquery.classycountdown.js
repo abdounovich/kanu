@@ -183,7 +183,7 @@
                 });
             }
             $(window).trigger('resize');
-            $(window).on('resize', $.throttle(50, onResize));
+            $(window).resize($.throttle(50, onResize));
         }
 
         function onResize() {
