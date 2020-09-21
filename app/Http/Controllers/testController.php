@@ -262,6 +262,9 @@ $date=date("l");
        $f_pause="00:01";
    }
 
+   echo $d_pause;
+   dd();
+
     $debut=date("Y-m-d ").$debut.":00";
     $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
     $fin=date("Y-m-d ").$fin.":00";
