@@ -160,6 +160,7 @@ switch ($yawm) {
 
     <script> 
     str=parseInt(document.getElementById('hidden').value);
+    alert(str);
 
     
     $('#countdown-container').ClassyCountdown({
