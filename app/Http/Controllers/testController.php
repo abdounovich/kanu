@@ -203,10 +203,8 @@ if ($date=='Friday') {
       else{  $arr2[]=$arr[$i];}
     }
     else{
-      if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause) {
-        $arr2[]=$arr[$i];}
-else{
-       $arr4[]= $arr[$i];}}}
+ 
+       $arr4[]= $arr[$i];}}
      
      
      }} else {
@@ -318,7 +316,7 @@ foreach ($arr4 as $k ) {
 
     if (!in_array($k, $items)&&!in_array($k, $arr2) ) {
 
-if ($k<=$d_pause && $k>$f_pause) {
+if ($d_pause<=$k && $k<$f_pause) {
 }
 else{
 
@@ -401,10 +399,8 @@ $date=date("l");
     else{  $arr2[]=$arr[$i];}
   }
   else{
-    if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause) {
-      $arr2[]=$arr[$i];}
-else{
-     $arr4[]= $arr[$i];}}}
+  
+     $arr4[]= $arr[$i];}}
    
    
    }} else {
