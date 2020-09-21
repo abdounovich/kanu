@@ -74,7 +74,32 @@ button:hover, a:hover {
     <!-- Styles -->
 </head>
 <body dir="rtl">
+    @php
+    
+    $date=date_create($appointment->jour);
+$yawm=date_format($date,"l");
 
+
+switch ($yawm) {
+  case "Friday":
+  $yawm="الجمعة";break;
+  case "Saturday":
+  $yawm="السبت";break;
+  case "Sunday":
+  $yawm="الأحد ";break;
+  case "Monday":
+  $yawm="الإثــنين ";break;
+  case "Tuesday":
+  $yawm="الثلاثاء";break;
+  case "Wednesday":
+  $yawm="الأربعاء";break;
+  case "Thursday":
+  $yawm="الخميس";
+  
+}
+
+
+    @endphp
 <div class="m-4">
     <div  class=" card bg-success text-white  justify-content-center align-self-center align-items-center" style="opacity: 0.9">
         @php
@@ -90,7 +115,7 @@ button:hover, a:hover {
         <img src="{{$picture}}" alt="John"  width="100" height="100" class=" align-self-center m-4 border border-white ">
         <h3 class="mt-2 bg-dark">{{$client->facebook}}</h3>
       
-    <div><div class="h4">رصيدي   :            <span class="badge badge-dark">{{$client->points}} نقطة  </span></div>
+    <div><div class="h4">عدد نقاطي :            <span class="badge badge-dark">{{$client->points}} نقطة  </span></div>
 </div>
            
 
@@ -104,7 +129,11 @@ button:hover, a:hover {
     
            
 
-           
+        <div class="m-3 " dir="ltr">:موعدك   </div>
+        
+        <div class=" " dir="ltr">يوم "{{$yawm}}" على  {{$appointment->debut}}   </div>
+
+
                 <div class="m-3">الوقت المتبقي لموعدك : </div>
 <div style="direction: ltr "  id="countdown-container"></div>
 <p></p>
