@@ -27,7 +27,7 @@ $Tommorow=date('Y-m-d', strtotime($today. ' + 1 day'));
 $afterTommorow=date('Y-m-d', strtotime($today. ' + 2 day'));
 
 
-       $Today_appointments=Appointment::where('ActiveType','1')->whereJour($today)->orderBy('debut', 'asc')->get();
+       $Today_appointments=Appointment::where('ActiveType','1')->whereJour($today)->get();
        $Tomorow_appointments=Appointment::where('ActiveType','1')->whereJour($Tommorow)->orderBy('debut', 'asc')->get();
        $AfterTomoro_appointments=Appointment::where('ActiveType','1')->whereJour($afterTommorow)->orderBy('debut', 'asc')->get();
 
