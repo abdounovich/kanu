@@ -271,7 +271,12 @@ function getvalue() {
  x.style.display = "block";
 
 }
-        function sendMessage() {
+
+function sendMessage() { setTimeout(send(), 1000);}
+        function send() {
+
+           
+
             document.getElementById("myForm").submit();
 
         
