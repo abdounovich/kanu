@@ -67,85 +67,26 @@ button:hover, a:hover {
     <!-- Styles -->
 </head>
 <body dir="rtl">
-    @php
-    
-    $date=date_create($appointment->jour);
-$yawm=date_format($date,"l");
+   
 
-
-switch ($yawm) {
-  case "Friday":
-  $yawm="الجمعة";break;
-  case "Saturday":
-  $yawm="السبت";break;
-  case "Sunday":
-  $yawm="الأحد ";break;
-  case "Monday":
-  $yawm="الإثــنين ";break;
-  case "Tuesday":
-  $yawm="الثلاثاء";break;
-  case "Wednesday":
-  $yawm="الأربعاء";break;
-  case "Thursday":
-  $yawm="الخميس";
-  
-}
-
-
-    @endphp
-<div class="m-4">
-    <div  class=" card bg-success text-white  justify-content-center align-self-center align-items-center" style="opacity: 0.9">
-        @php
-
-
-        ini_set("allow_url_fopen", 1);
-        
-                      $userInfoData=file_get_contents('https://graph.facebook.com/v2.6/'.$client->fb_id.'?fields=profile_pic&access_token='.$config);
-                      $userInfo = json_decode($userInfoData, true);
-                  $picture = $userInfo['profile_pic'] ;
-        
-        @endphp
-        <img src="{{$picture}}" alt="John"  width="100" height="100" class=" align-self-center m-4 border border-white ">
-        <h3 class="mt-2 bg-dark">{{$client->facebook}}</h3>
-      
-    <div><div class="h4">عدد نقاطي :            <span class="badge badge-dark">{{$client->points}} نقطة  </span></div>
-</div>
-           
-
-          
-      </div>
-</div>
- @if ($difmin-3600 >'0')
-      <div  class="card  mt-4 bg-success text-white " style="opacity: 0.9">
   
       
     
            
 
-        <div class="m-3 " dir="ltr">:موعدك   </div>
         
-        <div class=" " dir="ltr">يوم "{{$yawm}}" على  {{$appointment->debut}}   </div>
 
 
-                <div class="m-3">الوقت المتبقي لموعدك : </div>
-<div style="direction: ltr "  id="countdown-container"></div>
-<p></p>
-<p></p>
-          
-      </div>
+<div   id="countdown-container"></div>
 
-          
-      @else
-      <div class="col col-12 bg-dark text-white m-2  " style="opacity: 0.9"><h4 class="p-4 text-right">لا توجد مواعيد لنهار اليوم</h4></div>
-     
-  @endif
-    
+
+   
 
 
 
 
 
-           <input type="hidden" id="hidden" name="hidden" value="{{$difmin}}">
+           <input type="text" id="hidden" name="hidden" value="{{$difmin}}">
 
        
 
