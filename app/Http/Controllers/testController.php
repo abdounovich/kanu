@@ -342,7 +342,7 @@ else{
   
   }}
 
-  dd();
+  
    $var=2;
    $type=Type::find($type);
    return view("test")->with('items',$items)
