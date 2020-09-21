@@ -94,12 +94,9 @@ button:hover, a:hover {
 
 
     <script> 
-    str=parseInt(document.getElementById('hidden').value);
-
-    
-    $('#countdown-container').ClassyCountdown({
-    theme: "dark", // theme
-    end: $.now() +28748040 // end time
+   $('#countdown-container').ClassyCountdown({
+    theme: "white", // theme
+    end: $.now() + 645600 // end time
 });</script>
 
 
