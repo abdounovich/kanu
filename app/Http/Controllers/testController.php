@@ -311,19 +311,26 @@ $date=date("l");
             $arr4[]= $arr[$i];}
           }
 
+
+          echo $d_pause;
+          echo $f_pause;
 foreach ($arr4 as $k ) {
 
 
     if (!in_array($k, $items)&&!in_array($k, $arr2) ) {
 
 if ($d_pause<=$k && $k<$f_pause) {
+  echo "true";
 }
 else{
 
    $items[]=$k;
+   
 }
   
   }}
+
+  dd();
    $var=2;
    $type=Type::find($type);
    return view("test")->with('items',$items)
