@@ -148,17 +148,26 @@ $config=Config::get('app.url');
    
    {
 date_default_timezone_set("Africa/Algiers");
+$arr2=array();
+
     $date=date("l");   
 
 if ($date=='Friday') {
     $debut="09:00";
     $fin="22:00";
+    $d_pause="12:00";
+    $f_pause="15:00";
+   
  }elseif($date=='Saturday'){
      $debut="09:00";
-     $fin="22:00";
+     $fin="22:00"; 
+     $d_pause="12:00";
+     $f_pause="13:00";
  }else{
      $debut="16:00";
      $fin="22:00";
+     $d_pause="00:00";
+     $f_pause="00:01";
  }
     $debut=date("Y-m-d ").$debut.":00";
     $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
@@ -167,8 +176,6 @@ if ($date=='Friday') {
     $types=Type::whereId($type)->first();
     $pas=60*$types->temps;
     $arr=array();
-    $arr2=array();
-
     $items=array();
     $arr4=array();
     $jour=date("Y-m-d");
@@ -184,8 +191,12 @@ if ($date=='Friday') {
     for ($i=0; $i <count($arr) ; $i++) { 
     $d=date("Y-m-d H:i:s", strtotime($appointment->date." ".$appointment->debut.":00"));
     $f=date("Y-m-d H:i:s", strtotime($appointment->date." ".$appointment->fin.":00"));
-    if ($arr[$i]>=$d && $arr[$i]<$f) {
-      $arr2[]=$arr[$i];
+    if ($arr[$i]>=$d && $arr[$i]<$f ) {
+      if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause ) {
+      
+        $arr2[]=$arr[$i];}
+        else{
+      $arr2[]=$arr[$i];}
     }
     else{
        $arr4[]= $arr[$i];}}
@@ -226,17 +237,23 @@ date_default_timezone_set("Africa/Algiers");
 $date=date("l");
     $date=date("l", strtotime($date. ' + 1 day'));
 
-
-if ($date=='Friday') {
-    $debut="09:00";
-    $fin="22:00";
- }elseif($date=='Saturday'){
-     $debut="09:00";
-     $fin="22:00";
- }else{
-     $debut="16:00";
-     $fin="22:00";
- }
+    if ($date=='Friday') {
+      $debut="09:00";
+      $fin="22:00";
+      $d_pause="12:00";
+      $f_pause="15:00";
+     
+   }elseif($date=='Saturday'){
+       $debut="09:00";
+       $fin="22:00"; 
+       $d_pause="12:00";
+       $f_pause="13:00";
+   }else{
+       $debut="16:00";
+       $fin="22:00";
+       $d_pause="00:00";
+       $f_pause="00:01";
+   }
 
     $debut=date("Y-m-d ").$debut.":00";
     $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
@@ -265,8 +282,12 @@ if ($date=='Friday') {
     for ($i=0; $i <count($arr) ; $i++) { 
     $d=date("Y-m-d H:i:s", strtotime($appointment->date." ".$appointment->debut.":00"));
     $f=date("Y-m-d H:i:s", strtotime($appointment->date." ".$appointment->fin.":00"));
-    if ($arr[$i]>=$d && $arr[$i]<$f) {
-      $arr2[]=$arr[$i];
+    if ($arr[$i]>=$d && $arr[$i]<$f ) {
+      if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause ) {
+      
+        $arr2[]=$arr[$i];}
+        else{
+      $arr2[]=$arr[$i];}
     }
     else{
        $arr4[]= $arr[$i];}}
@@ -307,15 +328,22 @@ date_default_timezone_set("Africa/Algiers");
 $date=date("l");
     $date=date("l", strtotime($date. ' + 2 day'));
     if ($date=='Friday') {
-   $debut="09:00";
-   $fin="22:00";
-}elseif($date=='Saturday'){
-    $debut="09:00";
-    $fin="22:00";
-}else{
-    $debut="16:00";
-    $fin="22:00";
-}
+      $debut="09:00";
+      $fin="22:00";
+      $d_pause="12:00";
+      $f_pause="15:00";
+     
+   }elseif($date=='Saturday'){
+       $debut="09:00";
+       $fin="22:00"; 
+       $d_pause="12:00";
+       $f_pause="13:00";
+   }else{
+       $debut="16:00";
+       $fin="22:00";
+       $d_pause="00:00";
+       $f_pause="00:01";
+   }
    $debut=date("Y-m-d ").$debut.":00";
    $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
    $fin=date("Y-m-d ").$fin.":00";
@@ -340,9 +368,13 @@ $date=date("l");
    for ($i=0; $i <count($arr) ; $i++) { 
    $d=date("Y-m-d H:i:s", strtotime($appointment->date." ".$appointment->debut.":00"));
    $f=date("Y-m-d H:i:s", strtotime($appointment->date." ".$appointment->fin.":00"));
-   if ($arr[$i]>=$d && $arr[$i]<$f) {
-     $arr2[]=$arr[$i];
-   }
+   if ($arr[$i]>=$d && $arr[$i]<$f ) {
+    if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause ) {
+    
+      $arr2[]=$arr[$i];}
+      else{
+    $arr2[]=$arr[$i];}
+  }
    else{
       $arr4[]= $arr[$i];}}
     

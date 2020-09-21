@@ -146,6 +146,7 @@ $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
 
                 @switch($var)
                     @case(1)
+                    
                     <div  class="h3 bg-success text-white text text-center p-2 m-2  rounded" >المواعيد المتاحة اليوم  </div>
 
                         @break
@@ -159,9 +160,7 @@ $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
 
                      
                 @endswitch
-                @if ($var==1)
-
-                @endif
+                
             <div id="top-menu"  class=" bg-dark m-2 p-2 align-self-center justify-content-center align-items-center " style="opacity: 0.8">
             @foreach ($items as $item)
             @php   
