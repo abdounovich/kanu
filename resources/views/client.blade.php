@@ -158,7 +158,7 @@ switch ($yawm) {
     
     $('#countdown-container').ClassyCountdown({
     theme: "dark", // theme
-    end: $.now() +10800+str // end time
+    end: $.now() +10800+7200+str // end time
 });</script>
 
 
