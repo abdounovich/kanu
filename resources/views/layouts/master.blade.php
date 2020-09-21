@@ -55,7 +55,7 @@
 
 
      
-<div class="p-2 m-5  d-flex justify-content-center"> <a class="btn btn-dark  rounded text-white " ><i class=" p-1 fa fa-arrow-down fa-4x " data-toggle="collapse" data-target="#demo"></i>
+<div class="p-2 m-5  d-flex justify-content-center"> <a class="btn btn-white  rounded text-dark " ><i class=" p-1 fa fa-arrow-down fa-4x " data-toggle="collapse" data-target="#demo"></i>
 </a></div>
        
           <div id="demo" class="collapse m-5 p-4">
