@@ -161,7 +161,7 @@ switch ($yawm) {
 
     <script> 
     sar=parseInt(document.getElementById('hidden').value);
-    str=86400+str-3600;
+    str=86400+sar-3600;
 
     
     $('#countdown-container').ClassyCountdown({
