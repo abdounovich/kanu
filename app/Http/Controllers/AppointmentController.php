@@ -20,12 +20,26 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-       $Actif_appointments=Appointment::where('ActiveType','1')->latest()->get();
+
+        date_default_timezone_set("Africa/Algiers");
+$today=date("Y-m-d");
+$Tommorow=date('Y-m-d', strtotime($today. ' + 1 day'));
+$afterTommorow=date('Y-m-d', strtotime($today. ' + 2 day'));
+
+
+       $Today_appointments=Appointment::where('ActiveType','1')->whereJour($today)->orderByDesc('debut')->get();
+       $Tomorow_appointments=Appointment::where('ActiveType','1')->whereJour($Tommorow)->orderByDesc('debut')->get();
+       $AfterTomoro_appointments=Appointment::where('ActiveType','1')->whereJour($afterTommorow)->orderByDesc('debut')->get();
+
+
+
        $Inactif_appointments=Appointment::where('ActiveType','0')->latest()->paginate(5);
     $config=Config::get('botman.facebook.token');
  
        return view("rdv")
-       ->with('Actif_appointments',$Actif_appointments)
+       ->with('Today_appointments',$Today_appointments)
+       ->with('Tomorow_appointments',$Tomorow_appointments)
+       ->with('AfterTomoro_appointments',$AfterTomoro_appointments)
        ->with('Inactif_appointments',$Inactif_appointments)
        ->with('config',$config);
     }
