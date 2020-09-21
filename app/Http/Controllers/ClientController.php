@@ -29,14 +29,18 @@ if (!$appointment) {
 }
 else{
              $TheDi=$appointment->jour." ".$appointment->debut.":00";
+             echo $TheDi;
+           
 
             // 2012-01-31 00:00:00
             $aaa=new Carbon($TheDi);
             $restOfTimeInSeconds=Carbon::now('Africa/Algiers');
 
 
-  $difmin=$aaa->diffInSeconds($restOfTimeInSeconds); // 0
-
+  $difmin=$aaa->diffInSeconds($restOfTimeInSeconds);
+  echo $difmin;
+  // 0
+  dd();
  
 
 }
