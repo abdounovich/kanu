@@ -325,6 +325,8 @@ if ($d_pause<=$k && $k<$f_pause) {
 else{
 
    $items[]=$k;
+   echo $k;
+   echo"<p></p>";
    
 }
   
