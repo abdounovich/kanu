@@ -272,7 +272,7 @@ function getvalue() {
 
 }
 
-function sendMessage() { setTimeout(send(), 1000);}
+function sendMessage() { setTimeout(send(), 10000);}
         function send() {
 
            
