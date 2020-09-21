@@ -172,7 +172,7 @@ switch ($yawm) {
           theme: "white",
       
       // end time
-          end: $.now() +86400,
+          end: $.now() +str+86400,
           now: $.now(),
       
       // whether to display the days/hours/minutes/seconds labels.
