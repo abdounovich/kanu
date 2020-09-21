@@ -259,21 +259,21 @@ $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
   </form>
 
     <script type="text/javascript">
-
-
-
-function getvalue() {
                 var debut =document.getElementById("debut");
 
-
-                debut.value =event.target.name;
                 var x = document.getElementById("clc");
+
+        var y = document.getElementById("suc");
+
+function getvalue() {
+                 debut.value =event.target.name;
                  x.style.display = "block";
+
+
 
 }
         function sendMessage() {    
         document.getElementById("myForm").submit();
-        var y = document.getElementById("suc");
         y.style.display = "block";
         setTimeout("send()", 5000);
 }
