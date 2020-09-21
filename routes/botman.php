@@ -48,7 +48,7 @@ if ($DbUsername=="0") {
 
 $DbUsername=Client::whereFacebook($full_name)->first();
 $bot->typesAndWaits(2);
-    $bot->reply('مرحبا بك  🙋‍♂️ '.$full_name."\n".' IK9 تشرفنا زيارتك لصفحة   ');
+    $bot->reply('مرحبا بك  🙋‍♂️ '.$full_name."\n".' 🖤💚 IK9 تشرفنا زيارتك لصفحة   ');
     $bot->typesAndWaits(2);
     $bot->reply(ButtonTemplate::create('   أنا روربوت المحادثة التلقائية  🤖  كيف يمكنني خدمتك ؟  ')
 	->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
