@@ -185,8 +185,7 @@ if ($date=='Friday') {
     $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause))); 
     $f_pause=$jour.$f_pause.":00";
     $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
-echo $d_pause ." // ".$f_pause;
-dd();
+
     $Today_appointments=Appointment::where('ActiveType',"1")->whereJour($jour)->get();
     while ($debut < $fin )
     {
@@ -207,7 +206,10 @@ dd();
       $arr2[]=$arr[$i];}
     }
     else{
-       $arr4[]= $arr[$i];}}
+      if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause ) {
+        $arr2[]=$arr[$i];}
+else{
+       $arr4[]= $arr[$i];}}}
      
      
      }} else {
