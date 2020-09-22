@@ -62,7 +62,7 @@
           echo $demain;
           @endphp</td>
             <td class="align-middle"> @php  carbon\Carbon::setLocale('ar');
-              echo $Today_appointment->created_at->subMinutes(60)->diffForHumans(); @endphp    </td>
+              echo $Today_appointment->created_at->addMinutes(60)->diffForHumans(); @endphp    </td>
 
         </tr>
     
@@ -129,7 +129,7 @@
           echo $demain;
           @endphp</td>
             <td class="align-middle"> @php  carbon\Carbon::setLocale('ar');
-              echo $Tomorow_appointment->created_at->subMinutes(60)->diffForHumans(); @endphp    </td>
+              echo $Tomorow_appointment->created_at->addMinutes(60)->diffForHumans(); @endphp    </td>
 
         </tr>
     
@@ -189,7 +189,7 @@
           echo $demain;
           @endphp</td>
             <td class="align-middle"> @php  carbon\Carbon::setLocale('ar');
-              echo $AfterTomoro_appointment->created_at->subMinutes(60)->diffForHumans(); @endphp    </td>
+              echo $AfterTomoro_appointment->created_at->addMinutes(60)->diffForHumans(); @endphp    </td>
 
         </tr>
     
