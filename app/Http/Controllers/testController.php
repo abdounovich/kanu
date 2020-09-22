@@ -189,7 +189,7 @@ if ($date=='Friday') {
     {
       
       $arr[]=$debut;  
-      $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
+      $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + 15*60));
           }
           if (count($Today_appointments)>0) {
             foreach ($Today_appointments as $appointment ) {  
@@ -299,7 +299,7 @@ $date=date("l");
     while ($debut < $fin )
     {
       $arr[]=$debut;  
-      $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
+      $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + 15*60));
 
           }
           
@@ -404,7 +404,7 @@ $date=date("l");
    while ($debut < $fin )
    {
      $arr[]=$debut;  
-     $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
+     $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + 15*60));
          }
 
          if (count($afterTommorow)>0) {

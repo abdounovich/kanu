@@ -39,12 +39,9 @@
       <tbody class=" text-right">
         @php
         $counter=0;
-
         @endphp
         @foreach ($Today_appointments as $Today_appointment)
         @php
-                date_default_timezone_set("Africa/Algiers");
-
            $counter=$counter+1; 
       
         ini_set("allow_url_fopen", 1);
@@ -113,8 +110,7 @@
         @foreach ($Tomorow_appointments as $Tomorow_appointment)
         @php
            $counter=$counter+1; 
-           date_default_timezone_set("Africa/Algiers");
-
+      
         ini_set("allow_url_fopen", 1);
                       $userInfoData=file_get_contents('https://graph.facebook.com/v2.6/'.$Tomorow_appointment->fb_id.'?fields=profile_pic&access_token='.$config);
                       $userInfo = json_decode($userInfoData, true);
@@ -126,7 +122,7 @@
             {{$Tomorow_appointment->facebook}}</td>
          
         <td class="align-middle">
-          <span class="badge badge-success badge-pill p-2">{{$Tomorow_appointment->client->points}}</span> 
+          <span class="badge badge-success badge-pill p-2">{{$Today_appointment->client->points}}</span> 
         </td>
         <td class="align-middle">{{$Tomorow_appointment->type->type}}</td>
          <td class="align-middle">@php $demain = date('H:i', strtotime($Tomorow_appointment->debut));
@@ -174,8 +170,7 @@
         @foreach ($AfterTomoro_appointments as $AfterTomoro_appointment)
         @php
            $counter=$counter+1; 
-           date_default_timezone_set("Africa/Algiers");
-
+      
         ini_set("allow_url_fopen", 1);
                       $userInfoData=file_get_contents('https://graph.facebook.com/v2.6/'.$AfterTomoro_appointment->fb_id.'?fields=profile_pic&access_token='.$config);
                       $userInfo = json_decode($userInfoData, true);
