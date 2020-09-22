@@ -180,10 +180,10 @@ switch ($yawm) {
 // object that specifies different language phrases for says/hours/minutes/seconds as well as specific CSS styles.
     labelsOptions: {
         lang: {
-            days: 'الأيام ',
-            hours: 'الساعات ',
-            minutes: 'الدقائق',
-            seconds: 'الثواني'
+            days: 'يوم ',
+            hours: 'ساعة ',
+            minutes: 'دقيقة',
+            seconds: 'ثانية'
         },
         style: 'font-size: 0.7em;'
     },
