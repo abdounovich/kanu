@@ -39,6 +39,8 @@
       <tbody class=" text-right">
         @php
         $counter=0;
+        date_default_timezone_set("Africa/Algiers");
+
         @endphp
         @foreach ($Today_appointments as $Today_appointment)
         @php
