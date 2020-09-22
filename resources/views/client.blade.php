@@ -180,12 +180,12 @@ switch ($yawm) {
 // object that specifies different language phrases for says/hours/minutes/seconds as well as specific CSS styles.
     labelsOptions: {
         lang: {
-            days: 'Days',
-            hours: 'Hours',
-            minutes: 'Minutes',
-            seconds: 'Seconds'
+            days: 'الأيام ',
+            hours: 'الساعات ',
+            minutes: 'الدقائق',
+            seconds: 'الثواني'
         },
-        style: 'font-size: 0.5em;'
+        style: 'font-size: 0.7em;'
     },
 
 // custom style for the countdown
