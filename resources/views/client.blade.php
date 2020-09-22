@@ -128,12 +128,12 @@ switch ($yawm) {
     
            
 
-        <div class="m-3 " dir="ltr">:موعدك   </div>
         
-        <div class=" " dir="ltr">يوم "{{$yawm}}" على  {{$appointment->debut}}   </div>
 
 
                 <div class="m-3">الوقت المتبقي لموعدك : </div>
+                <div  dir="ltr">يوم .<p class=" text-bold text-danger">{{$yawm}}</p> على  {{$appointment->debut}}   </div>
+
 <div style="direction: ltr "  id="countdown-container"></div>
 <p></p>
 <p></p>
