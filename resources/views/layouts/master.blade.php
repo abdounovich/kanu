@@ -3,7 +3,7 @@
         <title> @yield('title')</title>
         <meta charset="UTF-8">
         <meta  name="viewport" content="width= {screenWidth}">
-        <meta http-equiv="refresh" content="5"/>
+        <meta http-equiv="refresh" content="90"/>
 
        
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
