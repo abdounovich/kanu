@@ -107,7 +107,9 @@ $afterTommorow=date('Y-m-d', strtotime($today. ' + 2 day'));
 
 
     public function AddPFunction(){
-     $appointments=Appointment::where('ActiveType','1')->get();
+        $today=date("Y-m-d");
+
+     $appointments=Appointment::where('ActiveType','1')->whereJour($today)->get();
 
 
      foreach ($appointments as $appointment) {
@@ -124,8 +126,7 @@ $afterTommorow=date('Y-m-d', strtotime($today. ' + 2 day'));
 $update = [
     'ActiveType'     => "0"
 ];
-
-$appointments=Appointment::where('ActiveType','1')
+$appointments=Appointment::where('ActiveType','1')->whereJour($today)
 ->update($update);
 
  
