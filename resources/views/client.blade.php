@@ -121,7 +121,7 @@ switch ($yawm) {
           
       </div>
 </div>
-{{$difmin}};
+{{$difmin}}
  @if ($difmin-3600 >'0')
       <div  class="card  mt-4 bg-success text-white " style="opacity: 0.9">
   
