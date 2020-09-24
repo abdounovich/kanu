@@ -122,7 +122,7 @@
             {{$Tomorow_appointment->facebook}}</td>
          
         <td class="align-middle">
-          <span class="badge badge-success badge-pill p-2">{{$Today_appointment->client->points}}</span> 
+          <span class="badge badge-success badge-pill p-2">{{$Tomorow_appointment->client->points}}</span> 
         </td>
         <td class="align-middle">{{$Tomorow_appointment->type->type}}</td>
          <td class="align-middle">@php $demain = date('H:i', strtotime($Tomorow_appointment->debut));
