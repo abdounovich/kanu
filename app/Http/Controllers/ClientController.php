@@ -36,7 +36,7 @@ else{
             $restOfTimeInSeconds=Carbon::now('Africa/Algiers');
 
 
-  $difmin=$aaa->diffInSeconds($restOfTimeInSeconds,false);
+  $difmin=$restOfTimeInSeconds->diffInSeconds($aaa,false);
 
 
 }
