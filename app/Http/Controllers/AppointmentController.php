@@ -107,6 +107,8 @@ $afterTommorow=date('Y-m-d', strtotime($today. ' + 2 day'));
 
 
     public function AddPFunction(){
+        date_default_timezone_set("Africa/Algiers");
+
         $today=date("Y-m-d");
 
      $appointments=Appointment::where('ActiveType','1')->whereJour($today)->get();

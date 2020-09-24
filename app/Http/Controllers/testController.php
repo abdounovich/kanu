@@ -347,7 +347,7 @@ else{
    $type=Type::find($type);
    return view("test")->with('items',$items)
    ->with('var',$var)
-   ->with('type',$types->id)
+   ->with('type',$type)
    ->with('jour',$jour)
    ->with('username',$username)
    ->with('Cid',$Cid);  }
@@ -451,7 +451,7 @@ $date=date("l");
   $type=Type::find($type);
   return view("test")->with('items',$items)
   ->with('var',$var)
-  ->with('type',$types->id)
+  ->with('type',$type)
   ->with('jour',$jour)
   ->with('username',$username)
   ->with('Cid',$Cid);}
