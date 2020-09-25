@@ -58,9 +58,8 @@
           <th scope="row">{{$counter}}
                
        </th>
-          <td class="align-middle"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
-            {{$Today_appointment->facebook}}          <span class="badge badge-success badge-pill  float-left p-2">{{$Today_appointment->client->points}}</span> 
-          </td>
+          <td class="align-middle"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt=" {{$Today_appointment->facebook}}      ">
+            {{$Today_appointment->facebook}}          </td>
          
        
         <td class="align-middle">{{$Today_appointment->type->type}}</td>
