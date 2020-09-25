@@ -39,11 +39,13 @@
       <tbody class=" text-right">
         @php
         $counter=0;
+        date_default_timezone_set("Africa/Algiers");
+           $actifTime=date('H:i');
+           echo $actifTime;
         @endphp
         @foreach ($Today_appointments as $Today_appointment)
         @php
            $counter=$counter+1; 
-      
         ini_set("allow_url_fopen", 1);
                       $userInfoData=file_get_contents('https://graph.facebook.com/v2.6/'.$Today_appointment->fb_id.'?fields=profile_pic&access_token='.$config);
                       $userInfo = json_decode($userInfoData, true);
