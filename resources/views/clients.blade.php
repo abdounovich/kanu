@@ -31,7 +31,7 @@
           <th scope="col">#</th>          
 
           <th scope="col">الفيسبوك</th>
-          <th scope="col">عدد النقاط 
+          <th scope="col">الرصيد
           </th>
           <th scope="col">تاريخ التسجيل </th>
 

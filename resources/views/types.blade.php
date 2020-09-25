@@ -23,7 +23,7 @@
                       <th>النوع   </th>
                       <th>السعر </th>
                       <th>المدة </th>
-                      <th> النقاط</th>
+                      <th> الرصيد</th>
                       <th> الصورة</th>
                       <th> </th>
                      
@@ -95,7 +95,7 @@
                               <input type="text" class="form-control" name="temps"/>
                           </div>
                           <div class="form-group">
-                              <label for="point" class=" float-right">عدد النقاط:</label>
+                              <label for="point" class=" float-right">الرصيد :</label>
                               <input type="text" class="form-control" name="point"/>
                           </div>
 

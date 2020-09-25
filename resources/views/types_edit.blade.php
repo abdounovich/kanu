@@ -66,7 +66,7 @@ font-family: 'Cairo', sans-serif;
                               <input type="text" class="form-control" value="{{$type->temps}}" name="temps"/>
                           </div>
                           <div class="form-group">
-                              <label for="point" class=" float-right">عدد النقاط:</label>
+                              <label for="point" class=" float-right"> الرصيد:</label>
                               <input type="text" class="form-control"  value="{{$type->point}}" name="point"/>
                           </div>
 

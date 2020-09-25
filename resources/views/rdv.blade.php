@@ -111,7 +111,7 @@
           <th scope="col">#</th>          
 
           <th scope="col">الفيسبوك</th>
-          <th scope="col">عدد النقاط </th>
+          <th scope="col">الرصيد  </th>
           
           <th scope="col">نوع الحلاقة </th>
 
@@ -171,7 +171,7 @@
           <th scope="col">#</th>          
 
           <th scope="col">الفيسبوك</th>
-          <th scope="col">عدد النقاط </th>
+          <th scope="col">الرصيد</th>
           
           <th scope="col">نوع الحلاقة </th>
 
@@ -235,7 +235,7 @@
           <th scope="col">#</th>          
 
           <th scope="col">الفيسبوك</th>
-          <th scope="col">عدد النقاط</th>
+          <th scope="col">الرصيد </th>
           <th scope="col">الوقت </th>
         </tr>
       </thead>
