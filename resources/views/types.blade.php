@@ -64,7 +64,7 @@
 
 
 
-        <div >
+      
             <div class="card mt-5 mb-5" style="opacity: 0.9"  >
                 <div class="card-header  bg-success text-white ">           <h4 class=" text-center p-2 ">أضف نوع جديد </h4>
                 </div>
@@ -141,7 +141,7 @@
         
        </div>
        </div>
-    </div>
+    
 
 
 
