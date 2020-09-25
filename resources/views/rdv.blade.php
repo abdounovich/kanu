@@ -18,21 +18,22 @@
 <div class="container">
   <div class="row mt-5">
     @if ($Today_appointments->count()=='0')
-        <div  class="col col-12 bg-dark text-white mt-5  " style="opacity: 0.9"><h2 class="p-4 float-right">لا توجد مواعيد لنهار اليوم</h2></div>
+        <div  class="col col-12 bg-dark text-white mt-5 " style="opacity: 0.9"><h2 class="p-4 float-right">لا توجد مواعيد لنهار اليوم</h2></div>
    @else
     <h3 class="p-2 text-white">مواعيد اليوم </h3>
-    <table class="table table-striped table-dark "style="opacity:0.9">
+    <table class="table table-striped table-dark responsive" style="opacity:0.9">
       <thead class=" bg-success text-right">
         <tr>
           <th scope="col">#</th>          
 
           <th scope="col">الفيسبوك</th>
-          <th scope="col">عدد النقاط </th>
+          <th scope="col"> الرصيد </th>
           
-          <th scope="col">نوع الحلاقة </th>
+          <th scope="col"> الحلاقة </th>
 
           <th scope="col">الموعد  </th>
           <th scope="col">تاريخ الحجز </th>
+          <th scope="col">  </th>
 
 
         </tr>
@@ -58,7 +59,7 @@
       
           <th scope="row">{{$counter}}
                
-   </th>
+       </th>
           <td class="align-middle"><img class="  border  rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
             {{$Today_appointment->facebook}}</td>
          
@@ -75,7 +76,11 @@
            
 
               </td>
-
+<td>     <input  class="m-2 p-2" type="checkbox" id="cb{{$Today_appointment->id}}" @if ($Today_appointment->ActiveType=="2" )
+  checked 
+  @endif onchange="myFunction('{{$Today_appointment->id}}','cb{{$Today_appointment->id}}')"
+   data-on="حاضر" data-off="غائب" data-onstyle="success"  
+   data-offstyle="danger"  data-toggle="toggle"></td>
         </tr>
     
         @endforeach
@@ -106,7 +111,7 @@
           <th scope="col">#</th>          
 
           <th scope="col">الفيسبوك</th>
-          <th scope="col col-2">عدد النقاط </th>
+          <th scope="col">عدد النقاط </th>
           
           <th scope="col">نوع الحلاقة </th>
 
@@ -133,7 +138,7 @@
           <td class="align-middle"><img class="  border  rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
             {{$Tomorow_appointment->facebook}}</td>
          
-        <td class="align-middle col col-2">
+        <td class="align-middle">
           <span class="badge badge-success badge-pill p-2">{{$Tomorow_appointment->client->points}}</span> 
         </td>
         <td class="align-middle">{{$Tomorow_appointment->type->type}}</td>
