@@ -26,7 +26,6 @@
           <th scope="col">#</th>          
 
           <th scope="col">الفيسبوك</th>
-          <th scope="col"> الرصيد </th>
           
           <th scope="col"> الحلاقة </th>
 
@@ -60,11 +59,10 @@
                
        </th>
           <td class="align-middle"><img class="  border  rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
-            {{$Today_appointment->facebook}}</td>
+            {{$Today_appointment->facebook}}          <span class="badge badge-success badge-pill p-2">{{$Today_appointment->client->points}}</span> 
+          </td>
          
-        <td class="align-middle">
-          <span class="badge badge-success badge-pill p-2">{{$Today_appointment->client->points}}</span> 
-        </td>
+       
         <td class="align-middle">{{$Today_appointment->type->type}}</td>
          <td class="align-middle">@php $demain = date('H:i', strtotime($Today_appointment->debut));
           echo $demain;
