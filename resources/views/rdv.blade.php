@@ -21,7 +21,7 @@
         <div  class="col col-12 bg-dark text-white mt-5  " style="opacity: 0.9"><h2 class="p-4 float-right">لا توجد مواعيد لنهار اليوم</h2></div>
    @else
     <h3 class="p-2 text-white">مواعيد اليوم </h3>
-    <table class="table table-striped table-dark"style="opacity:0.9">
+    <table class="table table-striped table-dark responsive"style="opacity:0.9">
       <thead class=" bg-success text-right">
         <tr>
           <th scope="col">#</th>          
