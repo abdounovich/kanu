@@ -33,6 +33,8 @@
 
           <th scope="col">الموعد  </th>
           <th scope="col">تاريخ الحجز </th>
+          <th scope="col">  </th>
+
 
         </tr>
       </thead>
@@ -41,7 +43,6 @@
         $counter=0;
         date_default_timezone_set("Africa/Algiers");
            $actifTime=date('H:i');
-           echo $actifTime;
         @endphp
         @foreach ($Today_appointments as $Today_appointment)
         @php
@@ -51,7 +52,11 @@
                       $userInfo = json_decode($userInfoData, true);
                   $picture = $userInfo['profile_pic'] ;
         @endphp
-        <tr>
+        <tr  @if ($actifTime>=$Today_appointment->debut && $actifTime<$Today_appointment->fin)
+             class="bg-info" 
+        @endif>
+
+      
           <th scope="row">{{$counter}}</th>
           <td class="align-middle"><img class="  border  rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
             {{$Today_appointment->facebook}}</td>
@@ -65,6 +70,16 @@
           @endphp</td>
             <td class="align-middle"> @php  carbon\Carbon::setLocale('ar');
               echo $Today_appointment->created_at->addMinutes(60)->diffForHumans(); @endphp    </td>
+              <td>
+                
+                
+              <input type="checkbox" id="cb{{$Today_appointment->id}}" @if ($Today_appointment->ActiveType=="2" )
+checked 
+@endif onchange="myFunction('{{$Today_appointment->id}}','cb{{$Today_appointment->id}}')"
+ data-on="حاضر" data-off="غائب" data-onstyle="success"  
+ data-offstyle="danger"  data-toggle="toggle">
+
+              </td>
 
         </tr>
     
@@ -267,4 +282,25 @@
    </div> 
   </div>
 
+
+
+  <script>
+  function myFunction($fid,$cbid) {
+    var checkBox=document.getElementById($cbid);
+
+   
+/*     window.location = "/actif/"+$fid;
+ */  
+    
+
+ if (checkBox.checked == true){
+  window.location = "/actif/"+$fid+"/2";
+  } else {
+    window.location = "/actif/"+$fid+"/1";
+
+ }
+
+}
+
+;</script>
 @stop

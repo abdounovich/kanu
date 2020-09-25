@@ -38,6 +38,8 @@ Route::post('/test','testController@commande');
 Route::get('/delete/{id}','TypeController@supprimer');
 Route::get('/edit/{id}','TypeController@edit');
 Route::post('/types_edit/{id}','TypeController@update');
+Route::get('/actif/{id}/{num}','AppointmentController@actif');
+
 Route::get('/','HomeController@index');
 Route::get('/commande', function () {
     return view('commande') ;

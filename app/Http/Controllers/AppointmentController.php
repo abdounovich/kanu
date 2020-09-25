@@ -18,6 +18,16 @@ class AppointmentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+
+    public function actif($id,$num)
+    {
+    $A=Appointment::find($id);
+    $A->ActiveType=$num;
+    $A->save();
+
+    return redirect('/rdv')   ; }
     public function index()
     {
 
@@ -27,7 +37,7 @@ $Tommorow=date('Y-m-d', strtotime($today. ' + 1 day'));
 $afterTommorow=date('Y-m-d', strtotime($today. ' + 2 day'));
 
 
-       $Today_appointments=Appointment::where('ActiveType','1')->whereJour($today)->orderBy('debut', 'asc')->get();
+       $Today_appointments=Appointment::where('ActiveType','>','0')->whereJour($today)->orderBy('debut', 'asc')->get();
        $Tomorow_appointments=Appointment::where('ActiveType','1')->whereJour($Tommorow)->orderBy('debut', 'asc')->get();
        $AfterTomoro_appointments=Appointment::where('ActiveType','1')->whereJour($afterTommorow)->orderBy('debut', 'asc')->get();
 
@@ -35,6 +45,7 @@ $afterTommorow=date('Y-m-d', strtotime($today. ' + 2 day'));
 
        $Inactif_appointments=Appointment::where('ActiveType','0')->latest()->paginate(5);
     $config=Config::get('botman.facebook.token');
+ 
  
        return view("rdv")
        ->with('Today_appointments',$Today_appointments)
@@ -111,7 +122,7 @@ $afterTommorow=date('Y-m-d', strtotime($today. ' + 2 day'));
 
         $today=date("Y-m-d");
 
-     $appointments=Appointment::where('ActiveType','1')->whereJour($today)->get();
+     $appointments=Appointment::where('ActiveType','2')->whereJour($today)->get();
 
 
      foreach ($appointments as $appointment) {
@@ -125,10 +136,27 @@ $afterTommorow=date('Y-m-d', strtotime($today. ' + 2 day'));
        
 }
 
+
+
+
+$appoints=Appointment::where('ActiveType','1')->whereJour($today)->get();
+
+
+foreach ($appoints as $appoint) {
+    $clients=Client::whereFacebook($appoint->facebook)->get();
+foreach ($clients as $client ) {
+    $update = [
+    'points'  => $client->points-50
+];           $client->update($update);
+
+}
+  
+}
+
 $update = [
     'ActiveType'     => "0"
 ];
-$appointments=Appointment::where('ActiveType','1')->whereJour($today)
+$appointments=Appointment::where('ActiveType','1')->orWhere('ActiveType','2')->whereJour($today)
 ->update($update);
 
  
