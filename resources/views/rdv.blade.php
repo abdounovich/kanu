@@ -75,10 +75,13 @@
            
 
               </td>
-<td>     <input  class="m-2 p-2" type="checkbox" id="cb{{$Today_appointment->id}}" @if ($Today_appointment->ActiveType=="2" )
+<td> 
+  
+  
+  <input  class="m-2 p-2" type="checkbox" id="cb{{$Today_appointment->id}}" @if ($Today_appointment->ActiveType=="2" )
   checked 
   @endif onchange="myFunction('{{$Today_appointment->id}}','cb{{$Today_appointment->id}}')"
-   data-on="حاضر" data-off="غائب" data-onstyle="success"  
+   data-on="حاضر" data-off="غائب" data-onstyle="success"
    data-offstyle="danger"  data-toggle="toggle"></td>
         </tr>
     
