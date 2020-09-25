@@ -59,7 +59,7 @@
                
        </th>
           <td class="align-middle"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
-            {{$Today_appointment->facebook}}  <span class="badge badge-success badge-pill mr-5 p-2">{{$Today_appointment->client->points}}</span> 
+            {{$Today_appointment->facebook}}  <span class="badge badge-success badge-pill d-flex justify-content-end p-2">{{$Today_appointment->client->points}}</span> 
           </td>
          
        
