@@ -57,7 +57,13 @@
         @endif>
 
       
-          <th scope="row">{{$counter}}</th>
+          <th scope="row">{{$counter}}
+               
+            <input  class="m-2 p-2" type="checkbox" id="cb{{$Today_appointment->id}}" @if ($Today_appointment->ActiveType=="2" )
+            checked 
+            @endif onchange="myFunction('{{$Today_appointment->id}}','cb{{$Today_appointment->id}}')"
+             data-on="حاضر" data-off="غائب" data-onstyle="success"  
+             data-offstyle="danger"  data-toggle="toggle"></th>
           <td class="align-middle"><img class="  border  rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
             {{$Today_appointment->facebook}}</td>
          
@@ -71,12 +77,7 @@
             <td class="align-middle"> @php  carbon\Carbon::setLocale('ar');
               echo $Today_appointment->created_at->addMinutes(60)->diffForHumans(); @endphp    
                 
-                
-              <input  class="m-2 p-2" type="checkbox" id="cb{{$Today_appointment->id}}" @if ($Today_appointment->ActiveType=="2" )
-checked 
-@endif onchange="myFunction('{{$Today_appointment->id}}','cb{{$Today_appointment->id}}')"
- data-on="حاضر" data-off="غائب" data-onstyle="success"  
- data-offstyle="danger"  data-toggle="toggle">
+           
 
               </td>
 
