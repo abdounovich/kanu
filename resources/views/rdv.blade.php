@@ -69,11 +69,10 @@
           echo $demain;
           @endphp</td>
             <td class="align-middle"> @php  carbon\Carbon::setLocale('ar');
-              echo $Today_appointment->created_at->addMinutes(60)->diffForHumans(); @endphp    </td>
-              <td>
+              echo $Today_appointment->created_at->addMinutes(60)->diffForHumans(); @endphp    
                 
                 
-              <input type="checkbox" id="cb{{$Today_appointment->id}}" @if ($Today_appointment->ActiveType=="2" )
+              <input  class="m-2 p-2" type="checkbox" id="cb{{$Today_appointment->id}}" @if ($Today_appointment->ActiveType=="2" )
 checked 
 @endif onchange="myFunction('{{$Today_appointment->id}}','cb{{$Today_appointment->id}}')"
  data-on="حاضر" data-off="غائب" data-onstyle="success"  
