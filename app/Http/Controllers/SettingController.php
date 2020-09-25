@@ -46,7 +46,8 @@ class SettingController extends Controller
      */
     public function show(Setting $setting)
     {
-        //
+        $parametres=Setting::all();
+        return view("parametres")->with('parametres',$parametres);
     }
 
     /**
