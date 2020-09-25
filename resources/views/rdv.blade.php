@@ -33,7 +33,6 @@
 
           <th scope="col">الموعد  </th>
           <th scope="col">تاريخ الحجز </th>
-          <th scope="col">  </th>
 
 
         </tr>
