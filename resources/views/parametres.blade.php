@@ -22,10 +22,15 @@
     </div>
 </div>
 
-
-@foreach ($settings as $item)
-    
-@endforeach
+<div class="container">
+    <div class="row">
+        <div class="col">
+            @foreach ($settings as $setting)
+        <div><h2>{{$setting->nom}}->>{{$setting->valeur}}</h2></div>
+            @endforeach
+        </div>
+    </div>
+</div>
 
  
 

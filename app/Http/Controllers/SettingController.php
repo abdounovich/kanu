@@ -14,7 +14,8 @@ class SettingController extends Controller
      */
     public function index()
     {
-        //
+        $settings=Setting::all();
+        return  redirect('/settings')->with('settings',$settings);
     }
 
     /**
@@ -51,8 +52,7 @@ class SettingController extends Controller
      */
     public function show(Setting $setting)
     {
-        $settings=Setting::all();
-        return view("parametres")->with('settings',$settings);
+        
     }
 
     /**

@@ -29,7 +29,7 @@ Route::get('/types','TypeController@index');
 Route::get('/test/{type}/D1/{username}/{Cid}','testController@today');
 Route::get('/test/{type}/D2/{username}/{Cid}','testController@tomorrow');
 Route::get('/test/{type}/D3/{username}/{Cid}','testController@afterTomorrow');
-Route::get('/settings','SettingController@show');
+Route::get('/settings','SettingController@index');
 Route::post('/settings','SettingController@store');
 
 
