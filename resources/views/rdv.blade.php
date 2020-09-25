@@ -106,7 +106,7 @@
           <th scope="col">#</th>          
 
           <th scope="col">الفيسبوك</th>
-          <th scope="col">عدد النقاط </th>
+          <th scope="col col-2">عدد النقاط </th>
           
           <th scope="col">نوع الحلاقة </th>
 
@@ -133,7 +133,7 @@
           <td class="align-middle"><img class="  border  rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
             {{$Tomorow_appointment->facebook}}</td>
          
-        <td class="align-middle">
+        <td class="align-middle col col-2">
           <span class="badge badge-success badge-pill p-2">{{$Tomorow_appointment->client->points}}</span> 
         </td>
         <td class="align-middle">{{$Tomorow_appointment->type->type}}</td>
