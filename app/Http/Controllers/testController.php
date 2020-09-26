@@ -144,68 +144,74 @@ $config=Config::get('app.url');
 
 
    public function today($type,$username,$Cid)
-   
    {
-
 date_default_timezone_set("Africa/Algiers");
-$arr2=array();
+$date=date("l");
 
-    $date=date("l");   
 
-if ($date=='Friday') {
-    $debut="09:00";
-    $fin="22:00";
-    $d_pause="12:00";
-    $f_pause="15:00";
-   
- }elseif($date=='Saturday'){
-     $debut="09:00";
-     $fin="22:00"; 
-     $d_pause="12:00";
-     $f_pause="13:00";
- }else{
-     $debut="16:00";
-     $fin="22:00";
-     $d_pause="00:00";
-     $f_pause="00:01";
- }
-    $debut=date("Y-m-d ").$debut.":00";
+
+    if ($date=='Friday') {
+      $debut="09:00";
+      $fin="22:00";
+      $d_pause="12:00";
+      $f_pause="15:00";
+     
+   }elseif($date=='Saturday'){
+       $debut="09:00";
+       $fin="22:00"; 
+       $d_pause="12:00";
+       $f_pause="13:00";
+   }else{
+       $debut="16:00";
+       $fin="22:00";
+       $d_pause="00:00";
+       $f_pause="00:01";
+   }
+   $jour=date("Y-m-d");
+
+    $debut=$jour." ".$debut.":00";
     $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
-    $fin=date("Y-m-d ").$fin.":00";
+    $fin=$jour." ".$fin.":00";
     $fin=date("Y-m-d H:i:s", strtotime(date($fin)));
     $types=Type::whereId($type)->first();
+
     $pas=60*$types->temps-60;
     $arr=array();
+    $arr2=array();
     $items=array();
     $arr4=array();
-    $jour=date("Y-m-d");
-
+    
+    
     $d_pause=$jour." ".$d_pause.":00";
     $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause)));  
     $f_pause=$jour." ".$f_pause.":00";
     $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
+
     $Today_appointments=Appointment::where('ActiveType',"1")->whereJour($jour)->get();
     while ($debut < $fin )
     {
-      
       $arr[]=$debut;  
       $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + 15*60));
+
           }
+          
           if (count($Today_appointments)>0) {
             foreach ($Today_appointments as $appointment ) {  
     for ($i=0; $i <count($arr) ; $i++) { 
     $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
     $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
+    $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. '+ '.$pas.' seconds'));
     if ($arr[$i]>=$d && $arr[$i]<$f) {
-      if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause) {
 
       $arr2[]=$arr[$i];}
-      else{  $arr2[]=$arr[$i];}
+
+    elseif ($ai>=$d && $ai<$f) {
+      $arr2[]=$arr[$i];
     }
+    
     else{
- 
+  
        $arr4[]= $arr[$i];}}
-     
      
      }} else {
  
@@ -214,36 +220,33 @@ if ($date=='Friday') {
        
             $arr4[]= $arr[$i];}
           }
-          foreach ($arr4 as $k ) {
 
 
-            if (!in_array($k, $items)&&!in_array($k, $arr2) ) {
-        
-        if ($d_pause<=$k && $k<$f_pause) {
-        }
-        else{
-        
-           $items[]=$k;
-        
-           
-        }
-          
-          }}
+foreach ($arr4 as $k ) {
+
+
+    if (!in_array($k, $items)&&!in_array($k, $arr2) ) {
+
+if ($d_pause<=$k && $k<$f_pause) {
+}
+else{
+
+   $items[]=$k;
+
+   
+}
+  
+  }}
+
+  
    $var=1;
-
-
-
    $type=Type::find($type);
    return view("test")->with('items',$items)
    ->with('var',$var)
    ->with('type',$type)
    ->with('jour',$jour)
    ->with('username',$username)
-   ->with('Cid',$Cid);
-
-    }
-
-
+   ->with('Cid',$Cid);  }
 
 
 
