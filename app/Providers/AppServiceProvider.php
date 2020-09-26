@@ -2,9 +2,6 @@
 
 namespace App\Providers;
 
-use App\Setting;
-use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -17,10 +14,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         setlocale(LC_TIME, "fr_FR");
-            foreach (Setting::all() as $setting) {
-                Config::set('settings.'.$setting->nom, $setting->valeur);
-            }
-        
 
     }
 

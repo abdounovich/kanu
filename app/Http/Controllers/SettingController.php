@@ -37,8 +37,8 @@ class SettingController extends Controller
     public function store(Request $request)
     {
        $setting=new Setting();
-       $setting->name=$request->input('nom');
-       $setting->value=$request->input('valeur');
+       $setting->nom=$request->input('nom');
+       $setting->valeur=$request->input('valeur');
        $setting->save();
        return redirect('/settings');
 
@@ -77,8 +77,8 @@ class SettingController extends Controller
     {
        $setting=Setting::find($setting);
       
-       $setting->name=$request->input('nom');
-       $setting->value=$request->input('valeur');
+       $setting->nom=$request->input('nom');
+       $setting->valeur=$request->input('valeur');
        $setting->save();
        return redirect('/settings');
     }

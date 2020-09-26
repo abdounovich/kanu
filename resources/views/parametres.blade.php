@@ -38,7 +38,7 @@
         <div class="card-body bg-dark text-white"> <div>
            
 
-            @foreach ($settings as $setting)
+         {{--    @foreach ($settings as $setting)
         <form method="post" action="/settings/{{$setting->id}}" role="form" enctype="multipart/form-data">
                   @csrf
                 
@@ -60,7 +60,7 @@
               
                 </form>
 
-                @endforeach
+                @endforeach --}}
 
           </div></div> 
       </div>  
