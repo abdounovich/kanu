@@ -255,6 +255,7 @@ $date=date("l");
     $date=date("l", strtotime($date. ' + 1 day'));
 
 
+    $date='Friday';
 
     if ($date=='Friday') {
       $debut="09:00";
@@ -295,7 +296,7 @@ $date=date("l");
     $f_pause=$jour." ".$f_pause.":00";
     $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
 
-    $Tomorrow_appointments=Appointment::where('ActiveType',"1")->whereJour($tomorrow)->get();
+    $Tomorrow_appointments=Appointment::where('ActiveType',"1")->whereJour($jour)->get();
     while ($debut < $fin )
     {
       $arr[]=$debut;  
