@@ -410,8 +410,8 @@ $date=date("l");
          if (count($afterTommorow)>0) {
            foreach ($afterTommorow as $appointment ) {  
    for ($i=0; $i <count($arr) ; $i++) { 
-   $d=date("Y-m-d H:i:s", strtotime($appointment->date." ".$appointment->debut.":00"));
-   $f=date("Y-m-d H:i:s", strtotime($appointment->date." ".$appointment->fin.":00"));
+   $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
+   $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
    if ($arr[$i]>=$d && $arr[$i]<$f) {
     if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause) {
 
