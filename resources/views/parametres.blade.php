@@ -38,7 +38,7 @@
         <div class="card-body bg-dark text-white"> <div>
            
 
-         {{--    @foreach ($settings as $setting)
+           @foreach ($settings as $setting)
         <form method="post" action="/settings/{{$setting->id}}" role="form" enctype="multipart/form-data">
                   @csrf
                 
@@ -46,9 +46,9 @@
                  
         
                   <div class="form-group  d-flex">
-                      <input type="text" class="form-control p-2 m-2" value="{{$setting->nom}}" name="nom"/>
+                      <input type="text" class="form-control p-2 m-2" value="{{$setting->key}}" name="nom"/>
               
-                      <input type="text" class="form-control p-2 m-2"  value="{{$setting->valeur}}" name="valeur"/>
+                      <input type="text" class="form-control p-2 m-2"  value="{{$setting->value}}" name="valeur"/>
                 
                     <button  type="submit" class="btn btn-success p-2 m-2">  حفظ التغييرات</button>
 
@@ -60,7 +60,7 @@
               
                 </form>
 
-                @endforeach --}}
+                @endforeach 
 
           </div></div> 
       </div>  

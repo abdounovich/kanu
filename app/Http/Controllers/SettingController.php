@@ -21,7 +21,7 @@ class SettingController extends Controller
         Config::set('app.'.$setting->key,  $setting->value);
 
     }
-return view('tester');
+return view('parametres')->with('settings',$settings);
         
     }
 
@@ -44,8 +44,8 @@ return view('tester');
     public function store(Request $request)
     {
        $setting=new Setting();
-       $setting->nom=$request->input('nom');
-       $setting->valeur=$request->input('valeur');
+       $setting->key=$request->input('nom');
+       $setting->value=$request->input('valeur');
        $setting->save();
        return redirect('/settings');
 
@@ -84,8 +84,8 @@ return view('tester');
     {
        $setting=Setting::find($setting);
       
-       $setting->nom=$request->input('nom');
-       $setting->valeur=$request->input('valeur');
+       $setting->key=$request->input('nom');
+       $setting->value=$request->input('valeur');
        $setting->save();
        return redirect('/settings');
     }
