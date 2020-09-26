@@ -15,7 +15,7 @@ class SettingController extends Controller
     public function index()
     {
         $settings=Setting::all();
-        return  redirect('/settings')->with('settings',$settings);
+        return  view('parametres')->with('settings',$settings);
     }
 
     /**
@@ -37,10 +37,10 @@ class SettingController extends Controller
     public function store(Request $request)
     {
        $setting=new Setting();
-       $setting->nom=$request->input('nom');
-       $setting->valeur=$request->input('valeur');
+       $setting->name=$request->input('nom');
+       $setting->value=$request->input('valeur');
        $setting->save();
-       return view('parametres');
+       return redirect('/settings');
 
     }
 
@@ -73,9 +73,14 @@ class SettingController extends Controller
      * @param  \App\Setting  $setting
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Setting $setting)
+    public function update(Request $request,  $setting)
     {
-        //
+       $setting=Setting::find($setting);
+      
+       $setting->name=$request->input('nom');
+       $setting->value=$request->input('valeur');
+       $setting->save();
+       return redirect('/settings');
     }
 
     /**

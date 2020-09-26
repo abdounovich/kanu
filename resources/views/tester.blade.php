@@ -2,27 +2,13 @@
 <html>
 <body>
 
-<p>Click the button to wait 3 seconds, then alert "Hello".</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<script>
 
 
 
-
-function fun() {
-   alert("Hello"); 
-}
-function myFunction() {
-
-
-
-
-
-  setTimeout("fun()", 5000);
-}
-</script>
+  @php
+  $debut=Setting::get("debut_samedi");
+  dd($debut);
+@endphp
 
 </body>
 </html>
