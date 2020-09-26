@@ -16,8 +16,7 @@ class testController extends Controller
 
 
 
-  public function bot(Request $request)
-  {}
+
 
    /**
      * Store a newly created resource in storage.
