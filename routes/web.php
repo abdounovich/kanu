@@ -51,5 +51,8 @@ Route::get('/commande', function () {
 });
 
 
-Route::get('/tester','SettingController@index');
+Route::get('///','SettingController@index');
 
+Route::get('/tester', function () {
+    return view('tester') ;
+});
