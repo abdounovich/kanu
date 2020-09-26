@@ -255,7 +255,6 @@ $date=date("l");
     $date=date("l", strtotime($date. ' + 1 day'));
 
 
-    $date='Friday';
 
     if ($date=='Friday') {
       $debut="09:00";
