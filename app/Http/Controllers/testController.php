@@ -174,7 +174,7 @@ if ($date=='Friday') {
     $fin=date("Y-m-d ").$fin.":00";
     $fin=date("Y-m-d H:i:s", strtotime(date($fin)));
     $types=Type::whereId($type)->first();
-    $pas=60*$types->temps;
+    $pas=60*$types->temps-60;
     $arr=array();
     $items=array();
     $arr4=array();
@@ -283,7 +283,7 @@ $date=date("l");
     $fin=date("Y-m-d H:i:s", strtotime(date($fin)));
     $types=Type::whereId($type)->first();
 
-    $pas=60*$types->temps;
+    $pas=60*$types->temps-60;
     $arr=array();
     $arr2=array();
     $items=array();
@@ -394,7 +394,7 @@ $date=date("l");
    $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
    $fin=$jour." ".$fin.":00";
    $fin=date("Y-m-d H:i:s", strtotime(date($fin)));
-   $pas=60*$types->temps;
+   $pas=60*$types->temps-60;
    $arr=array();
    $arr2=array();
    $items=array();
