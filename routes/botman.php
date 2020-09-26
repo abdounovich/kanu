@@ -202,6 +202,10 @@ if ($DbUsername=="0") {
 
 
     $bot->typesAndWaits(2);
+    $bot->reply("عفوا لا يمكنك حجز موعد الآن ");
+    $bot->reply("ستدخل حيز الخدمة في الفاتح من أكتوبر ");
+    $bot->reply("شكرا لكم على حسن تفهمكم ");
+
 
   /*   $bot->reply(Question::create('  من فضلك إختر يوم موعدك  👇👇')->addButtons([
     Button::create(' 🕐 بعد غد')->value('rdv3'),
