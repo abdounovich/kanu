@@ -308,14 +308,18 @@ $date=date("l");
     for ($i=0; $i <count($arr) ; $i++) { 
     $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
     $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
+    $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. '+ '.$pas.' seconds'));
     if ($arr[$i]>=$d && $arr[$i]<$f) {
 
       $arr2[]=$arr[$i];}
+
+    elseif ($ai>=$d && $ai<$f) {
+      $arr2[]=$arr[$i];
+    }
     
     else{
   
        $arr4[]= $arr[$i];}}
-     
      
      }} else {
  
@@ -409,19 +413,21 @@ $date=date("l");
 
          if (count($afterTommorow)>0) {
            foreach ($afterTommorow as $appointment ) {  
-   for ($i=0; $i <count($arr) ; $i++) { 
-   $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
-   $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
-   if ($arr[$i]>=$d && $arr[$i]<$f) {
-    if ($arr[$i]>=$d_pause && $arr[$i]<$f_pause) {
-
-    $arr2[]=$arr[$i];}
-    else{  $arr2[]=$arr[$i];}
-  }
-  else{
-  
-     $arr4[]= $arr[$i];}}
-   
+            for ($i=0; $i <count($arr) ; $i++) { 
+              $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
+              $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
+              $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. '+ '.$pas.' seconds'));
+              if ($arr[$i]>=$d && $arr[$i]<$f) {
+          
+                $arr2[]=$arr[$i];}
+          
+              elseif ($ai>=$d && $ai<$f) {
+                $arr2[]=$arr[$i];
+              }
+              
+              else{
+            
+                 $arr4[]= $arr[$i];}}
    
    }} else {
 
