@@ -148,7 +148,6 @@ $config=Config::get('app.url');
    
    {
 
-    $parametres=Setting::all();
 date_default_timezone_set("Africa/Algiers");
 $arr2=array();
 
