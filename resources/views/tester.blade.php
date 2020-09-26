@@ -6,8 +6,9 @@
 
 
   @php
-  $debut=Setting::get("debut_samedi");
-  dd($debut);
+
+
+echo Config::get('app.debut_samedi');
 @endphp
 
 </body>

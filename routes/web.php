@@ -50,6 +50,6 @@ Route::get('/commande', function () {
     return view('commande') ;
 });
 
-Route::get('/tester', function () {
-    return view('tester') ;
-});
+
+Route::get('/tester','SettingController@index');
+

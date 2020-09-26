@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 
 class SettingController extends Controller
 {
@@ -15,7 +16,13 @@ class SettingController extends Controller
     public function index()
     {
         $settings=Setting::all();
-        return  view('parametres')->with('settings',$settings);
+
+    foreach ($settings as $setting ) {            
+        Config::set('app.'.$setting->key,  $setting->value);
+
+    }
+return view('tester');
+        
     }
 
     /**
