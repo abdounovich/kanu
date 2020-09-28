@@ -32,6 +32,10 @@ class HomeController extends Controller
         echo "<p></p>";
         echo $d;
         dd();
+
+
+
+        
         if ($d==$date) {
            
        try {
