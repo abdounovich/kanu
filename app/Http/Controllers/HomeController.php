@@ -14,7 +14,12 @@ class HomeController extends Controller
 
 
 
-    
+    public function func2(){
+
+
+        echo "hhhh";
+    }
+
     public function func(){
 
 
@@ -52,7 +57,7 @@ class HomeController extends Controller
 
 
 
-dd();
+
 
 
 
