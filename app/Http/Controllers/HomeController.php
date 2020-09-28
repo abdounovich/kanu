@@ -16,18 +16,18 @@ class HomeController extends Controller
 
     public function func2(){
 
+        $botman = app('botman');
+ date_default_timezone_set("Africa/Algiers");
 
-        echo "hhhh";
+        $date=date("Y-m-d H:i");
+        echo $date;
     }
 
     public function func(){
 
 
 
-        $botman = app('botman');
-        date_default_timezone_set("Africa/Algiers");
-
-        $date=date("Y-m-d H:i");
+       
         $appointments=Appointment::where('ActiveType','1')->get();
         foreach ($appointments as $appointment ) {        
         $d=date("Y-m-d H:i", strtotime($appointment->jour." ".$appointment->debut.":00"));
