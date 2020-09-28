@@ -17,7 +17,7 @@ class HomeController extends Controller
     
     public function func(){
 
-
+        dd("lpm");
 
         $botman = app('botman');
         date_default_timezone_set("Africa/Algiers");
@@ -28,7 +28,7 @@ class HomeController extends Controller
         $d=date("Y-m-d H:i", strtotime($appointment->jour." ".$appointment->debut.":00"));
         $ai=date('Y-m-d H:i', strtotime($d. '+'.'1 hours'));
 
-dd("lpm");
+
         echo $date;
         echo "<p></p>";
 
