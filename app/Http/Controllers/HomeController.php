@@ -26,15 +26,12 @@ class HomeController extends Controller
         $appointments=Appointment::where('ActiveType','1')->get();
         foreach ($appointments as $appointment ) {        
         $d=date("Y-m-d H:i", strtotime($appointment->jour." ".$appointment->debut.":00"));
+        $date=date('Y-m-d H:i', strtotime($date. '+'.'1 hours'));
+
+
        
-
-
-        echo $date;
-        echo "<p></p>";
-
-        echo $d;
         
-        if ($ai==$date) {
+        if ($d==$date) {
            
        try {
             $botman->say( "تبقت ساعة واحدة على موعد حلاقتك ",$appointment->fb_id, FacebookDriver::class);
