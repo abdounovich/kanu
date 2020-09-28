@@ -26,6 +26,8 @@ class ClientController extends Controller
 
 if (!$appointment) {
     $difmin='0';
+    $appointment->jour="Friday";
+
 }
 else{
              $TheDi=$appointment->jour." ".$appointment->debut.":00";
