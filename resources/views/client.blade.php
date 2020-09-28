@@ -73,32 +73,7 @@ button:hover, a:hover {
     <!-- Styles -->
 </head>
 <body dir="rtl">
-    @php
-    
-    $date=date_create($appointment->jour);
-$yawm=date_format($date,"l");
-
-
-switch ($yawm) {
-  case "Friday":
-  $yawm="الجمعة";break;
-  case "Saturday":
-  $yawm="السبت";break;
-  case "Sunday":
-  $yawm="الأحد ";break;
-  case "Monday":
-  $yawm="الإثــنين ";break;
-  case "Tuesday":
-  $yawm="الثلاثاء";break;
-  case "Wednesday":
-  $yawm="الأربعاء";break;
-  case "Thursday":
-  $yawm="الخميس";
-  
-}
-
-
-    @endphp
+ 
 <div class="m-4">
     <div  class=" card bg-success text-white  justify-content-center align-self-center align-items-center" style="opacity: 0.9">
         @php

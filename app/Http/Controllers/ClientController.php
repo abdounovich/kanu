@@ -26,7 +26,28 @@ class ClientController extends Controller
 
 if (!$appointment) {
     $difmin='0';
-    $appointment->jour="Friday";
+     
+    $date=date_create($appointment->jour);
+$yawm=date_format($date,"l");
+
+
+switch ($yawm) {
+  case "Friday":
+  $yawm="الجمعة";break;
+  case "Saturday":
+  $yawm="السبت";break;
+  case "Sunday":
+  $yawm="الأحد ";break;
+  case "Monday":
+  $yawm="الإثــنين ";break;
+  case "Tuesday":
+  $yawm="الثلاثاء";break;
+  case "Wednesday":
+  $yawm="الأربعاء";break;
+  case "Thursday":
+  $yawm="الخميس";
+  
+}
 
 }
 else{
@@ -50,6 +71,7 @@ $config=Config::get('botman.facebook.token');
         return view("client")->with('client',$client)
         ->with('appointment',$appointment)
         ->with('difmin',$difmin)
+        ->with('yawm',$yawm)
         ->with('config',$config);
 
 
