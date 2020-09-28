@@ -17,8 +17,8 @@ class HomeController extends Controller
     
     public function func(){
 
-      
-dd("kkkkll");
+
+
         $botman = app('botman');
         date_default_timezone_set("Africa/Algiers");
 
@@ -27,17 +27,16 @@ dd("kkkkll");
         foreach ($appointments as $appointment ) {        
         $d=date("Y-m-d H:i", strtotime($appointment->jour." ".$appointment->debut.":00"));
         $ai=date('Y-m-d H:i', strtotime($d. '+'.'1 hours'));
-dd($date);
+
 
         echo $date;
         echo "<p></p>";
 
         echo $ai;
-        
         if ($ai==$date) {
            
        try {
-            $botman->say( "تبقت ساعة واحدة على موعد حلاقتك ",$appointment->fb_id, FacebookDriver::class);
+            $botman->say( "تبقت ساعة واخدة على موعد حلاقتك ",$appointment->fb_id, FacebookDriver::class);
         } catch (\Exception $e) {
            
             echo $info=$e->getCode().': '.$e->getMessage();
@@ -53,7 +52,7 @@ dd($date);
 
 
 
-
+dd();
 
 
 
