@@ -22,6 +22,14 @@ $botman = resolve('botman');
 
 
 
+
+
+
+
+
+
+
+
 $botman->hears('GET_STARTED', function ( $bot) {
     $user = $bot->getUser();
     $facebook_id = $user->getId();

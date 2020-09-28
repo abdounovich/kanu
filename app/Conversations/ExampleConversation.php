@@ -22,17 +22,19 @@ use BotMan\Drivers\Facebook\Extensions\GenericTemplate;
 
 class ExampleConversation extends Conversation
 {
-    protected $facebook;
-    protected $number;
+  
+
+ 
+    public function test()
 
 
-    public function __construct(string $facebook ,string $number,string $fb_id) {
 
-        $this->facebook = $facebook;
-        $this->type = $number;
-        $this->fb_id = $fb_id;
+{    
+    $this->say('Message');
+}
 
-    }
+
+
     public function askType()
 
     
@@ -172,8 +174,12 @@ if($Tos){
     
     {
 
+        $this->test();
 
-       
+
+
+
+       return;
 
         $this->askType();
     }

@@ -109,13 +109,24 @@ if ($date=='Friday') {
 
 
 
+ $botman = app('botman');
+
+
+            try {
+                $botman->say('Hey ', "3325986554166389", WebDriver::class);
+            } catch (\Exception $e) {
+               
+                echo $info=$e->getCode().': '.$e->getMessage();
+            }
+        
+
+      echo('Success.');
 
 
 
 
 
-
-
+dd();
 
 
 
