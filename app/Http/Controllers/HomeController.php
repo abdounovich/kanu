@@ -29,7 +29,10 @@ class HomeController extends Controller
         $date=date('Y-m-d H:i', strtotime($date. '+'.'1 hours'));
 
 
-       
+        echo $date;
+        echo "<p></p>";
+
+        echo $d;
         
         if ($d==$date) {
            
