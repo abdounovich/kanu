@@ -23,6 +23,7 @@ class ClientController extends Controller
         
      $appointment=Appointment::where('facebook',$client->facebook)
      ->where('ActiveType','1')->first();
+     $yawm="";
 
 if (!$appointment) {
     $difmin='0';
