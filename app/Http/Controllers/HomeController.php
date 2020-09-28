@@ -17,7 +17,7 @@ class HomeController extends Controller
     
     public function func(){
 
-        dd("lpm");
+      
 
         $botman = app('botman');
         date_default_timezone_set("Africa/Algiers");
