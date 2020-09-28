@@ -27,7 +27,7 @@ class HomeController extends Controller
         foreach ($appointments as $appointment ) {        
         $d=date("Y-m-d H:i", strtotime($appointment->jour." ".$appointment->debut.":00"));
         $ai=date('Y-m-d H:i', strtotime($d. '+'.'1 hours'));
-
+dd($date);
 
         echo $date;
         echo "<p></p>";
