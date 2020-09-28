@@ -26,12 +26,13 @@ class HomeController extends Controller
         $appointments=Appointment::where('ActiveType','1')->get();
         foreach ($appointments as $appointment ) {        
         $d=date("Y-m-d H:i", strtotime($appointment->jour." ".$appointment->debut.":00"));
+       
 
 
         echo $date;
         echo "<p></p>";
 
-        echo $ai;
+        echo $d;
         
         if ($ai==$date) {
            
