@@ -24,12 +24,6 @@ $botman = resolve('botman');
 
 
 
-
-
-
-
-
-
 $botman->hears('GET_STARTED', function ( $bot) {
     $user = $bot->getUser();
     $facebook_id = $user->getId();
@@ -80,20 +74,6 @@ $botman->hears('rdv([0-9]+)', function($bot,$number) {
 $lastname = $user->getLastname();
 $full_name=$firstname.'-'.$lastname;
 // Access Username
-$DbUsername=Client::whereFacebook($full_name)->count();
-if ($DbUsername=="0") {
-    $client=new Client();
-    $client->facebook=$full_name;
-    $client->slug=Str::random(10) ;
-
-    $client->points='5';
-    $client->fb_id=$facebook_id;
-
-    $client->save();
-
-
-
-}
   
 $DbUsername=Client::whereFacebook($full_name)->first();
 
@@ -174,20 +154,7 @@ $botman->hears('GoToDis', function ( $bot) {
 $lastname = $user->getLastname();
 $full_name=$firstname.'-'.$lastname;
 // Access Username
-$DbUsername=Client::whereFacebook($full_name)->count();
-if ($DbUsername=="0") {
-    $client=new Client();
-    $client->facebook=$full_name;
-    $client->slug=Str::random(10) ;
 
-    $client->points='5';
-    $client->fb_id=$facebook_id;
-
-    $client->save();
-
-
-
-}
     $DbUsername=Client::whereFacebook($full_name)->first();
     $OneApp=Appointment::where('facebook',$full_name)
     ->where('ActiveType','1')->count();
@@ -252,20 +219,7 @@ $botman->hears('menu', function ($bot) {
 $lastname = $user->getLastname();
 $full_name=$firstname.'-'.$lastname;
 // Access Username
-$DbUsername=Client::whereFacebook($full_name)->count();
-if ($DbUsername=="0") {
-    $client=new Client();
-    $client->facebook=$full_name;
-    $client->slug=Str::random(10) ;
 
-    $client->points='5';
-    $client->fb_id=$facebook_id;
-
-    $client->save();
-
-
-
-}
     $DbUsername=Client::whereFacebook($full_name)->first();
     $bot->typesAndWaits(2);
 
@@ -301,20 +255,7 @@ if ($DbUsername=="0") {
 $lastname = $user->getLastname();
 $full_name=$firstname.'-'.$lastname;
 // Access Username
-$DbUsername=Client::whereFacebook($full_name)->count();
-if ($DbUsername=="0") {
-    $client=new Client();
-    $client->facebook=$full_name;
-    $client->slug=Str::random(10) ;
 
-    $client->points='5';
-    $client->fb_id=$facebook_id;
-
-    $client->save();
-
-
-
-}
 
     $bot->reply(' 🤭  لتسهيل عملية حجز موعد إختصرتها لك في  ثلاث  مراحل بسيطة  للغاية  😁 : ');
     $bot->typesAndWaits(1);
@@ -354,23 +295,9 @@ if ($DbUsername=="0") {
 $lastname = $user->getLastname();
 $full_name=$firstname.'-'.$lastname;
 // Access Username
-$DbUsername=Client::whereFacebook($full_name)->count();
-if ($DbUsername=="0") {
-    $client=new Client();
-    $client->facebook=$full_name;
-    $client->slug=Str::random(10) ;
 
-    $client->points='5';
-    $client->fb_id=$facebook_id;
-
-    $client->save();
-
-
-
-}
       
-/*     $bot->reply(ButtonTemplate::create('عذرًا ، لم أستطع فهمك 😕 '."\n". 'هذه قائمة بالأوامر التي أفهمها:')
- */    $bot->reply(ButtonTemplate::create('لقد تم تفعيل حسابك بنجاح شكرا لك')
+ $bot->reply(ButtonTemplate::create('عذرًا ، لم أستطع فهمك 😕 '."\n". 'هذه قائمة بالأوامر التي أفهمها:')
 
 	->addButton(ElementButton::create('🛍 احجز موعد ')
 	    ->type('postback')

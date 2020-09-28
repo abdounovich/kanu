@@ -20,18 +20,32 @@ class HomeController extends Controller
 
 
         $botman = app('botman');
+        date_default_timezone_set("Africa/Algiers");
+
+        $date=date("Y-m-d H:i");
+        $appointments=Appointment::where('ActiveType','1')->get();
+        foreach ($appointments as $appointment ) {        
+        $d=date("Y-m-d H:i", strtotime($appointment->jour." ".$appointment->debut.":00"));
+        $ai=date('Y-m-d H:i', strtotime($d. '+'.'1 hours'));
 
 
+        echo $date;
+        echo "<p></p>";
 
-        
-
-        try {
-            $botman->say('Hey ', 3243262092379356, FacebookDriver::class);
+        echo $ai;
+        if ($ai==$date) {
+           
+       try {
+            $botman->say( "تبقت ساعة واحدة على موعد حلاقتك ",$appointment->fb_id, FacebookDriver::class);
         } catch (\Exception $e) {
            
             echo $info=$e->getCode().': '.$e->getMessage();
-        }
+        }  } 
     
+
+        }
+
+      
 
 
 
