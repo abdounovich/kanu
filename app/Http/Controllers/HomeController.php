@@ -28,12 +28,10 @@ class HomeController extends Controller
         $d=date("Y-m-d H:i", strtotime($appointment->jour." ".$appointment->debut.":00"));
         $date=date('Y-m-d H:i', strtotime($date. '+'.'1 hours'));
 
-
         echo $date;
         echo "<p></p>";
-
         echo $d;
-        
+        dd();
         if ($d==$date) {
            
        try {
