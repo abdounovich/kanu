@@ -27,30 +27,33 @@ class ClientController extends Controller
 if (!$appointment) {
     $difmin='0';
      
-    $date=date_create($appointment->jour);
-$yawm=date_format($date,"l");
-
-
-switch ($yawm) {
-  case "Friday":
-  $yawm="الجمعة";break;
-  case "Saturday":
-  $yawm="السبت";break;
-  case "Sunday":
-  $yawm="الأحد ";break;
-  case "Monday":
-  $yawm="الإثــنين ";break;
-  case "Tuesday":
-  $yawm="الثلاثاء";break;
-  case "Wednesday":
-  $yawm="الأربعاء";break;
-  case "Thursday":
-  $yawm="الخميس";
-  
-}
+   
 
 }
 else{
+
+
+    $date=date_create($appointment->jour);
+    $yawm=date_format($date,"l");
+    
+    
+    switch ($yawm) {
+      case "Friday":
+      $yawm="الجمعة";break;
+      case "Saturday":
+      $yawm="السبت";break;
+      case "Sunday":
+      $yawm="الأحد ";break;
+      case "Monday":
+      $yawm="الإثــنين ";break;
+      case "Tuesday":
+      $yawm="الثلاثاء";break;
+      case "Wednesday":
+      $yawm="الأربعاء";break;
+      case "Thursday":
+      $yawm="الخميس";
+      
+    }
              $TheDi=$appointment->jour." ".$appointment->debut.":00";
            
 
