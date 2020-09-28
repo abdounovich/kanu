@@ -29,18 +29,11 @@ class HomeController extends Controller
         $ai=date('Y-m-d H:i', strtotime($d. '+'.'1 hours'));
 
 
-        echo $date;
-        echo "<p></p>";
-
-        echo $ai;
-        if ($ai==$date) {
-           
-       try {
+       
+      
             $botman->say( "تبقت ساعة واحدة على موعد حلاقتك ",$appointment->fb_id, FacebookDriver::class);
-        } catch (\Exception $e) {
            
-            echo $info=$e->getCode().': '.$e->getMessage();
-        }  } 
+        
     
 
         }
