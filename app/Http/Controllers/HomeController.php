@@ -29,11 +29,7 @@ class HomeController extends Controller
         $ai=date('Y-m-d H:i', strtotime($d. '+'.'1 hours'));
 
 
-        echo $date;
-        echo "<p></p>";
-
-        echo $ai;
-        dd();
+       
         if ($ai==$date) {
            
        try {
