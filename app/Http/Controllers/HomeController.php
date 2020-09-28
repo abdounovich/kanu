@@ -26,19 +26,30 @@ class HomeController extends Controller
         $appointments=Appointment::where('ActiveType','1')->get();
         foreach ($appointments as $appointment ) {        
         $d=date("Y-m-d H:i", strtotime($appointment->jour." ".$appointment->debut.":00"));
-        $date=date('Y-m-d H:i', strtotime($date. '+'.'1 hours'));
+        $date1=date('Y-m-d H:i', strtotime($date. '+'.'1 hours'));
+        $ten=date('Y-m-d H:i', strtotime($date. '+'.'15 minutes'));
+
+
+
 
 
        
-        if ($d==$date) {
+        if ($d==$date1) {
            
-       try {
-            $botman->say( "تبقت ساعة واخدة على موعد حلاقتك ",$appointment->fb_id, FacebookDriver::class);
-        } catch (\Exception $e) {
+      
+            $botman->say( "تبقت ساعة واحدة على موعد حلاقتك ",$appointment->fb_id, FacebookDriver::class);
+     
            
-            echo $info=$e->getCode().': '.$e->getMessage();
-        }  } 
+        }
     
+
+        if ($d==$ten) {
+           
+      
+            $botman->say( "تبقت  ربع ساعة  على موعد حلاقتك ",$appointment->fb_id, FacebookDriver::class);
+     
+           
+        }
 
         }
 
