@@ -36,7 +36,7 @@ $appointment=Appointment::where("ActiveType","1")->where("facebook",$facebook)->
 $appointment->delete();
 $client=Client::find($id);
 $config=Config::get('app.url');
-
+echo $client->fb_id;dd();
 
 
       $messageData = [
