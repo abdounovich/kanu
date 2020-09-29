@@ -103,11 +103,10 @@ button:hover, a:hover {
            
 
         
-
+        <div   dir="rtl" class="p-2 m-2"> موعدك</div>
 
                 
-                <div   dir="rtl" class="p-2 m-2"> موعدك يوم  <span style="font-size: 18px;" class="badge badge-warning  text-white font-weight-bold p-2">{{$yawm}}  على {{$appointment->debut}}  </span>    </div>
-                <div class="m-3">الوقت المتبقي لموعدك : </div>
+                <div   dir="rtl" class="p-2 m-2">  <span style="font-size: 18px;" class="badge badge-warning  text-white font-weight-bold p-2">{{$yawm}}  على {{$appointment->debut}}  </span>    </div>
 
 <div style="direction: ltr "  id="countdown-container"></div>
 
