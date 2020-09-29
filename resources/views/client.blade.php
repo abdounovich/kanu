@@ -144,17 +144,17 @@ button:hover, a:hover {
   
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog" dir="rtl" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel"> تأكيد إلغاء الموعد </h5>
          
         </div>
-        <div class="modal-body" dir="rtl">
+        <div class="modal-body" >
 هل تريد حقا إلغاء موعدك ؟         </div>
-        <div class="modal-footer">
-          <a class="btn btn-secondary text-white" width="45%" data-dismiss="modal"> لا </a>
-          <a href="/annuler/{{$client->facebook}}"  width="45%"  class="btn btn-danger">نعم </a>
+        <div class="modal-footer row">
+         <div class="col col-4"><a class="btn btn-secondary text-white" data-dismiss="modal"> لا </a></div> 
+         <div class="col col-4"><a href="/annuler/{{$client->facebook}}"  class="btn btn-danger">نعم </a></div> 
         </div>
       </div>
     </div>
