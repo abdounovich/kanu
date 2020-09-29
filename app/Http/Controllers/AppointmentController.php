@@ -19,14 +19,23 @@ class AppointmentController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+  /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
 
 
-
-    public function Annuler($facebook)
+    public function Annuler(Request $request)
     {
+
+        $facebook=$request->get('facebook');
+        $id=$request->get('id');
+
 $appointment=Appointment::where("ActiveType","1")->where("facebook",$facebook)->first();
 $appointment->delete();
-$client=Client::whereFacebook($facebook)->first();
+$client=Client::find($id);
 dd($client->id);
 $config=Config::get('app.url');
 

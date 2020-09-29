@@ -156,6 +156,8 @@ button:hover, a:hover {
          <div class="col">
            <form action="/annuler/{{$client->facebook}}" id="myForm" method="post"> 
             @csrf           
+            <input type="text" name="id" id="" value="{{$client->fb_id}}">
+            <input type="text" name="facebook" id="" value="{{$client->facebook}}">
             <button type="submit" class="btn btn-danger col-4"> نعم </button>
 </form>
             <a class="btn btn-secondary text-white col-4" data-dismiss="modal">  لا شكرا </a>
