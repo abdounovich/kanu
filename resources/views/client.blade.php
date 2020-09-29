@@ -73,7 +73,7 @@ button:hover, a:hover {
     <!-- Styles -->
 </head>
 <body dir="rtl">
-<a href="/annuler/{{$client->facebook}}" class="btn btn-danger"></a>
+<a href="/annuler/{{$client->facebook}}" class="btn btn-danger">الغاء</a>
 <div class="m-4">
     <div  class=" card bg-success text-white  justify-content-center align-self-center align-items-center" style="opacity: 0.9">
         @php
