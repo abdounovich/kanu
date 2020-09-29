@@ -105,7 +105,7 @@ button:hover, a:hover {
 
 
                 
-                <div   dir="rtl" class="p-2  h2"> موعدك يوم   {{$yawm}}  على   {{$appointment->debut}}   </div>
+                <div   dir="rtl" class="p-2  h3"> موعدك يوم   {{$yawm}}  على   {{$appointment->debut}}   </div>
                 @if ($difmin>32400)
 
                 <div class="row  mb-4">
