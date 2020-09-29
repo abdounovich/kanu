@@ -282,8 +282,8 @@ $date="Tuesday";
        $d_pause="12:00";
        $f_pause="13:00";
    }elseif($date=='Tuesday'){
-       $debut="00:01";
-       $fin="00:03";
+       $debut="00:00";
+       $fin="00:00";
        $d_pause="00:00";
        $f_pause="00:01";
    }
