@@ -129,7 +129,7 @@ button:hover, a:hover {
 
 
 
-           <input type="text" id="hidden" name="hidden" value="{{$difmin}}">
+           <input type="hidden" id="hidden" name="hidden" value="{{$difmin}}">
 
        
 
