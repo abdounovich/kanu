@@ -152,7 +152,7 @@ button:hover, a:hover {
         </div>
         <div class="modal-body  text-right"  >
 هل تريد حقا إلغاء موعدك ؟         </div>
-        <div class="modal-footer row align-items-center justify-content-center align-content-center">
+        <div class="modal-footer row float-right text-right">
          <div class="col"><a class="btn btn-secondary text-white col-4" data-dismiss="modal">  لا شكرا </a>
             <a href="/annuler/{{$client->facebook}}"  class="btn btn-danger col-4"> نعم </a></div> 
 
