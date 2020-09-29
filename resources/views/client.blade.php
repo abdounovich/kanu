@@ -112,11 +112,11 @@ button:hover, a:hover {
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-danger"  width="50%" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn btn-danger"   data-toggle="modal" data-target="#exampleModal">
 إلغاء الموعد    </button>
   
   <!-- Modal -->
-  <div class="modal fade m-2 " style="opacity:1" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade m-2 bg-dark " style="opacity:1" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
