@@ -105,7 +105,7 @@ button:hover, a:hover {
 
 
                 
-                <div   dir="rtl" class="p-2  h4"> موعدك يوم   {{$yawm}}  على   {{$appointment->debut}}   </div>
+                <div   dir="rtl" class="p-2 h5"> موعدك يوم   {{$yawm}}  على   {{$appointment->debut}}   </div>
               
 <div style="direction: ltr "  id="countdown-container"></div>
 @if ($difmin>32400) 
@@ -143,7 +143,7 @@ button:hover, a:hover {
 
   
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal" tabindex="-1"  dir="rtl" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" dir="rtl" role="document">
       <div class="modal-content">
         <div class="modal-header">
