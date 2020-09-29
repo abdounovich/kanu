@@ -111,7 +111,7 @@ button:hover, a:hover {
 <div style="direction: ltr "  id="countdown-container"></div>
 <p></p>
 <p></p>
-<a href="/annuler/{{$client->facebook}}" class="btn btn-danger">الغاء</a>
+<a href="/annuler/{{$client->facebook}}" class="btn btn-danger  p-2 m-3">  الغاء الموعد </a>
 
           
       </div>
