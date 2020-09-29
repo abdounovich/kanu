@@ -110,7 +110,7 @@ button:hover, a:hover {
 <div style="direction: ltr "  id="countdown-container"></div>
 @if ($difmin>32400) 
 <div>
- <a style="width: 80%" href="/annuler/{{$client->facebook}}" class="btn btn-danger m-2  "> إلغاء  </a>
+ <a style="width: 90%" href="/annuler/{{$client->facebook}}" class="btn btn-danger m-4  "> إلغاء  </a>
 </div>
 @endif
 
