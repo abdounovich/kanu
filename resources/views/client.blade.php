@@ -102,14 +102,7 @@ button:hover, a:hover {
     
            
 
-        
-        <div   dir="rtl" class="p-2 mt-2"> موعدك</div>
-
-                
-                <div   dir="rtl" class="p-2 m-2">  <span style="font-size: 18px;" class="badge badge-warning  text-white font-weight-bold p-2">{{$yawm}}  على {{$appointment->debut}}  </span>    </div>
-
-<div style="direction: ltr "  id="countdown-container"></div>
-@if ($difmin>32400)
+        @if ($difmin>32400)
 
 <div class="row  mt-4">
     
@@ -131,6 +124,13 @@ button:hover, a:hover {
 </div>
 
 @endif
+        <div   dir="rtl" class="p-2 mt-2"> موعدك</div>
+
+                
+                <div   dir="rtl" class="p-2 m-2">  <span style="font-size: 18px;" class="badge badge-warning  text-white font-weight-bold p-2">{{$yawm}}  على {{$appointment->debut}}  </span>    </div>
+
+<div style="direction: ltr "  id="countdown-container"></div>
+
 
 <p></p>
 <p></p> 
