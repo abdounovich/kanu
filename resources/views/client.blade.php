@@ -271,6 +271,7 @@ button:hover, a:hover {
                 MessengerExtensions.requestCloseBrowser(function success() {
     
                 }, function error(err) {
+                    alert(err);
     
                 });
             }
