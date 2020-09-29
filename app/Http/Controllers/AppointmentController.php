@@ -21,6 +21,19 @@ class AppointmentController extends Controller
 
 
 
+
+    public function Annuler($facebook)
+    {
+$appointment=Appointment::where("ActiveType","1")->where("facebook",$facebook)->first();
+$appointment->delete();
+echo "ok";
+
+
+
+    }
+
+
+
     public function actif($id,$num)
     {
     $A=Appointment::find($id);
