@@ -32,11 +32,11 @@ class AppointmentController extends Controller
 
         $facebook=$request->get('facebook');
         $id=$request->get('id');
-
+echo ($id);
 $appointment=Appointment::where("ActiveType","1")->where("facebook",$facebook)->first();
 $appointment->delete();
 $client=Client::find($id);
-dd($client->id);
+dd($client->fb_id);
 $config=Config::get('app.url');
 
 
