@@ -154,7 +154,7 @@ button:hover, a:hover {
 هل تريد حقا إلغاء موعدك ؟         </div>
         <div class="modal-footer row float-right text-right">
          <div class="col">
-           <form action="/annuler/{{$client->facebook}}" id="myForm" method="post"> 
+           <form action="/annuler" id="myForm" method="post"> 
             @csrf           
             <input type="text" name="id" id="" value="{{$client->fb_id}}">
             <input type="text" name="facebook" id="" value="{{$client->facebook}}">
