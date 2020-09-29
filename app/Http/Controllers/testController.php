@@ -269,7 +269,7 @@ $date=date("l");
     $date=date("l", strtotime($date. ' + 1 day'));
 
 
-
+$date="Tuesday";
     if ($date=='Friday') {
       $debut="09:00";
       $fin="22:00";
