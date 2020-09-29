@@ -102,33 +102,33 @@ button:hover, a:hover {
     
            
 
-        @if ($difmin>32400)
 
-<div class="row  mt-4">
-    
-    <div class="col col-2  ">
-    
-    </div>
-<div class="col col-3  float-right">
-    <a href="/annuler/{{$client->facebook}}" class="btn btn-danger "> الغاء الموعد </a>
-
-</div>
-
-<div class="col col-3 float-left mr-4 ">
-    <a href="/edit/{{$client->facebook}}" class="btn btn-warning text-white "> تغيير الموعد     </a>
-</div>
-
-<div class="col col-2">
-    
-</div>
-</div>
-
-@endif
         <div   dir="rtl" class="p-2 mt-2"> موعدك</div>
 
                 
                 <div   dir="rtl" class="p-2 m-2">  <span style="font-size: 18px;" class="badge badge-warning  text-white font-weight-bold p-2">{{$yawm}}  على {{$appointment->debut}}  </span>    </div>
+                @if ($difmin>32400)
 
+                <div class="row  mt-4">
+                    
+                    <div class="col col-2  ">
+                    
+                    </div>
+                <div class="col col-3  float-right">
+                    <a href="/annuler/{{$client->facebook}}" class="btn btn-danger "> الغاء  </a>
+                
+                </div>
+                
+                <div class="col col-3 float-left mr-4 ">
+                    <a href="/edit/{{$client->facebook}}" class="btn btn-warning text-white "> تغيير      </a>
+                </div>
+                
+                <div class="col col-2">
+                    
+                </div>
+                </div>
+                
+                @endif
 <div style="direction: ltr "  id="countdown-container"></div>
 
 
