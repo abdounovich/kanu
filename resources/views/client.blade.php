@@ -112,18 +112,15 @@ button:hover, a:hover {
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn btn-danger"  width="80%" data-toggle="modal" data-target="#exampleModal">
 إلغاء الموعد    </button>
   
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade m-2" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">إالغاء الموعد </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
         </div>
         <div class="modal-body">
           هل أنت متأكد من أنك تريد إلغاء موعدك 
@@ -138,9 +135,7 @@ button:hover, a:hover {
 
 
 
-<div>
- <a style="width: 90%" href="" class="btn btn-danger m-4  "> إلغاء  </a>
-</div>
+
 @endif
 
 <p></p>
