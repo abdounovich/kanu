@@ -50,11 +50,13 @@
                       $userInfo = json_decode($userInfoData, true);
                   $picture = $userInfo['profile_pic'] ;
         @endphp
-        <tr  @if ($actifTime>=$Today_appointment->debut && $actifTime<$Today_appointment->fin)
+        <tr @if ($actifTime>=$Today_appointment->debut && $actifTime<$Today_appointment->fin)
              class="bg-info" 
         @endif>
-
-      
+        {{$actifTime}}<p></p>
+      {{$Today_appointment->debut}}
+      <p></p>
+      {{$Today_appointment->fin}}
           <th scope="row">{{$counter}}
                
        </th>
