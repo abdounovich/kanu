@@ -117,9 +117,6 @@ button:hover, a:hover {
 <div class="col col-4">
     <a href="/annuler/{{$client->facebook}}" class="btn btn-danger  p-2 m-3"> الغاء الموعد </a>
 
-</div>
-
-<div class="col col-4">
     <a href="/edit/{{$client->facebook}}" class="btn btn-warning  p-2 m-3"> تغيير   </a>
 </div>
 </div>
