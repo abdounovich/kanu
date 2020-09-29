@@ -111,16 +111,16 @@ button:hover, a:hover {
 <div style="direction: ltr "  id="countdown-container"></div>
 @if ($difmin>32400)
 
-<div class="row">
+<div class="row d-flex">
     
 
-<div class="col col-4">
-    <a href="/annuler/{{$client->facebook}}" class="btn btn-danger  p-2 "> الغاء الموعد </a>
+<div class="col col-4 float-right ">
+    <a href="/annuler/{{$client->facebook}}" class="btn btn-danger  "> الغاء الموعد </a>
 
 </div>
 
-<div class="col col-4">
-    <a href="/edit/{{$client->facebook}}" class="btn btn-warning  p-2 m-3"> تغيير الموعد     </a>
+<div class="col col-4 float-left">
+    <a href="/edit/{{$client->facebook}}" class="btn btn-warning "> تغيير الموعد     </a>
 </div>
 </div>
 
