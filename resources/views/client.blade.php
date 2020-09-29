@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>BotMan Studio</title>
+    <title>IK9</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
@@ -107,7 +107,7 @@ button:hover, a:hover {
 
                 <div class="m-3">الوقت المتبقي لموعدك : </div>
                 
-                <div   dir="rtl">يوم  {{$yawm}}  على <span style="font-size: 20px;" class="badge badge-info font-weight-bold p-2">{{$appointment->debut}}  </span>    </div>
+                <div   dir="rtl">يوم  {{$yawm}}  على <span style="font-size: 20px;" class="badge badge-warning font-weight-bold p-2">{{$appointment->debut}}  </span>    </div>
 
 <div style="direction: ltr "  id="countdown-container"></div>
 
