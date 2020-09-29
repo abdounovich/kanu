@@ -106,20 +106,7 @@ button:hover, a:hover {
 
                 
                 <div   dir="rtl" class="p-2  h4"> موعدك يوم   {{$yawm}}  على   {{$appointment->debut}}   </div>
-                @if ($difmin>32400)
-
-                    
-                    
-                <div>
-                    <a style="width: 90%" href="/annuler/{{$client->facebook}}" class="btn btn-danger  "> إلغاء  </a>
-                
-                
-               
-                
-               
-                </div>
-                
-                @endif
+              
 <div style="direction: ltr "  id="countdown-container"></div>
 
 
@@ -136,15 +123,7 @@ button:hover, a:hover {
   @endif
     
 
-
-
-
-
            <input type="hidden" id="hidden" name="hidden" value="{{$difmin}}">
-
-       
-
-
 
 
     <script> 
