@@ -109,7 +109,7 @@ button:hover, a:hover {
                 <div   dir="rtl" class="p-2 m-2">  <span style="font-size: 18px;" class="badge badge-warning  text-white font-weight-bold p-2">{{$yawm}}  على {{$appointment->debut}}  </span>    </div>
 
 <div style="direction: ltr "  id="countdown-container"></div>
-@if ($difmin<28800)
+@if ($difmin>28800)
     
 
 <a href="/annuler/{{$client->facebook}}" class="btn btn-danger  p-2 m-3"> الغاء الموعد </a>
