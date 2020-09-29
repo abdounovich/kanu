@@ -121,8 +121,8 @@ button:hover, a:hover {
 
 </div>
 
-<div class="col col-3 float-left ">
-    <a href="/edit/{{$client->facebook}}" class="btn btn-warning mr-4"> تغيير الموعد     </a>
+<div class="col col-3 float-left mr-4 ">
+    <a href="/edit/{{$client->facebook}}" class="btn btn-warning text-white "> تغيير الموعد     </a>
 </div>
 
 <div class="col col-2">
