@@ -165,12 +165,19 @@ $date=date("l");
        $fin="22:00"; 
        $d_pause="12:00";
        $f_pause="13:00";
-   }else{
-       $debut="16:00";
-       $fin="22:00";
+   }elseif($date=='Tuesday'){
+       $debut="00:01";
+       $fin="00:03";
        $d_pause="00:00";
        $f_pause="00:01";
    }
+
+   else{ $debut="10:00";
+    $fin="22:00";
+    $d_pause="14:00";
+    $f_pause="15:00";}
+
+
    $jour=date("Y-m-d");
 
     $debut=$jour." ".$debut.":00";
@@ -274,12 +281,18 @@ $date=date("l");
        $fin="22:00"; 
        $d_pause="12:00";
        $f_pause="13:00";
-   }else{
-       $debut="16:00";
-       $fin="22:00";
+   }elseif($date=='Tuesday'){
+       $debut="00:01";
+       $fin="00:03";
        $d_pause="00:00";
        $f_pause="00:01";
    }
+
+   else{ $debut="10:00";
+    $fin="22:00";
+    $d_pause="14:00";
+    $f_pause="15:00";}
+
    $jour=date("Y-m-d");
    $tomorrow=date('Y-m-d', strtotime($jour. ' + 1 day'));
    $jour=$tomorrow;
@@ -377,7 +390,7 @@ date_default_timezone_set("Africa/Algiers");
 $date=date("l");
     $date=date("l", strtotime($date. ' + 2 day'));
 
-    if ($date=='Friday') {
+  if ($date=='Friday') {
       $debut="09:00";
       $fin="22:00";
       $d_pause="12:00";
@@ -388,12 +401,17 @@ $date=date("l");
        $fin="22:00"; 
        $d_pause="12:00";
        $f_pause="13:00";
-   }else{
-       $debut="16:00";
-       $fin="22:00";
+   }elseif($date=='Tuesday'){
+       $debut="00:01";
+       $fin="00:03";
        $d_pause="00:00";
        $f_pause="00:01";
    }
+
+   else{ $debut="10:00";
+    $fin="22:00";
+    $d_pause="14:00";
+    $f_pause="15:00";}
    $jour=date("Y-m-d");
    $afterTommorow=date('Y-m-d', strtotime($jour. ' + 2 day'));
    $jour=$afterTommorow;

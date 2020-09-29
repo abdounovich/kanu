@@ -180,21 +180,19 @@ $full_name=$firstname.'-'.$lastname;
 
 
     $bot->typesAndWaits(2);
-    $bot->reply("عفوا لا يمكنك حجز موعد الآن ");
-    $bot->reply(" ستبدأ هذه الخدمة في الفاتح من أكتوبر ");
-    $bot->reply("شكرا لكم على حسن تفهمكم ");
+ 
 
 
-  /*   $bot->reply(Question::create('  من فضلك إختر يوم موعدك  👇👇')->addButtons([
-    Button::create(' 🕐 بعد غد')->value('rdv3'),
-    Button::create(' 🕐 يوم الغد ')->value('rdv2'),        
-    Button::create('🕐 اليوم')->value('rdv1'),
-
+    $bot->reply(Question::create('  من فضلك إختر يوم موعدك  👇👇')->addButtons([
+/*     Button::create(' 🕐 بعد غد')->value('rdv3'),
+ */    Button::create(' 🕐 يوم الغد ')->value('rdv2'),        
+/*     Button::create('🕐 اليوم')->value('rdv1'),
+ */
 
 
     
 
-    ])); */}
+    ])); }
 });
 
 /* $botman->hears('C([0-9]+)', function ($bot, $number) {
