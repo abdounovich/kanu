@@ -150,11 +150,11 @@ button:hover, a:hover {
           <h5 class="modal-title" id="exampleModalLabel"> تأكيد إلغاء الموعد </h5>
          
         </div>
-        <div class="modal-body">
+        <div class="modal-body" dir="rtl">
 هل تريد حقا إلغاء موعدك ؟         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal"> لا </button>
-          <a type="button" href="/annuler/{{$client->facebook}}"  class="btn btn-danger">نعم </a>
+          <a class="btn btn-secondary" data-dismiss="modal"> لا </a>
+          <a href="/annuler/{{$client->facebook}}"  class="btn btn-danger">نعم </a>
         </div>
       </div>
     </div>
