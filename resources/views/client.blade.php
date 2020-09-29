@@ -153,8 +153,8 @@ button:hover, a:hover {
         <div class="modal-body" dir="rtl">
 هل تريد حقا إلغاء موعدك ؟         </div>
         <div class="modal-footer">
-          <a class="btn btn-secondary" data-dismiss="modal"> لا </a>
-          <a href="/annuler/{{$client->facebook}}"  class="btn btn-danger">نعم </a>
+          <a class="btn btn-secondary text-white" width="45%" data-dismiss="modal"> لا </a>
+          <a href="/annuler/{{$client->facebook}}"  width="45%"  class="btn btn-danger">نعم </a>
         </div>
       </div>
     </div>
