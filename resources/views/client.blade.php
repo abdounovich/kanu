@@ -108,21 +108,15 @@ button:hover, a:hover {
                 <div   dir="rtl" class="p-2  h4"> موعدك يوم   {{$yawm}}  على   {{$appointment->debut}}   </div>
                 @if ($difmin>32400)
 
-                <div class="row  mb-4">
                     
-                    <div class="col col-2  ">
                     
-                    </div>
-                <div class="col col-8  float-right mr-4">
-                    <a href="/annuler/{{$client->facebook}}" class="btn btn-danger "> إلغاء  </a>
+                <div>
+                    <a style="width: 90%" href="/annuler/{{$client->facebook}}" class="btn btn-danger  "> إلغاء  </a>
                 
-                </div>
                 
                
                 
-                <div class="col col-2">
-                    
-                </div>
+               
                 </div>
                 
                 @endif
