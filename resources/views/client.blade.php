@@ -86,7 +86,7 @@ button:hover, a:hover {
         
         @endphp
         <img src="{{$picture}}" alt="John"  width="100" height="100" class=" align-self-center m-4 border border-white ">
-        <h3 class="mt-2 p-2 bg-dark">{{$client->facebook}}</h3>
+        <h3 class="mt-2 p-2  text-success bg-dark">{{$client->facebook}}</h3>
       
     <div><div class="h4">رصيدي 🎁   :            <span class="badge badge-dark">{{$client->points}} نقطة  </span></div>
 </div>
@@ -110,7 +110,7 @@ button:hover, a:hover {
 <div style="direction: ltr "  id="countdown-container"></div>
 @if ($difmin>32400) 
 <div>
- <a style="width: 80%" class="btn btn-danger m-2  " data-toggle="modal" data-target="#exampleModal"> إلغاء  </a>
+ <a style="width: 60%" class="btn btn-danger m-2  " data-toggle="modal" data-target="#exampleModal"> إلغاء  </a>
 </div>
 
 
@@ -150,11 +150,14 @@ button:hover, a:hover {
           <h5 class="modal-title" id="exampleModalLabel"> تأكيد إلغاء الموعد </h5>
          
         </div>
-        <div class="modal-body" >
+        <div class="modal-body float-right"  >
 هل تريد حقا إلغاء موعدك ؟         </div>
         <div class="modal-footer row">
+            <div class="col col-2"></div> 
          <div class="col col-4"><a class="btn btn-secondary text-white" data-dismiss="modal"> لا </a></div> 
-         <div class="col col-4"><a href="/annuler/{{$client->facebook}}"  class="btn btn-danger">نعم </a></div> 
+         <div class="col col-4"><a href="/annuler/{{$client->facebook}}"  class="btn btn-danger"> نعم </a></div> 
+         <div class="col col-2"></div> 
+
         </div>
       </div>
     </div>
