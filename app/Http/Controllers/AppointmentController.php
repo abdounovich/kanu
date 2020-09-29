@@ -35,8 +35,8 @@ class AppointmentController extends Controller
 $appointment=Appointment::where("ActiveType","1")->where("facebook",$facebook)->first();
 $appointment->delete();
 $client=Client::find($id);
+dd($client);
 $config=Config::get('app.url');
-echo $client->fb_id;dd();
 
 
       $messageData = [
