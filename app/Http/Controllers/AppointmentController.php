@@ -41,7 +41,7 @@ $config=Config::get('app.url');
 
       $messageData = [
           "recipient" => [
-              "id" => $client->id,
+              "id" => $client->fb_id,
           ],
           "message"=>[
             "attachment"=>[
