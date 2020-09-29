@@ -51,10 +51,9 @@ $config=Config::get('app.url');
                 "text"=>"لقد تم إلغاء موعدك بنجاح ",
                 "buttons"=>[
                   [
-                    "type"=>"web_url",
-                    "url"=>"$config/client/$client->slug",
-                    "title"=>" 📅 تصفح  مواعيدي",
-                    "webview_height_ratio"=>"tall"
+                    "type"=>"postback",
+                    "title"=>" إحجز موعد جديد ",
+                    "payload"=>"GotoDis",
 
                   ],
                   [
