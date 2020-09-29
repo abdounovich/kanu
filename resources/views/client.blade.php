@@ -109,33 +109,9 @@ button:hover, a:hover {
               
 <div style="direction: ltr "  id="countdown-container"></div>
 @if ($difmin>32400) 
-
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-danger"   data-toggle="modal" data-target="#exampleModal">
-إلغاء الموعد    </button>
-  
-  <!-- Modal -->
-  <div class="modal fade m-2  " style="opacity:1" id="exampleModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog bg-dark" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">إالغاء الموعد </h5>
-        </div>
-        <div class="modal-body">
-          هل أنت متأكد من أنك تريد إلغاء موعدك 
-        </div>
-        <div class="modal-footer">
-          <a  href="/annuler/{{$client->facebook}}" class="btn btn-danger" data-dismiss="modal">نعم    </a>
-          <a  class="btn btn-primary"> لا </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
+<div>
+ <a style="width: 90%" href="/annuler/{{$client->facebook}}" class="btn btn-danger m-4  "> إلغاء  </a>
+</div>
 @endif
 
 <p></p>
