@@ -48,9 +48,9 @@ class HomeController extends Controller
         if ($d==$ten) {
            
       
-            $botman->say( "تذكير ⏰",$appointment->fb_id, FacebookDriver::class);
+            $botman->say( "⏰ تذكير ⏰",$appointment->fb_id, FacebookDriver::class);
 
-            $botman->say( "تبقت ربع ساعة  على موعد حلاقتك ".$appointment->facebook."مرحبا" ,$appointment->fb_id, FacebookDriver::class);
+            $botman->say( "تبقت  ربع ساعة  على موعد حلاقتك"."\n".$appointment->facebook." مرحبا 🙋‍♂️ " ,$appointment->fb_id, FacebookDriver::class);
           
            
         }
