@@ -38,9 +38,9 @@ class HomeController extends Controller
            
             
             $botman->say( "⏰ تذكير ⏰",$appointment->fb_id, FacebookDriver::class);
-
-            $botman->say( "تبقت   ساعة واحدة   على موعد حلاقتك"."\n".$appointment->facebook." مرحبا 🙋‍♂️ " ,$appointment->fb_id, FacebookDriver::class);
+            $botman->say( "🙋‍♂️ مرحبا ".$appointment->facebook."\n"."تبقت  ساعة واحدة  على موعد حلاقتك ",$appointment->fb_id, FacebookDriver::class);
           
+           
            
         }
     
@@ -49,8 +49,7 @@ class HomeController extends Controller
            
       
             $botman->say( "⏰ تذكير ⏰",$appointment->fb_id, FacebookDriver::class);
-
-            $botman->say( "تبقت  ربع ساعة  على موعد حلاقتك"."\n".$appointment->facebook." مرحبا 🙋‍♂️ " ,$appointment->fb_id, FacebookDriver::class);
+            $botman->say( "🙋‍♂️ مرحبا ".$appointment->facebook."\n"."تبقت ربع ساعة على موعد حلاقتك ",$appointment->fb_id, FacebookDriver::class);
           
            
         }
