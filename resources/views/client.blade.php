@@ -105,7 +105,7 @@ button:hover, a:hover {
 
 
                 
-                <div   dir="rtl" class="p-2 "> موعدك يوم :   {{$yawm}}  على :  {{$appointment->debut}}   </div>
+                <div   dir="rtl" class="p-2  h2"> موعدك يوم   {{$yawm}}  على   {{$appointment->debut}}   </div>
                 @if ($difmin>32400)
 
                 <div class="row  mb-4">
@@ -118,7 +118,7 @@ button:hover, a:hover {
                 
                 </div>
                 
-                <div class="col col-3 float-left mr-1 ">
+                <div class="col col-3 float-left ">
                     <a href="/edit/{{$client->facebook}}" class="btn btn-warning text-white "> تغيير      </a>
                 </div>
                 
