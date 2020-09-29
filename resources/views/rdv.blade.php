@@ -51,7 +51,7 @@
                   $picture = $userInfo['profile_pic'] ;
         @endphp
         <tr @if ($actifTime>=$Today_appointment->debut && $actifTime<$Today_appointment->fin)
-             class="bg-warning" 
+             class="bg-info" 
         @endif>
     
           <th scope="row">{{$counter}}
