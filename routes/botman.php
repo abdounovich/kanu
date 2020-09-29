@@ -166,6 +166,8 @@ $full_name=$firstname.'-'.$lastname;
         ->addButton(ElementButton::create('🗒 تصفح مواعيدي  ')
         ->url($this->config.'/client/'.$DbUsername->slug)
         ->enableExtensions()
+        ->heightRatio('tall')
+        ->disableShare()
     
         )
         
@@ -236,6 +238,8 @@ $full_name=$firstname.'-'.$lastname;
     ->url($this->config.'/client/'.$DbUsername->slug)
     ->heightRatio('tall')
     ->disableShare()
+    ->enableExtensions()
+
 
 
 	)
