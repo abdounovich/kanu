@@ -113,16 +113,20 @@ button:hover, a:hover {
 
 <div class="row d-flex">
     
-    <div class="col col-4 float-right ">
+    <div class="col col-3 float-right ">
     
     </div>
-<div class="col col-4 float-right ">
+<div class="col col-3 float-right ">
     <a href="/annuler/{{$client->facebook}}" class="btn btn-danger  p-2 m-2"> الغاء الموعد </a>
 
 </div>
 
-<div class="col col-4 float-left">
+<div class="col col-3 float-right">
     <a href="/edit/{{$client->facebook}}" class="btn btn-warning  p-2 m-2"> تغيير الموعد     </a>
+</div>
+
+<div class="col col-3 float-right ">
+    
 </div>
 </div>
 
