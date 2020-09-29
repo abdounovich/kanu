@@ -113,7 +113,7 @@ button:hover, a:hover {
 
 <div class="row ">
     
-    <div class="col col-3  ">
+    <div class="col col-2  ">
     
     </div>
 <div class="col col-3 ">
@@ -125,12 +125,15 @@ button:hover, a:hover {
     <a href="/edit/{{$client->facebook}}" class="btn btn-warning"> تغيير الموعد     </a>
 </div>
 
-<div class="col col-3">
+<div class="col col-2">
     
 </div>
 </div>
 
 @endif
+
+<p></p>
+<p></p> 
 
           
       </div>
