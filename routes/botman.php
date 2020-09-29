@@ -165,6 +165,7 @@ $full_name=$firstname.'-'.$lastname;
         $bot->reply(ButtonTemplate::create(' عذرا صديقي 😕 '.$full_name ."\n"." لقد حجزت موعد من قبل لا يمكنك حجز أكثر من موعد في نفس اليوم ")
         ->addButton(ElementButton::create('🗒 تصفح مواعيدي  ')
         ->url($this->config.'/client/'.$DbUsername->slug)
+        ->enableExtensions()
     
         )
         
