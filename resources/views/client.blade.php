@@ -112,7 +112,7 @@ button:hover, a:hover {
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-danger"  width="80%" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn btn-danger"  width="50%" data-toggle="modal" data-target="#exampleModal">
 إلغاء الموعد    </button>
   
   <!-- Modal -->
