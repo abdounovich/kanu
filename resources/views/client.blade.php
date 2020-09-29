@@ -109,8 +109,7 @@ button:hover, a:hover {
                 <div   dir="rtl">يوم<span class="text-bold"> {{$yawm}} </span>على <span class=" badge badge-dark p-2">{{$appointment->debut}}</span>    </div>
 
 <div style="direction: ltr "  id="countdown-container"></div>
-<p></p>
-<p></p>
+
 <a href="/annuler/{{$client->facebook}}" class="btn btn-danger  p-2 m-3">  الغاء الموعد </a>
 
           
