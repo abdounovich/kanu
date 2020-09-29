@@ -105,7 +105,7 @@ button:hover, a:hover {
 
 
                 
-                <div   dir="rtl" class="p-2 h5"> موعدك يوم   {{$yawm}}  على   {{$appointment->debut}}   </div>
+                <div   dir="rtl" class="p-2  h4"> موعدك يوم   {{$yawm}}  على   {{$appointment->debut}}   </div>
               
 <div style="direction: ltr "  id="countdown-container"></div>
 @if ($difmin>32400) 
@@ -143,16 +143,16 @@ button:hover, a:hover {
 
   
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1"  dir="rtl" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" dir="rtl" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel"> تأكيد إلغاء الموعد </h5>
          
         </div>
-        <div class="modal-body float-right"  >
+        <div class="modal-body  text-right"  >
 هل تريد حقا إلغاء موعدك ؟         </div>
-        <div class="modal-footer row">
+        <div class="modal-footer row align-items-center justify-content-center align-content-center">
          <div class="col"><a class="btn btn-secondary text-white col-4" data-dismiss="modal">  لا شكرا </a>
             <a href="/annuler/{{$client->facebook}}"  class="btn btn-danger col-4"> نعم </a></div> 
 
