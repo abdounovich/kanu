@@ -158,7 +158,7 @@ button:hover, a:hover {
             @csrf           
             <input type="hidden" name="id" id="" value="{{$client->fb_id}}">
             <input type="hidden" name="facebook" id="" value="{{$client->facebook}}">
-            <a onclick="sendMessage()" class="btn btn-danger col-4"> نعم </a>
+            <a onclick="sendMessage()" class="btn btn-danger  text-white col-4"> نعم </a>
 
             <a class="btn btn-secondary text-white col-4" data-dismiss="modal">  لا شكرا </a>
           </form> </div> 
