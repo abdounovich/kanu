@@ -126,8 +126,8 @@ button:hover, a:hover {
           هل أنت متأكد من أنك تريد إلغاء موعدك 
         </div>
         <div class="modal-footer">
-          <a  href="/annuler/{{$client->facebook}}" class="btn btn-secondary" data-dismiss="modal">نعم    </a>
-          <button type="button" class="btn btn-danger"> لا     </button>
+          <a  href="/annuler/{{$client->facebook}}" class="btn btn-danger" data-dismiss="modal">نعم    </a>
+          <a  class="btn btn-primary"> لا </a>
         </div>
       </div>
     </div>
