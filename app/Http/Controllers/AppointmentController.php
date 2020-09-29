@@ -26,7 +26,53 @@ class AppointmentController extends Controller
     {
 $appointment=Appointment::where("ActiveType","1")->where("facebook",$facebook)->first();
 $appointment->delete();
-echo "ok";
+$client=Client::whereFacebook($facebook)->first();
+$config=Config::get('app.url');
+
+
+
+      $messageData = [
+          "recipient" => [
+              "id" => $client->id,
+          ],
+          "message"=>[
+            "attachment"=>[
+        
+              "type"=>"template",
+              "payload"=>[
+                "template_type"=>"button",
+                "text"=>"لقد تم إلغاء موعدك بنجاح ",
+                "buttons"=>[
+                  [
+                    "type"=>"web_url",
+                    "url"=>"$config/client/$client->slug",
+                    "title"=>" 📅 تصفح  مواعيدي",
+                    "webview_height_ratio"=>"tall"
+
+                  ],
+                  [
+                    "type"=>"web_url",
+                    "url"=>"$config/client/$client->slug",
+                    "title"=>" 🎁 رصيدي    ",
+                    "webview_height_ratio"=>"tall"
+
+                  ],
+                 
+                  
+                ]
+              ]
+            ]
+          ],
+      ];
+      $ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token=' . env("FACEBOOK_TOKEN"));
+      // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      // curl_setopt($ch, CURLOPT_HEADER, false);
+      curl_setopt($ch, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
+      curl_setopt($ch, CURLOPT_POST, true);
+      curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($messageData));
+      curl_exec($ch);
+      curl_close($ch);
+
 
 
 
