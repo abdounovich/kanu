@@ -109,8 +109,12 @@ button:hover, a:hover {
                 <div   dir="rtl" class="p-2 m-2">  <span style="font-size: 18px;" class="badge badge-warning  text-white font-weight-bold p-2">{{$yawm}}  على {{$appointment->debut}}  </span>    </div>
 
 <div style="direction: ltr "  id="countdown-container"></div>
+@if ()
+    
 
 <a href="/annuler/{{$client->facebook}}" class="btn btn-danger  p-2 m-3"> الغاء الموعد </a>
+<a href="/edit/{{$client->facebook}}" class="btn btn-warning  p-2 m-3"> تغيير   </a>
+@endif
 
           
       </div>
@@ -126,7 +130,7 @@ button:hover, a:hover {
 
 
 
-           <input type="hidden" id="hidden" name="hidden" value="{{$difmin}}">
+           <input type="text" id="hidden" name="hidden" value="{{$difmin}}">
 
        
 
