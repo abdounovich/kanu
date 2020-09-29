@@ -159,9 +159,9 @@ button:hover, a:hover {
             <input type="hidden" name="id" id="" value="{{$client->fb_id}}">
             <input type="hidden" name="facebook" id="" value="{{$client->facebook}}">
             <a onclick="sendMessage()" class="btn btn-danger col-4"> نعم </a>
-</form>
+
             <a class="btn btn-secondary text-white col-4" data-dismiss="modal">  لا شكرا </a>
-           </div> 
+          </form> </div> 
 
         </div>
       </div>
