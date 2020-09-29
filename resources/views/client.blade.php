@@ -111,7 +111,7 @@ button:hover, a:hover {
 <div style="direction: ltr "  id="countdown-container"></div>
 @if ($difmin>32400)
 
-<div class="row ">
+<div class="row  mt-4">
     
     <div class="col col-2  ">
     
