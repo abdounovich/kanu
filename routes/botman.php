@@ -184,10 +184,10 @@ $full_name=$firstname.'-'.$lastname;
 
 
     $bot->reply(Question::create('  من فضلك إختر يوم موعدك  👇👇')->addButtons([
-/*     Button::create(' 🕐 بعد غد')->value('rdv3'),
- */    Button::create(' 🕐 يوم الغد ')->value('rdv2'),        
-/*     Button::create('🕐 اليوم')->value('rdv1'),
- */
+     Button::create(' 🕐 بعد غد')->value('rdv3'),
+     Button::create(' 🕐 يوم الغد ')->value('rdv2'),        
+     Button::create('🕐 اليوم')->value('rdv1'),
+ 
 
 
     
