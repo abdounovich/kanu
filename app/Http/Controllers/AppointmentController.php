@@ -108,7 +108,7 @@ $afterTommorow=date('Y-m-d', strtotime($today. ' + 2 day'));
 
 
 
-       $Inactif_appointments=Appointment::where('ActiveType','0')->latest()->paginate(5);
+       $Inactif_appointments=Appointment::where('ActiveType','0')->orWhere('ActiveType','2')->latest()->paginate(5);
     $config=Config::get('botman.facebook.token');
  
  
@@ -221,7 +221,7 @@ foreach ($clients as $client ) {
 $update = [
     'ActiveType'     => "0"
 ];
-$appointments=Appointment::where('ActiveType','1')->orWhere('ActiveType','2')->whereJour($today)
+$appointments=Appointment::whereJour($today)->where('ActiveType','1')->orWhere('ActiveType','2')
 ->update($update);
 
  
