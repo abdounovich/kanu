@@ -37,10 +37,10 @@ class testController extends Controller
     $id=$request->get('id');
     $debut=$request->get('debut'); 
     $type=$request->get('type');
-    
+      
     $username=$request->get('username');
 
-   $fin=date("Y-m-d H:i:s", (strtotime(date($debut)) + $type*60-60));
+   $fin=date("Y-m-d H:i:s", (strtotime(date($debut)) + $type*60));
    $fin=date("H:i", strtotime(date($fin)));
    $debut=date("H:i", strtotime(date($debut)));
 
