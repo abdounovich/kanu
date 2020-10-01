@@ -39,7 +39,7 @@ class testController extends Controller
     $type=$request->get('type');
       
     $username=$request->get('username');
-
+    $type=$type-1;
    $fin=date("Y-m-d H:i:s", (strtotime(date($debut)) + $type*60));
    $fin=date("H:i", strtotime(date($fin)));
    $debut=date("H:i", strtotime(date($debut)));
