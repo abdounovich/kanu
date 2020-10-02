@@ -72,7 +72,18 @@ font-weight:bold;
 <body dir="ltr">
 
 
+@php
+echo $username;
+  $OneApp=Appointment::where('facebook',$username)
+    ->where('ActiveType','1')->count();
+    
+    if ($OneApp>0) {
+       }
 
+
+
+       return ("عفوا لا يمكنك حجز أكثر من موعد ")
+@endphp
 {{-- @php
 
 date_default_timezone_set("Africa/Algiers");
@@ -151,7 +162,7 @@ $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
 
                         @break
                     @case(2)
-                    <div  class="h3 bg-success text-white text text-center p-2 m-2  rounded" >المواعيد المتاحة غدا   </div>
+            <div  class="h3 bg-success text-white text text-center p-2 m-2  rounded" > المواعيد المتاحة غدا   </div>
 
                         @break
                   
