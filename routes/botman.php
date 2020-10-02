@@ -64,6 +64,51 @@ $bot->typesAndWaits(2);
 });
   
 
+
+
+$botman->hears('OhYes', function ( $bot) {
+
+$user = $bot->getUser();
+$facebook_id = $user->getId();
+// Access last name
+$firstname = $user->getFirstname();
+// Access last name
+$lastname = $user->getLastname();
+$full_name=$firstname.'-'.$lastname;
+// Access Username
+
+$DbUsername=Client::whereFacebook($full_name)->first();
+
+
+$types2=Type::where('point','>=','30')->get();
+
+$array2=array();
+
+$bot->typesAndWaits(2);
+
+
+
+ foreach ($types2 as $type ) {
+    $array2[]= Element::create($type->type)
+    ->subtitle("السعر : ".$type->prix.' دج ')
+    ->image($type->photo)
+    ->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
+    ->url($this->config.'/test/'.$type->id.'/D'.$number."/".$full_name."/".$DbUsername->id)
+    ->heightRatio('tall')
+    ->disableShare()
+    ->enableExtensions());}
+
+
+
+$bot->typesAndWaits(2);
+
+$bot->reply(GenericTemplate::create()
+->addImageAspectRatio(GenericTemplate::RATIO_SQUARE)
+->addElements($array2)
+); 
+});
+
+
 $botman->hears('rdv([0-9]+)', function($bot,$number) {
  
     $user = $bot->getUser();
@@ -79,10 +124,8 @@ $DbUsername=Client::whereFacebook($full_name)->first();
 
 
  $types1=Type::where('point','<','30')->get();
- $types2=Type::where('point','>=','30')->get();
 
  $array1=array();
- $array2=array();
 
  $bot->typesAndWaits(2);
 
@@ -96,68 +139,19 @@ $DbUsername=Client::whereFacebook($full_name)->first();
      ->disableShare()
      ->enableExtensions());}
 
-     foreach ($types2 as $type ) {
-        $array2[]= Element::create($type->type)
-        ->subtitle("السعر : ".$type->prix.' دج ')
-        ->image($type->photo)
-        ->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
-        ->url($this->config.'/test/'.$type->id.'/D'.$number."/".$full_name."/".$DbUsername->id)
-        ->heightRatio('tall')
-        ->disableShare()
-        ->enableExtensions());}
+  
+
+
+
+        
+    $bot->reply(Question::create(' إظهار المزيد ')->addButtons([
+        Button::create(' نعم ')->value('OhYes'),]));
+
+
  $bot->reply(GenericTemplate::create()
  ->addImageAspectRatio(GenericTemplate::RATIO_SQUARE)
  ->addElements($array1)
 ); 
-
-
-$bot->typesAndWaits(2);
- 
-$bot->reply(GenericTemplate::create()
-->addImageAspectRatio(GenericTemplate::RATIO_SQUARE)
-->addElements($array2)
-); 
-
- /* $Tos=Appointment::where('ActiveType','1')->get();
-$somme=0;
-foreach ($Tos as $To) {
-$somme=$somme+$To->type->temps;
-}
-
- if ($somme<=$total) {    
-    date_default_timezone_set("Africa/Algiers");
-    $date = new Carbon($debut);
-    $date->subMinute(120);
-    $date=$date->format('H:i:s');
-    $heure_actuel=$dt=date("H:i:s");
-if ($heure_actuel>=$date){
-    $Tos=Appointment::where('ActiveType','1')->get();
-    $app_tot=Appointment::where('ActiveType','1')->count();
-    $somme=0;
-    foreach ($Tos as $To) {
-        $somme=$somme+$To->type->temps;
-    }
-$diff=$total-$somme;
-    $types=Type::all();
-    $array=array();
-    foreach ($types as $type ) {
-        $array[]= Element::create($type->type)
-        ->subtitle("السعر : ".$type->prix.' دج ')
-        ->image($type->photo)
-        ->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
-            ->payload('C'.$type->id)
-            ->type('postback'));}
-    $bot->reply(GenericTemplate::create()
-    ->addImageAspectRatio(GenericTemplate::RATIO_SQUARE)
-    ->addElements($array)
-); 
- }else{    
-    $bot->reply(' عذرا صديقي يتم أخذ موعد إبتداءا  من 🧏‍♂️ '.$date);
-}}
-else{
-$complet_message="  أنا آسف صديقي 😕  ".$full_name."\n"." كل الأماكن محجوزة لنهار اليوم ";
-    $bot->reply($complet_message);
-}*/
  
 });
 
