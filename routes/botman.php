@@ -144,15 +144,20 @@ $DbUsername=Client::whereFacebook($full_name)->first();
 
 
         
-    $bot->reply(Question::create(' إظهار المزيد ')->addButtons([
-        Button::create(' نعم ')->value('OhYes'),]));
+   
 
 
  $bot->reply(GenericTemplate::create()
  ->addImageAspectRatio(GenericTemplate::RATIO_SQUARE)
  ->addElements($array1)
 ); 
+
+$bot->typesAndWaits(2);
+
  
+
+$bot->reply(Question::create(' إظهار المزيد ؟ ')->addButtons([
+    Button::create(' نعم ')->value('OhYes'),]));
 });
 
 
