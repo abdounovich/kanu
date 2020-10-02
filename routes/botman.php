@@ -126,7 +126,6 @@ $DbUsername=Client::whereFacebook($full_name)->first();
 
  $array1=array();
 
- $bot->typesAndWaits(2);
 
  foreach ($types1 as $type ) {
      $array1[]= Element::create($type->type)
@@ -141,6 +140,7 @@ $DbUsername=Client::whereFacebook($full_name)->first();
   
 
 
+     $bot->typesAndWaits(2);
 
         
    
