@@ -78,11 +78,13 @@ echo $username;
     ->where('ActiveType','1')->count();
     
     if ($OneApp>0) {
-       }
+              return ("عفوا لا يمكنك حجز أكثر من موعد ")
+
+   
+    }
 
 
 
-       return ("عفوا لا يمكنك حجز أكثر من موعد ")
 @endphp
 {{-- @php
 
