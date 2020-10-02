@@ -80,7 +80,7 @@ $full_name=$firstname.'-'.$lastname;
 $DbUsername=Client::whereFacebook($full_name)->first();
 
 
-$types2=Type::where('point','>=','30')->get();
+$types2=Type::where('point','<','30')->get();
 
 $array2=array();
 
@@ -122,7 +122,7 @@ $full_name=$firstname.'-'.$lastname;
 $DbUsername=Client::whereFacebook($full_name)->first();
 
 
- $types1=Type::where('point','<','30')->get();
+ $types1=Type::where('point','>=','30')->get();
 
  $array1=array();
 
