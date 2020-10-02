@@ -37,10 +37,10 @@ class testController extends Controller
     $id=$request->get('id');
     $debut=$request->get('debut'); 
     $type=$request->get('type');
-      
+      $type=Type::find($type);
     $username=$request->get('username');
-    $type=$type-1;
-   $fin=date("Y-m-d H:i:s", (strtotime(date($debut)) + $type*60));
+    $type_time=$type->temps-1;
+   $fin=date("Y-m-d H:i:s", (strtotime(date($debut)) +  $type_time*60));
    $fin=date("H:i", strtotime(date($fin)));
    $debut=date("H:i", strtotime(date($debut)));
 
@@ -51,7 +51,7 @@ $jour=$request->get('jour');
 
 $addApp=new Appointment();
 $addApp->facebook=$username;
-$addApp->type_id="1";
+$addApp->type_id= $type->id;
 $addApp->ActiveType="1";
 $addApp->fb_id=$id;
 $addApp->jour=$jour;
