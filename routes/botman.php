@@ -84,7 +84,6 @@ $types2=Type::where('point','>=','30')->get();
 
 $array2=array();
 
-$bot->typesAndWaits(2);
 
 
 
@@ -156,8 +155,8 @@ $bot->typesAndWaits(2);
 
  
 
-$bot->reply(Question::create(' إظهار المزيد ؟ ')->addButtons([
-    Button::create(' نعم ')->value('OhYes'.$number),]));
+$bot->reply(Question::create(' إظهار المزيد ؟ ➕  ')->addButtons([
+    Button::create(' ✅ نعم ')->value('OhYes'.$number),]));
 });
 
 
