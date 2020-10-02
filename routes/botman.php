@@ -151,11 +151,11 @@ $DbUsername=Client::whereFacebook($full_name)->first();
  ->addElements($array1)
 ); 
 
-$bot->typesAndWaits(2);
+$bot->typesAndWaits(1);
 
  
 
-$bot->reply(Question::create(' إظهار المزيد ؟ ➕  ')->addButtons([
+$bot->reply(Question::create(' إظهار المزيد ➕ ؟   ')->addButtons([
     Button::create(' ✅ نعم ')->value('OhYes'.$number),]));
 });
 
