@@ -6,7 +6,7 @@
 
        
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta http-equiv="refresh" content="250">
+        <meta http-equiv="refresh" content="25">
 
         <title>Document</title>      
 
