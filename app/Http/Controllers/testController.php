@@ -185,7 +185,7 @@ $date=date("l");
     $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
     $fin=$jour." ".$fin.":00";
     $fin=date("Y-m-d H:i:s", strtotime(date($fin)));
-    $types=Type::whereId($type)->first();
+    $types=Type::find($type);
 
     $pas=60*$types->temps-60;
     $arr=array();
