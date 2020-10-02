@@ -79,7 +79,7 @@ $DbUsername=Client::whereFacebook($full_name)->first();
 
 
  $types1=Type::where('point','<','30')->get();
- $types2=Type::where('point','>','30')->get();
+ $types2=Type::where('point','>=','30')->get();
 
  $array1=array();
  $array2=array();
@@ -110,6 +110,9 @@ $DbUsername=Client::whereFacebook($full_name)->first();
  ->addElements($array1)
 ); 
 
+
+$bot->typesAndWaits(2);
+ 
 $bot->reply(GenericTemplate::create()
 ->addImageAspectRatio(GenericTemplate::RATIO_SQUARE)
 ->addElements($array2)
