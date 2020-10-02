@@ -66,7 +66,7 @@ $bot->typesAndWaits(2);
 
 
 
-$botman->hears('OhYes', function ( $bot) {
+$botman->hears('OhYes([0-9]+)', function ( $bot,$number) {
 
 $user = $bot->getUser();
 $facebook_id = $user->getId();
@@ -157,7 +157,7 @@ $bot->typesAndWaits(2);
  
 
 $bot->reply(Question::create(' إظهار المزيد ؟ ')->addButtons([
-    Button::create(' نعم ')->value('OhYes'),]));
+    Button::create(' نعم ')->value('OhYes'.$number),]));
 });
 
 
