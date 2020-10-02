@@ -74,7 +74,7 @@ font-weight:bold;
 
 @php
 echo $username;
-  $OneApp=Appointment::where('facebook',$username)
+  $OneApp=App\Appointment::where('facebook',$username)
     ->where('ActiveType','1')->count();
     
     if ($OneApp>0) {
