@@ -73,19 +73,14 @@ font-weight:bold;
 
 
 @php
-echo $username;
   $OneApp=App\Appointment::where('facebook',$username)
     ->where('ActiveType','1')->count();
     
-    if ($OneApp>0) {
-             echo "عفوا لا يمكنك حجز أكثر من موعد ";
-
-   
-    }
+   @endphp 
 
 
 
-@endphp
+
 {{-- @php
 
 date_default_timezone_set("Africa/Algiers");
@@ -147,8 +142,18 @@ $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
 
         @endif @endfor @endforeach --}}
 
+@if ($OneApp>0) 
+<div  class="h3 bg-danger text-white text text-center p-2 m-2  rounded" >عفوا صديقي لا يمكنك حجز أكثر من موعد  </div>
 
 
+    
+@else
+    
+
+
+    
+
+<div>
 
             <div class="container">
 
@@ -314,6 +319,7 @@ function getvalue() {
  */            });
         };
     </script>
-
+</div>
+@endif
 </body>
 </html>
