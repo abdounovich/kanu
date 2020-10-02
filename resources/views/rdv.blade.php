@@ -220,7 +220,7 @@
 
 
 
-{{$aa}}
+
 <div class="container p-2">
   <div class="row">
     @if ($Inactif_appointments->count()=='0')
