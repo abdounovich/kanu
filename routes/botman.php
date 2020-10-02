@@ -78,12 +78,16 @@ $full_name=$firstname.'-'.$lastname;
 $DbUsername=Client::whereFacebook($full_name)->first();
 
 
- $types=Type::all();
- $array=array();
+ $types1=Type::where('point','<','30');
+ $types2=Type::where('point','>','30');
+
+ $array1=array();
+ $array2=array();
+
  $bot->typesAndWaits(2);
 
- foreach ($types as $type ) {
-     $array[]= Element::create($type->type)
+ foreach ($types1 as $type ) {
+     $array1[]= Element::create($type->type)
      ->subtitle("السعر : ".$type->prix.' دج ')
      ->image($type->photo)
      ->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
@@ -91,9 +95,24 @@ $DbUsername=Client::whereFacebook($full_name)->first();
      ->heightRatio('tall')
      ->disableShare()
      ->enableExtensions());}
+
+     foreach ($types2 as $type ) {
+        $array2[]= Element::create($type->type)
+        ->subtitle("السعر : ".$type->prix.' دج ')
+        ->image($type->photo)
+        ->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
+        ->url($this->config.'/test/'.$type->id.'/D'.$number."/".$full_name."/".$DbUsername->id)
+        ->heightRatio('tall')
+        ->disableShare()
+        ->enableExtensions());}
  $bot->reply(GenericTemplate::create()
  ->addImageAspectRatio(GenericTemplate::RATIO_SQUARE)
- ->addElements($array)
+ ->addElements($array1)
+); 
+
+$bot->reply(GenericTemplate::create()
+->addImageAspectRatio(GenericTemplate::RATIO_SQUARE)
+->addElements($array2)
 ); 
 
  /* $Tos=Appointment::where('ActiveType','1')->get();
