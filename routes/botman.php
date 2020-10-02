@@ -139,8 +139,8 @@ $DbUsername=Client::whereFacebook($full_name)->first();
 
   
 
-     $bot->typesAndWaits(1);
 
+     $bot->typesAndWaits(1);
 
         
    
@@ -151,7 +151,6 @@ $DbUsername=Client::whereFacebook($full_name)->first();
  ->addElements($array1)
 ); 
 
-$bot->typesAndWaits(1);
 
  
 
