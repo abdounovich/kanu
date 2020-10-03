@@ -59,7 +59,7 @@ $addApp->jour=$jour;
 $addApp->debut="20:00";
 $addApp->fin=$fin;
 $addApp->client_id=$Cid;
-if ($a) {
+if (count($a)>0) {
   return "حدث خطأ ما نرجو منك إعادة المحاولة من جديد";
 } else {
   
