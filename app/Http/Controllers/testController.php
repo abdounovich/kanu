@@ -47,6 +47,7 @@ class testController extends Controller
 
 $jour=$request->get('jour');
 
+$a=Appointment::whereJour($jour)->whereDebut($debut)->get();
 
 
 $addApp=new Appointment();
@@ -55,9 +56,13 @@ $addApp->type_id= $type->id;
 $addApp->ActiveType="1";
 $addApp->fb_id=$id;
 $addApp->jour=$jour;
-$addApp->debut=$debut;
+$addApp->debut="20:00";
 $addApp->fin=$fin;
 $addApp->client_id=$Cid;
+if ($a) {
+  return "حدث خطأ ما نرجو منك إعادة المحاولة من جديد";
+} else {
+  
 
 $addApp->save();
 $client=Client::find($Cid);
@@ -115,7 +120,7 @@ $config=Config::get('app.url');
       curl_exec($ch);
       curl_close($ch);
 
-  }
+    }  }
 
 
    public function commande(Request $request){
