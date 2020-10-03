@@ -53,7 +53,7 @@ $a=Appointment::whereJour($jour)->whereDebut($debut)->get()->count();
 
 if ($a>0) {
   $botman = app('botman');
-  $botman->reply( "حدث خطأ نرجو إعادة المحاولة ",$id, FacebookDriver::class);
+  $botman->say( "حدث خطأ نرجو إعادة المحاولة ",$id, FacebookDriver::class);
   return;
 
 } else {
