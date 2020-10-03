@@ -20,7 +20,7 @@
         <div  class="col col-12 bg-dark text-white mt-5 " style="opacity: 0.9"><h2 class="p-4 float-right">لا توجد مواعيد لنهار اليوم</h2></div>
    @else
     <h3 class="p-2 text-white">مواعيد اليوم </h3>
-    <table class="table table-striped table-dark responsive" style="opacity:0.9 ; font-size:10px">
+    <table class="table table-striped table-dark responsive" style="opacity:0.9 ">
       <thead class=" bg-success text-right">
         <tr>
           <th scope="col">#</th>          
@@ -139,8 +139,7 @@
          <td class="align-middle">@php $demain = date('H:i', strtotime($Tomorow_appointment->debut));
           echo $demain;
           @endphp</td>
-            <td class="align-middle h6"> @php  carbon\Carbon::setLocale('ar');
-              echo $Tomorow_appointment->created_at->addMinutes(60)->diffForHumans(); @endphp    </td>
+           
 
         </tr>
     
@@ -199,8 +198,7 @@
          <td class="align-middle">@php $demain = date('H:i', strtotime($AfterTomoro_appointment->debut));
           echo $demain;
           @endphp</td>
-            <td class="align-middle h5"> @php  carbon\Carbon::setLocale('ar');
-              echo $AfterTomoro_appointment->created_at->addMinutes(60)->diffForHumans(); @endphp    </td>
+            
 
         </tr>
     
