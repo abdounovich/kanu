@@ -49,7 +49,12 @@ class testController extends Controller
 $jour=$request->get('jour');
 
 $a=Appointment::whereJour($jour)->whereDebut($debut)->first();
+if (count($a)>0) {
+  $botman = app('botman');
+  $botman->say( "حدث خطأ نرجو إعادة المحاولة ",$id, FacebookDriver::class);
+  return;
 
+} else {
 
 $addApp=new Appointment();
 $addApp->facebook=$username;
@@ -60,11 +65,7 @@ $addApp->jour=$jour;
 $addApp->debut="20:00";
 $addApp->fin=$fin;
 $addApp->client_id=$Cid;
-if (count($a)>0) {
-  $botman = app('botman');
-  $botman->say( "حدث خطأ نرجو إعادة المحاولة ",$id, FacebookDriver::class);
 
-} else {
   
 
 $addApp->save();
