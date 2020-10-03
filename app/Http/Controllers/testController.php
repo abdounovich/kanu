@@ -37,7 +37,6 @@ class testController extends Controller
     $Cid=$request->get('Cid');
     $id=$request->get('id');
     $debut=$request->get('debut'); 
-    $debut="20:00";
     $type=$request->get('type');
     $type=Type::find($type);
     $username=$request->get('username');
