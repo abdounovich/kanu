@@ -30,7 +30,7 @@
           <th scope="col"> الحلاقة </th>
 
           <th scope="col">الموعد  </th>
-          <th scope="col">تاريخ الحجز </th>
+          <th scope="col">  </th>
           <th scope="col">  </th>
 
 
@@ -68,7 +68,7 @@
          <td class="align-middle">@php $demain = date('H:i', strtotime($Today_appointment->debut));
           echo $demain;
           @endphp</td>
-            <td class="align-middle"> @php  carbon\Carbon::setLocale('ar');
+            <td class="align-middle h6"> @php  carbon\Carbon::setLocale('ar');
               echo $Today_appointment->created_at->addMinutes(60)->diffForHumans(); @endphp    
                 
            
@@ -116,7 +116,7 @@
           <th scope="col">نوع الحلاقة </th>
 
           <th scope="col">الموعد  </th>
-          <th scope="col">تاريخ الحجز </th>
+          <th scope="col"></th>
 
         </tr>
       </thead>
@@ -145,7 +145,7 @@
          <td class="align-middle">@php $demain = date('H:i', strtotime($Tomorow_appointment->debut));
           echo $demain;
           @endphp</td>
-            <td class="align-middle"> @php  carbon\Carbon::setLocale('ar');
+            <td class="align-middle h6"> @php  carbon\Carbon::setLocale('ar');
               echo $Tomorow_appointment->created_at->addMinutes(60)->diffForHumans(); @endphp    </td>
 
         </tr>
