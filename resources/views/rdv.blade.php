@@ -176,7 +176,7 @@
           <th scope="col">نوع الحلاقة </th>
 
           <th scope="col">الموعد  </th>
-          <th scope="col">تاريخ الحجز </th>
+          <th scope="col">  </th>
 
         </tr>
       </thead>
@@ -205,7 +205,7 @@
          <td class="align-middle">@php $demain = date('H:i', strtotime($AfterTomoro_appointment->debut));
           echo $demain;
           @endphp</td>
-            <td class="align-middle"> @php  carbon\Carbon::setLocale('ar');
+            <td class="align-middle h5"> @php  carbon\Carbon::setLocale('ar');
               echo $AfterTomoro_appointment->created_at->addMinutes(60)->diffForHumans(); @endphp    </td>
 
         </tr>
