@@ -9,6 +9,7 @@ use App\Appointment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Artisan;
+use BotMan\Drivers\Facebook\FacebookDriver;
 
 class testController extends Controller
 {
@@ -60,7 +61,9 @@ $addApp->debut="20:00";
 $addApp->fin=$fin;
 $addApp->client_id=$Cid;
 if (count($a)>0) {
-  return "حدث خطأ ما نرجو منك إعادة المحاولة من جديد";
+  $botman = app('botman');
+  $botman->say( "حدث خطأ نرجو إعادة المحاولة ",$id, FacebookDriver::class);
+
 } else {
   
 
