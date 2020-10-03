@@ -38,7 +38,7 @@ class testController extends Controller
     $id=$request->get('id');
     $debut=$request->get('debut'); 
     $type=$request->get('type');
-      $type=Type::find($type);
+    $type=Type::find($type);
     $username=$request->get('username');
     $type_time=$type->temps-1;
    $fin=date("Y-m-d H:i:s", (strtotime(date($debut)) +  $type_time*60));
@@ -51,7 +51,7 @@ $jour=$request->get('jour');
 $a=Appointment::whereJour($jour)->whereDebut($debut)->get()->count();
 if ($a>0) {
   $botman = app('botman');
-  $botman->say( "حدث خطأ نرجو إعادة المحاولة ",$id, FacebookDriver::class);
+  $botman->reply( "حدث خطأ نرجو إعادة المحاولة ",$id, FacebookDriver::class);
   return;
 
 } else {
@@ -62,7 +62,7 @@ $addApp->type_id= $type->id;
 $addApp->ActiveType="1";
 $addApp->fb_id=$id;
 $addApp->jour=$jour;
-$addApp->debut="20:00";
+$addApp->debut=$debut;
 $addApp->fin=$fin;
 $addApp->client_id=$Cid;
 
