@@ -205,7 +205,7 @@ $date=date("l");
     $f_pause=$jour." ".$f_pause.":00";
     $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
 
-    $Today_appointments=Appointment::where('ActiveType',"1")->whereJour($jour)->get();
+    $Today_appointments=Appointment::whereJour($jour)->where('ActiveType',"1")->Orwhere('ActiveType',"2")->get();
     while ($debut < $fin )
     {
       $arr[]=$debut;  
@@ -321,7 +321,7 @@ $date=date("l");
     $f_pause=$jour." ".$f_pause.":00";
     $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
 
-    $Tomorrow_appointments=Appointment::where('ActiveType',"1")->whereJour($jour)->get();
+    $Tomorrow_appointments=Appointment::whereJour($jour)->where('ActiveType',"1")->Orwhere('ActiveType',"2")->get();
     while ($debut < $fin )
     {
       $arr[]=$debut;  
@@ -435,7 +435,7 @@ $date=date("l");
     $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause)));  
     $f_pause=$jour." ".$f_pause.":00";
     $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
-   $afterTommorow=Appointment::where('ActiveType',"1")->whereJour($afterTommorow)->get();
+   $afterTommorow=Appointment::whereJour($jour)->where('ActiveType',"1")->Orwhere('ActiveType',"2")->get();
    while ($debut < $fin )
    {
      $arr[]=$debut;  
