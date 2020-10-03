@@ -48,7 +48,7 @@ class testController extends Controller
 
 $jour=$request->get('jour');
 
-$a=Appointment::whereJour($jour)->whereDebut($debut)->get();
+$a=Appointment::whereJour($jour)->whereDebut($debut)->first();
 
 
 $addApp=new Appointment();
