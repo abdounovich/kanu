@@ -31,7 +31,6 @@
 
           <th scope="col">الموعد  </th>
           <th scope="col">  </th>
-          <th scope="col">  </th>
 
 
         </tr>
@@ -68,12 +67,7 @@
          <td class="align-middle">@php $demain = date('H:i', strtotime($Today_appointment->debut));
           echo $demain;
           @endphp</td>
-            <td class="align-middle h6"> @php  carbon\Carbon::setLocale('ar');
-              echo $Today_appointment->created_at->addMinutes(60)->diffForHumans(); @endphp    
-                
            
-
-              </td>
 <td> 
   
   
