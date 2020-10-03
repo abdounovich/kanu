@@ -293,7 +293,11 @@ function getvalue() {
             document.getElementById("myForm").submit();
 
         
-           
+            MessengerExtensions.requestCloseBrowser(function success() {
+
+            }, function error(err) {
+
+            });
         }
 
         (function (d, s, id) {
