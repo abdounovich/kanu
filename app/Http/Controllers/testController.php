@@ -48,8 +48,8 @@ class testController extends Controller
 
 $jour=$request->get('jour');
 
-$a=Appointment::whereJour($jour)->whereDebut($debut)->first();
-if (count($a)>0) {
+$a=Appointment::whereJour($jour)->whereDebut($debut)->count();
+if ($a>0) {
   $botman = app('botman');
   $botman->say( "حدث خطأ نرجو إعادة المحاولة ",$id, FacebookDriver::class);
   return;
