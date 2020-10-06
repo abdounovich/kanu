@@ -57,11 +57,11 @@
           <th scope="row">{{$counter}}
                
        </th>
-          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2  mr-5" width="50" height="50" src="{{$picture}}" alt="">
            <p> {{$Today_appointment->facebook}}</p>  <span dir="ltr" style=" position: absolute;
             top:1px;
             font-size:13px;
-            right:1px; width:30px;height:30px; 
+            right:50px; width:30px;height:30px; 
     min-width: 14px;
     text-align: center;
     line-height: 24px;
@@ -134,11 +134,11 @@
         <tr>
           <th scope="row">{{$counter}}</th>
         
-          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2  mr-5" width="50" height="50" src="{{$picture}}" alt="">
             <p>{{$Tomorow_appointment->facebook}}</p>  <span dir="ltr"  style=" position: absolute;
             top:1px;
             font-size:13px;
-            right:1px; width:30px;height:30px; 
+            right:50px; width:30px;height:30px; 
     min-width: 14px;
     text-align: center;
     line-height: 24px;
@@ -200,11 +200,11 @@
           
 
 
-            <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+            <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2  mr-5" width="50" height="50" src="{{$picture}}" alt="">
               {{$AfterTomoro_appointment->facebook}}  <span dir="ltr"  style=" position: absolute;
               top:1px;
               font-size:13px;
-              right:1px; width:30px;height:30px; 
+              right:50px; width:30px;height:30px; 
       min-width: 14px;
       text-align: center;
       line-height: 24px;
@@ -263,11 +263,11 @@
         @endphp
         <tr>
           <th scope="row">{{$counter}}</th>
-          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
-            {{$Inactif_appointment->facebook}}  <span dir="ltr"  style=" position: absolute;
+          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2 mr-5" width="50" height="50" src="{{$picture}}" alt="">
+            <p>{{$Inactif_appointment->facebook}}</p>  <span dir="ltr"  style=" position: absolute;
             top:1px;
             font-size:13px;
-            right:1px; width:30px;height:30px; 
+            right:50px; width:30px;height:30px; 
     min-width: 14px;
     text-align: center;
     line-height: 24px;
