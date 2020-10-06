@@ -104,7 +104,6 @@
           <th scope="col">#</th>          
 
           <th scope="col">الفيسبوك</th>
-          <th scope="col">الرصيد  </th>
           
           <th scope="col">نوع الحلاقة </th>
 
@@ -164,7 +163,6 @@
           <th scope="col">#</th>          
 
           <th scope="col">الفيسبوك</th>
-          <th scope="col">الرصيد</th>
           
           <th scope="col">نوع الحلاقة </th>
 
@@ -231,7 +229,6 @@
           <th scope="col">#</th>          
 
           <th scope="col">الفيسبوك</th>
-          <th scope="col">الرصيد </th>
           <th scope="col">الوقت </th>
         </tr>
       </thead>
@@ -250,12 +247,15 @@
         @endphp
         <tr>
           <th scope="row">{{$counter}}</th>
-          <td class="align-middle"><img class="  border  rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
-            {{$Inactif_appointment->facebook}}</td>
+          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+            {{$Inactif_appointment->facebook}}  <span dir="ltr" style=" position: absolute;
+            top:1px;
+            right:1px; width:30px;height:30px" class="badge badge-success  rounded-circle p-2 ">{{$Inactif_appointment->client->points}}</span> 
+          </td>
+
+
          
-        <td class="align-middle">
-          <span class="badge badge-success badge-pill p-2">{{$Inactif_appointment->client->points}}</span> 
-        </td>
+       
          <td class="align-middle"> @php  carbon\Carbon::setLocale('ar');
           echo $Inactif_appointment->created_at->diffForHumans(); @endphp    </td>
 
