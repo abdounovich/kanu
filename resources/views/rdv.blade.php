@@ -144,7 +144,7 @@
     text-align: center;
     line-height: 24px;
     box-shadow: 1px 1px 1px black;
- " class="badge badge-success   text-center rounded-circle p-2 ">{{$Tomorow_appointment->client->points}}</span> 
+ " class="badge badge-success   text-center rounded-circle  ">{{$Tomorow_appointment->client->points}}</span> 
           </td>
          
        
@@ -211,7 +211,7 @@
       text-align: center;
       line-height: 24px;
       box-shadow: 1px 1px 1px black;
-   "class="badge badge-success text-center  rounded-circle p-2 ">{{$AfterTomoro_appointment->client->points}}</span> 
+   "class="badge badge-success text-center  rounded-circle  ">{{$AfterTomoro_appointment->client->points}}</span> 
             </td>
 
          
@@ -276,7 +276,7 @@
     text-align: center;
     line-height: 24px;
     box-shadow: 1px 1px 1px black;
- " class="badge badge-success text-center  rounded-circle p-2 ">{{$Inactif_appointment->client->points}}</span> 
+ " class="badge badge-success text-center  rounded-circle  ">{{$Inactif_appointment->client->points}}</span> 
           </td>
 
 
