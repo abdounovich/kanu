@@ -57,11 +57,11 @@
           <th scope="row">{{$counter}}
                
        </th>
-          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2  mr-3" width="50" height="50" src="{{$picture}}" alt="">
-           <p> {{$Today_appointment->facebook}}</p>  <span dir="ltr" style=" position: absolute;
+          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+            {{$Today_appointment->facebook}}  <span dir="ltr" style=" position: absolute;
             top:1px;
             font-size:13px;
-            right:50px; width:30px;height:30px; 
+            right:1px; width:30px;height:30px; 
     min-width: 14px;
     text-align: center;
     line-height: 24px;
@@ -100,6 +100,7 @@
 
 
 
+<div class="container">
   <div class="row mt-5">
     @if ($Tomorow_appointments->count()=='0')
         <div  class="col col-12 bg-dark text-white mt-5  " style="opacity: 0.9"><h2 class="p-4 float-right">لا توجد مواعيد لنهار الغد</h2></div>
@@ -134,11 +135,11 @@
         <tr>
           <th scope="row">{{$counter}}</th>
         
-          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2  mr-3" width="50" height="50" src="{{$picture}}" alt="">
-            <p>{{$Tomorow_appointment->facebook}}</p>  <span dir="ltr"  style=" position: absolute;
+          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+            {{$Tomorow_appointment->facebook}}  <span dir="ltr"  style=" position: absolute;
             top:1px;
             font-size:13px;
-            right:50px; width:30px;height:30px; 
+            right:1px; width:30px;height:30px; 
     min-width: 14px;
     text-align: center;
     line-height: 24px;
@@ -159,11 +160,12 @@
       </tbody>
     </table> @endif
   </div>
+</div>
 
 
 
 
-
+<div class="container">
   <div class="row mt-5">
     @if ($AfterTomoro_appointments->count()=='0')
         <div  class="col col-12 bg-dark text-white mt-5  " style="opacity: 0.9"><h2 class="p-4 float-right">لا توجد مواعيد لبعد الغد</h2></div>
@@ -200,11 +202,11 @@
           
 
 
-            <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2  mr-3" width="50" height="50" src="{{$picture}}" alt="">
+            <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
               {{$AfterTomoro_appointment->facebook}}  <span dir="ltr"  style=" position: absolute;
               top:1px;
               font-size:13px;
-              right:50px; width:30px;height:30px; 
+              right:1px; width:30px;height:30px; 
       min-width: 14px;
       text-align: center;
       line-height: 24px;
@@ -226,12 +228,14 @@
       </tbody>
     </table> @endif
   </div>
+</div>
 
 
 
 
 
 
+<div class="container p-2">
   <div class="row">
     @if ($Inactif_appointments->count()=='0')
     <div  class="col col-12 text-white bg-dark " style="opacity: 0.9"><h2 class="p-4 float-right">   لا توجد مواعيد سابقة </h2></div>
@@ -263,11 +267,11 @@
         @endphp
         <tr>
           <th scope="row">{{$counter}}</th>
-          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2 mr-3" width="50" height="50" src="{{$picture}}" alt="">
-            <p>{{$Inactif_appointment->facebook}}</p>  <span dir="ltr"  style=" position: absolute;
+          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+            {{$Inactif_appointment->facebook}}  <span dir="ltr"  style=" position: absolute;
             top:1px;
             font-size:13px;
-            right:50px; width:30px;height:30px; 
+            right:1px; width:30px;height:30px; 
     min-width: 14px;
     text-align: center;
     line-height: 24px;
@@ -288,12 +292,17 @@
     </table>
    @endif
   </div>
+</div>
 
 
 
 
-
-
+<div class=" container">
+     <div class="row">
+     <div class=" justify-content-center">{{$Inactif_appointments->links()}}
+    </div>
+   </div> 
+  </div>
 
 
 
