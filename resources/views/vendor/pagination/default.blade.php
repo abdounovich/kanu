@@ -1,11 +1,29 @@
 
 
 <style>
-    a{
+    
+    a:hover{
         background-color: black;
         color: green;
-        padding: 10px;
+        padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #ddd; /* Gray */
+
     }
+
+    a{
+        background-color: green;
+        color: black;
+        padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #ddd; /* Gray */
+
+    }
+
+    a:active {
+  background-color:white;
+  color: white;
+}
 </style>
     
     @if ($paginator->hasPages())

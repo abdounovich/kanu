@@ -1,3 +1,11 @@
+
+<style>
+    a{
+        background-color: black;
+        color: green;
+        padding: 10px;
+    }
+</style>
 @if ($paginator->hasPages())
     <ul class="pagination" role="navigation">
         {{-- Previous Page Link --}}

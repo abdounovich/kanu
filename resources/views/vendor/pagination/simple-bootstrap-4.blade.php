@@ -1,3 +1,5 @@
+
+
 @if ($paginator->hasPages())
     <ul class="pagination" role="navigation">
         {{-- Previous Page Link --}}
@@ -7,7 +9,7 @@
             </li>
         @else
             <li class="page-item">
-                <a class="page-link" href="{{ $paginator->previousPageUrl() }}" rel="prev">@lang('pagination.previous')</a>
+                <a class="page-link bg-success text-dark" href="{{ $paginator->previousPageUrl() }}" rel="prev">@lang('pagination.previous')</a>
             </li>
         @endif
 
