@@ -30,6 +30,8 @@
           <th scope="col"> الحلاقة </th>
 
           <th scope="col">الموعد  </th>
+          <th scope="col"></th>
+
 
 
         </tr>
@@ -58,7 +60,13 @@
           <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
             {{$Today_appointment->facebook}}  <span dir="ltr" style=" position: absolute;
             top:1px;
-            right:1px; width:30px;height:30px" class="badge badge-success text-center  rounded-circle p-2 ">{{$Today_appointment->client->points}}</span> 
+            font-size:13px;
+            right:1px; width:30px;height:30px; 
+    min-width: 14px;
+    text-align: center;
+    line-height: 24px;
+    box-shadow: 1px 1px 1px black;
+ " class="badge badge-success rounded-circle ">{{$Today_appointment->client->points}}</span> 
           </td>
          
        
@@ -128,9 +136,15 @@
           <th scope="row">{{$counter}}</th>
         
           <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
-            {{$Tomorow_appointment->facebook}}  <span dir="ltr" style=" position: absolute;
+            {{$Tomorow_appointment->facebook}}  <span dir="ltr"  style=" position: absolute;
             top:1px;
-            right:1px;padding:2px width:30px;height:30px" class="badge badge-success   text-center rounded-circle p-2 ">{{$Tomorow_appointment->client->points}}</span> 
+            font-size:13px;
+            right:1px; width:30px;height:30px; 
+    min-width: 14px;
+    text-align: center;
+    line-height: 24px;
+    box-shadow: 1px 1px 1px black;
+ " class="badge badge-success   text-center rounded-circle p-2 ">{{$Tomorow_appointment->client->points}}</span> 
           </td>
          
        
@@ -189,9 +203,15 @@
 
 
             <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
-              {{$AfterTomoro_appointment->facebook}}  <span dir="ltr" style=" position: absolute;
+              {{$AfterTomoro_appointment->facebook}}  <span dir="ltr"  style=" position: absolute;
               top:1px;
-              right:1px; width:30px;height:30px" class="badge badge-success text-center  rounded-circle p-2 ">{{$AfterTomoro_appointment->client->points}}</span> 
+              font-size:13px;
+              right:1px; width:30px;height:30px; 
+      min-width: 14px;
+      text-align: center;
+      line-height: 24px;
+      box-shadow: 1px 1px 1px black;
+   "class="badge badge-success text-center  rounded-circle p-2 ">{{$AfterTomoro_appointment->client->points}}</span> 
             </td>
 
          
@@ -248,9 +268,15 @@
         <tr>
           <th scope="row">{{$counter}}</th>
           <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
-            {{$Inactif_appointment->facebook}}  <span dir="ltr" style=" position: absolute;
+            {{$Inactif_appointment->facebook}}  <span dir="ltr"  style=" position: absolute;
             top:1px;
-            right:1px; width:30px;height:30px" class="badge badge-success text-center  rounded-circle p-2 ">{{$Inactif_appointment->client->points}}</span> 
+            font-size:13px;
+            right:1px; width:30px;height:30px; 
+    min-width: 14px;
+    text-align: center;
+    line-height: 24px;
+    box-shadow: 1px 1px 1px black;
+ " class="badge badge-success text-center  rounded-circle p-2 ">{{$Inactif_appointment->client->points}}</span> 
           </td>
 
 
