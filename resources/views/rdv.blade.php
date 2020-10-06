@@ -130,7 +130,7 @@
           <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
             {{$Tomorow_appointment->facebook}}  <span dir="ltr" style=" position: absolute;
             top:1px;
-            right:1px; width:30px;height:30px" class="badge badge-success  text-center rounded-circle p-2 ">{{$Tomorow_appointment->client->points}}</span> 
+            right:1px;padding:2px width:30px;height:30px" class="badge badge-success   text-center rounded-circle p-2 ">{{$Tomorow_appointment->client->points}}</span> 
           </td>
          
        
