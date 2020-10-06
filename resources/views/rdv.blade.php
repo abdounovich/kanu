@@ -293,12 +293,7 @@
 
 
 
-<div class=" container">
-     <div class="row">
-     <div class=" justify-content-center">{{$Inactif_appointments->links()}}
-    </div>
-   </div> 
-  </div>
+
 
 
 
