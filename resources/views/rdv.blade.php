@@ -30,7 +30,6 @@
           <th scope="col"> الحلاقة </th>
 
           <th scope="col">الموعد  </th>
-          <th scope="col">  </th>
 
 
         </tr>
@@ -128,12 +127,14 @@
         @endphp
         <tr>
           <th scope="row">{{$counter}}</th>
-          <td class="align-middle"><img class="  border  rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
-            {{$Tomorow_appointment->facebook}}</td>
+        
+          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+            {{$Tomorow_appointment->facebook}}  <span dir="ltr" style=" position: absolute;
+            top:1px;
+            right:1px; width:30px;height:30px" class="badge badge-success  rounded-circle p-2 ">{{$Tomorow_appointment->client->points}}</span> 
+          </td>
          
-        <td class="align-middle">
-          <span class="badge badge-success badge-pill p-2">{{$Tomorow_appointment->client->points}}</span> 
-        </td>
+       
         <td class="align-middle">{{$Tomorow_appointment->type->type}}</td>
          <td class="align-middle">@php $demain = date('H:i', strtotime($Tomorow_appointment->debut));
           echo $demain;
@@ -168,7 +169,6 @@
           <th scope="col">نوع الحلاقة </th>
 
           <th scope="col">الموعد  </th>
-          <th scope="col">  </th>
 
         </tr>
       </thead>
@@ -187,12 +187,17 @@
         @endphp
         <tr>
           <th scope="row">{{$counter}}</th>
-          <td class="align-middle"><img class="  border  rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
-            {{$AfterTomoro_appointment->facebook}}</td>
+          
+
+
+            <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+              {{$AfterTomoro_appointment->facebook}}  <span dir="ltr" style=" position: absolute;
+              top:1px;
+              right:1px; width:30px;height:30px" class="badge badge-success  rounded-circle p-2 ">{{$AfterTomoro_appointment->client->points}}</span> 
+            </td>
+
          
-        <td class="align-middle">
-          <span class="badge badge-success badge-pill p-2">{{$AfterTomoro_appointment->client->points}}</span> 
-        </td>
+       
         <td class="align-middle">{{$AfterTomoro_appointment->type->type}}</td>
          <td class="align-middle">@php $demain = date('H:i', strtotime($AfterTomoro_appointment->debut));
           echo $demain;
