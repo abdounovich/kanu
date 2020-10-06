@@ -54,6 +54,9 @@ Route::get('/commande', function () {
 });
 
 
+Route::get('/t', function () {
+    return view('tester') ;
+});
 Route::get('/tester','HomeController@func');
 
 /* Route::get('/tester', function () {

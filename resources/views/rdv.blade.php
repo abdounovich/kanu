@@ -110,7 +110,6 @@
           <th scope="col">نوع الحلاقة </th>
 
           <th scope="col">الموعد  </th>
-          <th scope="col"></th>
 
         </tr>
       </thead>
