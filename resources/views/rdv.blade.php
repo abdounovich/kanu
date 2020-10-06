@@ -58,7 +58,7 @@
                
        </th>
           <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
-            {{$Today_appointment->facebook}}  <span dir="ltr" style=" position: absolute;
+           <p> {{$Today_appointment->facebook}}</p>  <span dir="ltr" style=" position: absolute;
             top:1px;
             font-size:13px;
             right:1px; width:30px;height:30px; 
@@ -113,7 +113,7 @@
 
           <th scope="col">الفيسبوك</th>
           
-          <th scope="col">نوع الحلاقة </th>
+          <th scope="col"> الحلاقة </th>
 
           <th scope="col">الموعد  </th>
 
@@ -136,7 +136,7 @@
           <th scope="row">{{$counter}}</th>
         
           <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
-            {{$Tomorow_appointment->facebook}}  <span dir="ltr"  style=" position: absolute;
+            <p>{{$Tomorow_appointment->facebook}}</p>  <span dir="ltr"  style=" position: absolute;
             top:1px;
             font-size:13px;
             right:1px; width:30px;height:30px; 
@@ -178,7 +178,7 @@
 
           <th scope="col">الفيسبوك</th>
           
-          <th scope="col">نوع الحلاقة </th>
+          <th scope="col"> الحلاقة </th>
 
           <th scope="col">الموعد  </th>
 
