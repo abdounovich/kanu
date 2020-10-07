@@ -220,8 +220,9 @@ $date=date("l");
     for ($i=0; $i <count($arr) ; $i++) { 
     $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
     $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
-    $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. '+ '.$pas.' seconds'));
-    if ($arr[$i]>=$d && $arr[$i]<$f) {
+    $ai=date("Y-m-d H:i:s", strtotime($jour." ".$arr[$i].":00"));
+    $ai=date('Y-m-d H:i:s', strtotime($ai. '+ '.$pas.' seconds'));
+        if ($arr[$i]>=$d && $arr[$i]<$f) {
 
       $arr2[]=$arr[$i];}
 
@@ -338,7 +339,8 @@ $date=date("l");
     for ($i=0; $i <count($arr) ; $i++) { 
     $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
     $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
-    $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. '+ '.$pas.' seconds'));
+    $ai=date("Y-m-d H:i:s", strtotime($jour." ".$arr[$i].":00"));
+    $ai=date('Y-m-d H:i:s', strtotime($ai. '+ '.$pas.' seconds'));
     if ($arr[$i]>=$d && $arr[$i]<$f) {
 
       $arr2[]=$arr[$i];}
