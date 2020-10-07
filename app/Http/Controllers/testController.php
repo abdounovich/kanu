@@ -49,17 +49,7 @@ $debut="19:00";
 $jour=$request->get('jour');
 
 $a=Appointment::whereJour($jour)->whereDebut($debut)->get()->count();
-$b=Appointment::where("ActiveType","1")->orWhere("Activetype","2")->get();
 
-
-foreach ($b as $ab ) {
-if ($debut>$ab->debut and $debut<$ab->fin) {
-  $botman = app('botman');
-  $botman->say( "حدث خطأ نرجو إعادة المحاولة ",$id, FacebookDriver::class);
-  return;
-} 
-
-}
 
 if ($a>0) {
   $botman = app('botman');
