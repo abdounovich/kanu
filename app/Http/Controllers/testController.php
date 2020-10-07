@@ -346,6 +346,13 @@ $date=date("l");
     elseif ($ai>=$d && $ai<$f) {
       $arr2[]=$arr[$i];
     }
+
+    elseif ($ai>$fin) {
+      $arr2[]=$arr[$i];
+    }
+    elseif ($ai>$f_pause) {
+      $arr2[]=$arr[$i];
+    }
     
     else{
   
