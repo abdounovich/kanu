@@ -45,7 +45,7 @@ class testController extends Controller
    $fin=date("H:i", strtotime(date($fin)));
    $debut=date("H:i", strtotime(date($debut)));
 
-$debut="19:00";
+
 $jour=$request->get('jour');
 
 $a=Appointment::whereJour($jour)->whereDebut($debut)->get()->count();
