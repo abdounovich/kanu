@@ -298,8 +298,8 @@
 
 
 <div class=" container">
-     <div class="row d-flex justify-content-center">
-     <div >{{$Inactif_appointments->links('vendor.pagination.bootstrap-4')}}
+     <div  class="row d-flex justify-content-center">
+     <div  >{{$Inactif_appointments->links('vendor.pagination.bootstrap-4')}}
     </div>
    </div> 
   </div>

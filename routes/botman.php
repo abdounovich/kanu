@@ -88,7 +88,7 @@ $array2=array();
 
 
  foreach ($types2 as $type ) {
-    $array2[]= Element::create($type->type)
+    $array2[]= Element::create($type->type."/".$type->id)
     ->subtitle("السعر : ".$type->prix.' دج ')
     ->image($type->photo)
     ->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
