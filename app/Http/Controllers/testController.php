@@ -228,13 +228,6 @@ $date=date("l");
     elseif ($ai>=$d && $ai<$f) {
       $arr2[]=$arr[$i];
     }
-
-    elseif ( $ai>$fin) {
-      $arr2[]=$arr[$i];
-    }
-    elseif ( $ai>$f_pause) {
-      $arr2[]=$arr[$i];
-    }
     
     else{
   
@@ -353,13 +346,6 @@ $date=date("l");
     elseif ($ai>=$d && $ai<$f) {
       $arr2[]=$arr[$i];
     }
-
-    elseif ( $ai>$fin) {
-      $arr2[]=$arr[$i];
-    }
-    elseif ( $ai>$f_pause) {
-      $arr2[]=$arr[$i];
-    }
     
     else{
   
@@ -467,17 +453,10 @@ $date=date("l");
               $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
               $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. '+ '.$pas.' seconds'));
               if ($arr[$i]>=$d && $arr[$i]<$f) {
-
+          
                 $arr2[]=$arr[$i];}
           
               elseif ($ai>=$d && $ai<$f) {
-                $arr2[]=$arr[$i];
-              }
-          
-              elseif ( $ai>$fin) {
-                $arr2[]=$arr[$i];
-              }
-              elseif ( $ai>$f_pause) {
                 $arr2[]=$arr[$i];
               }
               
