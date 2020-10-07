@@ -128,7 +128,7 @@ $DbUsername=Client::whereFacebook($full_name)->first();
 
 
  foreach ($types1 as $type ) {
-     $array1[]= Element::create($type->type)
+     $array1[]= Element::create($type->type."/".$type->id)
      ->subtitle("السعر : ".$type->prix.' دج ')
      ->image($type->photo)
      ->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
