@@ -193,6 +193,7 @@ $date=date("l");
     $fin=$jour." ".$fin.":00";
     $fin=date("Y-m-d H:i:s", strtotime(date($fin)));
     $types=Type::find($type);
+    
 
     $pas=60*$types->temps-60;
     $arr=array();
@@ -227,6 +228,13 @@ $date=date("l");
     elseif ($ai>=$d && $ai<$f) {
       $arr2[]=$arr[$i];
     }
+
+    elseif ( $ai>$fin) {
+      $arr2[]=$arr[$i];
+    }
+    elseif ( $ai>$f_pause) {
+      $arr2[]=$arr[$i];
+    }
     
     else{
   
@@ -258,6 +266,8 @@ else{
   }}
 
   
+
+ 
    $var=1;
    $type=Type::find($type);
    return view("test")->with('items',$items)
@@ -341,6 +351,13 @@ $date=date("l");
       $arr2[]=$arr[$i];}
 
     elseif ($ai>=$d && $ai<$f) {
+      $arr2[]=$arr[$i];
+    }
+
+    elseif ( $ai>$fin) {
+      $arr2[]=$arr[$i];
+    }
+    elseif ( $ai>$f_pause) {
       $arr2[]=$arr[$i];
     }
     
@@ -450,10 +467,17 @@ $date=date("l");
               $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
               $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. '+ '.$pas.' seconds'));
               if ($arr[$i]>=$d && $arr[$i]<$f) {
-          
+
                 $arr2[]=$arr[$i];}
           
               elseif ($ai>=$d && $ai<$f) {
+                $arr2[]=$arr[$i];
+              }
+          
+              elseif ( $ai>$fin) {
+                $arr2[]=$arr[$i];
+              }
+              elseif ( $ai>$f_pause) {
                 $arr2[]=$arr[$i];
               }
               
