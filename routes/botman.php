@@ -88,7 +88,7 @@ $array2=array();
 
 
  foreach ($types2 as $type ) {
-    $array2[]= Element::create($type->type."/".$type->id)
+    $array2[]= Element::create($type->type)
     ->subtitle("السعر : ".$type->prix.' دج ')
     ->image($type->photo)
     ->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
@@ -128,7 +128,7 @@ $DbUsername=Client::whereFacebook($full_name)->first();
 
 
  foreach ($types1 as $type ) {
-     $array1[]= Element::create($type->type."/".$type->id)
+     $array1[]= Element::create($type->type)
      ->subtitle("السعر : ".$type->prix.' دج ')
      ->image($type->photo)
      ->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
@@ -203,10 +203,10 @@ $full_name=$firstname.'-'.$lastname;
 
 
     $bot->reply(Question::create('  من فضلك إختر يوم موعدك  👇👇')->addButtons([
-     Button::create(' 🕐 بعد غد')->value('rdv3'),
+/*      Button::create(' 🕐 بعد غد')->value('rdv3'),
      Button::create(' 🕐 يوم الغد ')->value('rdv2'),        
      Button::create('🕐 اليوم')->value('rdv1'),
- 
+  */
 
 
     
