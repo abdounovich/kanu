@@ -351,13 +351,14 @@ $date=date("l");
     echo $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
     echo"<br>";
 
-              for ($i=0; $i <count($arr) ; $i++) { 
+              foreach ($arr as $key) { 
               
-              $ai=Carbon::createFromFormat('Y-m-d H:i:s', $arr[$i]); 
+              $ai=Carbon::createFromFormat('Y-m-d H:i:s',$key); 
               $av=$ai->toDateTimeString();
                $ai->addMinutes(90); 
               echo $av; 
               echo"<br>";
+              dd();
  
 
 
