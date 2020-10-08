@@ -358,8 +358,7 @@ $date=date("l");
                $ai->addMinutes(90); 
               echo $ai; 
               echo"<br>";
-              dd();
- 
+             
 
 
 
