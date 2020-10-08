@@ -366,6 +366,12 @@ $date=date("l");
     
     
     }
+    elseif ($key<$d && $ai>=$f) {
+      $arr2[]=$key;
+
+    
+    
+    }
       
     elseif ($ai>=$d && $ai<=$f) {
       $arr2[]=$key;
