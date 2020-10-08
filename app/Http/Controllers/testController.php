@@ -313,9 +313,9 @@ $date=date("l");
     $f_pause="15:00";}
 
    $jour=date("Y-m-d");
-   $tomorrow=date('Y-m-d', strtotime($jour. ' + 1 day'));
+  /*  $tomorrow=date('Y-m-d', strtotime($jour. ' + 1 day'));
 
-   $jour=$tomorrow;
+   $jour=$tomorrow; */
 
     $debut=$jour." ".$debut.":00";
     $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
