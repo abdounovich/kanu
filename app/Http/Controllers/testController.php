@@ -252,7 +252,6 @@ $config=Config::get('app.url');
         
         }
           
-          
         elseif ($ai>=$d && $ai<=$f) {
           $arr2[]=$key;
         }
@@ -530,7 +529,7 @@ foreach ($arr4 as $k ) {
         
         
         }
-        elseif ($key<$d_pause && $ai>=$f_pause) {
+           elseif ($key<$d_pause && $ai>=$f_pause) {
           $arr2[]=$key;
     
         
