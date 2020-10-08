@@ -335,6 +335,9 @@ $date=date("l");
     $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
 
     $Tomorrow_appointments=Appointment::whereJour($jour)->where('ActiveType',"1")->Orwhere('ActiveType',"2")->get();
+
+  foreach ($Tomorrow_appointments as $Tomorrow_appointment) {
+$Today_appointment->jour;  }
     while ($debut < $fin )
     {
       $arr[]=$debut;  
