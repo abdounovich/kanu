@@ -245,7 +245,7 @@ $config=Config::get('app.url');
         
         
         }
-        elseif ($key<$d_pause && $ai>=$f_pause) {
+        elseif ($key>$d_pause && $ai<=$f_pause) {
           $arr2[]=$key;
     
         
