@@ -221,7 +221,7 @@ $date=date("l");
     $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
     $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
     $ai=date('Y-m-d H:i:s', strtotime($arr[$i].' + '.$pas.' minutes'));
-    echo $ai;
+    
     if ($arr[$i]>=$d && $arr[$i]<$f) {
      
 
@@ -233,7 +233,9 @@ $date=date("l");
     
     else{
   
-       $arr4[]= $arr[$i];}}
+       $arr4[]= $arr[$i];
+      
+      echo $arr[$i];}}
      
      }} else {
  
