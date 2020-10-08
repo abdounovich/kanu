@@ -235,7 +235,7 @@ $date=date("l");
   
        $arr4[]= $arr[$i];
       
-      echo $arr[$i];}}
+     }}
      
      }} else {
  
@@ -254,7 +254,7 @@ foreach ($arr4 as $k ) {
 if ($d_pause<=$k && $k<$f_pause) {
 }
 else{
-
+  echo $k;
    $items[]=$k;
 
    
