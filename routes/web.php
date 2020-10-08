@@ -58,6 +58,10 @@ Route::get('/t', function () {
     return view('tester') ;
 });
 Route::get('/tester','HomeController@func');
+Route::get('/abcd','TestController@try');
+
+
+
 
 /* Route::get('/tester', function () {
     return view('tester') ;

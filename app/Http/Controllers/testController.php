@@ -216,11 +216,12 @@ $date=date("l");
           }
           
           if (count($Today_appointments)>0) {
-            foreach ($Today_appointments as $appointment ) {  
-    for ($i=0; $i <count($arr) ; $i++) { 
-    $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
+            foreach ($Today_appointments as $appointment ) {      $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
     $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
-    $ai=date('Y-m-d H:i:s', strtotime($arr[$i].' + '.$pas.' minutes'));
+    for ($i=0; $i <count($arr) ; $i++) { 
+
+    $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. ' + '.$pas.' minutes'));
+
     
     if ($arr[$i]>=$d && $arr[$i]<$f) {
      
@@ -254,6 +255,7 @@ foreach ($arr4 as $k ) {
 if ($d_pause<=$k && $k<$f_pause) {
 }
 else{
+ 
    $items[]=$k;
 
    
@@ -337,10 +339,10 @@ $date=date("l");
           }
           
           if (count($Tomorrow_appointments)>0) {
-            foreach ($Tomorrow_appointments as $appointment ) {  
+            foreach ($Tomorrow_appointments as $appointment ) {     $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
+    $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00")); 
     for ($i=0; $i <count($arr) ; $i++) { 
-    $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
-    $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
+
     $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. '+ '.$pas.' minutes'));
     if ($arr[$i]>=$d && $arr[$i]<$f) {
 
@@ -457,10 +459,10 @@ $date=date("l");
          }
 
          if (count($afterTommorow)>0) {
-           foreach ($afterTommorow as $appointment ) {  
+           foreach ($afterTommorow as $appointment ) {  $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
+              $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));  
             for ($i=0; $i <count($arr) ; $i++) { 
-              $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
-              $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
+            
               $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. '+ '.$pas.' minutes'));
               if ($arr[$i]>=$d && $arr[$i]<$f) {
           
@@ -506,6 +508,139 @@ $date=date("l");
   ->with('jour',$jour)
   ->with('username',$username)
   ->with('Cid',$Cid);}
+
+
+
+
+  public function try()
+
+  {
+ 
+
+
+
+
+    $type="1";
+    $username="Merahi-AbdelDjalil";
+    $Cid="3";
+    date_default_timezone_set("Africa/Algiers");
+$date=date("l");
+
+
+
+    if ($date=='Friday') {
+      $debut="09:00";
+      $fin="22:00";
+      $d_pause="12:00";
+      $f_pause="15:00";
+     
+   }elseif($date=='Saturday'){
+       $debut="09:00";
+       $fin="22:00"; 
+       $d_pause="12:00";
+       $f_pause="13:00";
+   }elseif($date=='Tuesday'){
+       $debut="00:01";
+       $fin="00:03";
+       $d_pause="00:00";
+       $f_pause="00:01";
+   }
+
+   else{ $debut="10:00";
+    $fin="22:00";
+    $d_pause="14:00";
+    $f_pause="15:00";}
+
+
+   $jour=date("Y-m-d");
+
+    $debut=$jour." ".$debut.":00";
+    $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
+    $fin=$jour." ".$fin.":00";
+    $fin=date("Y-m-d H:i:s", strtotime(date($fin)));
+    $types=Type::find($type);
+    
+
+    $pas=$types->temps-1;
+    $arr=array();
+    $arr2=array();
+    $items=array();
+    $arr4=array();
+    
+    
+    $d_pause=$jour." ".$d_pause.":00";
+    $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause)));  
+    $f_pause=$jour." ".$f_pause.":00";
+    $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
+
+    $Today_appointments=Appointment::whereJour($jour)->where('ActiveType',"1")->Orwhere('ActiveType',"2")->get();
+    while ($debut < $fin )
+    {
+      $arr[]=$debut;  
+      $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + 15*60));
+
+          }
+          
+          if (count($Today_appointments)>0) {
+            foreach ($Today_appointments as $appointment ) { 
+                   $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
+    $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
+
+              foreach ($arr as $key) { 
+    $ai=date('Y-m-d H:i:s', strtotime($key. ' + '.$pas.' minutes'));
+    
+    if ($key>=$d && $key<$f) {
+     
+
+      $arr2[]=$key;}
+
+    elseif ($ai>=$d && $ai<$f) {
+      $arr2[]=$key;
+    }
+    
+    else{
+  
+       $arr4[]= $key;
+      
+     }}
+     
+     }} else {
+ 
+ 
+       foreach ($arr as $key) { 
+       
+            $arr4[]= $key;}
+          }
+
+
+foreach ($arr4 as $k ) {
+
+
+    if (!in_array($k, $items)&&!in_array($k, $arr2) ) {
+
+if ($d_pause<=$k && $k<$f_pause) {
+}
+else{
+   $items[]=$k;
+
+   
+}
+  
+  }}
+
+  
+
+ 
+   $var=1;
+   $type=Type::find($type);
+   return view("test")->with('items',$items)
+   ->with('var',$var)
+   ->with('type',$type)
+   ->with('jour',$jour)
+   ->with('username',$username)
+   ->with('Cid',$Cid); }
+
+
 
 
 
