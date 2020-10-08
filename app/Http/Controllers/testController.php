@@ -371,7 +371,7 @@ $date=date("l");
       echo 3;
 
     }
-    elseif ($ai>=$d_pause and $ai<$f_pause) {
+    if ($ai>=$d_pause and $ai<$f_pause) {
       $arr2[]=$key;
       echo 4;
 
