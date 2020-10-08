@@ -355,14 +355,7 @@ $date=date("l");
   foreach ($Tomorrow_appointments as $appointment ) { 
             $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
             $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
-            echo $ai;
-            echo"<br>";
-            echo $d;
-            echo"<br>";
 
-            echo$f;
-            echo"<br>";
-dd();
 
             
     if ($key>=$d && $key<=$f) {
@@ -390,8 +383,7 @@ dd();
     else{
        $arr4[]= $key;
        echo 5;
-       echo $key;
-       dd();
+    
       }}
      }
     
