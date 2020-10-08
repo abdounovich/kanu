@@ -355,6 +355,12 @@ $date=date("l");
   foreach ($Tomorrow_appointments as $appointment ) { 
             $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
             $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
+            echo $key;
+            echo"<br>";
+            echo $d;
+            echo"<br>";
+
+            echo$f;
     if ($key>=$d && $key<$f) {
       $arr2[]=$key;
       echo 1;
@@ -363,7 +369,7 @@ $date=date("l");
     
     }
       
-    elseif ($ai<$d && $ai<=$f) {
+    elseif ($ai>=$d && $ai<$f) {
       $arr2[]=$key;
       echo 2;
     }
