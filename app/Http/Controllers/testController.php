@@ -352,7 +352,7 @@ $date=date("l");
                
               $av=Carbon::createFromFormat('Y-m-d H:i:s', $arr[$i]); 
               $av->toDateTimeString();
-               $ai=$av->addMinutes(90);  
+               $ai=$av->addMinutes($pas);  
     echo $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
     echo"<p></p>";
     echo $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
