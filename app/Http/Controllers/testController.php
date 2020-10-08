@@ -272,7 +272,7 @@ $config=Config::get('app.url');
         if (!in_array($k, $items)&&!in_array($k, $arr2) ) {if ($d_pause<=$k && $k<$f_pause) {}else{$items[]=$k;}}}
     
       
-       $var=2;
+       $var=1;
        $type=Type::find($type);
        return view("test")->with('items',$items)
        ->with('var',$var)
