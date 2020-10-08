@@ -353,9 +353,9 @@ $date=date("l");
                
               $av= new Carbon ($key); 
               $av->toDateTimeString();
-               echo $ai=$av->addMinutes($pas);  
-               echo'<p></p>';
+              
   foreach ($Tomorrow_appointments as $appointment ) { 
+    $ai=$av->addMinutes($pas);  
             $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
           
             $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
