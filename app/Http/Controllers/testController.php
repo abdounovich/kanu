@@ -245,6 +245,13 @@ $config=Config::get('app.url');
         
         
         }
+        elseif ($key<$d_pause && $ai>=$f_pause) {
+          $arr2[]=$key;
+    
+        
+        
+        }
+          
           
         elseif ($ai>=$d && $ai<=$f) {
           $arr2[]=$key;
@@ -375,6 +382,12 @@ $date=date("l");
     
     }
     elseif ($key<$d && $ai>=$f) {
+      $arr2[]=$key;
+
+    
+    
+    }
+    elseif ($key<$d_pause && $ai>=$f_pause) {
       $arr2[]=$key;
 
     
@@ -517,6 +530,12 @@ foreach ($arr4 as $k ) {
         
         
         }
+        elseif ($key<$d_pause && $ai>=$f_pause) {
+          $arr2[]=$key;
+    
+        
+        
+        }
           
         elseif ($ai>=$d && $ai<=$f) {
           $arr2[]=$key;
@@ -525,7 +544,7 @@ foreach ($arr4 as $k ) {
           $arr2[]=$key;
     
         }
-        elseif ($ai>=$d_pause and $ai<$f_pause) {
+        elseif ($ai>=$d_pause && $ai<$f_pause) {
           $arr2[]=$key;
     
         }
