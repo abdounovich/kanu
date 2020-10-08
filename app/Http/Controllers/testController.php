@@ -349,8 +349,8 @@ $date=date("l");
                $ai=$av->addMinutes(90); 
               
             foreach ($Tomorrow_appointments as $appointment ) {      
-    $d=date("Y-m-d H:i:s", strtotime($jour." ".$appointment->debut.":00"));
-    $f=date("Y-m-d H:i:s", strtotime($jour." ".$appointment->fin.":00"));
+    $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
+    $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
 
 
     
