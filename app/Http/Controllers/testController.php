@@ -347,7 +347,7 @@ $date=date("l");
             foreach ($Tomorrow_appointments as $appointment ) {    
 
     echo $d=date("Y-m-d H:i:s", strtotime($jour." ".$appointment->debut.":00"));
-    echo $f=date("Y-m-d H:i:s", strtotime($our." ".$appointment->fin.":00"));
+    echo $f=date("Y-m-d H:i:s", strtotime($jour." ".$appointment->fin.":00"));
 
               for ($i=0; $i <count($arr) ; $i++) { 
               
