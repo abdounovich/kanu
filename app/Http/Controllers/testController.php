@@ -195,7 +195,7 @@ $date=date("l");
     $types=Type::find($type);
     
 
-    $pas=(60*$types->temps)-60;
+    $pas=$types->temps-1;
     $arr=array();
     $arr2=array();
     $items=array();
@@ -220,8 +220,9 @@ $date=date("l");
     for ($i=0; $i <count($arr) ; $i++) { 
     $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
     $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
-    $ai=date('Y-m-d H:i:s', strtotime($arr[$i].' + '.$pas.' seconds'));
+    $ai=date('Y-m-d H:i:s', strtotime($arr[$i].' + '.$pas.' minutes'));
     if ($arr[$i]>=$d && $arr[$i]<$f) {
+     
 
       $arr2[]=$arr[$i];}
 
@@ -313,7 +314,7 @@ $date=date("l");
     $fin=date("Y-m-d H:i:s", strtotime(date($fin)));
     $types=Type::whereId($type)->first();
 
-    $pas=60*$types->temps-60;
+    $pas=$types->temps-1;
     $arr=array();
     $arr2=array();
     $items=array();
@@ -338,7 +339,7 @@ $date=date("l");
     for ($i=0; $i <count($arr) ; $i++) { 
     $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
     $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
-    $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. '+ '.$pas.' seconds'));
+    $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. '+ '.$pas.' minutes'));
     if ($arr[$i]>=$d && $arr[$i]<$f) {
 
       $arr2[]=$arr[$i];}
@@ -402,7 +403,7 @@ else{
   public function afterTomorrow($type,$username,$Cid)
    
   {
-$types=Type::whereId($type)->first();
+$types=Type::find($type);
 date_default_timezone_set("Africa/Algiers");
 $date=date("l");
     $date=date("l", strtotime($date. ' + 2 day'));
@@ -436,7 +437,7 @@ $date=date("l");
    $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
    $fin=$jour." ".$fin.":00";
    $fin=date("Y-m-d H:i:s", strtotime(date($fin)));
-   $pas=60*$types->temps-60;
+   $pas=$types->temps-1;
    $arr=array();
    $arr2=array();
    $items=array();
@@ -458,7 +459,7 @@ $date=date("l");
             for ($i=0; $i <count($arr) ; $i++) { 
               $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
               $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
-              $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. '+ '.$pas.' seconds'));
+              $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. '+ '.$pas.' minutes'));
               if ($arr[$i]>=$d && $arr[$i]<$f) {
           
                 $arr2[]=$arr[$i];}
