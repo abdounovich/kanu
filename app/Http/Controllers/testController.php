@@ -348,10 +348,7 @@ $date=date("l");
             
             foreach ($Tomorrow_appointments as $appointment ) {    
 
-    echo $d=date("Y-m-d H:i:s", strtotime($jour." ".$appointment->debut.":00"));
-    echo"<br>";
-    echo $f=date("Y-m-d H:i:s", strtotime($jour." ".$appointment->fin.":00"));
-    echo"<br>";
+   
 
               
              foreach ($arr as $key) { 
@@ -359,7 +356,10 @@ $date=date("l");
               $ai=Carbon::createFromFormat('Y-m-d H:i:s',$key); 
               $ai->toDateTimeString();
               $av=$ai->addMinutes(90); 
-
+ echo $d=date("Y-m-d H:i:s", strtotime($jour." ".$appointment->debut.":00"));
+    echo"<br>";
+    echo $f=date("Y-m-d H:i:s", strtotime($jour." ".$appointment->fin.":00"));
+    echo"<br>";
 
 
     
