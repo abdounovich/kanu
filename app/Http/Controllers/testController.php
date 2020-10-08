@@ -349,9 +349,8 @@ $date=date("l");
                $ai=$av->addMinutes(90); 
               
             foreach ($Tomorrow_appointments as $appointment ) {      
-    echo $d=date("Y-m-d H:i:s", strtotime($jour." ".$appointment->debut.":00"));
-    echo $f=date("Y-m-d H:i:s", strtotime($jour." ".$appointment->fin.":00"));
-  
+    echo $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
+    echo $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
     if ($arr[$i]>=$d && $arr[$i]<$f) {
       $arr2[]=$arr[$i];}
 
