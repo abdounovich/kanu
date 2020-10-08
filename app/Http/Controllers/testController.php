@@ -211,7 +211,7 @@ $date=date("l");
     while ($debut < $fin )
     {
       $arr[]=$debut;  
-      $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + 15*60));
+      $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + 900));
 
           }
           
