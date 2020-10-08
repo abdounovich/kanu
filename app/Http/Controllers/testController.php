@@ -336,9 +336,7 @@ $date=date("l");
 
     $Tomorrow_appointments=Appointment::whereJour($jour)->get();
 
-  foreach ($Tomorrow_appointments as $Tomorrow_appointment) {
-echo $Tomorrow_appointment->facebook;  echo"<p></p>";
-}dd();
+
     while ($debut < $fin )
     {
       $arr[]=$debut;  
