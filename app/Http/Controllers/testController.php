@@ -361,6 +361,10 @@ $date=date("l");
             echo"<br>";
 
             echo$f;
+            echo"<br>";
+dd();
+
+            
     if ($key>=$d && $key<$f) {
       $arr2[]=$key;
       echo 1;
