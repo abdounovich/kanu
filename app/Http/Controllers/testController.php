@@ -356,7 +356,7 @@ $date=date("l");
               $ai=Carbon::createFromFormat('Y-m-d H:i:s',$key); 
               $av=$ai->toDateTimeString();
                $ai->addMinutes(90); 
-              echo $av; 
+              echo $ai; 
               echo"<br>";
               dd();
  
