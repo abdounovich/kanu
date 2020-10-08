@@ -217,8 +217,9 @@ $date=date("l");
           
           if (count($Today_appointments)>0) {
             for ($i=0; $i <count($arr) ; $i++) { 
-    $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. ' + '.$pas.' minutes'));
-
+    $ai=date('Y-m-d H:i:s', strtotime($arr[$i]));
+    echo $ai->addMinutes($pas);              
+dd();
             foreach ($Today_appointments as $appointment ) {      
     $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
     $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
