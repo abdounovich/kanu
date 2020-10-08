@@ -343,9 +343,10 @@ $date=date("l");
           }
           
           if (count($Tomorrow_appointments)>0) {
-            for ($i=0; $i <count($arr) ; $i++) { 
-              
+            
             foreach ($Tomorrow_appointments as $appointment ) {    
+              for ($i=0; $i <count($arr) ; $i++) { 
+              
               $ai=Carbon::createFromFormat('Y-m-d H:i:s', $arr[$i]); 
               $av=$ai->toDateTimeString();
                $ai->addMinutes(90); 
