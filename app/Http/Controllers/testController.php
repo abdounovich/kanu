@@ -357,6 +357,7 @@ $date=date("l");
               $av=Carbon::createFromFormat('Y-m-d H:i:s', $arr[$i]); 
               $av->toDateTimeString();
                echo $ai=$av->addMinutes($pas);  
+               echo'<p></p>';
 
 
     if ($arr[$i]>=$d && $arr[$i]<$f) {
