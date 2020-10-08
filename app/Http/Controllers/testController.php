@@ -254,7 +254,6 @@ foreach ($arr4 as $k ) {
 if ($d_pause<=$k && $k<$f_pause) {
 }
 else{
-  echo $k;
    $items[]=$k;
 
    
