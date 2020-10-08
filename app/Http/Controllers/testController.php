@@ -358,7 +358,7 @@ $date=date("l");
 
 
             
-    if ($key>=$d && $key<=$f) {
+    if ($key>=$d && $key<$f) {
       $arr2[]=$key;
       echo 1;
 
@@ -366,7 +366,7 @@ $date=date("l");
     
     }
       
-    elseif ($ai>=$d && $ai<$f) {
+    elseif ($ai>=$d && $ai<=$f) {
       $arr2[]=$key;
       echo 2;
     }
