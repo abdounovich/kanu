@@ -352,6 +352,8 @@ $date=date("l");
               $ai= new Carbon ($key); 
               $ai->toDateTimeString();
               $ai->addMinutes($pas);  
+              echo$ai;
+              echo"<br>";
   foreach ($Tomorrow_appointments as $appointment ) { 
             $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
             $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
@@ -360,7 +362,6 @@ $date=date("l");
             
     if ($key>=$d && $key<$f) {
       $arr2[]=$key;
-      echo 1;
 
     
     
@@ -368,21 +369,17 @@ $date=date("l");
       
     elseif ($ai>=$d && $ai<=$f) {
       $arr2[]=$key;
-      echo 2;
     }
     elseif ($ai>$fin) {
       $arr2[]=$key;
-      echo 3;
 
     }
     elseif ($ai>=$d_pause and $ai<$f_pause) {
       $arr2[]=$key;
-      echo 4;
 
     }
     else{
        $arr4[]= $key;
-       echo 5;
     
       }}
      }
