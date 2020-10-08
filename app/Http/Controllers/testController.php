@@ -337,7 +337,7 @@ $date=date("l");
     $Tomorrow_appointments=Appointment::whereJour($jour)->where('ActiveType',"1")->Orwhere('ActiveType',"2")->get();
 
   foreach ($Tomorrow_appointments as $Tomorrow_appointment) {
-echo $Tomorrow_appointment->jour;  
+echo $Tomorrow_appointment->jour;  echo"<p></p>";
 }dd();
     while ($debut < $fin )
     {
