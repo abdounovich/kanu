@@ -345,8 +345,8 @@ $date=date("l");
           if (count($Tomorrow_appointments)>0) {
             for ($i=0; $i <count($arr) ; $i++) { 
                $ai=Carbon::createFromFormat('Y-m-d H:i:s', $arr[$i]); 
-              echo $ai->toDateTimeString();
-              echo $ai->addMinutes(90); 
+              $av=$ai->toDateTimeString();
+               $ai->addMinutes(90); 
 
             foreach ($Tomorrow_appointments as $appointment ) {      
     $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
@@ -357,14 +357,14 @@ $date=date("l");
     if ($arr[$i]>=$d && $arr[$i]<$f) {
       $arr2[]=$arr[$i];}
 
-    elseif ($ai>=$d && $ai<$f) {
+    elseif ($av>=$d && $av<$f) {
       $arr2[]=$arr[$i];
     }
 
-    elseif ($ai>$fin) {
+    elseif ($av>$fin) {
       $arr2[]=$arr[$i];
     }
-    elseif ($ai>$f_pause) {
+    elseif ($av>$f_pause) {
       $arr2[]=$arr[$i];
     }
     
