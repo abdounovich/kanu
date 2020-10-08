@@ -347,7 +347,7 @@ $date=date("l");
                $ai=Carbon::createFromFormat('Y-m-d H:i:s', $arr[$i]); 
               $av=$ai->toDateTimeString();
                $ai->addMinutes(90); 
-
+              echo $av;
             foreach ($Tomorrow_appointments as $appointment ) {      
     $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
     $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
@@ -357,14 +357,14 @@ $date=date("l");
     if ($arr[$i]>=$d && $arr[$i]<$f) {
       $arr2[]=$arr[$i];}
 
-    elseif ($av>=$d && $av<$f) {
+    elseif ($ai>=$d && $ai<$f) {
       $arr2[]=$arr[$i];
     }
 
-    elseif ($av>$fin) {
+    elseif ($ai>$fin) {
       $arr2[]=$arr[$i];
     }
-    elseif ($av>$f_pause) {
+    elseif ($ai>$f_pause) {
       $arr2[]=$arr[$i];
     }
     
