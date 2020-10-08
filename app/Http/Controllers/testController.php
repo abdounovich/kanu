@@ -355,21 +355,27 @@ $date=date("l");
             $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
             $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
     if ($key>=$d && $key<$f) {
-     if ($ai>=$d && $ai<$f) {
-       if ($ai>$fin) {
-         if ($ai>=$d_pause and $ai<$f_pause) {
-            $arr2[]=$key;
-     
+      $arr2[]=$key;
+      echo 1;
 
-    }
-    }
-    }
-  
-  
+    
     
     }
       
-   
+    elseif ($ai>=$d && $ai<$f) {
+      $arr2[]=$key;
+      echo 2;
+    }
+    elseif ($ai>$fin) {
+      $arr2[]=$key;
+      echo 3;
+
+    }
+    elseif ($ai>=$d_pause and $ai<$f_pause) {
+      $arr2[]=$key;
+      echo 4;
+
+    }
     else{
        $arr4[]= $key;
        echo 5;
