@@ -195,7 +195,7 @@ $date=date("l");
     $types=Type::find($type);
     
 
-    $pas=60*$types->temps-60;
+    $pas=(60*$types->temps)-60;
     $arr=array();
     $arr2=array();
     $items=array();
@@ -220,7 +220,7 @@ $date=date("l");
     for ($i=0; $i <count($arr) ; $i++) { 
     $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
     $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
-    $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. '+ '.$pas.' seconds'));
+    $ai=date('Y-m-d H:i:s', strtotime($arr[$i].' + '.$pas.' seconds'));
     if ($arr[$i]>=$d && $arr[$i]<$f) {
 
       $arr2[]=$arr[$i];}

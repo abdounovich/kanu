@@ -87,12 +87,12 @@ $array2=array();
 
 
 
- foreach ($types2 as $type ) {
-    $array2[]= Element::create($type->type)
-    ->subtitle("السعر : ".$type->prix.' دج ')
-    ->image($type->photo)
+ foreach ($types2 as $type2 ) {
+    $array2[]= Element::create($type2->type)
+    ->subtitle("السعر : ".$type2->prix.' دج ')
+    ->image($type2->photo)
     ->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
-    ->url($this->config.'/test/'.$type->id.'/D'.$number."/".$full_name."/".$DbUsername->id)
+    ->url($this->config.'/test/'.$type2->id.'/D'.$number."/".$full_name."/".$DbUsername->id)
     ->heightRatio('tall')
     ->disableShare()
     ->enableExtensions());}
