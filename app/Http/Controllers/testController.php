@@ -363,23 +363,23 @@ $date=date("l");
 
 
     
-    if ($arr[$i]>=$d && $arr[$i]<$f) {
-      $arr2[]=$arr[$i];}
+    if ($key>=$d && $key<$f) {
+      $arr2[]=$key;}
 
     elseif ($ai>=$d && $ai<$f) {
-      $arr2[]=$arr[$i];
+      $arr2[]=$key;
     }
 
     elseif ($ai>$fin) {
-      $arr2[]=$arr[$i];
+      $arr2[]=$key;
     }
     elseif ($ai>$f_pause) {
-      $arr2[]=$arr[$i];
+      $arr2[]=$key;
     }
     
     else{
   
-       $arr4[]= $arr[$i];}}
+       $arr4[]= $key;}}
      
      }} else {
  
