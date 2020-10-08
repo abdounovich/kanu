@@ -348,8 +348,7 @@ $date=date("l");
               $ai=Carbon::createFromFormat('Y-m-d H:i:s',$key); 
               $ai->toDateTimeString();
               $av=$ai->addMinutes(90); 
-              echo $av; 
-              echo"<br>";
+             
             
             foreach ($Tomorrow_appointments as $appointment ) {    
 
