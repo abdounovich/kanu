@@ -217,7 +217,7 @@ $date=date("l");
           
           if (count($Today_appointments)>0) {
             for ($i=0; $i <count($arr) ; $i++) { 
-              echo $ai=Carbon::createFromFormat('Y-m-d H:i:s', $key); 
+              echo $ai=Carbon::createFromFormat('Y-m-d H:i:s', $arr[$i]); 
               $ai->toDateTimeString();
               $ai->addMinutes($pas); 
               echo $ai;
