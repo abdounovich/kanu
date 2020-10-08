@@ -379,6 +379,8 @@ $date=date("l");
     else{
        $arr4[]= $key;
        echo 5;
+       echo $key;
+       dd();
       }}
      }
     
