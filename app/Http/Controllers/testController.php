@@ -314,6 +314,7 @@ $date=date("l");
 
    $jour=date("Y-m-d");
    $tomorrow=date('Y-m-d', strtotime($jour. ' + 1 day'));
+
    $jour=$tomorrow;
 
     $debut=$jour." ".$debut.":00";
@@ -362,7 +363,7 @@ $date=date("l");
     
     }
       
-    elseif ($ai>=$d && $ai<$f) {
+    elseif ($ai<$d && $ai<=$f) {
       $arr2[]=$key;
       echo 2;
     }
