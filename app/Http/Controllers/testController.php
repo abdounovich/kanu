@@ -350,6 +350,7 @@ $date=date("l");
               foreach ($arr as $key) { 
               $ai= new Carbon ($key); 
               $ai->toDateTimeString();
+              echo$ai;
               $ai->addMinutes($pas);  
 echo $ai;
 dd();
