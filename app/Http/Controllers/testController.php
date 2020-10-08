@@ -350,6 +350,9 @@ $date=date("l");
               foreach ($arr as $key) { 
               $ai= new Carbon ($key); 
               $ai->toDateTimeString();
+              $ai->addMinutes($pas);  
+echo $ai;
+dd();
   foreach ($Tomorrow_appointments as $appointment ) { 
             $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
             $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
@@ -368,7 +371,6 @@ $date=date("l");
        $arr4[]= $key;}}
      }
     
-     $ai->addMinutes($pas);  
     } else {
        for ($i=0; $i <count($arr) ; $i++) { 
             $arr4[]= $arr[$i];}}
