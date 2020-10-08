@@ -354,9 +354,9 @@ $date=date("l");
               foreach ($arr as $key) { 
               
               $ai=Carbon::createFromFormat('Y-m-d H:i:s',$key); 
-              $av=$ai->toDateTimeString();
-               $ai->addMinutes(90); 
-              echo $ai; 
+              $ai->toDateTimeString();
+              $av=$ai->addMinutes(90); 
+              echo $av; 
               echo"<br>";
              
 
