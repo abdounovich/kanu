@@ -196,6 +196,7 @@ $date=date("l");
     
 
     $pas=$types->temps-1;
+    echo $pas;
     $arr=array();
     $arr2=array();
     $items=array();
