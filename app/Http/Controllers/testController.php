@@ -345,10 +345,7 @@ $date=date("l");
           }
           
           if (count($Tomorrow_appointments)>0) {
-           foreach ($Tomorrow_appointments as $appointment ) { 
-            $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
-          
-            $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
+         
          
               for ($i=0; $i <count($arr) ; $i++) { 
               
@@ -358,7 +355,10 @@ $date=date("l");
               $av->toDateTimeString();
                echo $ai=$av->addMinutes($pas);  
                echo'<p></p>';
-
+  foreach ($Tomorrow_appointments as $appointment ) { 
+            $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
+          
+            $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
 
     if ($arr[$i]>=$d && $arr[$i]<$f) {
       $arr2[]=$arr[$i];}
