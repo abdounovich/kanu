@@ -370,7 +370,7 @@ $date=date("l");
     elseif ($ai>$fin) {
       $arr2[]=$arr[$i];
     }
-    elseif ($ai>$f_pause) {
+    elseif ($ai>=$d_pause and $ai<$f_pause) {
       $arr2[]=$arr[$i];
     }
     
