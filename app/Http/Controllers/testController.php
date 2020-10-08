@@ -343,43 +343,39 @@ $date=date("l");
           }
           
           if (count($Tomorrow_appointments)>0) {
-            foreach ($arr as $key) { 
-              
-              $ai=Carbon::createFromFormat('Y-m-d H:i:s',$key); 
-              $ai->toDateTimeString();
-              $av=$ai->addMinutes(90); 
-           
             
             foreach ($Tomorrow_appointments as $appointment ) {    
 
     echo $d=date("Y-m-d H:i:s", strtotime($jour." ".$appointment->debut.":00"));
-    echo"<br>";
-    echo $f=date("Y-m-d H:i:s", strtotime($jour." ".$appointment->fin.":00"));
-    echo"<br>";
+    echo $f=date("Y-m-d H:i:s", strtotime($our." ".$appointment->fin.":00"));
 
+              for ($i=0; $i <count($arr) ; $i++) { 
               
-             
+              $ai=Carbon::createFromFormat('Y-m-d H:i:s', $arr[$i]); 
+              $av=$ai->toDateTimeString();
+               $ai->addMinutes(90); 
+              echo $av;  
 
 
 
     
-    if ($key>=$d && $key<$f) {
-      $arr2[]=$key;}
+    if ($arr[$i]>=$d && $arr[$i]<$f) {
+      $arr2[]=$arr[$i];}
 
-    elseif ($av>=$d && $av<$f) {
-      $arr2[]=$key;
+    elseif ($ai>=$d && $ai<$f) {
+      $arr2[]=$arr[$i];
     }
 
-    elseif ($av>$fin) {
-      $arr2[]=$key;
+    elseif ($ai>$fin) {
+      $arr2[]=$arr[$i];
     }
-    elseif ($av>$f_pause) {
-      $arr2[]=$key;
+    elseif ($ai>$f_pause) {
+      $arr2[]=$arr[$i];
     }
     
     else{
   
-       $arr4[]= $key;}}
+       $arr4[]= $arr[$i];}}
      
      }} else {
  
