@@ -361,14 +361,14 @@ $date=date("l");
     if ($arr[$i]>=$d && $arr[$i]<$f) {
       $arr2[]=$arr[$i];}
 
-    if ($ai>=$d && $ai<$f) {
+    elseif ($ai>=$d && $ai<$f) {
       $arr2[]=$arr[$i];
     }
 
-    if ($ai>$fin) {
+    elseif ($ai>$fin) {
       $arr2[]=$arr[$i];
     }
-    if ($ai>$f_pause) {
+    elseif ($ai>$f_pause) {
       $arr2[]=$arr[$i];
     }
     
