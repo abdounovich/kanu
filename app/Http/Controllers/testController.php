@@ -216,11 +216,13 @@ $date=date("l");
           }
           
           if (count($Today_appointments)>0) {
-            foreach ($Today_appointments as $appointment ) {      $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
-    $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
-    for ($i=0; $i <count($arr) ; $i++) { 
-
+            for ($i=0; $i <count($arr) ; $i++) { 
     $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. ' + '.$pas.' minutes'));
+
+            foreach ($Today_appointments as $appointment ) {      
+    $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
+    $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
+
 
     
     if ($arr[$i]>=$d && $arr[$i]<$f) {
@@ -339,9 +341,11 @@ $date=date("l");
           }
           
           if (count($Tomorrow_appointments)>0) {
-            foreach ($Tomorrow_appointments as $appointment ) {     $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
-    $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00")); 
     for ($i=0; $i <count($arr) ; $i++) { 
+      foreach ($Tomorrow_appointments as $appointment ) {  
+        $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00")); 
+        $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
+
 
     $ai=date('Y-m-d H:i:s', strtotime($arr[$i]. '+ '.$pas.' minutes'));
     if ($arr[$i]>=$d && $arr[$i]<$f) {
