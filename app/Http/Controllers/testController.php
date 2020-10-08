@@ -217,10 +217,10 @@ $date=date("l");
           
           if (count($Today_appointments)>0) {
             for ($i=0; $i <count($arr) ; $i++) { 
-              echo $ai=Carbon::createFromFormat('Y-m-d H:i:s', $arr[$i]); 
-              $ai->add(61, 'seconds'); 
-              echo $ai;                // 2012-02-03 01:01:00
-
+              echo $ai=Carbon::createFromFormat('Y-m-d H:i:s', $key); 
+              $ai->toDateTimeString();
+              $ai->addMinutes($pas); 
+              echo $ai;
 dd();
             foreach ($Today_appointments as $appointment ) {      
     $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
@@ -594,8 +594,10 @@ $date=date("l");
     $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
 
               foreach ($arr as $key) { 
-    $ai=date('Y-m-d H:i:s', strtotime($key. ' + '.$pas.' minutes'));
-    
+                echo $ai=Carbon::createFromFormat('Y-m-d H:i:s', $key); 
+                $ai->toDateTimeString();
+                $ai->addMinutes($pas); 
+                echo $ai;                   
     if ($key>=$d && $key<$f) {
      
 
