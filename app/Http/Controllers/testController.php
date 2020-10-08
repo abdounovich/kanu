@@ -348,60 +348,34 @@ $date=date("l");
          
          
               foreach ($arr as $key) { 
-              
-              
-               
               $av= new Carbon ($key); 
               $av->toDateTimeString();
-              
   foreach ($Tomorrow_appointments as $appointment ) { 
-    $ai=$av->addMinutes($pas);  
             $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
-          
             $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
-
     if ($key>=$d && $key<$f) {
       $arr2[]=$key;}
-
     elseif ($ai>=$d && $ai<$f) {
       $arr2[]=$key;
     }
-
     elseif ($ai>$fin) {
       $arr2[]=$key;
     }
     elseif ($ai>=$d_pause and $ai<$f_pause) {
       $arr2[]=$key;
     }
-    
     else{
-  
        $arr4[]= $key;}}
-     
-     }} else {
- 
- 
+     }
+    
+     $ai=$av->addMinutes($pas);  
+    } else {
        for ($i=0; $i <count($arr) ; $i++) { 
-       
-            $arr4[]= $arr[$i];}
-          }
-
-
+            $arr4[]= $arr[$i];}}
 foreach ($arr4 as $k ) {
 
 
-    if (!in_array($k, $items)&&!in_array($k, $arr2) ) {
-
-if ($d_pause<=$k && $k<$f_pause) {
-}
-else{
-
-   $items[]=$k;
-
-   
-}
-  
-  }}
+    if (!in_array($k, $items)&&!in_array($k, $arr2) ) {if ($d_pause<=$k && $k<$f_pause) {}else{$items[]=$k;}}}
 
   
    $var=2;
