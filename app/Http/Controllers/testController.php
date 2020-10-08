@@ -347,11 +347,11 @@ $date=date("l");
           if (count($Tomorrow_appointments)>0) {
          
          
-              for ($i=0; $i <count($arr) ; $i++) { 
+              foreach ($arr as $key) { 
               
               
                
-              $av= new Carbon ($arr[$i]); 
+              $av= new Carbon ($key); 
               $av->toDateTimeString();
                echo $ai=$av->addMinutes($pas);  
                echo'<p></p>';
@@ -360,23 +360,23 @@ $date=date("l");
           
             $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
 
-    if ($arr[$i]>=$d && $arr[$i]<$f) {
+    if ($key>=$d && $key<$f) {
       $arr2[]=$arr[$i];}
 
     elseif ($ai>=$d && $ai<$f) {
-      $arr2[]=$arr[$i];
+      $arr2[]=$key;
     }
 
     elseif ($ai>$fin) {
-      $arr2[]=$arr[$i];
+      $arr2[]=$key;
     }
     elseif ($ai>=$d_pause and $ai<$f_pause) {
-      $arr2[]=$arr[$i];
+      $arr2[]=$key;
     }
     
     else{
   
-       $arr4[]= $arr[$i];}}
+       $arr4[]= $key;}}
      
      }} else {
  
