@@ -352,6 +352,7 @@ $date=date("l");
               
             foreach ($Tomorrow_appointments as $appointment ) {      
     echo $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
+    echo"<p></p>";
     echo $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
     if ($arr[$i]>=$d && $arr[$i]<$f) {
       $arr2[]=$arr[$i];}
