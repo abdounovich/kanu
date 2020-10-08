@@ -361,7 +361,7 @@ $date=date("l");
             $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
 
     if ($key>=$d && $key<$f) {
-      $arr2[]=$arr[$i];}
+      $arr2[]=$key;}
 
     elseif ($ai>=$d && $ai<$f) {
       $arr2[]=$key;
