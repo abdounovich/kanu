@@ -14,6 +14,30 @@ class HomeController extends Controller
 
 
 
+      /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function sendMessageToClient(Request $request){
+$clients=Client::all();
+$botman = app('botman');
+$message=$request->get('message');
+
+/* foreach ($clients as $client ) {
+        $botman->say( $message,$client->fb_id, FacebookDriver::class);
+     
+} */
+
+$botman->say( $message,3325986554166389, FacebookDriver::class);
+
+
+       
+      
+    }
+
+
   
     public function func(){
 
