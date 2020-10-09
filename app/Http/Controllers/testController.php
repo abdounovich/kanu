@@ -367,39 +367,39 @@ $date=date("l");
 
 
             
-    if ($key>=$d && $key<$f) {
-      $arr2[]=$key;
-
-    
-    
-    }
-    elseif ($key<$d && $ai>=$f) {
-      $arr2[]=$key;
-
-    
-    
-    }
-      
-    elseif ($ai>=$d && $ai<=$f) {
-      $arr2[]=$key;
-    }
-    elseif ($ai>$fin) {
-      $arr2[]=$key;
-
-    }
-    elseif ($ai>=$d_pause and $ai<$f_pause) {
-      $arr2[]=$key;
-
-    }
-    else{
-       $arr4[]= $key;
-    
-      }}
-     }
-    
-    } else {
-       for ($i=0; $i <count($arr) ; $i++) { 
-            $arr4[]= $arr[$i];}}
+            if ($key>=$d && $key<$f) {
+              $arr2[]=$key;
+        
+            
+            
+            }
+            elseif ($key<$d && $ai>=$f) {
+              $arr2[]=$key;
+        
+            
+            
+            }
+              
+            elseif ($ai>=$d && $ai<=$f) {
+              $arr2[]=$key;
+            }
+            elseif ($ai>$fin) {
+              $arr2[]=$key;
+        
+            }
+            elseif ($ai>=$d_pause and $ai<$f_pause) {
+              $arr2[]=$key;
+        
+            }
+            else{
+               $arr4[]= $key;
+            
+              }}
+             }
+            
+            } else {
+               for ($i=0; $i <count($arr) ; $i++) { 
+                    $arr4[]= $arr[$i];}}
 foreach ($arr4 as $k ) {
 
 
@@ -504,39 +504,39 @@ foreach ($arr4 as $k ) {
     
     
                 
-        if ($key>=$d && $key<$f) {
-          $arr2[]=$key;
-    
-        
-        
-        }
-        elseif ($key<$d && $ai>=$f) {
-          $arr2[]=$key;
-    
-        
-        
-        }
-          
-        elseif ($ai>=$d && $ai<=$f) {
-          $arr2[]=$key;
-        }
-        elseif ($ai>$fin) {
-          $arr2[]=$key;
-    
-        }
-        elseif ($ai>=$d_pause and $ai<$f_pause) {
-          $arr2[]=$key;
-    
-        }
-        else{
-           $arr4[]= $key;
-        
-          }}
-         }
-        
-        } else {
-           for ($i=0; $i <count($arr) ; $i++) { 
-                $arr4[]= $arr[$i];}}
+                if ($key>=$d && $key<$f) {
+                  $arr2[]=$key;
+            
+                
+                
+                }
+                elseif ($key<$d && $ai>=$f) {
+                  $arr2[]=$key;
+            
+                
+                
+                }
+                  
+                elseif ($ai>=$d && $ai<=$f) {
+                  $arr2[]=$key;
+                }
+                elseif ($ai>$fin) {
+                  $arr2[]=$key;
+            
+                }
+                elseif ($ai>=$d_pause and $ai<$f_pause) {
+                  $arr2[]=$key;
+            
+                }
+                else{
+                   $arr4[]= $key;
+                
+                  }}
+                 }
+                
+                } else {
+                   for ($i=0; $i <count($arr) ; $i++) { 
+                        $arr4[]= $arr[$i];}}
     foreach ($arr4 as $k ) {
     
     
