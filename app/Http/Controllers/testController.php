@@ -342,9 +342,7 @@ $date=date("l");
     $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause)));  
     $f_pause=$jour." ".$f_pause.":00";
     $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
-    echo $jour;
-    echo$d_pause;
-    echo$f_pause;
+  
     $Tomorrow_appointments=Appointment::whereJour($jour)->get();
 
 
