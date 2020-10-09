@@ -290,118 +290,124 @@ $config=Config::get('app.url');
   
    public function tomorrow($type,$username,$Cid)
    {
-date_default_timezone_set("Africa/Algiers");
-$date=date("l");
+
+
+
+    date_default_timezone_set("Africa/Algiers");
+    $date=date("l");
     $date=date("l", strtotime($date. ' + 1 day'));
 
-
-    if ($date=='Friday') {
-      $debut="09:00";
-      $fin="22:00";
-      $d_pause="12:00";
-      $f_pause="15:00";
-     
-   }elseif($date=='Saturday'){
-       $debut="09:00";
-       $fin="22:00"; 
-       $d_pause="12:00";
-       $f_pause="13:00";
-   }elseif($date=='Tuesday'){
-       $debut="00:00";
-       $fin="00:00";
-       $d_pause="00:00";
-       $f_pause="00:01";
-   }
-
-   else{ $debut="10:00";
-    $fin="22:00";
-    $d_pause="14:00";
-    $f_pause="15:00";}
-
-   $jour=date("Y-m-d");
-   $tomorrow=date('Y-m-d', strtotime($jour. ' + 1 day'));
-
-   $jour=$tomorrow; 
-
-    $debut=$jour." ".$debut.":00";
-    $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
-    $fin=$jour." ".$fin.":00";
-    $fin=date("Y-m-d H:i:s", strtotime(date($fin)));
-    $types=Type::whereId($type)->first();
-
-    $pas=$types->temps-1;
-    $arr=array();
-    $arr2=array();
-    $items=array();
-    $arr4=array();
-  
     
-    $d_pause=$jour." ".$d_pause.":00";
-    $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause)));  
-    $f_pause=$jour." ".$f_pause.":00";
-    $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
-  
-    $Tomorrow_appointments=Appointment::whereJour($jour)->get();
-
-
-    while ($debut < $fin )
-    {
-      $arr[]=$debut;  
-      $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + 900));
-
-          }
-          
-          if (count($Tomorrow_appointments)>0) {
+        if ($date=='Friday') {
+          $debut="09:00";
+          $fin="22:00";
+          $d_pause="12:00";
+          $f_pause="15:00";
          
-         
-              foreach ($arr as $key) { 
-              $ai= new Carbon ($key); 
-              $ai->toDateTimeString();
-              $ai->addMinutes($pas);  
-           
-  foreach ($Tomorrow_appointments as $appointment ) { 
-            $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
-            $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
+       }elseif($date=='Saturday'){
+           $debut="09:00";
+           $fin="22:00"; 
+           $d_pause="12:00";
+           $f_pause="13:00";
+       }elseif($date=='Tuesday'){
+           $debut="00:00";
+           $fin="00:00";
+           $d_pause="00:00";
+           $f_pause="00:01";
+       }
+    
+       else{ $debut="10:00";
+        $fin="22:00";
+        $d_pause="14:00";
+        $f_pause="15:00";}
+    
+       $jour=date("Y-m-d");
 
+       $tomorrow=date('Y-m-d', strtotime($jour. ' + 1 day'));
 
-            
-            if ($key>=$d && $key<$f) {
-              $arr2[]=$key;
+       $jour=$tomorrow; 
+
+        $debut=$jour." ".$debut.":00";
+        $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
+        $fin=$jour." ".$fin.":00";
+        $fin=date("Y-m-d H:i:s", strtotime(date($fin)));
+        $types=Type::whereId($type)->first();
+    
+        $pas=$types->temps-1;
+        $arr=array();
+        $arr2=array();
+        $items=array();
+        $arr4=array();
         
-            
-            
-            }
-            elseif ($key<$d && $ai>=$f) {
-              $arr2[]=$key;
         
-            
-            
-            }
+        $d_pause=$jour." ".$d_pause.":00";
+        $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause)));  
+        $f_pause=$jour." ".$f_pause.":00";
+        $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
+    
+        $Tomorrow_appointments=Appointment::whereJour($jour)->get();
+    
+    
+        while ($debut < $fin )
+        {
+          $arr[]=$debut;  
+          $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + 900));
+    
+              }
               
-            elseif ($ai>=$d && $ai<=$f) {
-              $arr2[]=$key;
-            }
-            elseif ($ai>$fin) {
-              $arr2[]=$key;
-        
-            }
-            elseif ($ai>=$d_pause and $ai<$f_pause) {
-              $arr2[]=$key;
-        
-            }
-            else{
-               $arr4[]= $key;
-            
-              }}
-             }
-            
-            } else {
-               for ($i=0; $i <count($arr) ; $i++) { 
-                    $arr4[]= $arr[$i];}}
-        foreach ($arr4 as $k ) {
+              if (count($Tomorrow_appointments)>0) {
+                  foreach ($arr as $key) { 
+                  $ai= new Carbon ($key); 
+                  $ai->toDateTimeString();
+                  $ai->addMinutes($pas);  
+               
+      foreach ($Tomorrow_appointments as $appointment ) { 
+                $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
+                $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
+    
+    
+                
+        if ($key>=$d && $key<$f) {
+          $arr2[]=$key;
+    
         
         
-            if (!in_array($k, $items)&&!in_array($k, $arr2) ) {if ($d_pause<=$k && $k<$f_pause) {}else{$items[]=$k;}}}
+        }
+        elseif ($key<$d && $ai>=$f) {
+          $arr2[]=$key;
+    
+        
+        
+        }
+          
+        elseif ($ai>=$d && $ai<=$f) {
+          $arr2[]=$key;
+        }
+        elseif ($ai>$fin) {
+          $arr2[]=$key;
+    
+        }
+        elseif ($ai>=$d_pause and $ai<$f_pause) {
+          $arr2[]=$key;
+    
+        }
+        else{
+           $arr4[]= $key;
+        
+          }}
+         }
+        
+        } else {
+           for ($i=0; $i <count($arr) ; $i++) { 
+                $arr4[]= $arr[$i];}}
+    foreach ($arr4 as $k ) {
+    
+    
+        if (!in_array($k, $items)&&!in_array($k, $arr2) ) {if ($d_pause<=$k && $k<$f_pause) {}else{$items[]=$k;}}}
+    
+
+
+
   
    $var=2;
    $type=Type::find($type);
