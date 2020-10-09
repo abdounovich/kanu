@@ -208,7 +208,8 @@ $config=Config::get('app.url');
         $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause)));  
         $f_pause=$jour." ".$f_pause.":00";
         $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
-    
+    echo $d_pause;
+    echo $f_pause;
         $Today_appointments=Appointment::whereJour($jour)->get();
     
     
