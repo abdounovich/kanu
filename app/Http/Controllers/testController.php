@@ -391,6 +391,10 @@ $date=date("l");
               $arr2[]=$key;
         
             }
+            elseif ($key<$d_pause and $ai<$f_pause) {
+              $arr2[]=$key;
+        
+            }
             else{
                $arr4[]= $key;
             
