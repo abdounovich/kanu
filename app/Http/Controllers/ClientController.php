@@ -40,7 +40,6 @@ class ClientController extends Controller
            echo ($e->getCode().': '.$e->getMessage());
         }
         
-        return redirect('/sendMsg');                
               
             }
 
