@@ -219,8 +219,6 @@ $config=Config::get('app.url');
               }
               
               if (count($Today_appointments)>0) {
-             
-             
                   foreach ($arr as $key) { 
                   $ai= new Carbon ($key); 
                   $ai->toDateTimeString();
@@ -391,10 +389,6 @@ $date=date("l");
               $arr2[]=$key;
         
             }
-            elseif ($key<$d_pause and $ai>=$f_pause) {
-              $arr2[]=$key;
-        
-            }
             else{
                $arr4[]= $key;
             
@@ -404,11 +398,10 @@ $date=date("l");
             } else {
                for ($i=0; $i <count($arr) ; $i++) { 
                     $arr4[]= $arr[$i];}}
-foreach ($arr4 as $k ) {
-
-
-    if (!in_array($k, $items)&&!in_array($k, $arr2) ) {if ($d_pause<=$k && $k<$f_pause) {}else{$items[]=$k;}}}
-
+        foreach ($arr4 as $k ) {
+        
+        
+            if (!in_array($k, $items)&&!in_array($k, $arr2) ) {if ($d_pause<=$k && $k<$f_pause) {}else{$items[]=$k;}}}
   
    $var=2;
    $type=Type::find($type);
@@ -541,11 +534,10 @@ foreach ($arr4 as $k ) {
                 } else {
                    for ($i=0; $i <count($arr) ; $i++) { 
                         $arr4[]= $arr[$i];}}
-    foreach ($arr4 as $k ) {
-    
-    
-        if (!in_array($k, $items)&&!in_array($k, $arr2) ) {if ($d_pause<=$k && $k<$f_pause) {}else{$items[]=$k;}}}
-    
+            foreach ($arr4 as $k ) {
+            
+            
+                if (!in_array($k, $items)&&!in_array($k, $arr2) ) {if ($d_pause<=$k && $k<$f_pause) {}else{$items[]=$k;}}}
       
        $var=3;
        $type=Type::find($type);
