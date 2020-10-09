@@ -60,7 +60,7 @@
           <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
             {{$Today_appointment->facebook}}  <span dir="ltr" style=" position: absolute;
             top:1px;
-            font-size:13px;
+            font-size:10px;
             right:1px; width:30px;height:30px; 
     min-width: 14px;
     text-align: center;
