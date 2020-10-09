@@ -59,10 +59,10 @@ Route::get('/t', function () {
 });
 Route::get('/tester','HomeController@func');
 Route::get('/abcd','TestController@try');
-Route::post('/sendMsg','HomeController@sendMessageToClient');
-Route::get('/sendMsg', function () {
-    return view('sendMessageToClients') ;
-});
+Route::post('/sendMsg','ClientController@sendMessageToClient');
+Route::get('/sendMsg','ClientController@sendMessageToClientView');
+
+
 
 
 
