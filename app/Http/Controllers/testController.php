@@ -230,7 +230,6 @@ $config=Config::get('app.url');
     
     
                 
-       
                 if ($key>=$d && $key<$f) {
                   $arr2[]=$key;}
                 elseif ($key<$d && $ai>=$f) {
@@ -242,6 +241,9 @@ $config=Config::get('app.url');
                   $arr2[]=$key;
                 }
                 elseif ($ai>=$d_pause and $ai<$f_pause) {
+                  $arr2[]=$key;
+                }
+                elseif ($key<=$d_pause and $ai>$f_pause) {
                   $arr2[]=$key;
                 }
                 else{
@@ -260,6 +262,10 @@ $config=Config::get('app.url');
                   elseif ($ai>=$d_pause and $ai<$f_pause) {
                     $arr2[]=$key;
                   }
+                  elseif ($key<=$d_pause and $ai>$f_pause) {
+                    $arr2[]=$key;
+                  }
+                  
                   else{
                      $arr4[]= $key;
                     }
@@ -363,8 +369,7 @@ $config=Config::get('app.url');
                
       foreach ($Tomorrow_appointments as $appointment ) { 
                 $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
-                $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
-                if ($key>=$d && $key<$f) {
+                $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00")); if ($key>=$d && $key<$f) {
                   $arr2[]=$key;}
                 elseif ($key<$d && $ai>=$f) {
                   $arr2[]=$key;}
@@ -375,6 +380,9 @@ $config=Config::get('app.url');
                   $arr2[]=$key;
                 }
                 elseif ($ai>=$d_pause and $ai<$f_pause) {
+                  $arr2[]=$key;
+                }
+                elseif ($key<=$d_pause and $ai>$f_pause) {
                   $arr2[]=$key;
                 }
                 else{
@@ -393,6 +401,10 @@ $config=Config::get('app.url');
                   elseif ($ai>=$d_pause and $ai<$f_pause) {
                     $arr2[]=$key;
                   }
+                  elseif ($key<=$d_pause and $ai>$f_pause) {
+                    $arr2[]=$key;
+                  }
+                  
                   else{
                      $arr4[]= $key;
                     }
@@ -401,8 +413,6 @@ $config=Config::get('app.url');
             
             
                 if (!in_array($k, $items)&&!in_array($k, $arr2) ) {if ($d_pause<=$k && $k<$f_pause) {}else{$items[]=$k;}}}
-      
-
 
   
    $var=2;
@@ -512,6 +522,9 @@ $config=Config::get('app.url');
                   $arr2[]=$key;
                 }
                 elseif ($ai>=$d_pause and $ai<$f_pause) {
+                  $arr2[]=$key;
+                }
+                elseif ($key<=$d_pause and $ai>$f_pause) {
                   $arr2[]=$key;
                 }
                 else{
