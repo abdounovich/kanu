@@ -249,6 +249,11 @@ $config=Config::get('app.url');
                   }}
                  }
                 } else {
+
+                  foreach ($arr as $key) { 
+                    $ai= new Carbon ($key); 
+                    $ai->toDateTimeString();
+                    $ai->addMinutes($pas); 
                   if ($ai>$fin) {
                     $arr2[]=$key;
                   }
@@ -258,7 +263,7 @@ $config=Config::get('app.url');
                   else{
                      $arr4[]= $key;
                     }
-                  }
+                  }}
             foreach ($arr4 as $k ) {
             
             
@@ -359,40 +364,44 @@ $config=Config::get('app.url');
       foreach ($Tomorrow_appointments as $appointment ) { 
                 $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
                 $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
-        if ($key>=$d && $key<$f) {
-          $arr2[]=$key;}
-        elseif ($key<$d && $ai>=$f) {
-          $arr2[]=$key;}
-        elseif ($ai>=$d && $ai<=$f) {
-          $arr2[]=$key;
-        }
-        elseif ($ai>$fin) {
-          $arr2[]=$key;
-        }
-        elseif ($ai>=$d_pause and $ai<$f_pause) {
-          $arr2[]=$key;
-        }
-        else{
-           $arr4[]= $key;
-          }}
-         }
-        } else {
-          if ($ai>$fin) {
-            $arr2[]=$key;
-          }
-          elseif ($ai>=$d_pause and $ai<$f_pause) {
-            $arr2[]=$key;
-          }
-          else{
-             $arr4[]= $key;
-            }
-          }
-    foreach ($arr4 as $k ) {
-    
-    
-        if (!in_array($k, $items)&&!in_array($k, $arr2) ) {if ($d_pause<=$k && $k<$f_pause) {}else{$items[]=$k;}}}
-    
+                if ($key>=$d && $key<$f) {
+                  $arr2[]=$key;}
+                elseif ($key<$d && $ai>=$f) {
+                  $arr2[]=$key;}
+                elseif ($ai>=$d && $ai<=$f) {
+                  $arr2[]=$key;
+                }
+                elseif ($ai>$fin) {
+                  $arr2[]=$key;
+                }
+                elseif ($ai>=$d_pause and $ai<$f_pause) {
+                  $arr2[]=$key;
+                }
+                else{
+                   $arr4[]= $key;
+                  }}
+                 }
+                } else {
 
+                  foreach ($arr as $key) { 
+                    $ai= new Carbon ($key); 
+                    $ai->toDateTimeString();
+                    $ai->addMinutes($pas); 
+                  if ($ai>$fin) {
+                    $arr2[]=$key;
+                  }
+                  elseif ($ai>=$d_pause and $ai<$f_pause) {
+                    $arr2[]=$key;
+                  }
+                  else{
+                     $arr4[]= $key;
+                    }
+                  }}
+            foreach ($arr4 as $k ) {
+            
+            
+                if (!in_array($k, $items)&&!in_array($k, $arr2) ) {if ($d_pause<=$k && $k<$f_pause) {}else{$items[]=$k;}}}
+      
 
 
   
@@ -492,9 +501,6 @@ $config=Config::get('app.url');
                 $d=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->debut.":00"));
                 $f=date("Y-m-d H:i:s", strtotime($appointment->jour." ".$appointment->fin.":00"));
     
-    
-                
-
                 if ($key>=$d && $key<$f) {
                   $arr2[]=$key;}
                 elseif ($key<$d && $ai>=$f) {
@@ -513,6 +519,11 @@ $config=Config::get('app.url');
                   }}
                  }
                 } else {
+
+                  foreach ($arr as $key) { 
+                    $ai= new Carbon ($key); 
+                    $ai->toDateTimeString();
+                    $ai->addMinutes($pas); 
                   if ($ai>$fin) {
                     $arr2[]=$key;
                   }
@@ -522,12 +533,12 @@ $config=Config::get('app.url');
                   else{
                      $arr4[]= $key;
                     }
-                  }
+                  }}
             foreach ($arr4 as $k ) {
             
             
                 if (!in_array($k, $items)&&!in_array($k, $arr2) ) {if ($d_pause<=$k && $k<$f_pause) {}else{$items[]=$k;}}}
-       $var=3;
+         $var=3;
        $type=Type::find($type);
        return view("test")->with('items',$items)
        ->with('var',$var)
