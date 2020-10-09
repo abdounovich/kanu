@@ -207,9 +207,7 @@ $config=Config::get('app.url');
         $d_pause=date("Y-m-d H:i:s", strtotime(date($d_pause)));  
         $f_pause=$jour." ".$f_pause.":00";
         $f_pause=date("Y-m-d H:i:s", strtotime(date($f_pause))); 
-        echo $date;
-    echo $d_pause;
-    echo $f_pause;
+    
         $Today_appointments=Appointment::whereJour($jour)->get();
     
     
@@ -246,7 +244,6 @@ $config=Config::get('app.url');
         
         
         }
-     
           
         elseif ($ai>=$d && $ai<=$f) {
           $arr2[]=$key;
@@ -256,10 +253,6 @@ $config=Config::get('app.url');
     
         }
         elseif ($ai>=$d_pause and $ai<$f_pause) {
-          $arr2[]=$key;
-    
-        }
-        elseif ($key<$d_pause and $ai<$f_pause) {
           $arr2[]=$key;
     
         }
@@ -386,12 +379,6 @@ $date=date("l");
     
     
     }
-    elseif ($key<$d_pause && $ai>=$f_pause) {
-      $arr2[]=$key;
-
-    
-    
-    }
       
     elseif ($ai>=$d && $ai<=$f) {
       $arr2[]=$key;
@@ -444,7 +431,7 @@ foreach ($arr4 as $k ) {
 
     date_default_timezone_set("Africa/Algiers");
     $date=date("l");
-        $date=date("l", strtotime($date. ' + 1 day'));
+        $date=date("l", strtotime($date. ' + 2 day'));
     
     
         if ($date=='Friday') {
@@ -529,12 +516,6 @@ foreach ($arr4 as $k ) {
         
         
         }
-           elseif ($key<$d_pause && $ai>=$f_pause) {
-          $arr2[]=$key;
-    
-        
-        
-        }
           
         elseif ($ai>=$d && $ai<=$f) {
           $arr2[]=$key;
@@ -543,7 +524,7 @@ foreach ($arr4 as $k ) {
           $arr2[]=$key;
     
         }
-        elseif ($ai>=$d_pause && $ai<$f_pause) {
+        elseif ($ai>=$d_pause and $ai<$f_pause) {
           $arr2[]=$key;
     
         }
