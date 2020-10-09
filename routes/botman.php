@@ -199,13 +199,13 @@ $full_name=$firstname.'-'.$lastname;
 
 
     $bot->typesAndWaits(2);
- 
+ /* 
 
     $bot->reply(" عفوا لا يمكنك استعمال هاته الخدمة بسبب خلل تقني سنقوم بإصلاحه قريبا ");
-    $bot->reply(" يمكنك حجز موعد عبر الهاتف مؤقتا على الرقم  0555727410 ");
+    $bot->reply(" يمكنك حجز موعد عبر الهاتف مؤقتا على الرقم  0555727410 "); */
 
 
-   /*  $bot->reply(Question::create('  من فضلك إختر يوم موعدك  👇👇')->addButtons([
+     $bot->reply(Question::create('  من فضلك إختر يوم موعدك  👇👇')->addButtons([
      Button::create(' 🕐 بعد غد')->value('rdv3'),
      Button::create(' 🕐 يوم الغد ')->value('rdv2'),        
      Button::create('🕐 اليوم')->value('rdv1'),
@@ -214,7 +214,7 @@ $full_name=$firstname.'-'.$lastname;
 
     
 
-    ])); */ }
+    ])); }
 });
 
 /* $botman->hears('C([0-9]+)', function ($bot, $number) {
