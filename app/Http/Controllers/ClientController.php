@@ -42,7 +42,9 @@ class ClientController extends Controller
             public function sendMessageToClientView( ){
                
                 $clients=Client::all();
-                       return view("sendMessageToClients")->with('clients',$clients);                      
+                $config=Config::get('botman.facebook.token');
+        return view("clients")->with('sendMessageToClients',$clients)
+        ->with('config',$config);
                     }
         
 
