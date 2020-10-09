@@ -33,8 +33,7 @@ class ClientController extends Controller
         
         $botman->say( $message,3325986554166389, FacebookDriver::class);
         
-        
-               
+        return redirect('/sendMsg');                
               
             }
 
