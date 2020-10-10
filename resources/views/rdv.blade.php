@@ -66,7 +66,11 @@
                
        </th>
           <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
-            {{$Today_appointment->facebook}}  <span dir="ltr" style=" position: absolute;
+            <span style=" 
+            width: 100px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;">{{$Today_appointment->facebook}}</span>  <span dir="ltr" style=" position: absolute;
             top:1px;
             font-size:10px;
             right:1px; width:30px;height:30px; 
@@ -93,7 +97,7 @@
    data-offstyle="outline-danger"  data-toggle="toggle">
 
   </td>
-  <td>    <a  class="btn btn-danger m-0  " data-toggle="modal" data-target="#exampleModal"><i class=" fa fa-trash p-1"></i>   </a>
+  <td>    <a  class="btn btn-danger   " data-toggle="modal" data-target="#exampleModal"><i class=" fa fa-trash fa-2x"></i>   </a>
   </td>
         </tr>
       <!-- Modal -->
