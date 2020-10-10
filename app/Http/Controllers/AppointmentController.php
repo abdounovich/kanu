@@ -34,8 +34,8 @@ class AppointmentController extends Controller
     public function AnnulerByAdmin(Request $request)
     {
 
-        $facebook=$request->get('facebook');
-$appointment=Appointment::where("ActiveType","1")->where("facebook",$facebook)->first()->delete();
+        $id=$request->get('id');
+$appointment=Appointment::find($id)->delete();
  return redirect()->back()->with('success', 'لقد تم إلغاء الموعد');   
 
 
