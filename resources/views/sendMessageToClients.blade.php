@@ -4,7 +4,13 @@
 @section('title', 'Clients')
 
 
-
+@if (\Session::has('success'))
+    <div class="alert  alert-info  text-right ">
+        <ul>
+            <li class="p-2">{!! \Session::get('success') !!}</li>
+        </ul>
+    </div>
+@endif
 @section('content')
 <div class="row mr-4 p-4">
     

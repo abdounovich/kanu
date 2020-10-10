@@ -23,7 +23,7 @@ class AppointmentController extends Controller
     {
 
 $appointment=Appointment::find($id)->delete();
- return redirect()->back()->with('success', 'لقد تم إلغاء الموعد');   
+ return redirect()->back()->with('success', ' لقد تم إلغاء الموعد بنجاح ' );   
 
 
 
