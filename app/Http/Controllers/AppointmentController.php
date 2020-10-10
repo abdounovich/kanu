@@ -36,9 +36,8 @@ class AppointmentController extends Controller
 
         $facebook=$request->get('facebook');
         $id=$request->get('id');
-$appointment=Appointment::where("ActiveType","1")->where("facebook",$facebook)->first();
- $appointment->delete();
- return redirect()->back()->with('success', 'لقد تم إلغاء الموعد بنجاح');   
+$appointment=Appointment::where("ActiveType","1")->where("facebook",$facebook)->first()->delete();
+ return redirect()->back()->with('success', 'لقد تم إلغاء الموعد');   
 
 
 

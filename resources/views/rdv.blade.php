@@ -110,7 +110,7 @@
          
         </div>
         <div class="modal-body  text-right"  >
-هل تريد حقا إلغاء موعدك ؟         </div>
+هل تريد حقا إلغاء هذا الموعد ؟         </div>
         <div class="modal-footer row float-right text-right">
          <div class="col">
            <form action="/annulerByAdmin" id="myForm" method="post"> 
