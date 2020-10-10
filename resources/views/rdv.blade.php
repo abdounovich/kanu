@@ -12,7 +12,13 @@
 
   
 
-
+@if (\Session::has('success'))
+    <div class="alert  alert-info  text-right ">
+        <ul>
+            <li class="p-2">{!! \Session::get('success') !!}</li>
+        </ul>
+    </div>
+@endif
 
 
   <div class="row mt-5">
@@ -82,16 +88,44 @@
   checked 
   @endif onchange="myFunction('{{$Today_appointment->id}}','cb{{$Today_appointment->id}}')"
    data-on="حاضر" data-off="غائب" data-onstyle="outline-success"
-   data-offstyle="outline-danger"  data-toggle="toggle"></td>
+   data-offstyle="outline-danger"  data-toggle="toggle">
+    <a  class="btn btn-danger m-2  " data-toggle="modal" data-target="#exampleModal"><i class="fa fa-trash"></i>   </a>
+
+  </td>
         </tr>
-    
+      <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" dir="rtl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"> تأكيد إلغاء الموعد </h5>
+         
+        </div>
+        <div class="modal-body  text-right"  >
+هل تريد حقا إلغاء موعدك ؟         </div>
+        <div class="modal-footer row float-right text-right">
+         <div class="col">
+           <form action="/annulerByAdmin" id="myForm" method="post"> 
+            @csrf           
+            <input type="hidden" name="id" id="" value="{{$Today_appointment->fb_id}}">
+            <input type="hidden" name="facebook" id="" value="{{$Today_appointment->facebook}}">
+            <a onclick="sendMessage()" class="btn btn-danger  text-white col-4"> نعم </a>
+
+            <a class="btn btn-secondary text-white col-4" data-dismiss="modal">  لا شكرا </a>
+          </form> </div> 
+
+        </div>
+      </div>
+    </div>
+  </div>
         @endforeach
       </tbody>
     </table> @endif
   </div>
 
 
-
+<script> function sendMessage() {
+  document.getElementById("myForm").submit();}</script>
 
 
 

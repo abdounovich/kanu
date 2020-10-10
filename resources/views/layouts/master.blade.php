@@ -80,27 +80,7 @@
 
 
           <!-- Modal -->
-<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">       
 
-        <h5 class="modal-title" id="exampleModalLabel">   تأكيد العملية   </h5>
-        </button>
-      </div>
-      <div class="modal-body  text-right">
-         سيتم إفراغ جميع المواعيد المحجوزة لنهار اليوم   
-      </div>
-      <div class="modal-body text-right">
-سيتم  منح الزبائن نقاطهم        </div>
-      <div class="modal-footer align-items-center justify-content-center align-content-center">        
-        <a href="/add" class="btn btn-danger">تــأكيد العملية</a>
-
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">إلغـــاء</button>
-      </div>
-    </div>
-  </div>
-</div>
         <div class="container">
             @yield('content')
         </div>

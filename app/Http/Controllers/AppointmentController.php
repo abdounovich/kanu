@@ -13,6 +13,40 @@ use Config;
 
 class AppointmentController extends Controller
 {
+
+
+
+
+      /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+  /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+
+    public function AnnulerByAdmin(Request $request)
+    {
+
+        $facebook=$request->get('facebook');
+        $id=$request->get('id');
+$appointment=Appointment::where("ActiveType","1")->where("facebook",$facebook)->first();
+ $appointment->delete();
+ return redirect()->back()->with('success', 'لقد تم إلغاء الموعد بنجاح');   
+
+
+
+}
+
+
+
+
     /**
      * Display a listing of the resource.
      *
