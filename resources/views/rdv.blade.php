@@ -37,6 +37,8 @@
 
           <th scope="col">الموعد  </th>
           <th scope="col"></th>
+          <th scope="col"></th>
+
 
 
 
@@ -89,8 +91,9 @@
   @endif onchange="myFunction('{{$Today_appointment->id}}','cb{{$Today_appointment->id}}')"
    data-on="حاضر" data-off="غائب" data-onstyle="outline-success"
    data-offstyle="outline-danger"  data-toggle="toggle">
-    <a  class="btn btn-danger m-2  " data-toggle="modal" data-target="#exampleModal"><i class="p-1 fa fa-trash"></i>   </a>
 
+  </td>
+  <td>    <a  class="btn btn-danger m-0  " data-toggle="modal" data-target="#exampleModal"><i class=" fa fa-trash p-1"></i>   </a>
   </td>
         </tr>
       <!-- Modal -->
