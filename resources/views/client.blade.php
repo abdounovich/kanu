@@ -108,14 +108,14 @@ button:hover, a:hover {
                 <div   dir="rtl" class="p-2 m-2 h4"> موعدك يوم   {{$yawm}}  على   {{$appointment->debut}}   </div>
               
 <div style="direction: ltr "  id="countdown-container"></div>
-@if ($difmin>32400) 
+{{-- @if ($difmin>32400)  --}}
 <div>
  <a style="width: 60%" class="btn btn-danger m-2  " data-toggle="modal" data-target="#exampleModal">  إلغاء موعدي   </a>
 </div>
 
 
 
-@endif
+{{-- @endif --}}
 
 <p></p>
 <p></p> 
