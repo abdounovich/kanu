@@ -26,16 +26,14 @@ class ClientController extends Controller
         $clients=Client::all();
         $message=$request->get('message');
        
-        /* foreach ($clients as $client ) {
-                $botman->say( $message,$client->fb_id, FacebookDriver::class);
-             
-        } */       
+            
          $botman = app('botman');
 
 
 
         try {
-            $botman->say($message,3325986554166389, FacebookDriver::class);
+            foreach ($clients as $client ) {
+            $botman->say($message,$client->fb_id, FacebookDriver::class);}
         } catch (\Exception $e) {
            echo ('FAIL sending message to ');
            echo ($e->getCode().': '.$e->getMessage());
