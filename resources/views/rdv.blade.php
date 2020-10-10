@@ -66,7 +66,8 @@
                
        </th>
           <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
-            <span style=" 
+            <span  dir="ltr" style=" 
+            display:inline-flex;
             width: 100px;
             overflow: hidden;
             white-space: nowrap;
