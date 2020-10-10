@@ -4,6 +4,8 @@
 @section('title', 'Clients')
 
 
+
+@section('content')
 @if (\Session::has('success'))
     <div class="alert  alert-info  text-right ">
         <ul>
@@ -11,7 +13,6 @@
         </ul>
     </div>
 @endif
-@section('content')
 <div class="row mr-4 p-4">
     
 
