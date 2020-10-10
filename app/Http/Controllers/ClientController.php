@@ -32,15 +32,14 @@ class ClientController extends Controller
         } */       
          $botman = app('botman');
 
-        $botman->say('Message', '3325986554166389', FacebookDriver::class);
 
 
-      /*   try {
-            $botman->say('test',332598655416638, FacebookDriver::class);
+        try {
+            $botman->say($message,3325986554166389, FacebookDriver::class);
         } catch (\Exception $e) {
            echo ('FAIL sending message to ');
            echo ($e->getCode().': '.$e->getMessage());
-        } */
+        } 
         return redirect()->back()->with('success', 'قد تم إرسال الرسالة بنجاح ' );   
 
               
