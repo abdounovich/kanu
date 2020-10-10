@@ -25,7 +25,7 @@ class ClientController extends Controller
         $clients=Client::all();
         $botman = app('botman');
         $message=$request->get('message');
-        
+       
         /* foreach ($clients as $client ) {
                 $botman->say( $message,$client->fb_id, FacebookDriver::class);
              
@@ -33,13 +33,13 @@ class ClientController extends Controller
         
 
         try {
-            $botman->say($message,332598655416389, FacebookDriver::class);
-            echo "تم إرسال ";
+            $botman->say($message,3325986554166389, FacebookDriver::class);
         } catch (\Exception $e) {
            echo ('FAIL sending message to '.$user->fb_id);
            echo ($e->getCode().': '.$e->getMessage());
         }
-        
+                    echo "تم إرسال ";
+
               
             }
 
