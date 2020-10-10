@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use App\Appointment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
+use BotMan\Drivers\Facebook\FacebookDriver;
 
 class ClientController extends Controller
 {
@@ -23,13 +24,14 @@ class ClientController extends Controller
      */
     public function sendMessageToClient(Request $request){
         $clients=Client::all();
-        $botman = app('botman');
         $message=$request->get('message');
        
         /* foreach ($clients as $client ) {
                 $botman->say( $message,$client->fb_id, FacebookDriver::class);
              
-        } */
+        } */       
+         $botman = app('botman');
+
         $botman->say('Message', '3325986554166389', FacebookDriver::class);
 
 
