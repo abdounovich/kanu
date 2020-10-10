@@ -17,24 +17,11 @@ class AppointmentController extends Controller
 
 
 
-      /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
-  /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
 
 
-    public function AnnulerByAdmin(Request $request)
+    public function AnnulerByAdmin( $id)
     {
 
-        $id=$request->get('id');
 $appointment=Appointment::find($id)->delete();
  return redirect()->back()->with('success', 'لقد تم إلغاء الموعد');   
 

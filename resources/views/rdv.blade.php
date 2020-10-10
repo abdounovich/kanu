@@ -98,11 +98,13 @@
    data-offstyle="outline-danger"  data-toggle="toggle">
 
   </td>
-  <td>    <a  class="btn btn-danger   " data-toggle="modal" data-target="#exampleModal"><i class=" fa fa-trash fa-2x"></i>   </a>
+  <td>  @php
+      $theId=$Today_appointment->id;
+  @endphp  <a  class="btn btn-danger " data-toggle="modal" data-target="#exampleModal{{$theId}}"><i class=" fa fa-trash fa-2x"></i>   </a>
   </td>
         </tr>
       <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="exampleModal{{$theId}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" dir="rtl" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -113,10 +115,10 @@
 هل تريد حقا إلغاء هذا الموعد ؟         </div>
         <div class="modal-footer row float-right text-right">
          <div class="col">
-           <form action="/annulerByAdmin" id="myForm" method="post"> 
+         <form action="/annulerByAdmin" id="myForm{{$theId}}" method="post"> 
             @csrf           
-            <input type="text" name="id"  value="{{$Today_appointment->id}}">
-            <a onclick="sendMessage()" class="btn btn-danger  text-white col-4"> نعم </a>
+            <input type="hidden" name="id" value="{{$Today_appointment->id}}">
+            <a  href="/annulerByAdmin/{{$theId}}" class="btn btn-danger  text-white col-4"> نعم </a>
 
             <a class="btn btn-secondary text-white col-4" data-dismiss="modal">  لا شكرا </a>
           </form> </div> 
@@ -131,8 +133,8 @@
   </div>
 
 
-<script> function sendMessage() {
-  document.getElementById("myForm").submit();}</script>
+<script> function sendMessage(theId) {
+  document.getElementById("myForm".theId).submit();}</script>
 
 
 
