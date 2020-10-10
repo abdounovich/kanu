@@ -115,7 +115,7 @@
          <div class="col">
            <form action="/annulerByAdmin" id="myForm" method="post"> 
             @csrf           
-            <input type="hidden" name="id"  value="{{$Today_appointment->id}}">
+            <input type="text" name="id"  value="{{$Today_appointment->id}}">
             <a onclick="sendMessage()" class="btn btn-danger  text-white col-4"> نعم </a>
 
             <a class="btn btn-secondary text-white col-4" data-dismiss="modal">  لا شكرا </a>
