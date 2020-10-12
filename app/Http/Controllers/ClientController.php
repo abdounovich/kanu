@@ -22,12 +22,22 @@ class ClientController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function sendMessageToClient(Request $request){
-        $clients=Client::all();
+    public function sendMessageToClient(Request $request , $id){
         $message=$request->get('message');
-       
-            
-         $botman = app('botman');
+        $botman = app('botman');
+    if($id){
+         $client=Client::find($id);
+         try {
+            $botman->say($message,$client->fb_id, FacebookDriver::class);
+        } catch (\Exception $e) {
+           echo ('FAIL sending message to ');
+           echo ($e->getCode().': '.$e->getMessage());
+        } 
+        return redirect()->back()->with('success', 'قد تم إرسال الرسالة بنجاح ' );   
+
+       }
+        $clients=Client::all();
+        
 
 
 

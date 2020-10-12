@@ -24,7 +24,7 @@
     <h2  class="float-right text-white">محتوى الرسالة </h2>
 </div>
 <div class="container">
-<form action="/sendMsg" method="post">
+<form action="/sendMsg/{{$id}}" method="post">
         @csrf    
         
 
