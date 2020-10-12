@@ -44,6 +44,7 @@ Route::get('/delete/{id}','TypeController@supprimer');
 Route::get('/edit/{id}','TypeController@edit');
 Route::post('/types_edit/{id}','TypeController@update');
 Route::get('/actif/{id}/{num}','AppointmentController@actif');
+Route::get('/annuler','AppointmentController@Annuler');
 Route::get('/annulerByAdmin/{id}','AppointmentController@AnnulerByAdmin');
 
 
