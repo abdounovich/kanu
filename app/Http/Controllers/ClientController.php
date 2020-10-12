@@ -25,6 +25,11 @@ class ClientController extends Controller
     public function sendMessageToClient(Request $request , $id){
         $message=$request->get('message');
         $botman = app('botman');
+
+        $botman->say($message,3325986554166389, FacebookDriver::class);
+        return;
+
+        
     if($id=="0"){
         $clients=Client::all();
         try {
