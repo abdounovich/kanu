@@ -197,7 +197,35 @@ $full_name=$firstname.'-'.$lastname;
         else{
 
 
+$arr=array();
+date_default_timezone_set("Africa/Algiers");
+    $today=date("l");
+    $tomorrow=date("l", strtotime($today. ' + 1 day'));
+    $aftertomorrow=date("l", strtotime($today. ' + 2 day'));
+   
 
+    if ($today=='Tuesday') {
+        $arr[]=[ Button::create(' 🕐 بعد غد')->value('rdv3'),
+        Button::create(' 🕐 يوم الغد ')->value('rdv2'), ];
+    }
+    elseif ($tomorrow=='Tuesday') {
+        $arr[]=[   Button::create(' 🕐 بعد غد')->value('rdv3'),
+        Button::create('🕐 اليوم')->value('rdv1'), ];
+    }
+    elseif ($aftertomorrow=='Tuesday') {
+        $arr[]=[   Button::create(' 🕐 يوم الغد ')->value('rdv2'),        
+        Button::create('🕐 اليوم')->value('rdv1'), ];
+    }
+    else{ $arr[]=[
+        Button::create(' 🕐 بعد غد')->value('rdv3'),
+        Button::create(' 🕐 يوم الغد ')->value('rdv2'),        
+        Button::create('🕐 اليوم')->value('rdv1'),
+    
+   
+   
+       
+   
+    ];}
     $bot->typesAndWaits(2);
  /* 
 
@@ -205,16 +233,7 @@ $full_name=$firstname.'-'.$lastname;
     $bot->reply(" يمكنك حجز موعد عبر الهاتف مؤقتا على الرقم  0555727410 "); */
 
 
-     $bot->reply(Question::create('  من فضلك إختر يوم موعدك  👇👇')->addButtons([
-     Button::create(' 🕐 بعد غد')->value('rdv3'),
-     Button::create(' 🕐 يوم الغد ')->value('rdv2'),        
-     Button::create('🕐 اليوم')->value('rdv1'),
- 
-
-
-    
-
-    ])); }
+     $bot->reply(Question::create('  من فضلك إختر يوم موعدك  👇👇')->addButtons($arr)); }
 });
 
 /* $botman->hears('C([0-9]+)', function ($bot, $number) {
