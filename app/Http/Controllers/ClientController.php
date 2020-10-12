@@ -25,22 +25,8 @@ class ClientController extends Controller
     public function sendMessageToClient(Request $request , $id){
         $message=$request->get('message');
         $botman = app('botman');
-    if($id){
-         $client=Client::find($id);
-         try {
-            $botman->say($message,$client->fb_id, FacebookDriver::class);
-        } catch (\Exception $e) {
-           echo ('FAIL sending message to ');
-           echo ($e->getCode().': '.$e->getMessage());
-        } 
-        return redirect()->back()->with('success', 'قد تم إرسال الرسالة بنجاح ' );   
-
-       }
+    if($id=="0"){
         $clients=Client::all();
-        
-
-
-
         try {
             foreach ($clients as $client ) {
             $botman->say($message,$client->fb_id, FacebookDriver::class);}
@@ -48,10 +34,25 @@ class ClientController extends Controller
            echo ('FAIL sending message to ');
            echo ($e->getCode().': '.$e->getMessage());
         } 
-        return redirect()->back()->with('success', 'قد تم إرسال الرسالة بنجاح ' );   
+        return redirect()->back()->with('success', 'قد تم إرسال الرسالة الى  '. $id );   
+    }
+
+
+
+       
+       
+       else{
+        $client=Client::find($id);
+        try {
+           $botman->say($message,$client->fb_id, FacebookDriver::class);
+       } catch (\Exception $e) {
+          echo ('FAIL sending message to ');
+          echo ($e->getCode().': '.$e->getMessage());
+       } 
+       return redirect()->back()->with('success', 'قد تم إرسال الرسالة بنجاح ' );   
 
               
-            }
+            }}
 
 
             public function sendMessageToClientView($id){

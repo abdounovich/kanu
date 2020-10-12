@@ -64,7 +64,7 @@
 
             <a href="/clients" class="col col-2  text-white btn btn-info m-2 p-2" style="font-size: 60px"> <i class=" p-2 fa fa-users"></i></a>
             <a href="/types" class=" col col-2 text-white btn btn-success m-2 p-2" style="font-size: 60px"><i class=" p-2 fa fa-server"></i></a>
-            <a class=" col col-2 btn btn-light m-2 p-2 " style="font-size: 60px"   href="/sendMsg"><i class=" p-2 fa fa-comments"></i> </a>
+            <a class=" col col-2 btn btn-light m-2 p-2 " style="font-size: 60px"   href="/sendMsg/0"><i class=" p-2 fa fa-comments"></i> </a>
 
             <a href="/settings" class="col col-2  text-white btn btn-warning m-2 p-2" style="font-size: 60px"> <i class=" p-2 fa fa-wrench"></i></a> 
 
