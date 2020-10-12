@@ -49,7 +49,7 @@ class ClientController extends Controller
                     if ($id) {
                 $clients=Client::find($id);
         return view("sendMessageToClients")->with('clients',$clients)
-        ->with('config',$config);
+        ->with('config',$config)->with('id',$id);;
                }
                else{
                 $clients=Client::all();
