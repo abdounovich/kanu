@@ -67,7 +67,7 @@ class ClientController extends Controller
         ->with('config',$config)->with('id',$id);;
     }
                     else  {
-                return view("sendMessageToClients")->with('clients',$clients)
+                return view("sendMessageToClients")
                 ->with('config',$config)->with('id',$id);;
                        }
                 }
