@@ -26,7 +26,7 @@ class ClientController extends Controller
         $message=$request->get('message');
         $botman = app('botman');
 
-        $botman->say($message,3325986554166389, FacebookDriver::class);
+        $botman->say($message,$id, FacebookDriver::class);
         return;
 
         
