@@ -205,27 +205,20 @@ date_default_timezone_set("Africa/Algiers");
    
 
     if ($today=='Tuesday') {
-        $arr[]=[ Button::create(' 🕐 بعد غد')->value('rdv3'),
-        Button::create(' 🕐 يوم الغد ')->value('rdv2'), ];
+        $arr[]=Button::create(' 🕐 بعد غد')->value('rdv3');
+        $arr[]=Button::create(' 🕐 يوم الغد ')->value('rdv2');
     }
     elseif ($tomorrow=='Tuesday') {
-        $arr[]=[   Button::create(' 🕐 بعد غد')->value('rdv3'),
-        Button::create('🕐 اليوم')->value('rdv1'), ];
+        $arr[]=Button::create(' 🕐 بعد غد')->value('rdv3');
+        $arr[]=Button::create('🕐 اليوم')->value('rdv1');
     }
     elseif ($aftertomorrow=='Tuesday') {
-        $arr[]=[   Button::create(' 🕐 يوم الغد ')->value('rdv2'),        
-        Button::create('🕐 اليوم')->value('rdv1'), ];
+        $arr[]=   Button::create(' 🕐 يوم الغد ')->value('rdv2');        
+        $arr[]=Button::create('🕐 اليوم')->value('rdv1') ;
     }
-    else{ $arr[]=[
-        Button::create(' 🕐 بعد غد')->value('rdv3'),
-        Button::create(' 🕐 يوم الغد ')->value('rdv2'),        
-        Button::create('🕐 اليوم')->value('rdv1'),
-    
-   
-   
-       
-   
-    ];}
+    else{ $arr[]=Button::create(' 🕐 بعد غد')->value('rdv3');
+        $arr[]=Button::create(' 🕐 يوم الغد ')->value('rdv2');     
+        $arr[]=Button::create('🕐 اليوم')->value('rdv1');}
     $bot->typesAndWaits(2);
  /* 
 
