@@ -45,6 +45,8 @@ class ClientController extends Controller
        
        
        else{
+           echo $id;
+           dd();
         try {
            $botman->say($message,$id, FacebookDriver::class);
        } catch (\Exception $e) {
