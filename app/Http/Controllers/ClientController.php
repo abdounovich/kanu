@@ -44,13 +44,18 @@ class ClientController extends Controller
             }
 
 
-            public function sendMessageToClientView( ){
-               
-                $clients=Client::all();
+            public function sendMessageToClientView($id){
                 $config=Config::get('botman.facebook.token');
+                    if ($id) {
+                $clients=Client::find($id);
         return view("sendMessageToClients")->with('clients',$clients)
         ->with('config',$config);
-                    }
+               }
+               else{
+                $clients=Client::all();
+        return view("sendMessageToClients")->with('clients',$clients)
+        ->with('config',$config);
+                    }}
         
 
 
