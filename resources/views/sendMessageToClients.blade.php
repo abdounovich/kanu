@@ -15,12 +15,7 @@
 @endif
 <div class="row mr-4 p-4">
     
-@if ($id)
 
-
-{{ $id }}
-    
-@endif
     <h2  class="float-right text-white">محتوى الرسالة </h2>
 </div>
 <div class="container">
