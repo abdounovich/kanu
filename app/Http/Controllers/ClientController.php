@@ -47,9 +47,8 @@ class ClientController extends Controller
        
        
        else{
-        $client=Client::find($id);
         try {
-           $botman->say($message,$client->fb_id, FacebookDriver::class);
+           $botman->say($message,$id, FacebookDriver::class);
        } catch (\Exception $e) {
           echo ('FAIL sending message to ');
           echo ($e->getCode().': '.$e->getMessage());
