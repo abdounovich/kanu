@@ -71,7 +71,7 @@
             width: 100px;
             overflow: hidden;
             white-space: nowrap;
-          text-overflow: ellipsis;"><a href="sendMsg/{{$Today_appointment->fb_id}}"></a>{{$Today_appointment->facebook}}</span>  <span dir="ltr" style=" position: absolute;
+          text-overflow: ellipsis;"><a href="sendMsg/{{$Today_appointment->fb_id}}">{{$Today_appointment->facebook}}</a></span>  <span dir="ltr" style=" position: absolute;
             top:1px;
             font-size:10px;
             right:1px; width:30px;height:30px; 
