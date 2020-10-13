@@ -35,6 +35,7 @@ class ClientController extends Controller
             foreach ($clients as $client ) {
                 $Cid=$client->fb_id;
                 echo $Cid;
+                dd();
 /*             $botman->say($message,$Cid, FacebookDriver::class);
 
  */  }      
