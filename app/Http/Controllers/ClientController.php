@@ -30,14 +30,15 @@ class ClientController extends Controller
         
     if($id=="0"){
         $clients=Client::all();
-        try {
+    
+       
             foreach ($clients as $client ) {
-            $botman->say($message,$client->fb_id, FacebookDriver::class);}
-        } catch (\Exception $e) {
-           echo ('FAIL sending message to ');
-           echo ($e->getCode().': '.$e->getMessage());
-        } 
-        return redirect()->back()->with('success', 'قد تم إرسال الرسالة الى  '. $id );   
+                $Cid=$client->fb_id;
+                echo $Cid;
+/*             $botman->say($message,$Cid, FacebookDriver::class);
+
+ */  }      
+        return redirect()->back()->with('success', ' تم إرسال الرسالة بنجاح ' );   
     }
 
 
