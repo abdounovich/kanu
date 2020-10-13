@@ -34,11 +34,10 @@ class ClientController extends Controller
        
             foreach ($clients as $client ) {
                 $Cid=$client->fb_id;
-                echo $Cid;
                 
-/*             $botman->say($message,$Cid, FacebookDriver::class);
+            $botman->say($message,$Cid, FacebookDriver::class);
 
- */  }     dd(); 
+   }     
         return redirect()->back()->with('success', ' تم إرسال الرسالة بنجاح ' );   
     }
 
