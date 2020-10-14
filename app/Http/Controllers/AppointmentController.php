@@ -247,7 +247,6 @@ $appointments=Appointment::whereJour($today)->where('ActiveType','1')->orWhere('
  
  
 
-return redirect('/rdv')->with('success', 'تم تجديد المواعيد ومنح النقاط للزبائن');
 }
 
 
