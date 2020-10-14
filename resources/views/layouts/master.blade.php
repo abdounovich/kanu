@@ -58,15 +58,15 @@
        <div class="container  ">
             <div class="row ">
               <div class="col p-4 btn-group">
-                <a class=" col col-2 btn btn-primary m-2 p-2 " style="font-size: 60px"   href="/"><i class=" p-2 fa fa-home"></i> </a>
+                <a class=" col col-2 text-success btn btn-dark m-2 p-2 " style="font-size: 60px"   href="/"><i class=" p-2 fa fa-home"></i> </a>
 
-<a href="/rdv" class=" col col-2 text-white btn btn-danger m-2 p-2" style="font-size: 60px"><i class=" p-2 fa fa-calendar"></i></a> 
+<a href="/rdv" class=" col col-2 text-success btn btn-dark m-2 p-2" style="font-size: 60px"><i class=" p-2 fa fa-calendar"></i></a> 
 
-            <a href="/clients" class="col col-2  text-white btn btn-info m-2 p-2" style="font-size: 60px"> <i class=" p-2 fa fa-users"></i></a>
-            <a href="/types" class=" col col-2 text-white btn btn-success m-2 p-2" style="font-size: 60px"><i class=" p-2 fa fa-server"></i></a>
-            <a class=" col col-2 btn btn-light m-2 p-2 " style="font-size: 60px"   href="/sendMsg/0/"><i class=" p-2 fa fa-comments"></i> </a>
+            <a href="/clients" class="col col-2  text-success btn btn-dark m-2 p-2" style="font-size: 60px"> <i class=" p-2 fa fa-users"></i></a>
+            <a href="/types" class=" col col-2 text-success btn btn-dark m-2 p-2" style="font-size: 60px"><i class=" p-2 fa fa-server"></i></a>
+            <a class=" col col-2 text-success btn btn-dark m-2 p-2 " style="font-size: 60px"   href="/sendMsg/0/"><i class=" p-2 fa fa-comments"></i> </a>
 
-            <a href="/settings" class="col col-2  text-white btn btn-warning m-2 p-2" style="font-size: 60px"> <i class=" p-2 fa fa-wrench"></i></a> 
+            <a href="/settings" class="col col-2  text-success btn btn-dark  m-2 p-2" style="font-size: 60px"> <i class=" p-2 fa fa-wrench"></i></a> 
 
 
 
