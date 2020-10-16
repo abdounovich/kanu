@@ -14,16 +14,24 @@
 
 
 <div class="container">
-    <div class="row">
-        
-<form method="post" action="addAppoint">
+    <div class="row text-right" >
+            <form class=" form-group" method="post" action="addAppoint">
     @csrf
-<input type="time" name="debut" id="debut">
-<input type="time" name="fin" id="fin">
-<input type="date" name="jour" id="jour">
+<label class="h4 text-white" for="debut">من :</label>
+    <input class="m-2 p-2 form-control" type="time" name="debut" id="debut">
+    <label  class="h4 text-white" for="fin" >إلى  :</label>
 
-    <input type="submit" value="ajouter">
+    <input class="m-2 p-2 form-control"type="time" name="fin" id="fin">
+    
+    <label  class="h4 text-white" for="jour">يوم :</label>
+
+  <input class="m-2 p-2 col col-12 form-control" type="date" name="jour" id="jour">
+    
+
+
+    <input class=" m-2 p-2 btn btn-success" style="width: 99%" type="submit" value="إضافة">
 </form>
+
  
     </div>
 </div>
