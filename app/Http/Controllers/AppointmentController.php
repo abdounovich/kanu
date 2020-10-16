@@ -159,7 +159,7 @@ $afterTommorow=date('Y-m-d', strtotime($today. ' + 2 day'));
     {
         $app=new Appointment();
                 $app->facebook="admin";
-                $app->type_id="100";
+                $app->type_id="10";
                 $app->ActiveType="5";
                 $app->client_id="1";
                 $app->jour=$request->get('jour');
