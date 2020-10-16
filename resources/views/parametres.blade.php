@@ -52,7 +52,7 @@
         @csrf
         <div class="form-group">
 
-<input type="text" class="form-control p-2 m-2"  name="nom" id="nom">  
+<input type="time" class="form-control p-2 m-2"  name="nom" id="nom">  
 <input type="text"  class="form-control p-2 m-2"  name="valeur" id="valeur">     
 <input type="submit" class="btn btn-success p-2 m-2" value="اضافة">   
         </div>
