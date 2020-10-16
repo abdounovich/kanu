@@ -53,14 +53,11 @@
              <form action="/addAppoint" method="post">
         @csrf
         <div class="form-group">
-            <label class="h4 text-white" for="debut">من :</label>
 
 <input type="time" class="form-control p-2 m-2"  name="debut" id="debut"> 
 
-<label class="h4 text-white" for="fin">من :</label>
 
 <input type="time" class="form-control p-2 m-2"  name="fin" id="fin">
-<label  class="h4 text-white" for="jour">يوم :</label>
 
 <input type="date"  class="form-control p-2 m-2"  name="jour" id="jour">     
 <input type="submit" class="btn btn-success p-2 m-2" value="اضافة">   
