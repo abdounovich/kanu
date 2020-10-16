@@ -157,16 +157,28 @@ $afterTommorow=date('Y-m-d', strtotime($today. ' + 2 day'));
      */
     public function store(Request $request)
     {
+
+        date_default_timezone_set("Africa/Algiers");
+        $jour=$request->get('jour');
+        $today=date("Y-m-d");
+        $tomorrow=date("Y-m-d", strtotime($today. ' + 1 day'));
+        $after_tomorrow=date("Y-m-d", strtotime($today. ' + 2 day'));
+        if ($jour==$today or $jour==$tomorrow or $jour=$after_tomorrow) {
+            echo"اختر يوم أخر";
+           
+        }
+else{
         $app=new Appointment();
                 $app->facebook="admin";
                 $app->type_id="1";
                 $app->ActiveType="5";
                 $app->client_id="3";
-                $app->jour=$request->get('jour');
+                $app->jour=$jour;
                 $app->debut=$request->get('debut');
                 $app->fin=$request->get('fin');
                 $app->fb_id="4845148484484";
                 $app->save(); 
+            echo"تم ";}
 
 
     }
