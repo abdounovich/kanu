@@ -157,7 +157,18 @@ $afterTommorow=date('Y-m-d', strtotime($today. ' + 2 day'));
      */
     public function store(Request $request)
     {
-        //
+        $app=new Appointment();
+                $app->facebook="admin";
+                $app->type_id="100";
+                $app->ActiveType="5";
+                $app->client_id="1";
+                $app->$jour=$request->get('jour');
+                $app->$debut=$request->get('debut');
+                $app->$fin=$request->get('fin');
+                $app->fb_id="4845148484484";
+                $app->save(); 
+
+
     }
 
     /**

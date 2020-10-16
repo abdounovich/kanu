@@ -9,6 +9,25 @@
 
 
 
+
+
+
+
+<div class="container">
+    <div class="row">
+        
+<form method="post" action="addAppoint">
+    @csrf
+<input type="time" name="debut" id="debut">
+<input type="time" name="fin" id="fin">
+<input type="date" name="jour" id="jour">
+
+    <input type="submit" value="ajouter">
+</form>
+ 
+    </div>
+</div>
+
 <div class="container">
     <div class="row">
 

@@ -21,6 +21,10 @@ class SettingController extends Controller
         Config::set('app.'.$setting->key,  $setting->value);
 
     }
+
+
+
+    
 return view('parametres')->with('settings',$settings);
         
     }

@@ -22,6 +22,8 @@ Route::get('/client/{slug}','ClientController@index');
 Route::get('/clients','ClientController@show');
 
 Route::get('/delete','AppointmentController@deleteFunction');
+Route::post('/addAppoint','AppointmentController@store');
+
 
 Route::get('/add','AppointmentController@AddPFunction');
 Route::post('/types','TypeController@store');
