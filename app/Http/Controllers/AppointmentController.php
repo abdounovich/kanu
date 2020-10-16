@@ -163,7 +163,7 @@ $afterTommorow=date('Y-m-d', strtotime($today. ' + 2 day'));
         $today=date("Y-m-d");
         $tomorrow=date("Y-m-d", strtotime($today. ' + 1 day'));
         $after_tomorrow=date("Y-m-d", strtotime($today. ' + 2 day'));
-        if ($jour==$today or $jour==$tomorrow or $jour=$after_tomorrow) {
+        if ($jour==$today or $jour==$tomorrow or $jour==$after_tomorrow) {
             echo"اختر يوم أخر";
            
         }
