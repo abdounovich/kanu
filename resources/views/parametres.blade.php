@@ -14,24 +14,24 @@
 
 
 <div class="container">
-    <div class="row text-right " >
+    <div class="row text-right" >
 
         <div class=" form-group"> <form  method="post" action="addAppoint">
-            @csrf
-        <label class="h4 text-white" for="debut">من :</label>
-            <input class="m-2 p-2 form-control" type="time" name="debut" id="debut">
-            <label  class="h4 text-white" for="fin" >إلى  :</label>
-        
-            <input class="m-2 p-2 form-control"type="time" name="fin" id="fin">
-            
-            <label  class="h4 text-white" for="jour">يوم :</label>
-        
-          <input class="m-2 p-2 col col-12 form-control" type="date" name="jour" id="jour">
-            
-        
-        
-            <input class=" m-2 p-2 btn btn-success" style="width: 99%" type="submit" value="إضافة">
-        </form></div>
+    @csrf
+<label class="h4 text-white " for="debut">من :</label>
+    <input class="m-2 p-2 col col-12 form-control" type="time" name="debut" id="debut">
+    <label  class="h4 text-white" for="fin" >إلى  :</label>
+
+    <input class="m-2 p-2 form-control"type="time" name="fin" id="fin">
+    
+    <label  class="h4 text-white" for="jour">يوم :</label>
+
+  <input class="m-2 p-2 col col-12 form-control" type="date" name="jour" id="jour">
+    
+
+
+    <input class=" m-2 p-2 btn btn-success" style="width: 99%" type="submit" value="إضافة">
+</form></div>
            
 
  
@@ -45,7 +45,6 @@
     </div>
 </div>
 
-
 <div class="container">
     <div class="row">
 
@@ -53,8 +52,8 @@
         @csrf
         <div class="form-group">
 
-<input type="date" class="form-control p-2 m-2"  name="nom" id="nom">  
-<input type="time"  class="form-control p-2 m-2"  name="valeur" id="valeur">     
+<input type="text" class="form-control p-2 m-2"  name="nom" id="nom">  
+<input type="text"  class="form-control p-2 m-2"  name="valeur" id="valeur">     
 <input type="submit" class="btn btn-success p-2 m-2" value="اضافة">   
         </div>
 
