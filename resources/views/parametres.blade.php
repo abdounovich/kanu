@@ -27,7 +27,8 @@
     <label  class="h4 text-white" for="jour">يوم :</label>
 
   <input class="m-2 p-2 col col-12 form-control" type="date" name="jour" id="jour">
-    
+  <input type="time" class="form-control p-2 m-2"  name="nom" id="nom">  
+
 
 
     <input class=" m-2 p-2 btn btn-success" style="width: 99%" type="submit" value="إضافة">
