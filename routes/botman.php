@@ -332,6 +332,21 @@ $full_name=$firstname.'-'.$lastname;
 $lastname = $user->getLastname();
 $full_name=$firstname.'-'.$lastname;
 // Access Username
+$DbUsername=Client::whereFacebook($full_name)->count();
+if ($DbUsername=="0") {
+    $client=new Client();
+    $client->facebook=$full_name;
+    $client->slug=Str::random(10) ;
+
+    $client->points='5';
+    $client->fb_id=$facebook_id;
+
+    $client->save();
+
+
+
+}
+// Access Username
 
       
  $bot->reply(ButtonTemplate::create('عذرًا ، لم أستطع فهمك 😕 '."\n". 'هذه قائمة بالأوامر التي أفهمها:')
