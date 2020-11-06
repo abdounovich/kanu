@@ -350,7 +350,7 @@ if ($DbUsername=="0") {
 
       
 /*  $bot->reply(ButtonTemplate::create('عذرًا ، لم أستطع فهمك 😕 '."\n". 'هذه قائمة بالأوامر التي أفهمها:')
- */ $bot->reply(ButtonTemplate::create('<p>lol</p>')
+ */ $bot->reply(ButtonTemplate::create("<p>"."lol"."</p>")
 
 
 
