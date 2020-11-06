@@ -38,6 +38,7 @@
     </style>
     </head>
     <body dir="rtl">
+      @auth
         <div class="se-pre-con"></div>
         <div>   @if ($errors->any())
             <div class="alert alert-danger">
@@ -81,15 +82,16 @@
 
 
           <!-- Modal -->
-          @if (Auth::check()) {
+        
+            
+   
             
         
         <div class="container">
             @yield('content')
         </div>
 
-}
-@endif
+
 
 
 
@@ -97,5 +99,5 @@
         
       <script src="{{ asset('js/app.js') }}" type="text/js"></script>
      
-    </body>
+    @endauth</body>
 </html>
