@@ -12,8 +12,10 @@
 */
 
 
+Route::get('/add','AppointmentController@AddPFunction');
+Route::get('/tester','HomeController@func');
 
-
+Auth::routes();
 Route::match(['get', 'post'], '/botman', 'BotManController@handle');
 
 Route::get('/botman/tinker', 'BotManController@tinker');
@@ -25,7 +27,6 @@ Route::get('/delete','AppointmentController@deleteFunction');
 Route::post('/addAppoint','AppointmentController@store');
 
 
-Route::get('/add','AppointmentController@AddPFunction');
 Route::post('/types','TypeController@store');
 Route::get('/types','TypeController@index');
 Route::get('/test/{type}/D1/{username}/{Cid}','testController@today');
@@ -60,7 +61,6 @@ Route::get('/commande', function () {
 Route::get('/t', function () {
     return view('tester') ;
 });
-Route::get('/tester','HomeController@func');
 Route::get('/abcd','TestController@try');
 Route::post('/sendMsg/{id}','ClientController@sendMessageToClient');
 Route::get('/sendMsg/{id}','ClientController@sendMessageToClientView');
@@ -74,7 +74,7 @@ Route::get('/sendMsg/{id}','ClientController@sendMessageToClientView');
 /* Route::get('/tester', function () {
     return view('tester') ;
 }); */
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
