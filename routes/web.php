@@ -16,12 +16,12 @@ Route::get('/add','AppointmentController@AddPFunction');
 Route::get('/tester','HomeController@func');
 
 Auth::routes();
-Route::match(['get', 'post'], '/botman', 'BotManController@handle');
+Route::match(['get', 'post'], '/botman', 'BotManController@handle')->middleware('auth');;
 
-Route::get('/botman/tinker', 'BotManController@tinker');
-Route::get('/rdv','AppointmentController@index');
-Route::get('/client/{slug}','ClientController@index');
-Route::get('/clients','ClientController@show');
+Route::get('/botman/tinker', 'BotManController@tinker')->middleware('auth');;
+Route::get('/rdv','AppointmentController@index')->middleware('auth');;
+Route::get('/client/{slug}','ClientController@index')->middleware('auth');;
+Route::get('/clients','ClientController@show')->middleware('auth');;
 
 Route::get('/delete','AppointmentController@deleteFunction');
 Route::post('/addAppoint','AppointmentController@store');

@@ -38,7 +38,7 @@
     </style>
     </head>
     <body dir="rtl">
-      @auth
+      
         <div class="se-pre-con"></div>
         <div>   @if ($errors->any())
             <div class="alert alert-danger">
@@ -99,5 +99,5 @@
         
       <script src="{{ asset('js/app.js') }}" type="text/js"></script>
      
-    @endauth</body>
+  </body>
 </html>
