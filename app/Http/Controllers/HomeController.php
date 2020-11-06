@@ -23,6 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $clients=Client::all();
+        $appointments=Appointment::all();
+        $types=Types::all();
+                return view('home')->with('clients',$clients)->with('appointments',$appointments)->with('types',$types);
     }
 }
