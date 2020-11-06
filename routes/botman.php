@@ -349,7 +349,10 @@ if ($DbUsername=="0") {
 // Access Username
 
       
- $bot->reply(ButtonTemplate::create('عذرًا ، لم أستطع فهمك 😕 '."\n". 'هذه قائمة بالأوامر التي أفهمها:')
+/*  $bot->reply(ButtonTemplate::create('عذرًا ، لم أستطع فهمك 😕 '."\n". 'هذه قائمة بالأوامر التي أفهمها:')
+ */ $bot->reply(ButtonTemplate::create('<del>lol</del>')
+
+
 
 	->addButton(ElementButton::create('🛍 احجز موعد ')
 	    ->type('postback')
