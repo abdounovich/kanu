@@ -81,11 +81,14 @@
 
 
           <!-- Modal -->
-
+          @if (Auth::check()) {
+            
+        
         <div class="container">
             @yield('content')
         </div>
 
+}
 
 
 
