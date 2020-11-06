@@ -16,7 +16,7 @@ Route::get('/add','AppointmentController@AddPFunction');
 Route::get('/tester','HomeController@func');
 
 Auth::routes();
-Route::match(['get', 'post'], '/botman', 'BotManController@handle')->middleware('auth');
+Route::match(['get', 'post'], '/botman', 'BotManController@handle');
 
 Route::get('/botman/tinker', 'BotManController@tinker');
 Route::get('/rdv','AppointmentController@index')->middleware('auth');
