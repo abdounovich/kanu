@@ -29,6 +29,6 @@ class HomeController extends Controller
         $clients=Client::all();
         $appointments=Appointment::all();
         $types=Type::all();
-                return view('home')->with('clients',$clients)->with('appointments',$appointments)->with('types',$types);
+        return view('home')->with('clients',$clients)->with('appointments',$appointments)->with('types',$types);
     }
 }
