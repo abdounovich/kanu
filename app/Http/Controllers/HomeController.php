@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Type;
+use App\Client;
+use App\Appointment;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,7 +28,7 @@ class HomeController extends Controller
     {
         $clients=Client::all();
         $appointments=Appointment::all();
-        $types=Types::all();
+        $types=Type::all();
                 return view('home')->with('clients',$clients)->with('appointments',$appointments)->with('types',$types);
     }
 }
