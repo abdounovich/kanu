@@ -31,11 +31,11 @@ Route::post('/types','TypeController@store')
 Route::get('/types','TypeController@index')
 ->middleware('auth');
 Route::get('/test/{type}/D1/{username}/{Cid}','testController@today')
-->middleware('auth');
+;
 Route::get('/test/{type}/D2/{username}/{Cid}','testController@tomorrow')
-->middleware('auth');
+;
 Route::get('/test/{type}/D3/{username}/{Cid}','testController@afterTomorrow')
-->middleware('auth');
+;
 Route::get('/settings','SettingController@index')
 ->middleware('auth');
 Route::post('/settings','SettingController@store')
