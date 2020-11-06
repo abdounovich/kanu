@@ -20,11 +20,11 @@ Route::match(['get', 'post'], '/botman', 'BotManController@handle');
 
 Route::get('/botman/tinker', 'BotManController@tinker');
 Route::get('/rdv','AppointmentController@index')->middleware('auth');
-Route::get('/client/{slug}','ClientController@index')->middleware('auth');
+Route::get('/client/{slug}','ClientController@index');
 Route::get('/clients','ClientController@show')->middleware('auth');
 
 Route::get('/delete','AppointmentController@deleteFunction')->middleware('auth');
-Route::post('/addAppoint','AppointmentController@store')->middleware('auth');
+Route::post('/addAppoint','AppointmentController@store');
 
 Route::post('/types','TypeController@store')
 ->middleware('auth');
@@ -47,10 +47,10 @@ Route::post('/settings/{id}','SettingController@update')
 
 
 Route::post('/test2','testController@sendTextMessage')
-->middleware('auth');
+;
 
 Route::post('/test','testController@commande')
-->middleware('auth');
+;
 
 Route::get('/delete/{id}','TypeController@supprimer')
 ->middleware('auth');
@@ -59,11 +59,11 @@ Route::get('/edit/{id}','TypeController@edit')
 Route::post('/types_edit/{id}','TypeController@update')
 ->middleware('auth');
 Route::get('/actif/{id}/{num}','AppointmentController@actif')
-->middleware('auth');
+;
 Route::post('/annuler','AppointmentController@Annuler')
-->middleware('auth');
+;
 Route::get('/annulerByAdmin/{id}','AppointmentController@AnnulerByAdmin')
-->middleware('auth');
+;
 
 
 Route::get('/','HomeController@index')
@@ -79,10 +79,9 @@ Route::get('/t', function () {
 });
 Route::get('/abcd','TestController@try');
 Route::post('/sendMsg/{id}','ClientController@sendMessageToClient')
-->middleware('auth');
+;
 Route::get('/sendMsg/{id}','ClientController@sendMessageToClientView')
-->middleware('auth');
-
+;
 
 
 
