@@ -74,3 +74,8 @@ Route::get('/sendMsg/{id}','ClientController@sendMessageToClientView');
 /* Route::get('/tester', function () {
     return view('tester') ;
 }); */
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
