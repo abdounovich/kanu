@@ -48,7 +48,7 @@ Route::post('/settings/{id}','SettingController@update')
 Route::post('/test2','testController@sendTextMessage')
 ;
 
-Route::post('/tester','testController@func')
+Route::get('/tester','testController@func')
 ;
 
 Route::get('/delete/{id}','TypeController@supprimer')
