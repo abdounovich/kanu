@@ -176,6 +176,13 @@ $config=Config::get('app.url');
            $d_pause="12:00";
            $f_pause="13:00";
        }
+
+       elseif($date=='Thursday'){
+        $debut="00:00";
+        $fin="00:05"; 
+        $d_pause="12:00";
+        $f_pause="12:01";
+    }
     
        else{ $debut="16:00";
         $fin="19:30";
@@ -312,6 +319,12 @@ $config=Config::get('app.url');
            $f_pause="13:00";
        }
     
+       elseif($date=='Thursday'){
+        $debut="00:00";
+        $fin="00:05"; 
+        $d_pause="12:00";
+        $f_pause="12:01";
+    }
        else{ $debut="16:00";
         $fin="19:30";
         $d_pause="14:00";
@@ -446,6 +459,12 @@ $config=Config::get('app.url');
            $f_pause="13:00";
        }
     
+       elseif($date=='Thursday'){
+        $debut="00:00";
+        $fin="00:05"; 
+        $d_pause="12:00";
+        $f_pause="12:01";
+    }
        else{ $debut="16:00";
         $fin="19:30";
         $d_pause="14:00";
