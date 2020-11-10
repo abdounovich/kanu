@@ -55,6 +55,7 @@ return view('parametres')->with('settings',$settings);
 
     }
 
+    
     /**
      * Display the specified resource.
      *

@@ -13,7 +13,6 @@
 
 
 Route::get('/add','AppointmentController@AddPFunction');
-Route::get('/tester','HomeController@func');
 
 Auth::routes();
 Route::match(['get', 'post'], '/botman', 'BotManController@handle');
@@ -49,7 +48,7 @@ Route::post('/settings/{id}','SettingController@update')
 Route::post('/test2','testController@sendTextMessage')
 ;
 
-Route::post('/test','testController@commande')
+Route::post('/tester','testController@func')
 ;
 
 Route::get('/delete/{id}','TypeController@supprimer')
