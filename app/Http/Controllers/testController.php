@@ -325,13 +325,13 @@ public function tomorrow($type,$username,$Cid){
   }
      else{ $debut="16:00";
       $fin="19:30";
-      $d_pause="14:00";
-      $f_pause="15:00";}
+      $d_pause="00:00";
+      $f_pause="00:01";}
   
      $jour=date("Y-m-d");
-     $afterTommorow=date('Y-m-d', strtotime($jour. ' + 1 day'));
+     $tomorrow=date('Y-m-d', strtotime($jour. ' + 1 day'));
   
-     $jour=$afterTommorow; 
+     $jour=$tomorrow; 
   
       $debut=$jour." ".$debut.":00";
       $debut=date("Y-m-d H:i:s", strtotime(date($debut)));  
