@@ -361,7 +361,7 @@ public function tomorrow($type,$username,$Cid){
   
             }
             
-            if (count($afterTommorow_appointments)>0) {
+            if (count($Tomorrow_appointments)>0) {
            
            
                 foreach ($arr as $key) { 
