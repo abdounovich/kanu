@@ -301,7 +301,7 @@ public function tomorrow($type,$username,$Cid){
 
   date_default_timezone_set("Africa/Algiers");
   $date=date("l");
-      $date=date("l", strtotime($date. ' + 2 day'));
+      $date=date("l", strtotime($date. ' + 1 day'));
   
   
       if ($date=='Friday') {
