@@ -177,7 +177,7 @@ $config=Config::get('app.url');
            $f_pause="13:00";
        }
 
-       elseif($date=='Thursday'){
+       elseif($date=='Tuesday'){
         $debut="00:00";
         $fin="00:05"; 
         $d_pause="12:00";
@@ -317,7 +317,7 @@ public function tomorrow($type,$username,$Cid){
          $f_pause="13:00";
      }
   
-     elseif($date=='Thursday'){
+     elseif($date=='Tuesday'){
       $debut="00:00";
       $fin="00:05"; 
       $d_pause="12:00";
@@ -463,7 +463,7 @@ public function tomorrow($type,$username,$Cid){
            $f_pause="13:00";
        }
     
-       elseif($date=='Thursday'){
+       elseif($date=='Tuesday'){
         $debut="00:00";
         $fin="00:05"; 
         $d_pause="12:00";
