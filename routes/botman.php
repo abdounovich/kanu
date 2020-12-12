@@ -207,6 +207,8 @@ date_default_timezone_set("Africa/Algiers");
     if ($today=='Tuesday') {
         $arr[]=Button::create(' 🕐 بعد غد')->value('rdv3');
         $arr[]=Button::create(' 🕐 يوم الغد ')->value('rdv2');
+
+        
     }
     elseif ($tomorrow=='Tuesday') {
         $arr[]=Button::create(' 🕐 بعد غد')->value('rdv3');
