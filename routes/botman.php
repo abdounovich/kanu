@@ -239,7 +239,7 @@ date_default_timezone_set("Africa/Algiers");
 
     }
     else{  
-        $arr[]=  ElementButton::create('  اليوم 🕐')
+        $arr[]=  ElementButton::create('     اليوم 🕐')
         ->type('postback')
         ->payload('rdv1');
         $arr[]=  ElementButton::create(' يوم الغد  🕐')
