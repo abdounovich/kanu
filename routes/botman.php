@@ -216,16 +216,40 @@ date_default_timezone_set("Africa/Algiers");
         
     }
     elseif ($tomorrow=='Tuesday') {
-        $arr[]=Button::create(' 🕐 بعد غد')->value('rdv3');
-        $arr[]=Button::create('🕐 اليوم')->value('rdv1');
+       
+
+        $arr[]=  ElementButton::create('🕐 بعد غد ')
+        ->type('postback')
+        ->payload('rdv3');
+      
+        $arr[]=  ElementButton::create('🕐 اليوم   ')
+        ->type('postback')
+        ->payload('rdv1');
     }
     elseif ($aftertomorrow=='Tuesday') {
-        $arr[]=   Button::create(' 🕐 يوم الغد ')->value('rdv2');        
-        $arr[]=Button::create('🕐 اليوم')->value('rdv1') ;
+     
+        $arr[]=  ElementButton::create('🕐 اليوم ')
+        ->type('postback')
+        ->payload('rdv1');
+      
+        $arr[]=  ElementButton::create('🕐 يوم الغد ')
+        ->type('postback')
+        ->payload('rdv2');
+
+
     }
-    else{ $arr[]=Button::create(' 🕐 بعد غد')->value('rdv3');
-        $arr[]=Button::create(' 🕐 يوم الغد ')->value('rdv2');     
-        $arr[]=Button::create('🕐 اليوم')->value('rdv1');}
+    else{  
+        $arr[]=  ElementButton::create('🕐  اليوم ')
+        ->type('postback')
+        ->payload('rdv1');
+        $arr[]=  ElementButton::create('🕐 يوم الغد ')
+        ->type('postback')
+        ->payload('rdv2');
+          $arr[]=  ElementButton::create('🕐 بعد غد ')
+        ->type('postback')
+        ->payload('rdv3');
+      
+    }
     $bot->typesAndWaits(2);
  /* 
 
