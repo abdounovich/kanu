@@ -205,9 +205,14 @@ date_default_timezone_set("Africa/Algiers");
    
 
     if ($today=='Tuesday') {
-        $arr[]=Button::create(' 🕐 بعد غد')->value('rdv3');
-        $arr[]=Button::create(' 🕐 يوم الغد ')->value('rdv2');
-
+   
+        $arr[]=  ElementButton::create('🕐 بعد غد ')
+        ->type('postback')
+        ->payload('rdv3');
+      
+        $arr[]=  ElementButton::create('🕐 يوم الغد ')
+        ->type('postback')
+        ->payload('rdv2');
         
     }
     elseif ($tomorrow=='Tuesday') {
@@ -228,7 +233,8 @@ date_default_timezone_set("Africa/Algiers");
     $bot->reply(" يمكنك حجز موعد عبر الهاتف مؤقتا على الرقم  0555727410 "); */
 
 
-     $bot->reply(Question::create('  من فضلك إختر يوم موعدك  👇👇')->addButtons($arr)); }
+     $bot->reply(ButtonTemplate::create('  من فضلك إختر يوم موعدك  👇👇')->addButtons($arr)); 
+    }
 });
 
 /* $botman->hears('C([0-9]+)', function ($bot, $number) {
