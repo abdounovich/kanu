@@ -192,7 +192,30 @@
              </div>
     </div>
   </div>
-
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapseTwo">
+          EXAMPLE ?
+        </button>
+      </h5>
+    </div>
+    <div id="collapse11" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        One day I got a call from one of my clients, he works as a barber. I made an app for him that let their clients booking appointments through Messenger Chatbot.
+        He was so angry and he was shouting why the bot stopped, people can't book an appointment anymore 
+        What happened?
+        I let him finish. I apologized to him and told him tell me more, what exactly is the problem?
+        He told me that when customers clicked on confirmation of reservations, they would receive an error message with a three-digit code
+        I told him not to worry. The solution is very simple. Just send me a screenshot and I will solve the problem now.
+        He did what I asked of him and I found that Facebook made some updates and removed some features.
+        And they were sending me alerts on my Facebook developer account, but I was busy doing the exams.
+        I solved the problem and I apologized to him again, I told him that the app was just missing some update and he understood the situation.
+         I learned from this experience that I have to stay up-to-date with updates and the latest news. No matter the app is in good condition, it is subject to a bug at any time.
+                
+             </div>
+    </div>
+  </div>
   <div class="card">
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
