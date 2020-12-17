@@ -169,7 +169,25 @@
              </div>
     </div>
   </div>
-
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse25" aria-expanded="false" aria-controls="collapseTwo">
+           
+        EXPERIENCE WITH TEAM:  </button>
+      </h5>
+    </div>
+    <div id="collapse25" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+     
+        I remember when I was a member of the BECLUB, the scientific club of our university, which was composed of 10 founding members and many active members.
+        We organized many national events and competitions, we worked together since it was an idea until we realized it on the ground, we worked hard in all circumstances, meeting almost daily at the same table to discuss ideas and work with principle of brainstorming.
+        The school honored us for what we achieved together. It was an unforgettable experience for me and I have built strong and long-lasting relationships with everyone I work with .
+        
+             
+             </div>
+    </div>
+  </div>
   <div class="card">
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
