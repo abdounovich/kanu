@@ -144,9 +144,11 @@
       
         Honestly,I don't have the correct answer to this question but I will try.If I couldn't, I wouldn't risk predicting a solution.
         I speak to my team member or my supervisor or I have to tell the customer that I need a while to search and investigate and then I will return with the correct answer
-        
+        .........
         “I am not sure I quite know the answer yet, but let me try and attempt it “
+        ...............
         Well, I am sorry I do not know the answer but I would be glad if you could tell me”
+...............
          “To be honest, I do not know the answer at the moment but I would gladly learn it soon” 
         </div>
     </div>
