@@ -195,12 +195,12 @@
   <div class="card">
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapseTwo">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapseTwo">
           EXAMPLE ?
         </button>
       </h5>
     </div>
-    <div id="collapse11" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+    <div id="collapse12" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
       <div class="card-body">
         One day I got a call from one of my clients, he works as a barber. I made an app for him that let their clients booking appointments through Messenger Chatbot.
         He was so angry and he was shouting why the bot stopped, people can't book an appointment anymore 
