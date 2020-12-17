@@ -167,6 +167,27 @@
              </div>
     </div>
   </div>
+
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse15" aria-expanded="false" aria-controls="collapseTwo">
+            angry customer  </button>
+      </h5>
+    </div>
+    <div id="collapse15" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+     
+       
+        "This would be my first experience in this position so I'm not sure how I would handle it. But as they say, the customer is always right, so whatever they want I would give them.
+        And Angry customers can be converted to loyal customers if we offer him a positive customer service experience.
+                
+             </div>
+    </div>
+  </div>
+
+
+
   <div class="card">
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
