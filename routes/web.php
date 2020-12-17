@@ -93,5 +93,6 @@ Route::get('/sendMsg/{id}','ClientController@sendMessageToClientView')
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/hostinger','hostingerController@index');
 
 
