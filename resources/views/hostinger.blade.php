@@ -121,7 +121,7 @@
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse7" 
         aria-expanded="false" aria-controls="collapse7">
-            WHY DO YOU WANT TO LEAVE YOUR CURRENT JOB?       </button>
+         HUPP >>>      </button>
       </h5>
     </div>
     <div id="collapse7" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
