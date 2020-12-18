@@ -232,7 +232,12 @@
     </div>
     <div id="collapse11" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
       <div class="card-body">
-        for  me , customer success is  ensuring that every customer receives the  maximum value from the product or service. as a result of that we maximize retention, preventing churn, and ensuring customer happiness.
+        for  me , customer success is  ensuring that every customer receives the  maximum value from the product or service.
+         This includes advising them on buying decisions and onboarding new users after purchase. 
+         they  have an in-depth understanding of the customer's needs and are responsible for communicating 
+         common customer behaviors to the sales, marketing, and product teams.
+         as a result of that we maximize retention, preventing churn, and ensuring customer happiness.
+
         
              </div>
     </div>
