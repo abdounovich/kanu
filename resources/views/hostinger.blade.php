@@ -200,7 +200,7 @@
      
        
         "This would be my first experience in this position so I'm not sure how I would handle it. But as they say, the customer is always right, so whatever they want I would give them.
-        And Angry customers can be converted to loyal customers if we offer him a positive customer service experience.
+        And Angry customers can be converted to loyal customers if we offer him a positive customer  experience.
                 
              </div>
     </div>
