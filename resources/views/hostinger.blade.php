@@ -21,7 +21,7 @@
     <div class="card-header" id="headingOne">
       <h5 class="mb-0">
         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            INTRODUCE YOURSELF
+           1- INTRODUCE YOURSELF
         </button>
       </h5>
     </div>
@@ -43,7 +43,7 @@
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            How did hear about us?        </button>
+            2- How did hear about us?        </button>
       </h5>
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -57,7 +57,7 @@
     <div class="card-header" id="headingThree">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          HOSTINGER ??
+          3- HOSTINGER ??
         </button>
       </h5>
     </div>
@@ -71,7 +71,7 @@
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapseTwo">
-            Why you?      </button>
+           4-  Why you?      </button>
       </h5>
     </div>
     <div id="collapse4" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -86,7 +86,7 @@
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapseTwo">
-            Solving customers issues:      </button>
+            5- Solving customers issues:      </button>
       </h5>
     </div>
     <div id="collapse5" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -103,7 +103,7 @@
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapseTwo">
-            MY WEAKNESS/ MY STRENGTHS ?        </button>
+            6- MY WEAKNESS/ MY STRENGTHS ?        </button>
       </h5>
     </div>
     <div id="collapse6" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -121,7 +121,7 @@
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse7" 
         aria-expanded="false" aria-controls="collapse7">
-         HUPP >>>      </button>
+         7- HUPP >>>      </button>
       </h5>
     </div>
     <div id="collapse7" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -136,7 +136,7 @@
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapseTwo">
-            I HAVE NO ANSWER:     </button>
+            8- I HAVE NO ANSWER:     </button>
       </h5>
     </div>
     <div id="collapse8" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -157,7 +157,7 @@
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapseTwo">
-            TEAM WORK:  </button>
+            9- TEAM WORK:  </button>
       </h5>
     </div>
     <div id="collapse9" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -174,7 +174,7 @@
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse25" aria-expanded="false" aria-controls="collapseTwo">
            
-        EXPERIENCE WITH TEAM:  </button>
+        10- EXPERIENCE WITH TEAM:  </button>
       </h5>
     </div>
     <div id="collapse25" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -192,7 +192,7 @@
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse15" aria-expanded="false" aria-controls="collapseTwo">
-            angry customer  </button>
+            11- angry customer  </button>
       </h5>
     </div>
     <div id="collapse15" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -212,7 +212,7 @@
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapseTwo">
-            AFTER X YEAR ???       </button>
+            12- AFTER X YEAR ???       </button>
       </h5>
     </div>
     <div id="collapse10" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -226,7 +226,7 @@
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapseTwo">
-          Customer success?
+          13- Customer success?
         </button>
       </h5>
     </div>
@@ -246,7 +246,7 @@
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapseTwo">
-          EXAMPLE ?
+         14- EXAMPLE ?
         </button>
       </h5>
     </div>
@@ -273,7 +273,7 @@
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapseTwo">
-            QUESTIONS:
+            15- QUESTIONS:
         </button>
       </h5>
     </div>
