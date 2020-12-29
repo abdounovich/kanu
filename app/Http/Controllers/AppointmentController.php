@@ -117,6 +117,8 @@ $config=Config::get('app.url');
 
         date_default_timezone_set("Africa/Algiers");
 $today=date("Y-m-d");
+$today=date('Y-m-d', strtotime($today. ' - 1 day'));
+
 $Tommorow=date('Y-m-d', strtotime($today. ' + 1 day'));
 $afterTommorow=date('Y-m-d', strtotime($today. ' + 2 day'));
 
