@@ -117,13 +117,11 @@ $config=Config::get('app.url');
 
         date_default_timezone_set("Africa/Algiers");
 $today=date("Y-m-d");
-$today=date('Y-m-d', strtotime($today. ' - 1 day'));
-
 $Tommorow=date('Y-m-d', strtotime($today. ' + 1 day'));
 $afterTommorow=date('Y-m-d', strtotime($today. ' + 2 day'));
 
 
-       $Today_appointments=Appointment::where('ActiveType','0')->whereJour($today)->orderBy('debut', 'asc')->get();
+       $Today_appointments=Appointment::where('ActiveType','>','0')->whereJour($today)->orderBy('debut', 'asc')->get();
        $Tomorow_appointments=Appointment::where('ActiveType','1')->whereJour($Tommorow)->orderBy('debut', 'asc')->get();
        $AfterTomoro_appointments=Appointment::where('ActiveType','1')->whereJour($afterTommorow)->orderBy('debut', 'asc')->get();
 
