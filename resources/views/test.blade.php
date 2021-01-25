@@ -142,6 +142,13 @@ $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
 
         @endif @endfor @endforeach --}}
 
+
+        @if ($items=="")
+
+        <div  class="h3 bg-danger text-white text text-center p-2 m-2  rounded" >عفوا صديقي كل المواعيد محجوزة  </div>
+
+            
+        @endif
 @if ($OneApp>0) 
 <div  class="h3 bg-danger text-white text text-center p-2 m-2  rounded" >عفوا صديقي لا يمكنك حجز أكثر من موعد  </div>
 
