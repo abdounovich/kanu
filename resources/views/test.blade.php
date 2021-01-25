@@ -163,17 +163,16 @@ $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
 
                 @endphp
 
-
-                @switch($var)
-                    @case(1)
-                    @if ($items=="")
+@if (empty($items))
 
 <div  class="h3 bg-danger text-white text text-center p-2 m-2  rounded" >عفوا صديقي كل المواعيد محجوزة  </div>
 
-    @else
-                        <div  class="h3 bg-success text-white text text-center p-2 m-2  rounded" >المواعيد المتاحة اليوم  </div>
-
+    
 @endif
+                @switch($var)
+                    @case(1)
+                    
+                    <div  class="h3 bg-success text-white text text-center p-2 m-2  rounded" >المواعيد المتاحة اليوم  </div>
 
                         @break
                     @case(2)
