@@ -168,7 +168,7 @@ $debut=date("Y-m-d H:i:s", (strtotime(date($debut)) + $pas));
 <div  class="h3 bg-danger text-white text text-center p-2 m-2  rounded" >عفوا صديقي كل المواعيد محجوزة  </div>
 
     @php
-        return();
+        return;
     @endphp
 @endif
                 @switch($var)
