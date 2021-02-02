@@ -172,7 +172,7 @@ $config=Config::get('app.url');
          
        }elseif($date=='Saturday'){
            $debut="09:00";
-           $fin="19:30"; 
+           $fin="21:00"; 
            $d_pause="12:00";
            $f_pause="13:00";
        }
@@ -185,7 +185,7 @@ $config=Config::get('app.url');
     }
     
        else{ $debut="16:00";
-        $fin="19:30";
+        $fin="21:00";
         $d_pause="14:00";
         $f_pause="15:00";}
     
