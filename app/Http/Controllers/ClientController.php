@@ -208,7 +208,7 @@ return view("clients")->with('clients',$clients)->with('appointment',$appointmen
      $client=Client::find($id);
      $client->points=$request->get('points');
      $client->save();
-     return redirect()->route('clients');
+     return redirect()->back();
 
     }
 
