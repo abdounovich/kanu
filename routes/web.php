@@ -21,7 +21,7 @@ Route::get('/botman/tinker', 'BotManController@tinker');
 Route::get('/rdv','AppointmentController@index')->middleware('auth');
 Route::get('/client/{slug}','ClientController@index');
 Route::get('/clients','ClientController@show')->middleware('auth');
-Route::get('/client/edit/{id}','ClientController@update')->name("client.editpoints");
+Route::post('/client/edit/{id}','ClientController@update')->name("client.editpoints");
 
 Route::get('/delete','AppointmentController@deleteFunction')->middleware('auth');
 Route::post('/addAppoint','AppointmentController@store');
