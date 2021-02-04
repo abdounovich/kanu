@@ -59,8 +59,10 @@
           <span class="badge badge-success badge-pill p-2">
             <form action="{{route("client.editpoints",$client->id)}}" method="post">
               @csrf
-            <input type="text" name="points" id="">{{$client->points}}</form>
+            <input type="text" name="points" value="{{$client->points}}" id="">            
             <button class="btn btn-primary" type="submit">تغيير</button>
+
+          </form>
 
           </span> 
         </td>
