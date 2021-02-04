@@ -56,7 +56,13 @@
             {{$client->facebook}}</td>
          
         <td class="align-middle">
-          <span class="badge badge-success badge-pill p-2">{{$client->points}}</span> 
+          <span class="badge badge-success badge-pill p-2">
+            <form action="{{route("client.editpoints",{{$client->id}})}}" method="post">
+              @csrf
+            <input type="text" name="points" id="">{{$client->points}}</form>
+            <button class="btn btn-primary" type="submit">تغيير</button>
+
+          </span> 
         </td>
     
             <td class="align-middle"> @php  carbon\Carbon::setLocale('ar');

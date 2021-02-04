@@ -203,9 +203,13 @@ return view("clients")->with('clients',$clients)->with('appointment',$appointmen
      * @param  \App\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Client $client)
+    public function update(Request $request,  $id)
     {
-        //
+     $client=Client::find($id);
+     $client->points=$request->get('points');
+     $client->save();
+     return redirect()->route('clients');
+
     }
 
     /**
