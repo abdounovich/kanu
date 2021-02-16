@@ -78,12 +78,7 @@
     line-height: 24px;
     box-shadow: 1px 1px 1px black;
  " class="badge badge-success rounded-circle "> {{$Today_appointment->client->points}}</span> 
-            <form action="{{route("client.editpoints",$Today_appointment->client->id)}}" method="post">
-            @csrf
-          <input type="text" class=" form-control" name="points" value="{{$Today_appointment->client->points}}" id="">            
-          <button class="btn btn-primary" type="submit">تغيير</button>
-
-        </form> </td>
+           </td>
          
        
         <td class="align-middle">{{$Today_appointment->type->type}}</td>
@@ -333,6 +328,12 @@
     line-height: 24px;
     box-shadow: 1px 1px 1px black;
  " class="badge badge-success text-center  rounded-circle  ">{{$Inactif_appointment->client->points}}</span> 
+   <form action="{{route("client.editpoints",$Today_appointment->client->id)}}" method="post">
+    @csrf
+  <input type="text" class=" form-control" name="points" value="{{$Today_appointment->client->points}}" id="">            
+  <button class="btn btn-primary" type="submit">تغيير</button>
+
+</form>
           </td>
 
 
