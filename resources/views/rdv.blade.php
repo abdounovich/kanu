@@ -330,8 +330,8 @@
  " class="badge badge-success text-center  rounded-circle  ">{{$Inactif_appointment->client->points}}</span> 
    <form action="{{route("client.editpoints",$Inactif_appointment->client->id)}}" method="post">
     @csrf
-  <input type="text" class=" form-control" name="points" value="{{$Inactif_appointment->client->points}}" id="">            
-  <button class="btn btn-primary" type="submit">تغيير</button>
+  <input type="text" class=" form-control col col-4" name="points" value="{{$Inactif_appointment->client->points}}" id="">            
+  <button class="btn btn-primary col col-2" type="submit">تغيير</button>
 
 </form>
           </td>
