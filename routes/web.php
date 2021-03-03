@@ -78,11 +78,13 @@ Route::get('/commande', function () {
 
 
 Route::get('/22', function () {
+    $config=Config::get('botman.facebook.token');
+
     ini_set("allow_url_fopen", 1);
         $text='https://graph.facebook.com/v2.6/2926966884074340?fields=profile_pic&access_token='.$config;
                       $userInfoData=file_get_contents($text);
                       $userInfo = json_decode($userInfoData, true);
-                  $picture = $userInfo['profile_pic'] ;
+                 echo  $picture = $userInfo['profile_pic'] ;
     
 });
 
