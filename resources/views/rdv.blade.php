@@ -51,21 +51,11 @@
         @foreach ($Today_appointments as $Today_appointment)
         @php
            $counter=$counter+1; 
-  
-
-                  ini_set("allow_url_fopen", 1);
-    $text='https://graph.facebook.com/v2.6/3582653051862423?fields=profile_pic&access_token='.$config;
-    if (@file_get_contents($text)===FALSE) {
-      $picture ="https://i.stack.imgur.com/l60Hf.png";
-    }else{                    $userInfoData=file_get_contents($text);
+        ini_set("allow_url_fopen", 1);
+        $text='https://graph.facebook.com/v2.6/'.$Today_appointment->fb_id.'?fields=profile_pic&access_token='.$config;
+                      $userInfoData=@file_get_contents($text);
                       $userInfo = json_decode($userInfoData, true);
-                 $picture = $userInfo['profile_pic'] ;
-    
-
-   }
-      
-
-
+                  $picture = $userInfo['profile_pic'] ;
         @endphp
         <tr @if ($actifTime>=$Today_appointment->debut && $actifTime<$Today_appointment->fin)
              class="bg-info" 
