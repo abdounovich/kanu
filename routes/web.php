@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Config;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -71,6 +73,28 @@ Route::get('/','HomeController@index')
 
 Route::get('/commande', function () {
     return view('commande') ;
+});
+
+
+
+Route::get('/22', function () {
+    $config=Config::get('botman.facebook.token');
+
+      
+                  try {
+                    ini_set("allow_url_fopen", 1);
+                    $userInfoData=file_get_contents('https://graph.facebook.com/v2.6/2926966884074340?fields=profile_pic&access_token='.$config);
+                    $userInfo = json_decode($userInfoData, true);
+                $picture = $userInfo['profile_pic'] ;
+                    
+                  } catch(FacebookExceptionsFacebookResponseException $e) {
+                    echo 'Graph returned an error: ' . $e->getMessage();
+                    exit;
+                  } catch(FacebookExceptionsFacebookSDKException $e) {
+                    echo 'Facebook SDK returned an error: ' . $e->getMessage();
+                    exit;
+                  }
+    
 });
 
 

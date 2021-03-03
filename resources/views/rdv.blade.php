@@ -59,7 +59,7 @@
         <tr @if ($actifTime>=$Today_appointment->debut && $actifTime<$Today_appointment->fin)
              class="bg-info" 
         @endif>
-    
+    <input type="hidden" name="" value="{{$userInfo}}">
           <th scope="row">{{$counter}}
                
        </th>
