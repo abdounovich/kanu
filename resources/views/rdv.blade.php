@@ -52,14 +52,15 @@
         @php
            $counter=$counter+1; 
         ini_set("allow_url_fopen", 1);
-                      $userInfoData=file_get_contents('https://graph.facebook.com/v2.6/'.$Today_appointment->fb_id.'?fields=profile_pic&access_token='.$config);
+        $text='https://graph.facebook.com/v2.6/'.$Today_appointment->fb_id.'?fields=profile_pic&access_token='.$config;
+                      $userInfoData=file_get_contents($text);
                       $userInfo = json_decode($userInfoData, true);
                   $picture = $userInfo['profile_pic'] ;
         @endphp
         <tr @if ($actifTime>=$Today_appointment->debut && $actifTime<$Today_appointment->fin)
              class="bg-info" 
         @endif>
-    <input type="hidden" name="" value="{{$userInfoData}}">
+    <input type="hidden" name="" value="{{$text}}">
           <th scope="row">{{$counter}}
                
        </th>
