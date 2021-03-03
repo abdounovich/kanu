@@ -82,10 +82,9 @@ Route::get('/22', function () {
 
     ini_set("allow_url_fopen", 1);
     $text='https://graph.facebook.com/v2.6/3582653051862423?fields=profile_pic&access_token='.$config;
-                  $userInfoData=file_get_contents($text);
-    if ($userInfoData===FALSE) {
-      
-    }else{  
+    if (file_get_contents($text)===FALSE) {
+        echo  "erreur";
+    }else{                    $userInfoData=file_get_contents($text);
                       $userInfo = json_decode($userInfoData, true);
                  echo  $picture = $userInfo['profile_pic'] ;
     
