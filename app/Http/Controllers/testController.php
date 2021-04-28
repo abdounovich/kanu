@@ -166,9 +166,9 @@ $config=Config::get('app.url');
     
         if ($date=='Friday') {
           $debut="10:00";
-          $fin="18:30";
-          $d_pause="12:00";
-          $f_pause="14:30";
+          $fin="23:30";
+          $d_pause="18:30";
+          $f_pause="21:30";
          
        }elseif($date=='Saturday'){
            $debut="10:00";
@@ -309,9 +309,9 @@ $config=Config::get('app.url');
    
     if ($date=='Friday') {
       $debut="10:00";
-      $fin="18:30";
-      $d_pause="12:00";
-      $f_pause="14:30";
+      $fin="23:30";
+      $d_pause="18:30";
+      $f_pause="21:30";
      
        
     }elseif($date=='Saturday'){
@@ -452,9 +452,9 @@ $config=Config::get('app.url');
          
         if ($date=='Friday') {
           $debut="10:00";
-          $fin="18:30";
-          $d_pause="12:00";
-          $f_pause="14:30";
+          $fin="23:30";
+          $d_pause="18:30";
+          $f_pause="21:30";
          
           
         }elseif($date=='Saturday'){
