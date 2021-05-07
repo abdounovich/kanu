@@ -166,18 +166,18 @@
         $counter=0;
         @endphp
         @foreach ($Tomorow_appointments as $Tomorow_appointment)
-        @php
+      {{--   @php
            $counter=$counter+1; 
       
         ini_set("allow_url_fopen", 1);
                       $userInfoData=file_get_contents('https://graph.facebook.com/v2.6/'.$Tomorow_appointment->fb_id.'?fields=profile_pic&access_token='.$config);
                       $userInfo = json_decode($userInfoData, true);
                   $picture = $userInfo['profile_pic'] ;
-        @endphp
+        @endphp --}}
         <tr>
           <th scope="row">{{$counter}}</th>
         
-          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="" alt="">
             {{$Tomorow_appointment->facebook}}  <span dir="ltr"  style=" position: absolute;
             top:1px;
             font-size:13px;
@@ -236,20 +236,20 @@
         $counter=0;
         @endphp
         @foreach ($AfterTomoro_appointments as $AfterTomoro_appointment)
-        @php
+      {{--   @php
            $counter=$counter+1; 
       
         ini_set("allow_url_fopen", 1);
                       $userInfoData=file_get_contents('https://graph.facebook.com/v2.6/'.$AfterTomoro_appointment->fb_id.'?fields=profile_pic&access_token='.$config);
                       $userInfo = json_decode($userInfoData, true);
                   $picture = $userInfo['profile_pic'] ;
-        @endphp
+        @endphp --}}
         <tr>
           <th scope="row">{{$counter}}</th>
           
 
 
-            <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+            <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="" alt="">
               {{$AfterTomoro_appointment->facebook}}  <span dir="ltr"  style=" position: absolute;
               top:1px;
               font-size:13px;
@@ -309,17 +309,17 @@
         $counter=0;
         @endphp
         @foreach ($Inactif_appointments as $Inactif_appointment)
-        @php
+       {{--  @php
            $counter=$counter+1; 
       
         ini_set("allow_url_fopen", 1);
                       $userInfoData=file_get_contents('https://graph.facebook.com/v2.6/'.$Inactif_appointment->fb_id.'?fields=profile_pic&access_token='.$config);
                       $userInfo = json_decode($userInfoData, true);
                   $picture = $userInfo['profile_pic'] ;
-        @endphp
+        @endphp --}}
         <tr>
           <th scope="row">{{$counter}}</th>
-          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{-- {{$picture}} --}}" alt="">
             {{$Inactif_appointment->facebook}}  <span dir="ltr"  style=" position: absolute;
             top:1px;
             font-size:13px;
