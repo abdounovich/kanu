@@ -49,14 +49,14 @@
            $actifTime=date('H:i');
         @endphp
         @foreach ($Today_appointments as $Today_appointment)
-        @php
+       {{--  @php
            $counter=$counter+1; 
         ini_set("allow_url_fopen", 1);
         $text='https://graph.facebook.com/v2.6/'.$Today_appointment->fb_id.'?fields=profile_pic&access_token='.$config;
                       $userInfoData=@file_get_contents($text);
                       $userInfo = json_decode($userInfoData, true);
                   $picture = $userInfo['profile_pic'] ;
-        @endphp
+        @endphp --}}
         <tr @if ($actifTime>=$Today_appointment->debut && $actifTime<$Today_appointment->fin)
              class="bg-info" 
         @endif>
@@ -64,7 +64,7 @@
           <th scope="row">{{$counter}}
                
        </th>
-          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src=" "alt="">
             <span  dir="ltr" style=" 
             display:inline-flex;
             width: 100px;
