@@ -178,10 +178,10 @@ $config=Config::get('app.url');
        }
 
        elseif($date=='Tuesday'){
-        $debut="00:00";
-        $fin="00:05"; 
-        $d_pause="12:00";
-        $f_pause="12:01";
+        $debut="08:00";
+        $fin="23:59"; 
+        $d_pause="18:30";
+        $f_pause="21:00";
     }
     
        else{ $debut="15:45";
@@ -321,11 +321,11 @@ $config=Config::get('app.url');
       $f_pause="21:00";
   }
 
-   elseif($date=='Tuesday'){
-    $debut="00:00";
-    $fin="00:05"; 
-    $d_pause="12:00";
-    $f_pause="12:01";
+  elseif($date=='Tuesday'){
+    $debut="08:00";
+    $fin="23:59"; 
+    $d_pause="18:30";
+    $f_pause="21:00";
 }
 
    else{ $debut="15:45";
@@ -464,11 +464,11 @@ $config=Config::get('app.url');
           $f_pause="21:00";
       }
 
-       elseif($date=='Tuesday'){
-        $debut="00:00";
-        $fin="00:05"; 
-        $d_pause="12:00";
-        $f_pause="12:01";
+      elseif($date=='Tuesday'){
+        $debut="08:00";
+        $fin="23:59"; 
+        $d_pause="18:30";
+        $f_pause="21:00";
     }
     
        else{ $debut="15:45";
