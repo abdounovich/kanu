@@ -184,10 +184,10 @@ $config=Config::get('app.url');
         $f_pause="21:00";
     }
     
-       else{ $debut="15:45";
-        $fin="23:30";
-        $d_pause="18:30";
-        $f_pause="21:00";}
+    else{ $debut="00:00";
+      $fin="08:00";
+      $d_pause="08:01";
+      $f_pause="08:02";}
     
        $jour=date("Y-m-d");
 
@@ -328,10 +328,10 @@ $config=Config::get('app.url');
     $f_pause="21:00";
 }
 
-   else{ $debut="15:45";
-    $fin="23:30";
-    $d_pause="18:30";
-    $f_pause="21:00";}
+else{ $debut="00:00";
+  $fin="08:00";
+  $d_pause="08:01";
+  $f_pause="08:02";}
     
        $jour=date("Y-m-d");
 
@@ -471,10 +471,10 @@ $config=Config::get('app.url');
         $f_pause="21:00";
     }
     
-       else{ $debut="15:45";
-        $fin="23:30";
-        $d_pause="18:30";
-        $f_pause="21:00";}
+    else{ $debut="00:00";
+      $fin="08:00";
+      $d_pause="08:01";
+      $f_pause="08:02";}
     
        $jour=date("Y-m-d");
        $afterTommorow=date('Y-m-d', strtotime($jour. ' + 2 day'));
