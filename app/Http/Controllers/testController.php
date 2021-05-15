@@ -165,29 +165,29 @@ $config=Config::get('app.url');
     
     
         if ($date=='Friday') {
-          $debut="10:00";
-          $fin="23:30";
-          $d_pause="18:30";
-          $f_pause="21:30";
+          $debut="09:00";
+          $fin="21:00";
+          $d_pause="12:00";
+          $f_pause="15:00";
          
        }elseif($date=='Saturday'){
-           $debut="10:00";
-           $fin="23:30"; 
-           $d_pause="18:30";
-           $f_pause="21:00";
+           $debut="09:00";
+           $fin="21:00"; 
+           $d_pause="12:00";
+           $f_pause="14:00";
        }
 
        elseif($date=='Tuesday'){
-        $debut="08:00";
-        $fin="23:59"; 
-        $d_pause="18:30";
-        $f_pause="21:00";
+        $debut="00:00";
+        $fin="00:01"; 
+        $d_pause="00:02";
+        $f_pause="00:03";
     }
     
-    else{ $debut="00:00";
-      $fin="08:00";
-      $d_pause="08:01";
-      $f_pause="08:02";}
+    else{ $debut="16:00";
+      $fin="21:00";
+      $d_pause="12:01";
+      $f_pause="12:02";}
     
        $jour=date("Y-m-d");
 
@@ -308,31 +308,29 @@ $config=Config::get('app.url');
     
    
     if ($date=='Friday') {
-      $debut="10:00";
-      $fin="23:30";
-      $d_pause="18:30";
-      $f_pause="21:30";
+      $debut="09:00";
+      $fin="21:00";
+      $d_pause="12:00";
+      $f_pause="15:00";
      
-       
-    }elseif($date=='Saturday'){
-      $debut="10:00";
-      $fin="23:30"; 
-      $d_pause="18:30";
-      $f_pause="21:00";
-  }
+   }elseif($date=='Saturday'){
+       $debut="09:00";
+       $fin="21:00"; 
+       $d_pause="12:00";
+       $f_pause="14:00";
+   }
 
-  elseif($date=='Tuesday'){
-    $debut="08:00";
-    $fin="23:59"; 
-    $d_pause="18:30";
-    $f_pause="21:00";
+   elseif($date=='Tuesday'){
+    $debut="00:00";
+    $fin="00:01"; 
+    $d_pause="00:02";
+    $f_pause="00:03";
 }
 
-else{ $debut="00:00";
-  $fin="08:00";
-  $d_pause="08:01";
-  $f_pause="08:02";}
-    
+else{ $debut="16:00";
+  $fin="21:00";
+  $d_pause="12:01";
+  $f_pause="12:02";}
        $jour=date("Y-m-d");
 
        $tomorrow=date('Y-m-d', strtotime($jour. ' + 1 day'));
@@ -451,30 +449,29 @@ else{ $debut="00:00";
     
          
         if ($date=='Friday') {
-          $debut="10:00";
-          $fin="23:30";
-          $d_pause="18:30";
-          $f_pause="21:30";
+          $debut="09:00";
+          $fin="21:00";
+          $d_pause="12:00";
+          $f_pause="15:00";
          
-          
-        }elseif($date=='Saturday'){
-          $debut="10:00";
-          $fin="23:30"; 
-          $d_pause="18:30";
-          $f_pause="21:00";
-      }
+       }elseif($date=='Saturday'){
+           $debut="09:00";
+           $fin="21:00"; 
+           $d_pause="12:00";
+           $f_pause="14:00";
+       }
 
-      elseif($date=='Tuesday'){
-        $debut="08:00";
-        $fin="23:59"; 
-        $d_pause="18:30";
-        $f_pause="21:00";
+       elseif($date=='Tuesday'){
+        $debut="00:00";
+        $fin="00:01"; 
+        $d_pause="00:02";
+        $f_pause="00:03";
     }
     
-    else{ $debut="00:00";
-      $fin="08:00";
-      $d_pause="08:01";
-      $f_pause="08:02";}
+    else{ $debut="16:00";
+      $fin="21:00";
+      $d_pause="12:01";
+      $f_pause="12:02";}
     
        $jour=date("Y-m-d");
        $afterTommorow=date('Y-m-d', strtotime($jour. ' + 2 day'));

@@ -203,7 +203,7 @@ date_default_timezone_set("Africa/Algiers");
     $tomorrow=date("l", strtotime($today. ' + 1 day'));
     $aftertomorrow=date("l", strtotime($today. ' + 2 day'));
    
-/* 
+ 
     if ($today=='Tuesday') {
    
         $arr[]=  ElementButton::create(' بعد غد  🕐')
@@ -238,7 +238,7 @@ date_default_timezone_set("Africa/Algiers");
 
 
     }
-    else{  */ 
+    else{  
         $arr[]=  ElementButton::create('     اليوم 🕐')
         ->type('postback')
         ->payload('rdv1');
@@ -249,7 +249,7 @@ date_default_timezone_set("Africa/Algiers");
         ->type('postback')
         ->payload('rdv3');
       
-    /* } */
+     } 
     $bot->typesAndWaits(2);
  /* 
 
