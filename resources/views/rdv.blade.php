@@ -64,7 +64,7 @@
           <th scope="row">{{$counter}}
                
        </th>
-          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}"alt="">
+          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src=" "alt="">
             <span  dir="ltr" style=" 
             display:inline-flex;
             width: 100px;
@@ -177,7 +177,7 @@
         <tr>
           <th scope="row">{{$counter}}</th>
         
-          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src=" " alt="">
             {{$Tomorow_appointment->facebook}}  <span dir="ltr"  style=" position: absolute;
             top:1px;
             font-size:13px;
@@ -249,7 +249,7 @@
           
 
 
-            <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+            <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src=" " alt="">
               {{$AfterTomoro_appointment->facebook}}  <span dir="ltr"  style=" position: absolute;
               top:1px;
               font-size:13px;
@@ -319,7 +319,7 @@
         @endphp 
         <tr>
           <th scope="row">{{$counter}}</th>
-          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src="{{$picture}}" alt="">
+          <td  class="align-middle clearfix" style="position: relative;"><img class=" border rounded-circle ml-2" width="50" height="50" src=" " alt="">
             {{$Inactif_appointment->facebook}}  <span dir="ltr"  style=" position: absolute;
             top:1px;
             font-size:13px;
