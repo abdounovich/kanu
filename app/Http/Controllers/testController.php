@@ -553,7 +553,7 @@ $config=Config::get('app.url');
 
 
 }
-
+  }
 
 
 public function func(){
