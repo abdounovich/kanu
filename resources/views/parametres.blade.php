@@ -3,7 +3,6 @@
 @section('title', 'Clients')
 
 
-<meta name="csrf-token" content="{{ csrf_token() }}">
 
 @section('content')
 
@@ -114,8 +113,8 @@
 
 </div>
 
- <form action="/parametres/update/" method="POST">
-<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
+ <form action="/parametres/update/" method="post">
+<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
     <table class="table  table-bordred">
     <tr class="bg-dark text-white text-center">
