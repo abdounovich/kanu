@@ -114,7 +114,7 @@
 </div>
 
  <form action="/parametres/update/" method="POST">
-     <input type="hidden" name="token" value="{{ csrf_token() }}"/>
+    <input type="hidden" name="_token" value="rVb2ycSugwg0weAbZucdI8RzBi9uT7QumGArJOOW">
 
     <table class="table  table-bordred">
     <tr class="bg-dark text-white text-center">
