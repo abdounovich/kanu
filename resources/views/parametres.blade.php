@@ -3,6 +3,7 @@
 @section('title', 'Clients')
 
 
+<meta name="csrf-token" content="{{ csrf_token() }}">
 
 @section('content')
 
