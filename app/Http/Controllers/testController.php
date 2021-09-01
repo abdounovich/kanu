@@ -165,18 +165,24 @@ $config=Config::get('app.url');
 
     if ($date=="Friday") {
      $debut="09:00";
-     $fin="20:00";
+     $fin="19:30";
      $d_pause="12:00";
      $f_pause="14:00";
     }
 
     elseif ($date=="Saturday") {
       $debut="09:00";
-      $fin="20:00";
+      $fin="19:30";
       $d_pause="12:00";
       $f_pause="14:00";
      }
      elseif ($date=="Tuesday") {
+      $debut="00:00";
+      $fin="00:01";
+      $d_pause="12:00";
+      $f_pause="12:01";
+     }
+     elseif ($date=="Wednesday") {
       $debut="00:00";
       $fin="00:01";
       $d_pause="12:00";
@@ -324,20 +330,27 @@ $config=Config::get('app.url');
     $date=date("l", strtotime($date. ' + 1 day'));
 
     
+    
     if ($date=="Friday") {
       $debut="09:00";
-      $fin="20:00";
+      $fin="19:30";
       $d_pause="12:00";
       $f_pause="14:00";
      }
  
      elseif ($date=="Saturday") {
        $debut="09:00";
-       $fin="20:00";
+       $fin="19:30";
        $d_pause="12:00";
        $f_pause="14:00";
       }
       elseif ($date=="Tuesday") {
+       $debut="00:00";
+       $fin="00:01";
+       $d_pause="12:00";
+       $f_pause="12:01";
+      }
+      elseif ($date=="Wednesday") {
        $debut="00:00";
        $fin="00:01";
        $d_pause="12:00";
@@ -349,6 +362,7 @@ $config=Config::get('app.url');
        $d_pause="12:00";
        $f_pause="12:01";
       }
+ 
    /*  $days = array('Friday','Saturday','Sunday','Monday','Tuesday','Wednesday','Thursday');
     
     foreach ($days as $day) {
@@ -484,18 +498,24 @@ $config=Config::get('app.url');
     
         if ($date=="Friday") {
           $debut="09:00";
-          $fin="20:00";
+          $fin="19:30";
           $d_pause="12:00";
           $f_pause="14:00";
          }
      
          elseif ($date=="Saturday") {
            $debut="09:00";
-           $fin="20:00";
+           $fin="19:30";
            $d_pause="12:00";
            $f_pause="14:00";
           }
           elseif ($date=="Tuesday") {
+           $debut="00:00";
+           $fin="00:01";
+           $d_pause="12:00";
+           $f_pause="12:01";
+          }
+          elseif ($date=="Wednesday") {
            $debut="00:00";
            $fin="00:01";
            $d_pause="12:00";
@@ -507,6 +527,7 @@ $config=Config::get('app.url');
            $d_pause="12:00";
            $f_pause="12:01";
           }
+     
         $days = array('Friday','Saturday','Sunday','Monday','Tuesday','Wednesday','Thursday');
     
    /*  foreach ($days as $day) {
