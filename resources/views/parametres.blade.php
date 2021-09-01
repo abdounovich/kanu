@@ -114,7 +114,7 @@
 </div>
 
  <form action="/parametres/update/" method="POST">
-    <input type="hidden" name="_token" value="rVb2ycSugwg0weAbZucdI8RzBi9uT7QumGArJOOW">
+<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 
     <table class="table  table-bordred">
     <tr class="bg-dark text-white text-center">
