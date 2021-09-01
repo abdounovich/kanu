@@ -148,6 +148,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Unisharp\Setting\SettingServiceProvider::class,
+
 
         /*
          * Package Service Providers...
@@ -213,6 +215,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
+        'Setting' => Unisharp\Setting\SettingFacade::class,
+
 
 
     ],
