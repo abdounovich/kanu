@@ -121,65 +121,9 @@ Route::post('/parametres/update', function (Request $request) {
         return back()->with("success"," لقد تم حفظ البيانات بنجاح");
     });
 
-Route::get('/l', function () {
-    
-    Setting::set('Saturday', [
-        'debut'=> '08:00',
-        'fin'=> '21:00',
-        'active' => '1',
-        'debut-repos' => '12:00',
-        'fin-repos' => '13:00',
-        ]);
-    Setting::set('Sunday', [
-        'debut'=> '08:00',
-        'fin'=> '21:00',
-        'active' => '1',
-        'debut-repos' => '12:00',
-        'fin-repos' => '13:00',
-         ]);
-
-    Setting::set('Monday', [
-        'debut'=> '08:00',
-        'fin'=> '21:00',
-        'active' => '1',
-        'debut-repos' => '12:00',
-        'fin-repos' => '13:00',
-         ]);
-    Setting::set('Tuesday', [
-        'debut'=> '08:00',
-        'fin'=> '21:00',
-        'active' => '0',
-        'debut-repos' => '12:00',
-        'fin-repos' => '13:00',
-        ]);
-    Setting::set('Wednesday', [
-            'debut'=> '08:00',
-            'fin'=> '21:00',
-            'active' => '1',
-            'debut-repos' => '12:00',
-            'fin-repos' => '13:00',
-            ]);
-     Setting::set('Thursday', [
-            'debut'=> '08:00',
-            'fin'=> '21:00',
-            'active' => '1',
-            'debut-repos' => '12:00',
-            'fin-repos' => '13:00',
-            ]);
-    Setting::set('Friday', [
-            'debut'=> '08:00',
-            'fin'=> '21:00',
-            'active' => '1',
-            'debut-repos' => '12:00',
-            'fin-repos' => '13:00',
-                ]);
-    
+    Route::get('/testC','HomeController@test');
 
 
-        
-echo "ok";
-return;
-});
 
 Route::get('/abcd','TestController@try');
 Route::post('/sendMsg/{id}','ClientController@sendMessageToClient');
