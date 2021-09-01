@@ -161,7 +161,35 @@ $config=Config::get('app.url');
 
     date_default_timezone_set("Africa/Algiers");
     $date=date("l");
-    $days = array('Friday','Saturday','Sunday','Monday','Tuesday','Wednesday','Thursday');
+
+
+    if ($date=="Friday") {
+     $debut="09:00";
+     $fin="20:00";
+     $d_pause="12:00";
+     $f_pause="14:00";
+    }
+
+    elseif ($date=="Saturday") {
+      $debut="09:00";
+      $fin="20:00";
+      $d_pause="12:00";
+      $f_pause="14:00";
+     }
+     elseif ($date=="Tuesday") {
+      $debut="00:00";
+      $fin="00:01";
+      $d_pause="12:00";
+      $f_pause="12:01";
+     }
+     else  {
+      $debut="16:00";
+      $fin="20:00";
+      $d_pause="12:00";
+      $f_pause="12:01";
+     }
+
+    /* $days = array('Friday','Saturday','Sunday','Monday','Tuesday','Wednesday','Thursday');
     
     foreach ($days as $day) {
       if ($date==$day) {
@@ -177,7 +205,7 @@ $config=Config::get('app.url');
           $d_pause="00:02";
           $f_pause="00:03";
         }}
-    }
+    } */
         
        $jour=date("Y-m-d");
 
@@ -296,8 +324,32 @@ $config=Config::get('app.url');
     $date=date("l", strtotime($date. ' + 1 day'));
 
     
-   
-    $days = array('Friday','Saturday','Sunday','Monday','Tuesday','Wednesday','Thursday');
+    if ($date=="Friday") {
+      $debut="09:00";
+      $fin="20:00";
+      $d_pause="12:00";
+      $f_pause="14:00";
+     }
+ 
+     elseif ($date=="Saturday") {
+       $debut="09:00";
+       $fin="20:00";
+       $d_pause="12:00";
+       $f_pause="14:00";
+      }
+      elseif ($date=="Tuesday") {
+       $debut="00:00";
+       $fin="00:01";
+       $d_pause="12:00";
+       $f_pause="12:01";
+      }
+      else  {
+       $debut="16:00";
+       $fin="20:00";
+       $d_pause="12:00";
+       $f_pause="12:01";
+      }
+   /*  $days = array('Friday','Saturday','Sunday','Monday','Tuesday','Wednesday','Thursday');
     
     foreach ($days as $day) {
       if ($date==$day) {
@@ -313,7 +365,7 @@ $config=Config::get('app.url');
           $d_pause="00:02";
           $f_pause="00:03";
         }}
-    }
+    } */
        $jour=date("Y-m-d");
 
        $tomorrow=date('Y-m-d', strtotime($jour. ' + 1 day'));
@@ -430,10 +482,34 @@ $config=Config::get('app.url');
         $date=date("l", strtotime($date. ' + 2 day'));
     
     
-         
+        if ($date=="Friday") {
+          $debut="09:00";
+          $fin="20:00";
+          $d_pause="12:00";
+          $f_pause="14:00";
+         }
+     
+         elseif ($date=="Saturday") {
+           $debut="09:00";
+           $fin="20:00";
+           $d_pause="12:00";
+           $f_pause="14:00";
+          }
+          elseif ($date=="Tuesday") {
+           $debut="00:00";
+           $fin="00:01";
+           $d_pause="12:00";
+           $f_pause="12:01";
+          }
+          else  {
+           $debut="16:00";
+           $fin="20:00";
+           $d_pause="12:00";
+           $f_pause="12:01";
+          }
         $days = array('Friday','Saturday','Sunday','Monday','Tuesday','Wednesday','Thursday');
     
-    foreach ($days as $day) {
+   /*  foreach ($days as $day) {
       if ($date==$day) {
         if (Setting::get($day.'.active')==1) {
         $debut=Setting::get($day.'.debut');
@@ -446,8 +522,8 @@ $config=Config::get('app.url');
           $fin="00:04";
           $d_pause="00:02";
           $f_pause="00:03";
-        }}
-    }
+        }} */
+    
        $jour=date("Y-m-d");
        $afterTommorow=date('Y-m-d', strtotime($jour. ' + 2 day'));
     
