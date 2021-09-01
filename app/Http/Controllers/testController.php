@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Type;
 use App\Client;
+use App\Setting;
 use Carbon\Carbon;
 use App\Appointment;
 use Illuminate\Http\Request;
