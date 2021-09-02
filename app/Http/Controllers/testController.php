@@ -156,6 +156,10 @@ $config=Config::get('app.url');
 
    public function today($type,$username,$Cid)
    {
+      $debut="";
+$fin="";
+$d_pause="";
+$f_pause="";
 
 
 
@@ -291,8 +295,10 @@ $config=Config::get('app.url');
   
    public function tomorrow($type,$username,$Cid)
    {
-
-
+$debut="";
+$fin="";
+$d_pause="";
+$f_pause="";
 
     date_default_timezone_set("Africa/Algiers");
     $date=date("l");
@@ -425,7 +431,10 @@ $config=Config::get('app.url');
    
   {
 
-
+$debut="";
+$fin="";
+$d_pause="";
+$f_pause="";
 
 
 
