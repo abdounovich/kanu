@@ -381,7 +381,7 @@ if ($DbUsername=="0") {
 // Access Username
 
       
- $bot->reply(ButtonTemplate::create('عذرًا ، لم أستطع فهمك 😕 '."\n". 'هذه قائمة بالأوامر التي أفهمها: ........')
+ $bot->reply(ButtonTemplate::create('444444')
 
 
 
