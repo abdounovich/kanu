@@ -2,9 +2,9 @@
 
 namespace App\Conversations;
 
-
-use App\Type;
 use DateTime;
+use App\Type;
+
 use App\Client;
 use DateTimeZone;
 use Carbon\Carbon;
