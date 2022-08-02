@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Conversations;
+use App\Client;
 
 use DateTime;
 use App\Type;
 use Carbon\Carbon;
 
-use App\Client;
 use DateTimeZone;
 use App\Appointment;
 use Illuminate\Foundation\Inspiring;
