@@ -2,12 +2,12 @@
 
 namespace App\Conversations;
 use App\Client;
-
+use DateTimeZone;
 use DateTime;
 use App\Type;
 use Carbon\Carbon;
 
-use DateTimeZone;
+
 use App\Appointment;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Config;
