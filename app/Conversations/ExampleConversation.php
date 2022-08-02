@@ -4,10 +4,10 @@ namespace App\Conversations;
 
 use DateTime;
 use App\Type;
+use Carbon\Carbon;
 
 use App\Client;
 use DateTimeZone;
-use Carbon\Carbon;
 use App\Appointment;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Config;
