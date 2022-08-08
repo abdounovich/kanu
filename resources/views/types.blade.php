@@ -7,12 +7,6 @@
 
 @section('content')
 
-
-
-
-
-
-
     <div class=" container mt-5">
         <div class="row mt-5">
             <h2 class=" text-white p-2">أنواع .... :</h2>
