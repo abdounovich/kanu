@@ -133,9 +133,8 @@ $DbUsername=Client::whereFacebook($full_name)->first();
      ->image($type->photo)
      ->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
      ->url($this->config.'/test/'.$type->id.'/D'.$number."/".$full_name."/".$DbUsername->id)
-     ->heightRatio('tall')
-     ->disableShare()
-     ->enableExtensions());}
+)
+     ;}
 
   
 
@@ -154,10 +153,10 @@ $DbUsername=Client::whereFacebook($full_name)->first();
 
  
 
-$bot->reply(Question::create(' إظهار المزيد ➕ ؟   ')->addButtons([
+/* $bot->reply(Question::create(' إظهار المزيد ➕ ؟   ')->addButtons([
     Button::create(' ✅ نعم ')->value('OhYes'.$number),]));
-});
-
+*/});
+ 
 
 
 
