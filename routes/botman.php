@@ -131,9 +131,10 @@ $DbUsername=Client::whereFacebook($full_name)->first();
      $array1[]= Element::create($type->type)
      ->subtitle("السعر : ".$type->prix.' دج ')
      ->image($type->photo)
-     ->addButton(ElementButton::create(' 📆 احجز 4 الآن')
+     ->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
      ->url($this->config.'/test/'.$type->id.'/D'.$number."/".$full_name."/".$DbUsername->id)
-)
+     ->disableShare()
+     ->enableExtensions())
      ;}
 
   
@@ -184,7 +185,6 @@ $full_name=$firstname.'-'.$lastname;
         ->addButton(ElementButton::create('🗒 تصفح مواعيدي  ')
         ->url($this->config.'/client/'.$DbUsername->slug)
         ->enableExtensions()
-        ->heightRatio('tall')
         ->disableShare()
     
         )
