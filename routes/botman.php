@@ -49,9 +49,9 @@ if ($DbUsername=="0") {
 }
 
 $DbUsername=Client::whereFacebook($full_name)->first();
-$bot->typesAndWaits(2);
+$bot->typesAndWaits(1);
     $bot->reply('مرحبا بك  🙋‍♂️ '.$full_name."\n".' 🖤💚 IK9 تشرفنا زيارتك لصفحة   ');
-    $bot->typesAndWaits(2);
+    $bot->typesAndWaits(1);
     $bot->reply(ButtonTemplate::create('   أنا روربوت المحادثة التلقائية  🤖  كيف يمكنني خدمتك ؟  ')
 	->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
 	    ->type('postback')
@@ -99,7 +99,7 @@ $array2=array();
 
 
 
-$bot->typesAndWaits(2);
+$bot->typesAndWaits(1);
 
 $bot->reply(GenericTemplate::create()
 ->addImageAspectRatio(GenericTemplate::RATIO_SQUARE)
@@ -179,7 +179,7 @@ $full_name=$firstname.'-'.$lastname;
     ->where('ActiveType','1')->count();
     
     if ($OneApp>0) {
-        $bot->typesAndWaits(2);
+        $bot->typesAndWaits(1);
     
         $bot->reply(ButtonTemplate::create(' عذرا صديقي 😕 '.$full_name ."\n"." لقد حجزت موعد من قبل لا يمكنك حجز أكثر من موعد في نفس اليوم ")
         ->addButton(ElementButton::create('🗒 تصفح مواعيدي  ')
@@ -250,7 +250,7 @@ date_default_timezone_set("Africa/Algiers");
         ->payload('rdv3');
       
      } 
-    $bot->typesAndWaits(2);
+    $bot->typesAndWaits(1);
  /* 
 
     $bot->reply(" عفوا لا يمكنك استعمال هاته الخدمة بسبب خلل تقني سنقوم بإصلاحه قريبا ");
@@ -288,7 +288,7 @@ $full_name=$firstname.'-'.$lastname;
 // Access Username
 
     $DbUsername=Client::whereFacebook($full_name)->first();
-    $bot->typesAndWaits(2);
+    $bot->typesAndWaits(1);
 
     $bot->reply(ButtonTemplate::create('  الرجاء إختيار زر من القائمة 👇👇 ')
 	->addButton(ElementButton::create(' 📅 مواعيدي')
