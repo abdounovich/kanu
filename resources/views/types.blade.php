@@ -15,7 +15,7 @@
 
     <div class=" container mt-5">
         <div class="row mt-5">
-            <h2 class=" text-white p-2">أنواع الحلاقة :</h2>
+            <h2 class=" text-white p-2">أنواع .... :</h2>
             <table class="table table-dark table-hover" style="opacity: 0.9 ">
  <thead class=" bg-success text-center">
 
