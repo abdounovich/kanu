@@ -7,9 +7,15 @@
 
 @section('content')
 
+
+
+
+
+
+
     <div class=" container mt-5">
         <div class="row mt-5">
-            <h2 class=" text-white p-2"> الحلاقة أنواع  :</h2>
+            <h2 class=" text-white p-2">الأنواع  :</h2>
             <table class="table table-dark table-hover" style="opacity: 0.9 ">
  <thead class=" bg-success text-center">
 

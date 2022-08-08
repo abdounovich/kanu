@@ -106,6 +106,7 @@ return [
                             'title' => ' 👨‍🏫 شرح طريقة حجز موعد  ',
                             'type' => 'postback',
                             'payload' => 'steps',
+                           'webview_height_ratio'=>'compact'
                         ]]],
                       
                        
