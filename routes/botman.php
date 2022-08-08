@@ -93,9 +93,7 @@ $array2=array();
     ->image($type2->photo)
     ->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
     ->url($this->config.'/test/'.$type2->id.'/D'.$number."/".$full_name."/".$DbUsername->id)
-    ->heightRatio('tall')
-    ->disableShare()
-    ->enableExtensions());}
+   );}
 
 
 
