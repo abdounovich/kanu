@@ -49,9 +49,9 @@ if ($DbUsername=="0") {
 }
 
 $DbUsername=Client::whereFacebook($full_name)->first();
-$bot->typesAndWaits(2);
+$bot->typesAndWaits(1);
     $bot->reply('مرحبا بك  🙋‍♂️ '.$full_name."\n".' 🖤💚 IK9 تشرفنا زيارتك لصفحة   ');
-    $bot->typesAndWaits(2);
+    $bot->typesAndWaits(1);
     $bot->reply(ButtonTemplate::create('   أنا روربوت المحادثة التلقائية  🤖  كيف يمكنني خدمتك ؟  ')
 	->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
 	    ->type('postback')
@@ -91,13 +91,13 @@ $array2=array();
     $array2[]= Element::create($type2->type)
     ->subtitle("السعر : ".$type2->prix.' دج ')
     ->image($type2->photo)
-    ->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
+    ->addButton(ElementButton::create(' 📆 احجز 4 الآن')
     ->url($this->config.'/test/'.$type2->id.'/D'.$number."/".$full_name."/".$DbUsername->id)
    );}
 
 
 
-$bot->typesAndWaits(2);
+$bot->typesAndWaits(1);
 
 $bot->reply(GenericTemplate::create()
 ->addImageAspectRatio(GenericTemplate::RATIO_SQUARE)
@@ -129,9 +129,8 @@ $DbUsername=Client::whereFacebook($full_name)->first();
      $array1[]= Element::create($type->type)
      ->subtitle("السعر : ".$type->prix.' دج ')
      ->image($type->photo)
-     ->addButton(ElementButton::create(' 📆 احجز موعدك الآن')
+     ->addButton(ElementButton::create(' 📆 احجز 3 الآن')
      ->url($this->config.'/test/'.$type->id.'/D'.$number."/".$full_name."/".$DbUsername->id)
-     ->heightRatio('tall')
      ->disableShare()
      ->enableExtensions());}
 
@@ -183,7 +182,6 @@ $full_name=$firstname.'-'.$lastname;
         ->addButton(ElementButton::create('🗒 تصفح مواعيدي  ')
         ->url($this->config.'/client/'.$DbUsername->slug)
         ->enableExtensions()
-        ->heightRatio('tall')
         ->disableShare()
     
         )
