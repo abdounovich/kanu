@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 class TypeController extends Controller
 {
     /**
+    
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -17,7 +18,9 @@ class TypeController extends Controller
     public function index()
 
     {
+        
         $types=Type::all();
+        
        return view('types')->with('types',$types);    }
 
     /**
