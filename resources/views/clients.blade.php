@@ -42,17 +42,17 @@
         $counter=0;
         @endphp
         @foreach ($clients as $client)
-        @php
+        {{--@php
            $counter=$counter+1; 
       
         ini_set("allow_url_fopen", 1);
                       $userInfoData=file_get_contents('https://graph.facebook.com/v2.6/'.$client->fb_id.'?fields=profile_pic&access_token='.$config);
                       $userInfo = json_decode($userInfoData, true);
                   $picture = $userInfo['profile_pic'] ;
-        @endphp
+        @endphp --}} 
         <tr>
           <th scope="row">{{$counter}}</th>
-          <td class="align-middle"><img style="border-width: 5px;" class="  border border-white ml-2" width="50" height="50" src="{{$picture}}" alt="">
+          <td class="align-middle"><img style="border-width: 5px;" class="  border border-white ml-2" width="50" height="50" src="" alt="">
             {{$client->facebook}}</td>
          
         <td class="align-middle">
