@@ -18,18 +18,28 @@
         "botman/tinker": "~1.0",
         "fideloper/proxy": "^4.0",
         "jrm2k6/cloudder": "0.4.*",
-        "laravel/framework": "5.7.*",
-        "laravel/tinker": "^1.0",
+        "laravel/framework": "^7.0",
+        "laravel/helpers": "^1.5",
+        "laravel/tinker": "^2.0",
+        "laravelcollective/html": "^6.3",
         "rachidlaasri/laravel-installer": "^4.1",
-        "unisharp/laravel-settings": "^2.0"
+        "unisharp/laravel-settings": "^2.0",
+        "yajra/laravel-datatables-buttons": "^4.13",
+        "yajra/laravel-datatables-editor": "^1.25",
+        "yajra/laravel-datatables-fractal": "^1.6",
+        "yajra/laravel-datatables-html": "^4.41",
+        "yajra/laravel-datatables-oracle": "^9.21",
+        "facade/ignition": "^2.0",
+        "laravel/ui":"~2.0"
+
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "^1.0",
-        "nunomaduro/collision": "^2.0",
-        "phpunit/phpunit": "^7.0"
+        "nunomaduro/collision": "^4.1",
+        "phpunit/phpunit": "^8.5"
     },
     "autoload": {
         "classmap": [
