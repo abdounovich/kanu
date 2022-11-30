@@ -10,7 +10,7 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "^8.1.13",
+        "php": "^8.0",
         "botman/botman": "~2.0",
         "botman/driver-facebook": "dev-master",
         "botman/driver-web": "~1.0",
